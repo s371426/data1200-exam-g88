@@ -36,6 +36,13 @@ main {
     margin: 0;
 }
 
+/* skal style lenkene som vi har i nav class navbar */
+
+.navbar a {
+    color: #3D3D3D;
+
+}
+
 
 
 /*FOOTER*/
