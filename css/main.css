@@ -27,6 +27,11 @@ main {
 
 /* NAV BAR*/
 
+/* skal style listen i klassen .navbar.*/
+
+.navbar ul {
+    list-style-type: none;
+}
 
 
 
