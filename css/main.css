@@ -40,6 +40,9 @@ img{
     float: left;
     height: 90px;
     width: 130px;
+    padding-top: 20px;
+    padding-left: 20px;
+
 }
 
 /* HAMBURGER MENU */
@@ -53,6 +56,7 @@ img{
         flex-direction: row;
         justify-content: center;
         list-style-type: none;
+
     }
 
     .menu li (padding-right: 4rem;)
@@ -67,7 +71,7 @@ img{
 
     .menu-icon {
         display: block;
-        background-image:url(../images/menu.png);
+        background-image: url(../images/menu.png);
         background-size: cover;
         height: 40px;
         width: 40px;
@@ -135,7 +139,7 @@ figcaption {
 
 /* skal style listen i klassen .navbar.*/
 
-.navbar ul {
+.menu ul {
     list-style-type: none;
     background-color: var(--main-site-colour);
     padding: 0;
@@ -145,23 +149,23 @@ figcaption {
 
 /* skal style lenkene som vi har i nav class navbar */
 
-.navbar a {
+.menu a {
     color: #3D3D3D;
     padding: 20px;
     text-decoration: none;
-    display: block;
+    /*display: block;*/
     text-align: center;
 }
 
 /* hover på lenkene i navbar*/
 
-.navbar a:hover{
+.menu a:hover{
     background-color: lightskyblue;
 }
 
 /* for å gjøre lenkene i menyen horizontal*/
 
-.navbar li {
+.menu li {
     float: left;
 }
 
