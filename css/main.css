@@ -128,13 +128,15 @@ footer{
     height: 70px;
 }
 /* Grid kode tatt fra: https://www.w3schools.com/css/css_grid.asp*/
-.grid-container{
+.footerGrid{
     display: grid;
-    background-color: #586972;
+
     padding: 0 2% 2%;
 
+
+
 }
-.grid-item{
+.footerGrid-item{
 
     text-align: left;
     padding: 20px;
@@ -164,6 +166,10 @@ footer{
 }
 .item4 a:hover{
     text-decoration: underline;
+}
+
+@media (max-width: 900px){
+
 }
 /*https://www.w3schools.com/howto/howto_css_social_media_buttons.asp
  Ikon kode tatt fra ^
