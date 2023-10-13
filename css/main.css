@@ -8,6 +8,20 @@ main {
 
 }
 
+/*HEADER*/
+.header {
+    padding: 90px;
+    text-align: center;
+    background-color: #586972;
+    color: #000000;
+    font-size: 40px;
+}
+
+.header h3 {
+    font-size: 20px;
+    color: #ffffff;
+}
+
 /*OVERSKRIFTER*/
 
 
