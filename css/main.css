@@ -33,7 +33,7 @@ img{
 .header p {
     font-size: 20px;
     font-weight: lighter;
-    color: #ffffff;
+    color: #ffd74a;
 }
 /* Logo position and image size */
 #logo_position {
@@ -41,6 +41,62 @@ img{
     height: 90px;
     width: 130px;
 }
+
+/* HAMBURGER MENU */
+#burger-toggle {
+    display: none;
+}
+
+@media (min-width: 701px){
+    .menu {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        list-style-type: none;
+    }
+
+    .menu li (padding-right: 4rem;)
+}
+
+@media (max-width:700px){
+    .menu {
+        list-style-type: none;
+        position: sticky;
+        padding-left: 0px;
+    }
+
+    .menu-icon {
+        display: block;
+        background-image:url(../images/menu.png);
+        background-size: cover;
+        height: 40px;
+        weight: 40px;
+
+    }
+
+    hamburger-toggle-container {cursor: pointer;}
+
+    .menu li{
+        height: 0px;
+        overflow: hidden;
+    }
+
+    #burger-toggle:checked ~ .menu li {
+        heigt: 1 rem;
+        width: auto;
+        padding-left: 0.5 rem;
+        padding-right: 0.5 rem;
+        padding-bottom: 0.5rem;
+        background-color: green;
+    }
+
+    nav {
+        display: flex;
+        height: 40;
+    }
+}
+
+
 
 /*OVERSKRIFTER*/
 
