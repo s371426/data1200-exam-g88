@@ -59,7 +59,10 @@ img{
 
 
 /*DIVs*/
-
+.over-skrift {
+    border-bottom: 2px solid;
+    border-bottom-color: #3D3D3D;
+}
 
 
 /* NAV BAR*/
