@@ -50,7 +50,7 @@ img{
 @media (min-width: 701px){
     .menu {
         display: flex;
-        flex-direction: flow;
+        flex-direction: row;
         justify-content: center;
         list-style-type: none;
     }
