@@ -34,9 +34,11 @@ img{
     font-weight: lighter;
     color: #ffffff;
 }
-
+/* Logo position and image size */
 #logo_position {
     float: left;
+    height: 90px;
+    width: 130px;
 }
 
 /*OVERSKRIFTER*/
