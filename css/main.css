@@ -1,4 +1,11 @@
 /*DIVERSE*/
+
+/* Custom property om farge som kan gjenbrukes flere steder */
+:root {
+    --main-site-colour: #c9b81e;
+}
+
+
 body{
     margin: 0;
 
@@ -32,7 +39,7 @@ main {
 
 .navbar ul {
     list-style-type: none;
-    background-color: lightblue;
+    background-color: var(--main-site-colour);
     padding: 0;
     margin: 0;
     overflow: hidden;
