@@ -33,14 +33,74 @@ img{
 .header p {
     font-size: 20px;
     font-weight: lighter;
-    color: #ffffff;
+    color: #ffd74a;
 }
 /* Logo position and image size */
 #logo_position {
     float: left;
     height: 90px;
     width: 130px;
+    padding-top: 20px;
+    padding-left: 20px;
+
 }
+
+/* HAMBURGER MENU */
+#burger-toggle {
+    display: none;
+}
+
+@media (min-width: 701px){
+    .menu {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        list-style-type: none;
+
+    }
+
+    .menu li (padding-right: 4rem;)
+}
+
+@media (max-width:700px){
+    .menu {
+        list-style-type: none;
+        position: sticky;
+        padding-left: 0;
+    }
+
+    .menu-icon {
+        display: block;
+        background-image: url(../images/menu.png);
+        background-size: cover;
+        height: 40px;
+        width: 40px;
+
+    }
+
+    .hamburger-toggle-container {cursor: pointer;}
+
+    .menu li{
+        height: 0;
+        overflow: hidden;
+    }
+
+    #burger-toggle:checked ~ .menu li {
+        height: 1rem;
+        width: auto;
+        padding-left: 0.5rem;
+        padding-right: 0.5rem;
+        padding-bottom: 0.5rem;
+        background-color: green;
+    }
+
+    nav {
+        display: flex;
+        height: 40px;
+    }
+}
+
+
 
 /*OVERSKRIFTER*/
 
@@ -51,7 +111,20 @@ img{
 
 }
 
+figure {
+    margin: 0;
+    padding-top: 0;
+    padding-bottom: 10px;
+    padding-left: 0;
+    padding-right: 0;
 
+}
+
+figcaption {
+    margin-top: 0;
+    padding-top: 0;
+
+}
 
 /*SPANS*/
 
@@ -69,7 +142,7 @@ img{
 
 /* skal style listen i klassen .navbar.*/
 
-.navbar ul {
+.menu ul {
     list-style-type: none;
     background-color: var(--main-site-colour);
     padding: 0;
@@ -79,23 +152,23 @@ img{
 
 /* skal style lenkene som vi har i nav class navbar */
 
-.navbar a {
+.menu a {
     color: #3D3D3D;
     padding: 20px;
     text-decoration: none;
-    display: block;
+    /*display: block;*/
     text-align: center;
 }
 
 /* hover på lenkene i navbar*/
 
-.navbar a:hover{
+.menu a:hover{
     background-color: lightskyblue;
 }
 
 /* for å gjøre lenkene i menyen horizontal*/
 
-.navbar li {
+.menu li {
     float: left;
 }
 
@@ -104,11 +177,19 @@ img{
 
 /* Grid med to kolloner hvor hver av kollonene er like store */
 .location-grid{
+    /*display: flex;*/
+    /*flex-direction: row;*/
+    /*flex-wrap: wrap;*/
+    
     display: grid;
     grid-template-columns: 1fr 1fr;
+    grid-auto-rows: auto auto;
 }
 
 .location-grid-one {
+    /*min-width: 400px;*/
+    /*flex: 1 1;*/
+
     grid-column: 1/2;
     padding-left: 5%;
     padding-right: 5%;
@@ -116,11 +197,20 @@ img{
 }
 
 .location-grid-two {
+    /*min-width: 400px;*/
+    /*flex: 1 1;*/
+
     grid-column: 2/3;
     padding-left: 5%;
     padding-right: 5%;
 }
 
+ /* Alle elementer innenfor elemeter med location-grid classen vil gå fra første(1) til siste(3) grid linke */
+@media (max-width: 700px) {
+    .location-grid > *{
+       grid-column: 1/3;
+    }
+}
 
 /*FOOTER*/
 /*Setter fooder på bunn av siden og at bredden skal være 100%*/
@@ -131,13 +221,15 @@ footer{
     height: 70px;
 }
 /* Grid kode tatt fra: https://www.w3schools.com/css/css_grid.asp*/
-.grid-container{
+.footerGrid{
     display: grid;
-    background-color: #586972;
+
     padding: 0 2% 2%;
 
+
+
 }
-.grid-item{
+.footerGrid-item{
 
     text-align: left;
     padding: 20px;
@@ -168,6 +260,10 @@ footer{
 .item4 a:hover{
     text-decoration: underline;
 }
+
+@media (max-width: 900px){
+
+}
 /*https://www.w3schools.com/howto/howto_css_social_media_buttons.asp
  Ikon kode tatt fra ^
  */
@@ -183,7 +279,7 @@ footer{
     background: #3B5998;
     color: white;
 }
-fa-twitter {
+.fa-twitter {
     background: #55ACEE;
     color: white;
 }
