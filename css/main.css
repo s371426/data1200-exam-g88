@@ -62,7 +62,7 @@ img{
     .menu {
         list-style-type: none;
         position: sticky;
-        padding-left: 0px;
+        padding-left: 0;
     }
 
     .menu-icon {
@@ -70,29 +70,29 @@ img{
         background-image:url(../images/menu.png);
         background-size: cover;
         height: 40px;
-        weight: 40px;
+        width: 40px;
 
     }
 
-    hamburger-toggle-container {cursor: pointer;}
+    .hamburger-toggle-container {cursor: pointer;}
 
     .menu li{
-        height: 0px;
+        height: 0;
         overflow: hidden;
     }
 
     #burger-toggle:checked ~ .menu li {
-        heigt: 1 rem;
+        height: 1rem;
         width: auto;
-        padding-left: 0.5 rem;
-        padding-right: 0.5 rem;
+        padding-left: 0.5rem;
+        padding-right: 0.5rem;
         padding-bottom: 0.5rem;
         background-color: green;
     }
 
     nav {
         display: flex;
-        height: 40;
+        height: 40px;
     }
 }
 
@@ -236,7 +236,7 @@ footer{
     background: #3B5998;
     color: white;
 }
-fa-twitter {
+.fa-twitter {
     background: #55ACEE;
     color: white;
 }
