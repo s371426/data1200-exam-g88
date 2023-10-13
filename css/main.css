@@ -97,6 +97,26 @@ img{
 }
 
 
+/* LOCATION PAGE*/
+
+/* Grid med to kolloner hvor hver av kollonene er like store */
+.location-grid{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.location-grid-one {
+    grid-column: 1/2;
+    padding-left: 5%;
+    padding-right: 5%;
+
+}
+
+.location-grid-two {
+    grid-column: 2/3;
+    padding-left: 5%;
+    padding-right: 5%;
+}
 
 
 /*FOOTER*/
