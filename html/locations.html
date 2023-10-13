@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="no>
+<head>
+    <meta charset="UTF-8">
+
+    <!-- Sørger for at initial skalering og zoom er ritkig på forskjellige devices -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Title</title>
+    <link rel="stylesheet" href="../css/main.css">
+    <!-- Linker til favicon !-->
+    <link rel="icon" type="image/x-icon" href="../images/universitet.png">
+</head>
+<body>
+<header>
+    <nav class="navbar">
+        <ul>
+            <li><a href="../index.html">Home</a></li>
+            <li><a href="accessibility.html">Accessibility</a></li>
+            <li><a href="topical.html">Topical</a></li>
+            <li><a href="locations.html">Page4</a></li>
+            <li><a href="maybepage5.html">Maybepage5</a></li>
+        </ul>
+
+    </nav>
+</header>
+
+<main>
+    <h1>Områder</h1>
+    <section>
+        <div>
+            <picture>
+
+                <!-- Bilde blir valgt av device ut i fra hvilken oppløsning som passer best. "w" tallet er bredden
+                     på det bilde. Type forteller device at bildene er webp format-->
+                <source srcset=""
+                        type="image/webp">
+
+                <!-- Backup bilde tilfelle device ikke støtter <picture> eller webp, i tilleg til alt tekst informasjon -->
+                <img src=""
+                     alt=""
+                     width="" height ="">
+            </picture>
+            <p>[Bildetekst]</p>
+        </div>
+        <div>
+            <h2>[Overskirt of mokasjon]</h2>
+            <p>[Tekst om lokasjon]</p>
+        </div>
+    </section>
+
+    <section>
+        <picture>
+
+        </picture>
+    </section>
+</main>
+
+<footer>
+
+</footer>
+</body>
+</html>
