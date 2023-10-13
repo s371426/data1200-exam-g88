@@ -8,6 +8,7 @@
 
 body{
     margin: 0;
+    font-family: Verdana, sans-serif;
 
 }
 
@@ -102,7 +103,9 @@ img{
 
 
 /*PARAGRAFER*/
+.jajaja {
 
+}
 
 
 
@@ -150,6 +153,113 @@ img{
 }
 
 
+/* LOCATION PAGE*/
+
+/* Grid med to kolloner hvor hver av kollonene er like store */
+.location-grid{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.location-grid-one {
+    grid-column: 1/2;
+    padding-left: 5%;
+    padding-right: 5%;
+
+}
+
+.location-grid-two {
+    grid-column: 2/3;
+    padding-left: 5%;
+    padding-right: 5%;
+}
 
 
 /*FOOTER*/
+/*Setter fooder på bunn av siden og at bredden skal være 100%*/
+footer{
+   position: relative;
+    bottom:0;
+    width:100%;
+    height: 70px;
+}
+/* Grid kode tatt fra: https://www.w3schools.com/css/css_grid.asp*/
+.grid-container{
+    display: grid;
+    background-color: #586972;
+    padding: 0 2% 2%;
+
+}
+.grid-item{
+
+    text-align: left;
+    padding: 20px;
+
+
+}
+.item1{
+    grid-column: 1/span 2;
+    grid-row: 1;
+    border-bottom: 1px solid;
+    border-bottom-color: black;
+
+}
+
+.item2{
+    grid-column: 3;
+    grid-row: 1 / span 2;
+
+
+}
+.item3{
+
+}
+.item4 a{
+    text-decoration: none;
+    color:black;
+}
+.item4 a:hover{
+    text-decoration: underline;
+}
+/*https://www.w3schools.com/howto/howto_css_social_media_buttons.asp
+ Ikon kode tatt fra ^
+ */
+.fa {
+    padding: 10px;
+    font-size: 30px;
+    width: 15px;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 50%;
+}
+.fa-facebook {
+    background: #3B5998;
+    color: white;
+}
+fa-twitter {
+    background: #55ACEE;
+    color: white;
+}
+.fa-instagram {
+    background: #125688;
+    color: white;
+}
+.fa-youtube {
+    background: #bb0000;
+    color: white;
+}
+/*Slutt på ikonkode*/
+footer b{
+    font-size: 25px;
+}
+.knapp{
+    color: var(--main-site-colour);
+    text-decoration: none;
+    font-size:23px;
+    background-color: black;
+    padding:6px;
+
+}
+.knapp:hover{
+    text-decoration: underline;
+}
