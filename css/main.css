@@ -212,11 +212,16 @@ figcaption {
     align-self: center;
 
     /* margin og padding for h2 inni grid element*/
-    > h2 {
+    & h2 {
         padding-top: 0;
         margin-top: 0;
     }
+    /* For å gjøre at bilde og tekst er litt mere i senter med hverandre på grunn av bildetekst*/
+    & p{
+        margin-bottom: 2.5rem;
+    }
 }
+
 
  /* Alle elementer innenfor elemeter med location-grid classen vil gå fra første(1) til siste(3) grid linke */
 @media (max-width: 700px) {
