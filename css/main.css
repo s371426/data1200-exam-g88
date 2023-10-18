@@ -18,6 +18,10 @@ body{
 main {
 
 }
+
+article {
+    margin-left: 2em;
+}
 img{
     width: 100%;
     height: auto;
@@ -106,12 +110,17 @@ img{
 
 
 /*OVERSKRIFTER*/
-
+h1 {
+    font-family: "Gill Sans MT", serif;
+    font-weight: bolder;
+    font-size: 1.8rem;
+}
 
 
 /*PARAGRAFER*/
-.jajaja {
-
+.ingress {
+    font-weight: 550;
+    color: darkslategray;
 }
 
 figure {
