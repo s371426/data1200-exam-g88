@@ -1,8 +1,11 @@
 /*DIVERSE*/
 
-/* Custom property om farge som kan gjenbrukes flere steder */
+/* Custom variable/property om farger som kan gjenbrukes flere steder, enklere å endre senere hvis man vil */
+/* Inspirert av Tengel eksempel nettside i faget */
 :root {
     --main-site-colour: #c9b81e;
+    --main-site-background: white;
+    --main-site-font-colour: black;
 }
 
 
@@ -33,7 +36,7 @@ img{
 .header p {
     font-size: 20px;
     font-weight: lighter;
-    color: #ffd74a;
+    color: var(--main-site-colour);
 }
 /* Logo position and image size */
 #logo_position {
@@ -184,6 +187,10 @@ figcaption {
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-auto-rows: auto auto;
+
+    margin-bottom: 1%;
+
+    /*align-items: center;*/
 }
 
 .location-grid-one {
@@ -191,8 +198,9 @@ figcaption {
     /*flex: 1 1;*/
 
     grid-column: 1/2;
-    padding-left: 5%;
-    padding-right: 5%;
+    padding-left: 4%;
+    padding-right: 4%;
+    align-self: center;
 
 }
 
@@ -201,8 +209,16 @@ figcaption {
     /*flex: 1 1;*/
 
     grid-column: 2/3;
-    padding-left: 5%;
-    padding-right: 5%;
+    padding-left: 4%;
+    padding-right: 4%;
+
+    align-self: center;
+
+    /* margin og padding for h2 inni grid element*/
+    > h2 {
+        padding-top: 0;
+        margin-top: 0;
+    }
 }
 
  /* Alle elementer innenfor elemeter med location-grid classen vil gå fra første(1) til siste(3) grid linke */
