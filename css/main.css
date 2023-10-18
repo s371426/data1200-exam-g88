@@ -59,7 +59,7 @@ img{
 
     }
 
-    .menu li (padding-right: 4rem;)
+    .menu li {padding-right: 4rem;}
 }
 
 @media (max-width:700px){
