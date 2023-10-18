@@ -20,11 +20,12 @@ main {
 }
 
 article {
-    margin-left: 2em;
+    margin-left: 180px;
     margin-right: 2em;
     margin-bottom: 2em;
     font-family: Calibri, serif;
     font-weight: normal;
+
 }
 img{
     width: 100%;
@@ -156,7 +157,7 @@ figcaption {
     background-image: url(../images/satelitt-bilde.jpg);
     background-size: cover;
     width: 90vw;
-    height: 60vw;
+    height: 50vw;
 
 }
 
@@ -197,6 +198,24 @@ figcaption {
 
 
 /* LOCATION PAGE*/
+.sidenav {
+    width: 160px;
+    position: fixed;
+    display:grid;
+    background-color: #55ACEE;
+    color: black;
+
+
+}
+.sidenav a {
+    padding: 8px;
+    display: grid;
+
+}
+.sidenav a:hover{
+    color: green;
+}
+
 
 /* Grid med to kolloner hvor hver av kollonene er like store */
 .location-grid{
@@ -212,6 +231,7 @@ figcaption {
 
     /*align-items: center;*/
 }
+
 
 .location-grid-one {
     /*min-width: 400px;*/
