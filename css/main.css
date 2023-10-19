@@ -4,14 +4,18 @@
 /* inspirert av Tengel presentasjon og eksempel nettside i faget */
 :root {
     --main-site-colour: #fde008;
-    --main-site-background: white;
+    --main-site-background-colour: white;
     --main-site-font-colour: black;
 
 }
 
-/* Darkmode inspirert av Tengel presentasjon og eksempel nettside i faget */
+/* Darkmode som blir aktivert når device er satt til darkmode*/
+/* Inspirert av Tengel presentasjon og eksempel nettside i faget */
 @media (prefers-color-scheme: dark) {
-    
+    :root{
+        --main-site-background-colour: #222222;
+        --main-site-font-colour: #eeeeee;
+    }
 }
 
 body{
@@ -21,7 +25,8 @@ body{
 }
 
 main {
-
+    color: var(--main-site-font-colour);
+    background-color: var(--main-site-background-colour);
 }
 
 
