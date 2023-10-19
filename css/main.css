@@ -273,6 +273,42 @@ figcaption {
     }
 }
 
+/* GRID FRONT PAGE */
+/* Grid kode tatt fra https://www.w3schools.com/css/css_grid.asp */
+
+
+.grid-mainpage{
+    display: grid;
+    background-color: #5f788c;
+}
+
+.item1-mainpage{
+    grid-column: 1/span 2;
+    grid-row: 1;
+}
+
+.item2-mainpage {
+    grid-column: 2;
+    grid-row: 2/span 3;
+    background-color: #718a9b;
+    padding: 20px;
+    margin-bottom: 40px;
+}
+
+.item3-mainpage {
+    grid-column: 1/span 3;
+    grid-row: 3;
+    text-align: left;
+    font-weight: bold;
+    padding: 20px;
+    margin-bottom: 40px;
+}
+
+.item3-mainpage p {
+    font-weight: lighter;
+
+}
+
 /*FOOTER*/
 /*Setter fooder på bunn av siden og at bredden skal være 100%*/
 footer{
