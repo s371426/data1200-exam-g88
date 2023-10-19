@@ -205,6 +205,8 @@ figcaption {
 .main-bar {
     display: grid;
     width: 100px;
+    margin-right: 20px;
+
 }
 .sidenav {
     width: 160px;
@@ -212,7 +214,6 @@ figcaption {
     display:grid;
     background-color: #f1f1f1;
     overflow: auto;
-    padding: 0px;
 
 }
 .sidenav a {
@@ -226,6 +227,8 @@ figcaption {
 }
 .punkter {
     list-style-type: none;
+    padding: 0px;
+    margin: 0px;
 }
 
 
