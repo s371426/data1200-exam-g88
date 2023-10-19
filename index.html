@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
 
-    <!-- Sørger for at initial skalering og zoom er ritkig på forskjellige devices -->
+    <!-- Sørger for at initial skalering og zoom er riktig på forskjellige devices -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Title</title>
     <!-- Koble sammen HTML med CSS -->
@@ -39,7 +39,7 @@
 
 <!--
     <h1>Oslo Metropolitan University</h1>
-        <p> Velkommen til storbyuniversitetet</p>
+        <p>Velkommen til storbyuniversitetet</p>
     </div>
 
 
@@ -52,31 +52,47 @@
 
 <main>
 
-    <picture>
+    <div class="grid-mainpage">
+        <div class="item1-mainpage">
 
-        <!-- legge ved fotograf. Skjkalg Bøhmer Vold / OsloMet-->
+            <picture>
 
-        <!-- Device velger hvilken bilde som passer best basert på dens oppløsning,
-             type forteller device format på bilder -->
-        <source srcset="images/campus.jpeg 900w,
+            <!-- legge ved fotograf. Skjkalg Bøhmer Vold / OsloMet-->
+
+            <!-- Device velger hvilken bilde som passer best basert på dens oppløsning,
+                 type forteller device format på bilder -->
+            <source srcset="images/campus.jpeg 900w,
                         images/campus.jpeg 1200w,
                         images/campus.jpeg 1500w,
                         images/campus.jpeg 2100w"
-                type="image/jpeg">
+                    type="image/jpeg">
 
-        <!-- Backup hvis picture source eller WebP ikke støttes, i tilleg til alt tekst. -->
-        <img src="images/campus.jpeg"
-             alt="Andrea Arntzens hus"
-             width="6000" height="4000">
-    </picture>
+            <!-- Backup hvis picture source eller WebP ikke støttes, i tilleg til alt tekst. -->
+            <img src="images/campus.jpeg"
+                 alt="Andrea Arntzens hus"
+                 width="6000" height="4000">
+        </picture>
+        </div>
+        <div class="item2-mainpage">
+            <h2> TESTING TESTING.</h2>
+                <p>Alternativ tekst her.</p>
+        </div>
+        <div class="item3-mainpage">
+            <h2>OVERSKRIFT PÅ ARTIKKEL</h2>
+            <p>ALTERNATIV TEKST HER</p>
+        </div>
+    </div>
+
+
 
 </main>
 
 <footer>
     <!-- Grid kode tatt fra: https://www.w3schools.com/css/css_grid.asp-->
     <div class=" footerGrid">
-        <div class="footerGrid-item item1"><p><b>*Hold deg oppdatert på vårt nyhetsbrev </b>
-            <a href="https://www.oslomet.no/nyhetsbrev" class="knapp">Nyhetsbrev! </a></p></div>
+        <div class="footerGrid-item item1"><p class="item1item1"><b>*Hold deg oppdatert på vårt nyhetsbrev </b></p>
+            <div class="item1item2"><a href="https://www.oslomet.no/nyhetsbrev" class="knapp">Nyhetsbrev! </a></div>
+        </div>
 
         <div class="footerGrid-item item2"><b>Følg oss</b>
             <div class="ikoner">

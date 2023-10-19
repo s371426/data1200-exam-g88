@@ -3,7 +3,7 @@
 /* Custom variable/property om farger som kan gjenbrukes flere steder, enklere å endre senere hvis man vil */
 /* Inspirert av Tengel eksempel nettside i faget */
 :root {
-    --main-site-colour: #c9b81e;
+    --main-site-colour: #fde008;
     --main-site-background: white;
     --main-site-font-colour: black;
 }
@@ -19,81 +19,114 @@ main {
 
 }
 
-
-
-{
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-    background-color: lightskyblue;
-}
-
-li, a, button {
-    font-family: "Karla", sans-serif;
-    font-weight: 500;
-    font-size: 16px;
-    color: hotpink;
-    text-decoration: none;
-}
-
-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 20px 5%;
+article {
+    margin-left: 180px;
+    margin-right: 2em;
+    margin-bottom: 2em;
+    font-family: Calibri, serif;
+    font-weight: normal;
 
 }
-
-.logo {
-    cursor: pointer;
-    max-height: 60px;
-    width: auto;
+img{
+    width: 100%;
+    height: auto;
 }
 
-.navbar {
-    list-style: none;
-    padding: 0px 20px;
+/*HEADER*/
+.header {
+    padding: 30px;
+    text-align: center;
+    color: #000000;
+    background-color: #5f788c;
 }
 
-.navbar li a {
-    transition: all 0.3s ease 0s;
-
+/* Increasing the font size of the heading */
+.header p {
+    text-align: center;
+    font-size: 20px;
+    font-weight: lighter;
+    color: var(--main-site-colour);
 }
 
-.navbar li{
-    display: inline-block;
-    padding: 0px 20px;
+/* Logo position and image size */
+#logo_position {
     float: left;
-
+    height: 70px;
+    width: 100px;
+    padding-top: 20px;
+    padding-left: 20px;
+    position: absolute;
 }
 
-
-.navbar li a:hover {
-    color: rgb(128, 128, 128);
+/* HAMBURGER MENU */
+#burger-toggle {
+    display: none;
 }
 
-button {
-    padding: 9px 25px;
-    background-color: lightskyblue;
-    border: none;
-    border-radius: 50px;
-    cursor: pointer;
-    transition: all 0.3s ease 0s;
+@media (min-width: 701px){
+    .menu {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        list-style-type: none;
+
+    }
+
+    .menu li {padding-right: 4rem;}
 }
 
-button:hover {
-    background-color: lightgray;
+@media (max-width:700px){
+    .menu {
+        list-style-type: none;
+        position: sticky;
+        padding-left: 0;
+    }
+
+    .menu-icon {
+        display: block;
+        background-image: url(../images/menu.png);
+        background-size: cover;
+        height: 40px;
+        width: 40px;
+
+    }
+
+    .hamburger-toggle-container {cursor: pointer;}
+
+    .menu li{
+        height: 0;
+        overflow: hidden;
+    }
+
+    #burger-toggle:checked ~ .menu li {
+        height: 1rem;
+        width: auto;
+        padding-left: 0.5rem;
+        padding-right: 0.5rem;
+        padding-bottom: 0.5rem;
+        background-color: green;
+    }
+
+    nav {
+        display: flex;
+        height: 40px;
+    }
 }
 
 
 
 /*OVERSKRIFTER*/
-
+h1 {
+    font-family: "Gill Sans MT", serif;
+    font-weight: bolder;
+    font-size: 1.8rem;
+}
 
 
 /*PARAGRAFER*/
-.jajaja {
-
+.ingress {
+    font-weight: 550;
+    color: darkslategray;
 }
 
 figure {
@@ -117,23 +150,91 @@ figcaption {
 
 
 /*DIVs*/
+.over-skrift {
+    border-bottom: 2px solid;
+    border-bottom-color: chocolate;
+    background-color: goldenrod;
+    color: navy;
 
+}
+.andrebox {
+    background-image: url(../images/satelitt-bilde.jpg);
+    background-size: cover;
+    width: 90vw;
+    height: 50vw;
+
+}
 
 
 /* NAV BAR*/
 
 /* skal style listen i klassen .navbar.*/
 
+.menu ul {
+    list-style-type: none;
+    background-color: var(--main-site-colour);
+    padding: 0;
+    margin: 0;
+    overflow: hidden;
+}
+
+/* skal style lenkene som vi har i nav class navbar */
+
+.menu a {
+    color: #3D3D3D;
+    padding: 20px;
+    text-decoration: none;
+    /*display: block;*/
+    text-align: center;
+}
+
+/* hover på lenkene i navbar*/
+
+.menu a:hover{
+    background-color: #cfcfd3;
+}
+
+/* for å gjøre lenkene i menyen horizontal*/
+
+.menu li {
+    float: left;
+}
 
 
 /* LOCATION PAGE*/
+.main-bar {
+    display: grid;
+    width: 100px;
+}
+.sidenav {
+    width: 160px;
+    position: fixed;
+    display:grid;
+    background-color: #f1f1f1;
+    overflow: auto;
+    padding: 0px;
+
+}
+.sidenav a {
+    padding: 10px;
+    display: block;
+    color: chocolate;
+}
+.sidenav a:hover{
+    color: white;
+    background-color: dimgray;
+}
+.punkter {
+    list-style-type: none;
+}
+
 
 /* Grid med to kolloner hvor hver av kollonene er like store */
 .location-grid{
     /*display: flex;*/
     /*flex-direction: row;*/
     /*flex-wrap: wrap;*/
-    
+
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-auto-rows: auto auto;
@@ -142,6 +243,7 @@ figcaption {
 
     /*align-items: center;*/
 }
+
 
 .location-grid-one {
     /*min-width: 400px;*/
@@ -165,11 +267,16 @@ figcaption {
     align-self: center;
 
     /* margin og padding for h2 inni grid element*/
-    > h2 {
+    & h2 {
         padding-top: 0;
         margin-top: 0;
     }
+    /* For å gjøre at bilde og tekst er litt mere i senter med hverandre på grunn av bildetekst*/
+    & p{
+        margin-bottom: 2.5rem;
+    }
 }
+
 
  /* Alle elementer innenfor elemeter med location-grid classen vil gå fra første(1) til siste(3) grid linke */
 @media (max-width: 700px) {
@@ -178,29 +285,76 @@ figcaption {
     }
 }
 
+/* GRID FRONT PAGE */
+/* Grid kode tatt fra https://www.w3schools.com/css/css_grid.asp */
+
+
+.grid-mainpage{
+    display: grid;
+    background-color: #5f788c;
+}
+
+.item1-mainpage{
+    grid-column: 1 / span 3;
+    grid-row: 1;
+}
+
+.item2-mainpage {
+    grid-column: 3;
+    grid-row: 2 / span 3;
+    background-color: #718a9b;
+    padding: 20px;
+    margin-bottom: 40px;
+}
+
+.item3-mainpage {
+    grid-column: 1 / span 3;
+    grid-row: 3;
+    text-align: left;
+    font-weight: bold;
+    padding: 20px;
+    margin-bottom: 40px;
+}
+
+.item3-mainpage p {
+    font-weight: lighter;
+}
+
 /*FOOTER*/
 /*Setter fooder på bunn av siden og at bredden skal være 100%*/
 footer{
    position: relative;
     bottom:0;
     width:100%;
-    height: 70px;
+
 }
 /* Grid kode tatt fra: https://www.w3schools.com/css/css_grid.asp*/
 .footerGrid{
     display: grid;
+    grid-template-columns: auto;
     padding: 0 2% 2%;
-    background-color: #586972;
+    background-color: #8899a4;
 }
 .footerGrid-item{
     text-align: left;
     padding: 20px;
 }
 .item1{
-    grid-column: 1/span 2;
+    grid-column: 1 / span 2;
     grid-row: 1;
     border-bottom: 1px solid;
     border-bottom-color: black;
+    display: grid;
+    grid-template-columns: auto;
+    align-items: center;
+}
+
+.item1item1{
+    grid-row:1;
+}
+.item1item2{
+    grid-row: 1;
+    text-align: right;
 }
 .item2{
     grid-column: 3;
@@ -227,17 +381,37 @@ footer{
 }
 /*Når siden er mindre enn 1005 px skal grid stackes*/
 @media (max-width: 1005px) {
-    .footerGrid > * {
-        grid-column: 1/3;
+    .footerGrid  {
+        grid-template-columns: 1fr;
     }
     .item1{
-        position: absolute;
+        grid-row: 1;
+        grid-column: 1;
+    }
+    .item1item1{
+        grid-row: 1;
+        grid-column: 1;
+    }
+    .item1item2{
+        grid-row: 2;
+        grid-column: 1;
+        text-align: left;
     }
     .item2{
-       padding-top:16%;
+        grid-row: 2;
+        grid-column: 1;
+        text-align: left;
     }
     .item2 a{
         padding :1%;
+    }
+    .item3{
+        grid-row:3;
+        grid-column: 1;
+    }
+    .item4{
+        grid-row: 4;
+        grid-column: 1;
     }
 }
 /*https://www.w3schools.com/howto/howto_css_social_media_buttons.asp
@@ -277,8 +451,11 @@ footer b{
     text-decoration: none;
     font-size:23px;
     background-color: black;
-    padding:6px;
+    padding:3px;
+
+
 }
 .knapp:hover{
     text-decoration: underline;
+
 }
