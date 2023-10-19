@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
 
-    <!-- Sørger for at initial skalering og zoom er ritkig på forskjellige devices -->
+    <!-- Sørger for at initial skalering og zoom er riktig på forskjellige devices -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Title</title>
     <link rel="stylesheet" href="../css/main.css">
@@ -101,20 +101,91 @@
 
                 <!-- Bilde blir valgt av device ut i fra hvilken oppløsning som passer best. "w" tallet er bredden
                      på det bilde. Type forteller device at bildene er webp format-->
-                <source srcset="../images/sitteplasser-skjalg-bøhmer-vold-oslomet.jpg"
+                <source srcset="../images/kantine-p52-skjalg-bøhmer-vold/kantine-p52-skjalg-bøhmer-vold-small.webp 900w,
+                                ../images/kantine-p52-skjalg-bøhmer-vold/kantine-p52-skjalg-bøhmer-vold-medium.webp 1440w,
+                                ../images/kantine-p52-skjalg-bøhmer-vold/kantine-p52-skjalg-bøhmer-vold-large.webp 2100w"
                         type="image/webp">
 
                 <!-- Backup bilde tilfelle device ikke støtter <picture> eller webp, i tilleg til alt tekst informasjon -->
-                <img src=""
-                     alt=""
-                     width="" height ="">
+                <img src="../images/kantine-p52-skjalg-bøhmer-vold/kantine-p52-skjalg-bøhmer-vold-large.jpg"
+                     alt="kantine i bygg p52, koselig rom med bra lyes og buer i taket.
+                          Det er også border og stoler på det rutete gulvet"
+                     width="2100" height ="1400">
             </picture>
 
             <!-- <figcaption> er et Semantic element for å spesifisere bildetekst til <figure> elementet det er inni -->
             <figcaption>Skald Bøkmer Vold / OsloMET</figcaption>
         </figure>
         <div class="location-grid-two">
-            <h2>[Overskrift of lokasjon]</h2>
+            <h2>Kantine i Studenthuset P52</h2>
+            <p>[Tekst om lokasjon bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla
+                 bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla
+                 bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla
+                 bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla
+                 bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla]</p>
+        </div>
+    </section>
+
+    <section class="location-grid">
+
+        <!-- <figure> er et Semantic element som ment får spesifisere et selvstending enhet med ett bilde/figur og en
+             bildetekst -->
+        <figure class="location-grid-one">
+            <picture>
+
+                <!-- Bilde blir valgt av device ut i fra hvilken oppløsning som passer best. "w" tallet er bredden
+                     på det bilde. Type forteller device at bildene er webp format-->
+                <source srcset="../images/auditorium-p32-john-hughes/auditorium-p32-john-hughes-small.webp 900w,
+                                ../images/auditorium-p32-john-hughes/auditorium-p32-john-hughes-medium.webp 1350w,
+                                ../images/auditorium-p32-john-hughes/auditorium-p32-john-hughes-large.webp 2100w"
+                        type="image/webp">
+
+                <!-- Backup bilde tilfelle device ikke støtter <picture> eller webp, i tilleg til alt tekst informasjon -->
+                <img src="../images/auditorium-p32-john-hughes/auditorium-p32-john-hughes-large.jpg"
+                     alt=""
+                     width="2100" height ="1402">
+            </picture>
+
+            <!-- <figcaption> er et Semantic element for å spesifisere bildetekst til <figure> elementet det er inni -->
+            <figcaption class="img-text">John Hughes / OsloMET</figcaption>
+        </figure>
+
+        <div class="location-grid-two">
+            <h2>Auditorium Andrea Arntzens hus P32</h2>
+            <p>[Tekst om lokasjon bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla
+                 bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla
+                 bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla
+                 bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla
+                 bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla]</p>
+        </div>
+    </section>
+
+    <section class="location-grid">
+
+        <!-- <figure> er et Semantic element som ment får spesifisere et selvstending enhet med ett bilde/figur og en
+             bildetekst -->
+        <figure class="location-grid-one">
+            <picture>
+
+                <!-- Bilde blir valgt av device ut i fra hvilken oppløsning som passer best. "w" tallet er bredden
+                     på det bilde. Type forteller device at bildene er webp format-->
+                <source srcset="../images/studieplasser-skjalg-bøhmer-vold/studieplasser-skjalg-bøhmer-vold-small.webp 900w,
+                                ../images/studieplasser-skjalg-bøhmer-vold/studieplasser-skjalg-bøhmer-vold-medium.webp 1440w,
+                                ../images/studieplasser-skjalg-bøhmer-vold/studieplasser-skjalg-bøhmer-vold-large.webp 2100w"
+                        type="image/webp">
+
+                <!-- Backup bilde tilfelle device ikke støtter <picture> eller webp, i tilleg til alt tekst informasjon -->
+                <img src="../images/studieplasser-skjalg-bøhmer-vold/studieplasser-skjalg-bøhmer-vold-large.jpg"
+                     alt=""
+                     width="2100" height ="1400">
+            </picture>
+
+            <!-- <figcaption> er et Semantic element for å spesifisere bildetekst til <figure> elementet det er inni -->
+            <figcaption class="img-text">Skalg Bøhmer Vold / OsloMET</figcaption>
+        </figure>
+
+        <div class="location-grid-two">
+            <h2>Studieplasser til studenter</h2>
             <p>[Tekst om lokasjon bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla
                  bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla
                  bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla
