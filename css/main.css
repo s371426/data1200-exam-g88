@@ -5,8 +5,8 @@
 :root {
     --main-site-colour: #fde008;
     --main-site-background-colour: white;
+    --main-site-secondary-background-colour: #dddddd;
     --main-site-font-colour: black;
-
 }
 
 /* Darkmode som blir aktivert når device er satt til darkmode*/
@@ -15,6 +15,7 @@
     :root{
         --main-site-background-colour: #222222;
         --main-site-font-colour: #eeeeee;
+        --main-site-secondary-background-colour: #333333;
     }
 }
 
@@ -298,7 +299,7 @@ figcaption {
 }
 
 .location-grid:nth-child(2n){
-    background-color: #3D3D3D;
+    background-color: var(--main-site-secondary-background-colour);
 }
 
 
@@ -332,13 +333,13 @@ figcaption {
     }
 }
 
-
  /* Alle elementer innenfor elemeter med location-grid classen vil gå fra første(1) til siste(3) grid linke */
 @media (max-width: 700px) {
     .location-grid > *{
        grid-column: 1/3;
     }
 }
+
 
 /* GRID FRONT PAGE */
 /* Grid kode tatt fra https://www.w3schools.com/css/css_grid.asp */
