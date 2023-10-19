@@ -283,20 +283,20 @@ figcaption {
 }
 
 .item1-mainpage{
-    grid-column: 1/span 2;
+    grid-column: 1 / span 3;
     grid-row: 1;
 }
 
 .item2-mainpage {
-    grid-column: 2;
-    grid-row: 2/span 3;
+    grid-column: 3;
+    grid-row: 2 / span 3;
     background-color: #718a9b;
     padding: 20px;
     margin-bottom: 40px;
 }
 
 .item3-mainpage {
-    grid-column: 1/span 3;
+    grid-column: 1 / span 3;
     grid-row: 3;
     text-align: left;
     font-weight: bold;
@@ -306,7 +306,6 @@ figcaption {
 
 .item3-mainpage p {
     font-weight: lighter;
-
 }
 
 /*FOOTER*/
@@ -328,7 +327,7 @@ footer{
     padding: 20px;
 }
 .item1{
-    grid-column: 1/span 2;
+    grid-column: 1 / span 2;
     grid-row: 1;
     border-bottom: 1px solid;
     border-bottom-color: black;
