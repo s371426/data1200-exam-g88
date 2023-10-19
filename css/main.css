@@ -327,6 +327,7 @@ footer{
     text-align: left;
     padding: 20px;
 }
+
 .item1{
     grid-column: 1 / span 2;
     grid-row: 1;
@@ -412,6 +413,7 @@ footer{
     text-align: center;
     text-decoration: none;
     border-radius: 50%;
+    margin-right:2%;
 }
 .fa-facebook {
     background: #3B5998;
