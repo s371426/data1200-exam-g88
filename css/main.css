@@ -6,6 +6,7 @@
     --main-site-colour: #fde008;
     --main-site-background: white;
     --main-site-font-colour: black;
+
 }
 
 
@@ -322,7 +323,40 @@ figcaption {
 .item3-mainpage p {
     font-weight: lighter;
 }
+/*ACCESSIBILITY SiDE*/
+.mainAccessibility{
+    background-color: white;
+}
+.accessibilityTekst{
+    max-width: 1300px;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: white;
+   padding-left: 2%;
+    padding-right: 2%;
+}
+.accessibilityGrid{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+.acGridItem1{
 
+}
+.acGridItem2{
+    background-color: lightgrey;
+    align-items: center;
+}
+@media (max-width: 700px){
+    .accessibilityGrid{
+        grid-template-columns: 1fr;
+    }
+    .acGridItem1{
+        grid-column: 1;
+    }
+    .acGridItem2{
+        grid-column: 1;
+    }
+}
 /*FOOTER*/
 /*Setter fooder på bunn av siden og at bredden skal være 100%*/
 footer{
