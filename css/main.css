@@ -20,14 +20,7 @@ main {
 
 }
 
-article {
-    margin-left: 180px;
-    margin-right: 2em;
-    margin-bottom: 2em;
-    font-family: Calibri, serif;
-    font-weight: normal;
 
-}
 img{
     width: 100%;
     height: auto;
@@ -117,11 +110,6 @@ img{
 
 
 /*OVERSKRIFTER*/
-h1 {
-    font-family: "Gill Sans MT", serif;
-    font-weight: bolder;
-    font-size: 1.8rem;
-}
 
 
 /*PARAGRAFER*/
@@ -151,6 +139,53 @@ figcaption {
 
 
 /*DIVs*/
+
+.topical-overskrift {
+    font-family: "Gill Sans MT", serif;
+    font-weight: bolder;
+    font-size: 1.8rem;
+}
+
+
+article {
+    margin-left: 180px;
+    margin-right: 80px;
+    margin-bottom: 2em;
+    font-family: Calibri, serif;
+    font-weight: normal;
+}
+
+.main-bar {
+    display: grid;
+    width: 100px;
+    margin-right: 20px;
+    grid-column: 1/3;
+
+}
+.sidenav {
+    width: 160px;
+    position: fixed;
+    display:grid;
+    background-color: #f1f1f1;
+    overflow: auto;
+    grid-column: 1/3;
+
+}
+.sidenav a {
+    padding: 10px;
+    display: block;
+    color: chocolate;
+}
+.sidenav a:hover{
+    color: white;
+    background-color: dimgray;
+}
+.punkter {
+    list-style-type: none;
+    padding: 0px;
+    margin: 0px;
+}
+
 .over-skrift {
     border-bottom: 2px solid;
     border-bottom-color: chocolate;
@@ -203,34 +238,6 @@ figcaption {
 
 
 /* LOCATION PAGE*/
-.main-bar {
-    display: grid;
-    width: 100px;
-    margin-right: 20px;
-
-}
-.sidenav {
-    width: 160px;
-    position: fixed;
-    display:grid;
-    background-color: #f1f1f1;
-    overflow: auto;
-
-}
-.sidenav a {
-    padding: 10px;
-    display: block;
-    color: chocolate;
-}
-.sidenav a:hover{
-    color: white;
-    background-color: dimgray;
-}
-.punkter {
-    list-style-type: none;
-    padding: 0px;
-    margin: 0px;
-}
 
 
 /* Grid med to kolloner hvor hver av kollonene er like store */
