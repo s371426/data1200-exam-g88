@@ -181,6 +181,7 @@ figcaption {
     .topical-grid{
         grid-template-columns: 1fr;
 
+
     }
     .main-bar {
        grid-column: 1;
