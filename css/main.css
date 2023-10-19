@@ -147,30 +147,46 @@ figcaption {
 }
 
 
-article {
-    margin-left: 180px;
-    margin-right: 80px;
+.topical-grid {
+    display: grid;
+    grid-template-columns: minmax(130px,15%) auto;
+
     margin-bottom: 2em;
     font-family: Calibri, serif;
     font-weight: normal;
+
 }
 
 .main-bar {
-    display: grid;
-    width: 100px;
-    margin-right: 20px;
-    grid-column: 1/3;
+    grid-column: 2/3;
+    margin-right: 4%;
+    margin-left: 4%;
 
 }
 .sidenav {
-    width: 160px;
-    position: fixed;
-    display:grid;
-    background-color: #f1f1f1;
-    overflow: auto;
-    grid-column: 1/3;
+    grid-column: 1/2;
+    margin-left: 4%;
+    margin-right: 4%;
 
+    background-color: #f1f1f1;
 }
+   /* <!-- må sette media queries for ulike størrelser, 700 px for mobil kanskje og 1005 -->
+    <!-- laste ned samme bilde i ulike størrelser -->*/
+@media (max-width: 700px){
+    .topical-grid{
+        grid-template-columns: 1fr;
+
+    }
+    .main-bar {
+       grid-column: 1;
+        grid-row: 2;
+    }
+    .sidenav {
+        grid-column: 1;
+        grid-row:1;
+    }
+}
+
 .sidenav a {
     padding: 10px;
     display: block;
@@ -196,10 +212,11 @@ article {
 .andrebox {
     background-image: url(../images/satelitt-bilde.jpg);
     background-size: cover;
-    width: 90vw;
+    width: 85vw;
     height: 50vw;
 
 }
+
 
 
 /* NAV BAR*/
