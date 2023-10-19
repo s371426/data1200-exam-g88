@@ -18,89 +18,71 @@ body{
 main {
 
 }
-img{
-    width: 100%;
-    height: auto;
+
+
+
+{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    background-color: lightskyblue;
 }
 
-/*HEADER*/
-.header {
-    padding: 90px;
-    text-align: center;
-    background-color: #586972;
-    color: #000000;
-    font-size: 30px;
+li, a, button {
+    font-family: "Karla", sans-serif;
+    font-weight: 500;
+    font-size: 16px;
+    color: hotpink;
+    text-decoration: none;
 }
 
-/* Increasing the font size of the heading */
-.header p {
-    font-size: 20px;
-    font-weight: lighter;
-    color: var(--main-site-colour);
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 5%;
+
 }
-/* Logo position and image size */
-#logo_position {
+
+.logo {
+    cursor: pointer;
+    max-height: 60px;
+    width: auto;
+}
+
+.navbar {
+    list-style: none;
+    padding: 0px 20px;
+}
+
+.navbar li a {
+    transition: all 0.3s ease 0s;
+
+}
+
+.navbar li{
+    display: inline-block;
+    padding: 0px 20px;
     float: left;
-    height: 90px;
-    width: 130px;
-    padding-top: 20px;
-    padding-left: 20px;
 
 }
 
-/* HAMBURGER MENU */
-#burger-toggle {
-    display: none;
+
+.navbar li a:hover {
+    color: rgb(128, 128, 128);
 }
 
-@media (min-width: 701px){
-    .menu {
-        display: flex;
-        flex-direction: row;
-        justify-content: center;
-        list-style-type: none;
-
-    }
-
-    .menu li {padding-right: 4rem;}
+button {
+    padding: 9px 25px;
+    background-color: lightskyblue;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.3s ease 0s;
 }
 
-@media (max-width:700px){
-    .menu {
-        list-style-type: none;
-        position: sticky;
-        padding-left: 0;
-    }
-
-    .menu-icon {
-        display: block;
-        background-image: url(../images/menu.png);
-        background-size: cover;
-        height: 40px;
-        width: 40px;
-
-    }
-
-    .hamburger-toggle-container {cursor: pointer;}
-
-    .menu li{
-        height: 0;
-        overflow: hidden;
-    }
-
-    #burger-toggle:checked ~ .menu li {
-        height: 1rem;
-        width: auto;
-        padding-left: 0.5rem;
-        padding-right: 0.5rem;
-        padding-bottom: 0.5rem;
-        background-color: green;
-    }
-
-    nav {
-        display: flex;
-        height: 40px;
-    }
+button:hover {
+    background-color: lightgray;
 }
 
 
@@ -142,35 +124,6 @@ figcaption {
 
 /* skal style listen i klassen .navbar.*/
 
-.menu ul {
-    list-style-type: none;
-    background-color: var(--main-site-colour);
-    padding: 0;
-    margin: 0;
-    overflow: hidden;
-}
-
-/* skal style lenkene som vi har i nav class navbar */
-
-.menu a {
-    color: #3D3D3D;
-    padding: 20px;
-    text-decoration: none;
-    /*display: block;*/
-    text-align: center;
-}
-
-/* hover på lenkene i navbar*/
-
-.menu a:hover{
-    background-color: lightskyblue;
-}
-
-/* for å gjøre lenkene i menyen horizontal*/
-
-.menu li {
-    float: left;
-}
 
 
 /* LOCATION PAGE*/
