@@ -322,7 +322,7 @@ footer{
     display: grid;
     grid-template-columns: auto;
     padding: 0 2% 2%;
-    background-color: #5f788c;
+    background-color: #8899a4;
 }
 .footerGrid-item{
     text-align: left;
