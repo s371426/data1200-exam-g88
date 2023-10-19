@@ -55,6 +55,7 @@ img{
     width: 100px;
     padding-top: 20px;
     padding-left: 20px;
+    position: absolute;
 }
 
 /* HAMBURGER MENU */
@@ -151,7 +152,10 @@ figcaption {
 /*DIVs*/
 .over-skrift {
     border-bottom: 2px solid;
-    border-bottom-color: #3D3D3D;
+    border-bottom-color: chocolate;
+    background-color: goldenrod;
+    color: navy;
+
 }
 .andrebox {
     background-image: url(../images/satelitt-bilde.jpg);
@@ -198,22 +202,33 @@ figcaption {
 
 
 /* LOCATION PAGE*/
+.main-bar {
+    display: grid;
+    width: 100px;
+    margin-right: 20px;
+
+}
 .sidenav {
     width: 160px;
     position: fixed;
     display:grid;
-    background-color: #55ACEE;
-    color: black;
-
+    background-color: #f1f1f1;
+    overflow: auto;
 
 }
 .sidenav a {
-    padding: 8px;
-    display: grid;
-
+    padding: 10px;
+    display: block;
+    color: chocolate;
 }
 .sidenav a:hover{
-    color: green;
+    color: white;
+    background-color: dimgray;
+}
+.punkter {
+    list-style-type: none;
+    padding: 0px;
+    margin: 0px;
 }
 
 
@@ -321,7 +336,7 @@ footer{
     display: grid;
     grid-template-columns: auto;
     padding: 0 2% 2%;
-    background-color: #5f788c;
+    background-color: #8899a4;
 }
 .footerGrid-item{
     text-align: left;
