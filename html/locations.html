@@ -28,6 +28,42 @@
 
 <main>
     <h1>Områder</h1>
+
+    <section class="location-grid">
+
+        <!-- <figure> er et Semantic element som ment får spesifisere et selvstending enhet med ett bilde/figur og en
+             bildetekst -->
+        <figure class="location-grid-one">
+            <picture>
+
+                <!-- Bilde blir valgt av device ut i fra hvilken oppløsning som passer best. "w" tallet er bredden
+                     på det bilde. Type forteller device at bildene er webp format-->
+                <source srcset="../images/fyrhuset-utendørs-skjalg-bøhmer-vold/fyrhuset-utendørs-skjalg-bøhmer-vold-small.webp 900w,
+                                ../images/fyrhuset-utendørs-skjalg-bøhmer-vold/fyrhuset-utendørs-skjalg-bøhmer-vold-medium.webp 1440w,
+                                ../images/fyrhuset-utendørs-skjalg-bøhmer-vold/fyrhuset-utendørs-skjalg-bøhmer-vold-large.webp 2100w"
+                        type="image/webp">
+
+                <!-- Backup bilde tilfelle device ikke støtter <picture> eller webp, i tilleg til alt tekst informasjon -->
+                <img src="../images/fyrhuset-utendørs-skjalg-bøhmer-vold/fyrhuset-utendørs-skjalg-bøhmer-vold-large.jpg"
+                     alt="gammelt bygg av rød murstein med gamle viduer med buer øverst i første etasje,
+                          mens resten er uten vinduer. bygget er på en steinlagt plass"
+                     width="2100" height ="1400">
+            </picture>
+
+            <!-- <figcaption> er et Semantic element for å spesifisere bildetekst til <figure> elementet det er inni -->
+            <figcaption>Skalg Bøhmer Vold / OsloMET</figcaption>
+        </figure>
+
+        <div class="location-grid-two">
+            <h2>Fyrhuset spisested</h2>
+            <p>[Tekst om lokasjon bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla
+                 bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla
+                 bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla
+                 bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla
+                 bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla]</p>
+        </div>
+    </section>
+
     <section class="location-grid">
 
         <!-- <figure> er et Semantic element som ment får spesifisere et selvstending enhet med ett bilde/figur og en
@@ -50,38 +86,6 @@
 
             <!-- <figcaption> er et Semantic element for å spesifisere bildetekst til <figure> elementet det er inni -->
             <figcaption class="img-text">Skalg Bøhmer Vold / OsloMET</figcaption>
-        </figure>
-
-        <div class="location-grid-two">
-            <h2>Fyrhuset spisested</h2>
-            <p>[Tekst om lokasjon bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla
-                 bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla
-                 bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla
-                 bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla
-                 bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla]</p>
-        </div>
-    </section>
-
-    <section class="location-grid">
-
-        <!-- <figure> er et Semantic element som ment får spesifisere et selvstending enhet med ett bilde/figur og en
-             bildetekst -->
-        <figure class="location-grid-one">
-            <picture>
-
-                <!-- Bilde blir valgt av device ut i fra hvilken oppløsning som passer best. "w" tallet er bredden
-                     på det bilde. Type forteller device at bildene er webp format-->
-                <source srcset=""
-                        type="image/webp">
-
-                <!-- Backup bilde tilfelle device ikke støtter <picture> eller webp, i tilleg til alt tekst informasjon -->
-                <img src="../images/fyrhuset-innendørs-skjalg-bøhmer-vold-oslomet.jpg"
-                     alt=""
-                     width="" height ="">
-            </picture>
-
-            <!-- <figcaption> er et Semantic element for å spesifisere bildetekst til <figure> elementet det er inni -->
-            <figcaption>Skalg Bøhmer Vold / OsloMET</figcaption>
         </figure>
 
         <div class="location-grid-two">
@@ -179,7 +183,7 @@
                 <!-- Backup bilde tilfelle device ikke støtter <picture> eller webp, i tilleg til alt tekst informasjon -->
                 <img src="../images/studieplasser-skjalg-bøhmer-vold/studieplasser-skjalg-bøhmer-vold-large.jpg"
                      alt="lite minihus med trespiler og en åpen vegg med et bord og noen benker,
-                         der man kan sitte å studere i grupper"
+                          der man kan sitte å studere i grupper"
                      width="2100" height ="1400">
             </picture>
 
