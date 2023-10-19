@@ -342,7 +342,7 @@ footer{
     text-align: left;
     padding: 20px;
 }
-
+/*Setter posisjon på item 1 og setter opp grid i objektet*/
 .item1{
     grid-column: 1 / span 2;
     grid-row: 1;
@@ -450,17 +450,13 @@ footer{
 footer b{
     font-size: 25px;
 }
-
 .knapp{
     color: var(--main-site-colour);
     text-decoration: none;
     font-size:23px;
     background-color: black;
     padding:3px;
-
-
 }
 .knapp:hover{
     text-decoration: underline;
-
 }
