@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
 
-    <!-- Sørger for at initial skalering og zoom er ritkig på forskjellige devices -->
+    <!-- Sørger for at initial skalering og zoom er riktig på forskjellige devices -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Title</title>
     <!-- Koble sammen HTML med CSS -->
@@ -24,7 +24,7 @@
     <img id="logo_position" src="images/LogoOsloMet.png" alt="OsloMet sin logo"/>
     <div class="header">
     <h1>Oslo Metropolitan University</h1>
-        <p> Velkommen til storbyuniversitetet</p>
+        <p>Velkommen til storbyuniversitetet</p>
     </div>
 
 
@@ -47,23 +47,38 @@
 
 <main>
 
-    <picture>
+    <div class="grid-mainpage">
+        <div class="item1-mainpage">
 
-        <!-- legge ved fotograf. Skjkalg Bøhmer Vold / OsloMet-->
+            <picture>
 
-        <!-- Device velger hvilken bilde som passer best basert på dens oppløsning,
-             type forteller device format på bilder -->
-        <source srcset="images/campus.jpeg 900w,
+            <!-- legge ved fotograf. Skjkalg Bøhmer Vold / OsloMet-->
+
+            <!-- Device velger hvilken bilde som passer best basert på dens oppløsning,
+                 type forteller device format på bilder -->
+            <source srcset="images/campus.jpeg 900w,
                         images/campus.jpeg 1200w,
                         images/campus.jpeg 1500w,
                         images/campus.jpeg 2100w"
-                type="image/jpeg">
+                    type="image/jpeg">
 
-        <!-- Backup hvis picture source eller WebP ikke støttes, i tilleg til alt tekst. -->
-        <img src="images/campus.jpeg"
-             alt="Andrea Arntzens hus"
-             width="6000" height="4000">
-    </picture>
+            <!-- Backup hvis picture source eller WebP ikke støttes, i tilleg til alt tekst. -->
+            <img src="images/campus.jpeg"
+                 alt="Andrea Arntzens hus"
+                 width="6000" height="4000">
+        </picture>
+        </div>
+        <div class="item2-mainpage">
+            <h2> TESTING TESTING.</h2>
+                <p>Alternativ tekst her.</p>
+        </div>
+        <div class="item3-mainpage">
+            <h2>OVERSKRIFT PÅ ARTIKKEL</h2>
+            <p>ALTERNATIV TEKST HER</p>
+        </div>
+    </div>
+
+
 
 </main>
 
