@@ -275,23 +275,32 @@ figcaption {
 /* LOCATION PAGE*/
 
 
-/*.location-main-grid{*/
-/*    display: grid;*/
-/*    grid-template-columns: 1fr;*/
-/*    grid-auto-rows: auto;*/
-/*    & * {*/
-/*        grid-column: 1/2;*/
-/*    }*/
+/* Main flexbox, for å gjøre slik at overskrift passer med content under*/
+.location-main-grid{
+    /*display: flex;*/
+    /*flex-direction: column;*/
+    /*grid-template-columns: 1fr;*/
+    /*grid-auto-rows: auto;*/
+}
 
-/*}*/
+.location-main-grid h1{
+    box-sizing: border-box;
+    /*align-self: center;*/
+    /*flex: 1 1;*/
+    max-width: 1200px;
+    width: 100%;
+    padding-left: 4%;
+    padding-right: 4%;
+    padding-top: 1.5%;
+    padding-bottom: 1.5%;
+    margin: auto;
 
+}
 
-
-/* Grid med to kolloner hvor hver av kollonene er like store */
-.location-grid{
+/* Flexbox for to bokser */
+.location-flex{
     display: flex;
     flex-direction: row;
-    /*flex-wrap: wrap;*/
 
     /*display: grid;*/
     /*grid-template-columns: 1fr 1fr;*/
@@ -303,10 +312,8 @@ figcaption {
     justify-content: center;
 }
 
-
-
-.location-grid-img {
-    flex: 1 1;
+.location-flex-img {
+    box-sizing: border-box;
     /*grid-column: 1/2;*/
     max-width: 600px;
     padding-left: 4%;
@@ -314,11 +321,10 @@ figcaption {
     /*padding-top: 1.6rem;*/
     position: relative;
     top: 1em;
-
 }
 
-.location-grid-text {
-    flex: 1 1;
+.location-flex-text {
+    box-sizing: border-box;
     /*grid-column: 2/3;*/
     max-width: 600px;
     padding-left: 4%;
@@ -336,30 +342,29 @@ figcaption {
     }
 }
 
- /* Alle elementer innenfor elemeter med location-grid classen vil gå fra første(1) til siste(3) grid linke */
+/* Alle elementer innenfor elemeter med location-grid classen vil gå fra første(1) til siste(3) grid linke */
 /* Stabler elementer inni i høyden istedenfor vedsinen av hverandre */
 @media (max-width: 700px) {
-    .location-grid{
+    .location-flex{
         flex-direction: column;
     }
-    .location-grid > *{
+    .location-flex > *{
        grid-column: 1/3;
     }
-
 }
 
 /* Gjør bakgrunnen på annenhver child element til en annen farge (global secondary color) */
-.location-grid:nth-child(2n){
+.location-flex:nth-child(2n){
     background-color: var(--main-site-secondary-background-colour);
 }
 
 /* Bytter om på rekkefølgen på annenhver child element (nr 2,4 osv) hvis teksten er bredere en 700 px)*/
 @media (min-width: 700px) {
-    .location-grid:nth-child(2n) .location-grid-img {
+    .location-flex:nth-child(2n) .location-flex-img {
         order: 2;
     }
 
-    .location-grid:nth-child(2n) .location-grid-text {
+    .location-flex:nth-child(2n) .location-flex-text {
         order: 1;
     }
 }
