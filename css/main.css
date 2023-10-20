@@ -42,6 +42,37 @@ img{
     height: auto;
 }
 
+/*OVERSKRIFTER*/
+
+
+/*PARAGRAFER*/
+.ingress {
+    font-weight: 550;
+    color: darkslategray;
+}
+
+figure {
+    margin: 0;
+    padding-top: 0;
+    padding-bottom: 10px;
+    padding-left: 0;
+    padding-right: 0;
+
+}
+
+figcaption {
+    margin-top: 0;
+    padding-top: 0;
+
+}
+
+/*SPANS*/
+
+
+
+
+/*DIVs*/
+
 /*HEADER*/
 .header {
     padding: 30px;
@@ -123,39 +154,6 @@ img{
         /*    */
     }
 }
-
-
-
-/*OVERSKRIFTER*/
-
-
-/*PARAGRAFER*/
-.ingress {
-    font-weight: 550;
-    color: darkslategray;
-}
-
-figure {
-    margin: 0;
-    padding-top: 0;
-    padding-bottom: 10px;
-    padding-left: 0;
-    padding-right: 0;
-
-}
-
-figcaption {
-    margin-top: 0;
-    padding-top: 0;
-
-}
-
-/*SPANS*/
-
-
-
-
-/*DIVs*/
 
 
 /* NAV BAR*/
@@ -264,6 +262,7 @@ figcaption {
     color: navy;
 
 }
+
 .andrebox {
     background-image: url(../images/satelitt-bilde.jpg);
     background-size: cover;
@@ -298,10 +297,10 @@ figcaption {
     /*grid-template-columns: 1fr 1fr;*/
     /*grid-auto-rows: auto auto;*/
 
-    padding-bottom: 1%;
-    padding-top: 1%;
+    padding-bottom: 1.5%;
+    padding-top: 1.5%;
     align-items: center;
-
+    justify-content: center;
 }
 
 
@@ -309,17 +308,19 @@ figcaption {
 .location-grid-img {
     flex: 1 1;
     /*grid-column: 1/2;*/
-    max-width: 650px;
+    max-width: 600px;
     padding-left: 4%;
     padding-right: 4%;
-    padding-top: 1.6rem;
+    /*padding-top: 1.6rem;*/
+    position: relative;
+    top: 1em;
 
 }
 
 .location-grid-text {
     flex: 1 1;
     /*grid-column: 2/3;*/
-    max-width: 650px;
+    max-width: 600px;
     padding-left: 4%;
     padding-right: 4%;
 
