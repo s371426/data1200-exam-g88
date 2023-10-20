@@ -292,7 +292,7 @@ figcaption {
 .location-grid{
     display: flex;
     flex-direction: row;
-    flex-wrap: wrap;
+    /*flex-wrap: wrap;*/
 
     /*display: grid;*/
     /*grid-template-columns: 1fr 1fr;*/
@@ -304,27 +304,22 @@ figcaption {
 
 }
 
-.location-grid:nth-child(2n){
-    background-color: var(--main-site-secondary-background-colour);
-}
 
 
-.location-grid-one {
-    min-width: 400px;
+.location-grid-img {
     flex: 1 1;
-
     /*grid-column: 1/2;*/
+    max-width: 650px;
     padding-left: 4%;
     padding-right: 4%;
     padding-top: 1.6rem;
 
 }
 
-.location-grid-two {
-    min-width: 300px;
+.location-grid-text {
     flex: 1 1;
-
     /*grid-column: 2/3;*/
+    max-width: 650px;
     padding-left: 4%;
     padding-right: 4%;
 
@@ -341,9 +336,30 @@ figcaption {
 }
 
  /* Alle elementer innenfor elemeter med location-grid classen vil gå fra første(1) til siste(3) grid linke */
+/* Stabler elementer inni i høyden istedenfor vedsinen av hverandre */
 @media (max-width: 700px) {
+    .location-grid{
+        flex-direction: column;
+    }
     .location-grid > *{
        grid-column: 1/3;
+    }
+
+}
+
+/* Gjør bakgrunnen på annenhver child element til en annen farge (global secondary color) */
+.location-grid:nth-child(2n){
+    background-color: var(--main-site-secondary-background-colour);
+}
+
+/* Bytter om på rekkefølgen på annenhver child element (nr 2,4 osv) hvis teksten er bredere en 700 px)*/
+@media (min-width: 700px) {
+    .location-grid:nth-child(2n) .location-grid-img {
+        order: 2;
+    }
+
+    .location-grid:nth-child(2n) .location-grid-text {
+        order: 1;
     }
 }
 
