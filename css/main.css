@@ -91,12 +91,10 @@ figcaption {
 
 /* Logo position and image size */
 #logo_position {
-    float: left;
+   /* float: left; */
     height: 70px;
     width: 100px;
-    padding-top: 20px;
-    padding-left: 20px;
-    position: absolute;
+   /* position: absolute; */
 }
 
 /* HAMBURGER MENU */
@@ -104,7 +102,7 @@ figcaption {
     display: none;
 }
 
-@media (min-width: 701px){
+
     .menu {
         display: flex;
         flex-direction: row;
@@ -113,39 +111,85 @@ figcaption {
 
     }
 
-    .menu li {padding-right: 4rem;}
+
+.contact-button {
+    background-color: skyblue;
+    color: black;
+    border-radius: 30px;
+    padding-right: 30px;
+    padding-left: 30px;
+    padding-top: 15px;
+    padding-bottom: 15px;
 }
 
-@media (max-width:700px){
+.contact-button:hover {
+    background-color: green;
+}
+
+.menu-icon {
+    display: block;
+    background-image: url(../images/menu.png);
+    background-size: cover;
+    height: 40px;
+    width: 40px;
+
+}
+.hamburger-toggle-container {
+    display: none;
+
+
+}
+
+.navbar {
+        background-color: red;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+@media (max-width:800px){
+    .navbar {
+        flex-direction: column;
+        align-items: unset;
+
+    }
     .menu {
         list-style-type: none;
         position: sticky;
         padding-left: 0;
     }
 
-    .menu-icon {
+
+
+    .hamburger-toggle-container {
+        cursor: pointer;
         display: block;
-        background-image: url(../images/menu.png);
-        background-size: cover;
-        height: 40px;
-        width: 40px;
 
     }
 
-    .hamburger-toggle-container {cursor: pointer;}
-
-    .menu li{
+  /*  .menu li{
         height: 0;
         overflow: hidden;
     }
+   */
 
-    #burger-toggle:checked ~ .menu li {
+    .menu {
+        display: none;
+    }
+
+    .contact-button {
+        display: none;
+    }
+
+    #burger-toggle:checked ~ .menu {
+        display: block;
+        /*
         height: 1rem;
         width: auto;
         padding-left: 0.5rem;
         padding-right: 0.5rem;
         padding-bottom: 0.5rem;
-        background-color: green;
+        background-color: green; */
     }
 
     nav {
@@ -155,18 +199,18 @@ figcaption {
     }
 }
 
+.logo-burger-wrapper {
+    display: flex;
+    justify-content: space-between;
+}
 
 /* NAV BAR*/
 
+
+
 /* skal style listen i klassen .navbar.*/
 
-.menu ul {
-    list-style-type: none;
-    background-color: var(--main-site-colour);
-    padding: 0;
-    margin: 0;
-    overflow: hidden;
-}
+
 
 /* skal style lenkene som vi har i nav class navbar */
 
@@ -174,20 +218,12 @@ figcaption {
     color: #3D3D3D;
     padding: 20px;
     text-decoration: none;
-    /*display: block;*/
-    text-align: center;
 }
 
 /* hover på lenkene i navbar*/
 
 .menu a:hover{
     background-color: #cfcfd3;
-}
-
-/* for å gjøre lenkene i menyen horizontal*/
-
-.menu li {
-    float: left;
 }
 
 /*TOPICAL PAGE*/
