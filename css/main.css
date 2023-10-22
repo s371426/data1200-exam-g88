@@ -406,13 +406,13 @@ figcaption {
 }
 /*ACCESSIBILITY SiDE*/
 .mainAccessibility{
-    background-color: white;
+    background-color: var(--main-site-background-colour);
 }
 .accessibilityTekst{
     max-width: 1300px;
     margin-left: auto;
     margin-right: auto;
-    background-color: white;
+    background-color: var(--main-site-background-colour);
    padding-left: 2%;
     padding-right: 2%;
 }
