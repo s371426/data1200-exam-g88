@@ -67,7 +67,14 @@
                                 images/forsidebilde-arkitektur-p32/arkitektur-p32-skjalg-bøhmer-vold-medium.webp 1800w,
                                 images/forsidebilde-arkitektur-p32/arkitektur-p32-skjalg-bøhmer-vold-large.webp 2400w,
                                 images/forsidebilde-arkitektur-p32/arkitektur-p32-skjalg-bøhmer-vold-very-large.webp 3840p"
-                        type="image/webp">
+                        media="(min-width: 700px)" type="image/webp">
+
+                <!-- Hvis device skjerm er smallere enn 700px vil en av disse bildene bli valgt steden for de over,
+                     de er square istedenfor wide -->
+                <source srcset="images/forsidebilde-arkitektur-p32/arkitektur-p32-skjalg-bøhmer-vold-square-small.webp 1000w,
+                                images/forsidebilde-arkitektur-p32/arkitektur-p32-skjalg-bøhmer-vold-square-medium.webp 1440w,
+                                images/forsidebilde-arkitektur-p32/arkitektur-p32-skjalg-bøhmer-vold-square-large.jpg 2000w"
+                                media="(max-width: 700px)" type="image/webp">
 
                 <!-- Backup bilde tilfelle device ikke støtter <picture> eller webp, i tilleg til alt tekst informasjon -->
                 <img src="images/forsidebilde-arkitektur-p32/arkitektur-p32-skjalg-bøhmer-vold-large.jpg"
