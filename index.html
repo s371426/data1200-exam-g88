@@ -57,23 +57,25 @@
     <div class="grid-mainpage">
         <div class="item1-mainpage">
 
+            <!-- legge ved fotograf. Skjalg Bøhmer Vold / OsloMet-->
+
             <picture>
 
-            <!-- legge ved fotograf. Skjkalg Bøhmer Vold / OsloMet-->
+                <!-- Bilde blir valgt av device ut i fra hvilken oppløsning som passer best. "w" er bredden
+                     på det bildet. Type forteller device at bildene er webp format-->
+                <source srcset="images/forsidebilde-arkitektur-p32/arkitektur-p32-skjalg-bøhmer-vold-small.webp 1200w,
+                                images/forsidebilde-arkitektur-p32/arkitektur-p32-skjalg-bøhmer-vold-medium.webp 1800w,
+                                images/forsidebilde-arkitektur-p32/arkitektur-p32-skjalg-bøhmer-vold-large.webp 2400w,
+                                images/forsidebilde-arkitektur-p32/arkitektur-p32-skjalg-bøhmer-vold-very-large.webp 3840p"
+                        type="image/webp">
 
-            <!-- Device velger hvilken bilde som passer best basert på dens oppløsning,
-                 type forteller device format på bilder -->
-            <source srcset="images/campus.jpeg 900w,
-                            images/campus.jpeg 1200w,
-                            images/campus.jpeg 1500w,
-                            images/campus.jpeg 2100w"
-                    type="image/jpeg">
+                <!-- Backup bilde tilfelle device ikke støtter <picture> eller webp, i tilleg til alt tekst informasjon -->
+                <img src="images/forsidebilde-arkitektur-p32/arkitektur-p32-skjalg-bøhmer-vold-large.jpg"
+                     alt="kantine i bygg p52, koselig rom med bra lyes og buer i taket.
+                          Det er også border og stoler på det rutete gulvet"
+                     width="2400" height ="1600">
+            </picture>
 
-            <!-- Backup hvis picture source eller WebP ikke støttes, i tilleg til alt tekst. -->
-            <img src="images/campus.jpeg"
-                 alt="Andrea Arntzens hus"
-                 width="6000" height="4000">
-        </picture>
         </div>
         <div class="item2-mainpage">
             <h2> TESTING TESTING.</h2>
