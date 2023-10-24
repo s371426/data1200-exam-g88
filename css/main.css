@@ -72,10 +72,8 @@ figcaption {
 
 /* Logo position and image size */
 #logo-position {
-    /* float: left; */
     height: 70px;
     width: 100px;
-    /* position: absolute; */
 }
 
 /* HAMBURGER MENU */
@@ -152,11 +150,6 @@ figcaption {
 
     }
 
-    /*  .menu li{
-          height: 0;
-          overflow: hidden;
-      }
-     */
     /* dette gjør at kontakt-knappen til høyre i navigasjonsbaren ikke er synlig i navigasjonen når den scaler til tablet/mobil */
     .contact-button {
         display: none;
@@ -165,19 +158,10 @@ figcaption {
 
     #burger-toggle:checked ~ .menu {
         display: block;
-        /*
-        height: 1rem;
-        width: auto;
-        padding-left: 0.5rem;
-        padding-right: 0.5rem;
-        padding-bottom: 0.5rem;
-        background-color: green; */
     }
 
     nav {
         display: flex;
-        /*height: 40px;*/
-        /*    */
     }
 }
 
