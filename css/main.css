@@ -196,6 +196,7 @@ figcaption {
 
 .menu a {
     color: #3D3D3D;
+    display: block;
     padding: 20px;
     text-decoration: none;
 }
