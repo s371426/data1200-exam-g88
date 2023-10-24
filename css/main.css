@@ -18,14 +18,14 @@
 /* Darkmode som blir aktivert når device er satt til darkmode*/
 /* Inspirert av Tengel presentasjon og eksempel nettside i faget */
 @media (prefers-color-scheme: dark) {
-    :root{
+    :root {
         --main-site-background-colour: #222222;
         --main-site-font-colour: #eeeeee;
         --main-site-secondary-background-colour: #333333;
     }
 }
 
-body{
+body {
     margin: 0;
     font-family: Verdana, sans-serif;
 
@@ -37,7 +37,7 @@ main {
 }
 
 
-img{
+img {
     width: 100%;
     height: auto;
 }
@@ -66,18 +66,16 @@ figcaption {
 /*SPANS*/
 
 
-
-
 /*DIVs*/
 
 /*HEADER*/
 
 /* Logo position and image size */
 #logo-position {
-   /* float: left; */
+    /* float: left; */
     height: 70px;
     width: 100px;
-   /* position: absolute; */
+    /* position: absolute; */
 }
 
 /* HAMBURGER MENU */
@@ -86,13 +84,13 @@ figcaption {
 }
 
 
-    .menu {
-        display: flex;
-        flex-direction: row;
-        justify-content: center;
-        list-style-type: none;
+.menu {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    list-style-type: none;
 
-    }
+}
 
 
 .contact-button {
@@ -125,18 +123,19 @@ figcaption {
 }
 
 .navbar {
-        background-color: red;
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-    }
+    background-color: red;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
 
-@media (max-width:800px){
+@media (max-width: 800px) {
     .navbar {
         flex-direction: column;
         align-items: normal;
 
     }
+
     .menu {
         display: none;
         list-style-type: none;
@@ -145,21 +144,18 @@ figcaption {
     }
 
 
-
     .hamburger-toggle-container {
         cursor: pointer;
         display: block;
 
     }
 
-  /*  .menu li{
-        height: 0;
-        overflow: hidden;
-    }
-   */
-
+    /*  .menu li{
+          height: 0;
+          overflow: hidden;
+      }
+     */
     /* dette gjør at kontakt-knappen til høyre i navigasjonsbaren ikke er synlig i navigasjonen når den scaler til tablet/mobil */
-
     .contact-button {
         display: none;
     }
@@ -191,9 +187,7 @@ figcaption {
 /* NAV BAR*/
 
 
-
 /* skal style listen i klassen .navbar.*/
-
 
 
 /* skal style lenkene som vi har i nav class navbar */
@@ -206,7 +200,7 @@ figcaption {
 
 /* hover på lenkene i navbar*/
 
-.menu a:hover{
+.menu a:hover {
     background-color: #cfcfd3;
 }
 
@@ -221,7 +215,7 @@ figcaption {
 
 .topical-grid {
     display: grid;
-    grid-template-columns: minmax(130px,15%) auto;
+    grid-template-columns: minmax(130px, 15%) auto;
 
     margin-bottom: 2em;
     font-family: Calibri, serif;
@@ -235,6 +229,7 @@ figcaption {
     margin-left: 4%;
 
 }
+
 .sidenav {
     grid-column: 1/2;
     margin-left: 4%;
@@ -242,21 +237,24 @@ figcaption {
 
     background-color: #f1f1f1;
 }
-   /* <!-- må sette media queries for ulike størrelser, 700 px for mobil kanskje og 1005 -->
-    <!-- laste ned samme bilde i ulike størrelser -->*/
-@media (max-width: 700px){
-    .topical-grid{
+
+/* <!-- må sette media queries for ulike størrelser, 700 px for mobil kanskje og 1005 -->
+ <!-- laste ned samme bilde i ulike størrelser -->*/
+@media (max-width: 700px) {
+    .topical-grid {
         grid-template-columns: 1fr;
 
 
     }
+
     .main-bar {
-       grid-column: 1;
+        grid-column: 1;
         grid-row: 2;
     }
+
     .sidenav {
         grid-column: 1;
-        grid-row:1;
+        grid-row: 1;
     }
 }
 
@@ -265,10 +263,12 @@ figcaption {
     display: block;
     color: chocolate;
 }
-.sidenav a:hover{
+
+.sidenav a:hover {
     color: white;
     background-color: dimgray;
 }
+
 .punkter {
     list-style-type: none;
     padding: 0;
@@ -296,12 +296,12 @@ figcaption {
 
 
 /* Main flexbox, for å gjøre slik at overskrift passer med content under*/
-.location-main-flex{
+.location-main-flex {
     /*display: flex;*/
     /*flex-direction: column;*/
 }
 
-.location-main-flex h1{
+.location-main-flex h1 {
     box-sizing: border-box;
     /*align-self: center;*/
     /*flex: 1 1;*/
@@ -316,7 +316,7 @@ figcaption {
 }
 
 /* Horisontal flexbox for to bokser, som er sentrert*/
-.location-flex{
+.location-flex {
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -351,19 +351,21 @@ figcaption {
 
 /* Endrer flexboks til å være vertikal når viewport mindre enn 700px  */
 @media only screen and (max-width: 700px) {
-    .location-flex{
+    .location-flex {
         flex-direction: column;
     }
-    .location-flex-img{
+
+    .location-flex-img {
         max-width: 700px;
     }
-    .location-flex-text{
+
+    .location-flex-text {
         max-width: 700px;
     }
 }
 
 /* Gjør bakgrunnen på annenhver child element til en annen farge (main secondary background color) */
-.location-flex:nth-child(odd){
+.location-flex:nth-child(odd) {
     background-color: var(--main-site-secondary-background-colour);
 }
 
@@ -372,6 +374,7 @@ figcaption {
     .location-flex:nth-child(even) .location-flex-img {
         order: 2;
     }
+
     .location-flex:nth-child(even) .location-flex-text {
         order: 1;
     }
@@ -382,20 +385,20 @@ figcaption {
 /* Grid kode tatt fra https://www.w3schools.com/css/css_grid.asp */
 
 
-.grid-mainpage{
+.grid-mainpage {
     display: grid;
     background-color: #5f788c;
 }
 
-.item1-mainpage{
+.item1-mainpage {
     grid-column: 1 / span 3;
     grid-row: 1;
     position: relative;
     text-align: center;
-    
+
 }
 
-.bilde-tekst{
+.bilde-tekst {
     position: absolute;
     top: 50%;
     color: white;
@@ -407,7 +410,7 @@ figcaption {
     /*background: #777;*/
 }
 
-.item1-mainpage img{
+.item1-mainpage img {
     /*filter: blur(3px);*/
 }
 
@@ -434,60 +437,71 @@ figcaption {
 
 /*ACCESSIBILITY SIDE*/
 
-.mainAccessibility{
+.mainAccessibility {
     background-color: var(--main-site-background-colour);
 }
-.accessibilityTekst{
+
+.accessibilityTekst {
     max-width: 1300px;
     margin-left: auto;
     margin-right: auto;
     background-color: var(--main-site-background-colour);
-   padding-left: 2%;
+    padding-left: 2%;
     padding-right: 2%;
 }
-.accessibilityGrid{
+
+.accessibilityGrid {
     display: grid;
-    grid-template-columns: 1fr 1fr ;
+    grid-template-columns: 1fr 1fr;
 }
-.acGridItem1{
+
+.acGridItem1 {
 
 }
-.acGridItem2{
+
+.acGridItem2 {
     background-color: lightgrey;
     align-items: center;
 }
-@media (max-width: 700px){
-    .accessibilityGrid{
+
+@media (max-width: 700px) {
+    .accessibilityGrid {
         grid-template-columns: 1fr;
     }
-    .acGridItem1{
+
+    .acGridItem1 {
         grid-column: 1;
     }
-    .acGridItem2{
+
+    .acGridItem2 {
         grid-column: 1;
     }
 }
+
 /*FOOTER*/
 /*Setter fooder på bunn av siden og at bredden skal være 100%*/
-footer{
-   position: relative;
-    bottom:0;
-    width:100%;
+footer {
+    position: relative;
+    bottom: 0;
+    width: 100%;
 
 }
+
 /* Grid kode tatt fra: https://www.w3schools.com/css/css_grid.asp*/
-.footerGrid{
+.footerGrid {
     display: grid;
     grid-template-columns: auto;
     padding: 0 2% 2%;
     background-color: #8899a4;
 }
-.footerGrid-item{
+
+.footerGrid-item {
     text-align: left;
     padding: 20px;
 }
+
 /*Setter posisjon på item 1 og setter opp grid i objektet*/
-.item1{
+.item1 {
     grid-column: 1 / span 2;
     grid-row: 1;
     border-bottom: 1px solid;
@@ -497,68 +511,82 @@ footer{
     align-items: center;
 }
 
-.item1item1{
-    grid-row:1;
+.item1item1 {
+    grid-row: 1;
 }
-.item1item2{
+
+.item1item2 {
     grid-row: 1;
     text-align: right;
 }
-.item2{
+
+.item2 {
     grid-column: 3;
     grid-row: 1 / span 2;
 }
-.item2 a{
+
+.item2 a {
     display: block;
     padding: 5%;
     text-decoration: none;
     color: black;
 }
-.item2 a:hover{
+
+.item2 a:hover {
     text-decoration: underline;
 }
-.item4 a{
+
+.item4 a {
     text-decoration: none;
-    color:black;
+    color: black;
 }
-.item4 a:hover{
+
+.item4 a:hover {
     text-decoration: underline;
 }
-.item4 b{
+
+.item4 b {
     font-size: 20px;
 }
 
 /*Når siden er mindre enn 1005 px skal grid stackes*/
 @media (max-width: 1005px) {
-    .footerGrid  {
+    .footerGrid {
         grid-template-columns: 1fr;
     }
-    .item1{
+
+    .item1 {
         grid-row: 1;
         grid-column: 1;
     }
-    .item1item1{
+
+    .item1item1 {
         grid-row: 1;
         grid-column: 1;
     }
-    .item1item2{
+
+    .item1item2 {
         grid-row: 2;
         grid-column: 1;
         text-align: left;
     }
-    .item2{
+
+    .item2 {
         grid-row: 2;
         grid-column: 1;
         text-align: left;
     }
-    .item2 a{
-        padding :1%;
+
+    .item2 a {
+        padding: 1%;
     }
-    .item3{
-        grid-row:3;
+
+    .item3 {
+        grid-row: 3;
         grid-column: 1;
     }
-    .item4{
+
+    .item4 {
         grid-row: 4;
         grid-column: 1;
     }
@@ -574,35 +602,42 @@ footer{
     text-align: center;
     text-decoration: none;
     border-radius: 50%;
-    margin-right:2%;
+    margin-right: 2%;
 }
+
 .fa-facebook {
     background: #3B5998;
     color: white;
 }
+
 .fa-twitter {
     background: #55ACEE;
     color: white;
 }
+
 .fa-instagram {
     background: #125688;
     color: white;
 }
+
 .fa-youtube {
     background: #bb0000;
     color: white;
 }
+
 /*Slutt på ikonkode*/
-footer b{
+footer b {
     font-size: 25px;
 }
-.knapp{
+
+.knapp {
     color: var(--main-site-colour);
     text-decoration: none;
-    font-size:23px;
+    font-size: 23px;
     background-color: black;
-    padding:3px;
+    padding: 3px;
 }
-.knapp:hover{
+
+.knapp:hover {
     text-decoration: underline;
 }
