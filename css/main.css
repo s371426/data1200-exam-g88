@@ -117,10 +117,11 @@ figcaption {
     width: 40px;
 
 }
+
+/* kode for å passe på at hamburger icon ikke dukker opp før nettsiden scaler til andre decvices enn desktop */
+
 .hamburger-toggle-container {
     display: none;
-
-
 }
 
 .navbar {
