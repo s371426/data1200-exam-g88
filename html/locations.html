@@ -14,6 +14,7 @@
     <!-- Ikon bibliotek-->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
+
 <body>
 <header>
     <nav class="navbar">
@@ -28,8 +29,8 @@
     </nav>
 </header>
 
-<main class='location-main-grid'>
-    <h1 class="testL">Områder</h1>
+<main class='location-main-flex'>
+    <h1>Lokasjoner</h1>
 
     <section class="location-flex">
 
@@ -38,17 +39,84 @@
         <figure class="location-flex-img">
             <picture>
 
-                <!-- Bilde blir valgt av device ut i fra hvilken oppløsning som passer best. "w" tallet er bredden
-                     på det bilde. Type forteller device at bildene er webp format-->
-                <source srcset="../images/fyrhuset-utendørs-skjalg-bøhmer-vold/fyrhuset-utendørs-skjalg-bøhmer-vold-small.webp 900w,
-                                ../images/fyrhuset-utendørs-skjalg-bøhmer-vold/fyrhuset-utendørs-skjalg-bøhmer-vold-medium.webp 1440w,
-                                ../images/fyrhuset-utendørs-skjalg-bøhmer-vold/fyrhuset-utendørs-skjalg-bøhmer-vold-large.webp 2100w"
+                <!-- Bilde blir valgt av device ut i fra hvilken oppløsning som passer best. "w" er bredden
+                     på det bildet. Type forteller device at bildene er webp format-->
+                <source srcset="../images/auditorium-p32/auditorium-p32-john-hughes-small.webp 900w,
+                                ../images/auditorium-p32/auditorium-p32-john-hughes-medium.webp 1350w,
+                                ../images/auditorium-p32/auditorium-p32-john-hughes-large.webp 2100w"
                         type="image/webp">
 
                 <!-- Backup bilde tilfelle device ikke støtter <picture> eller webp, i tilleg til alt tekst informasjon -->
-                <img src="../images/fyrhuset-utendørs-skjalg-bøhmer-vold/fyrhuset-utendørs-skjalg-bøhmer-vold-large.jpg"
-                     alt="gammelt bygg av rød murstein med gamle viduer med buer øverst i første etasje,
-                          mens resten er uten vinduer. bygget er på en steinlagt plass"
+                <img src="../images/auditorium-p32/auditorium-p32-john-hughes-large.jpg"
+                     alt="stort auditorium med to etasjer som har gult gulv og oranskje og gule seter.
+                          vegger å tak er av metall og taket er bølgete"
+                     width="2100" height ="1402">
+            </picture>
+
+            <!-- <figcaption> er et Semantic element for å spesifisere bildetekst til <figure> elementet det er inni -->
+            <figcaption class="img-text">John Hughes / OsloMET</figcaption>
+        </figure>
+
+        <div class="location-flex-text">
+            <h2>Auditorium, Andrea Arntzens hus P32</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer fermentum vehicula suscipit. Phasellus
+                urna arcu, condimentum sit amet lacus quis, cursus lobortis metus. Quisque et imperdiet lectus. Vivamus
+                vehicula neque consequat lectus laoreet placerat. Etiam risus tortor, volutpat id nisi sit.</p>
+        </div>
+    </section>
+
+    <section class="location-flex">
+
+        <!-- <figure> er et Semantic element som ment får spesifisere et selvstending enhet med ett bilde/figur og en
+             bildetekst -->
+        <figure class="location-flex-img">
+            <picture>
+
+                <!-- Bilde blir valgt av device ut i fra hvilken oppløsning som passer best. "w" er bredden
+                     på det bildet. Type forteller device at bildene er webp format-->
+                <source srcset="../images/studieplasser/studieplasser-skjalg-bøhmer-vold-small.webp 900w,
+                                ../images/studieplasser/studieplasser-skjalg-bøhmer-vold-medium.webp 1440w,
+                                ../images/studieplasser/studieplasser-skjalg-bøhmer-vold-large.webp 2100w"
+                        type="image/webp">
+
+                <!-- Backup bilde tilfelle device ikke støtter <picture> eller webp, i tilleg til alt tekst informasjon -->
+                <img src="../images/studieplasser/studieplasser-skjalg-bøhmer-vold-large.jpg"
+                     alt="lite innendørs minihus med trespiler og en åpen vegg. innni er det bord og noen benker
+                          med puter, der man kan sitte å studere i grupper"
+                     width="2100" height ="1400">
+            </picture>
+
+            <!-- <figcaption> er et Semantic element for å spesifisere bildetekst til <figure> elementet det er inni -->
+            <figcaption class="img-text">Skalg Bøhmer Vold / OsloMET</figcaption>
+        </figure>
+
+        <div class="location-flex-text">
+            <h2>Studieplasser til studenter</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras in augue erat. Sed vitae turpis quis leo
+                ornare viverra. Cras volutpat ornare nulla, in gravida felis iaculis vestibulum. Morbi auctor congue ex
+                vitae molestie.</p>
+        </div>
+    </section>
+
+    <section class="location-flex">
+
+        <!-- <figure> er et Semantic element som ment får spesifisere et selvstending enhet med ett bilde/figur og en
+             bildetekst -->
+        <figure class="location-flex-img">
+            <picture>
+
+                <!-- Bilde blir valgt av device ut i fra hvilken oppløsning som passer best. "w" er bredden
+                     på det bildet. Type forteller device at bildene er webp format-->
+                <source srcset="../images/fyrhuset-utendørs/fyrhuset-utendørs-skjalg-bøhmer-vold-small.webp 900w,
+                                ../images/fyrhuset-utendørs/fyrhuset-utendørs-skjalg-bøhmer-vold-medium.webp 1440w,
+                                ../images/fyrhuset-utendørs/fyrhuset-utendørs-skjalg-bøhmer-vold-large.webp 2100w"
+                        type="image/webp">
+
+                <!-- Backup bilde tilfelle device ikke støtter <picture> eller webp, i tilleg til alt tekst informasjon -->
+                <img src="../images/fyrhuset-utendørs/fyrhuset-utendørs-skjalg-bøhmer-vold-large.jpg"
+                     alt="gammelt bygg av rød murstein med gamle høye viduer med buer øverst i første etasje,
+                          og like, men mye mindre vinduer i andre etasje.  resten er uten vinduer.
+                          bygget er plassert på en steinlagt plass"
                      width="2100" height ="1400">
             </picture>
 
@@ -71,16 +139,17 @@
         <figure class="location-flex-img">
             <picture>
 
-                <!-- Bilde blir valgt av device ut i fra hvilken oppløsning som passer best. "w" tallet er bredden
-                     på det bilde. Type forteller device at bildene er webp format-->
-                <source srcset="../images/fyrhuset-innendørs-skjalg-bøhmer-vold/fyrhuset-innendørs-skjalg-bøhmer-vold-small.webp 900w,
-                                ../images/fyrhuset-innendørs-skjalg-bøhmer-vold/fyrhuset-innendørs-skjalg-bøhmer-vold-medium.webp 1440w,
-                                ../images/fyrhuset-innendørs-skjalg-bøhmer-vold/fyrhuset-innendørs-skjalg-bøhmer-vold-large.webp 2100w"
+                <!-- Bilde blir valgt av device ut i fra hvilken oppløsning som passer best. "w" er bredden
+                     på det bildet. Type forteller device at bildene er webp format-->
+                <source srcset="../images/fyrhuset-innendørs/fyrhuset-innendørs-skjalg-bøhmer-vold-small.webp 900w,
+                                ../images/fyrhuset-innendørs/fyrhuset-innendørs-skjalg-bøhmer-vold-medium.webp 1440w,
+                                ../images/fyrhuset-innendørs/fyrhuset-innendørs-skjalg-bøhmer-vold-large.webp 2100w"
                         type="image/webp">
 
                 <!-- Backup bilde tilfelle device ikke støtter <picture> eller webp, i tilleg til alt tekst informasjon -->
-                <img src="../images/fyrhuset-innendørs-skjalg-bøhmer-vold/fyrhuset-innendørs-skjalg-bøhmer-vold-large.jpg"
-                     alt="koselig spisested med høye gamle vinduer, svarte fliser og bord med treplater"
+                <img src="../images/fyrhuset-innendørs/fyrhuset-innendørs-skjalg-bøhmer-vold-large.jpg"
+                     alt="koselig spisested med høye gamle vinduer med buet topp, svarte fliser på gulvet,
+                          og bord med treplater"
                      width="2100" height ="1400">
             </picture>
 
@@ -106,24 +175,24 @@
         <figure class="location-flex-img">
             <picture>
 
-                <!-- Bilde blir valgt av device ut i fra hvilken oppløsning som passer best. "w" tallet er bredden
-                     på det bilde. Type forteller device at bildene er webp format-->
-                <source srcset="../images/kantine-p52-skjalg-bøhmer-vold/kantine-p52-skjalg-bøhmer-vold-small.webp 900w,
-                                ../images/kantine-p52-skjalg-bøhmer-vold/kantine-p52-skjalg-bøhmer-vold-medium.webp 1440w,
-                                ../images/kantine-p52-skjalg-bøhmer-vold/kantine-p52-skjalg-bøhmer-vold-large.webp 2100w"
+                <!-- Bilde blir valgt av device ut i fra hvilken oppløsning som passer best. "w" er bredden
+                     på det bildet. Type forteller device at bildene er webp format-->
+                <source srcset="../images/kantine-p52/kantine-p52-skjalg-bøhmer-vold-small.webp 900w,
+                                ../images/kantine-p52/kantine-p52-skjalg-bøhmer-vold-medium.webp 1440w,
+                                ../images/kantine-p52/kantine-p52-skjalg-bøhmer-vold-large.webp 2100w"
                         type="image/webp">
 
                 <!-- Backup bilde tilfelle device ikke støtter <picture> eller webp, i tilleg til alt tekst informasjon -->
-                <img src="../images/kantine-p52-skjalg-bøhmer-vold/kantine-p52-skjalg-bøhmer-vold-large.jpg"
-                     alt="kantine i bygg p52, koselig rom med bra lyes og buer i taket.
-                          Det er også border og stoler på det rutete gulvet"
+                <img src="../images/kantine-p52/kantine-p52-skjalg-bøhmer-vold-large.jpg"
+                     alt="koselig rom med bra lyes og søyler av stein. taket er bugd opp av hvite buer med
+                            lamper formet som kuler. det er også border og stoler på det svart/beige rutete gulvet"
                      width="2100" height ="1400">
             </picture>
 
             <!-- <figcaption> er et Semantic element for å spesifisere bildetekst til <figure> elementet det er inni -->
-            <figcaption>Skald Bøkmer Vold / OsloMET</figcaption>
+            <figcaption>Skald Bøhmer Vold / OsloMET</figcaption>
         </figure>
-        
+
         <div class="location-flex-text">
             <h2>Kantine i Studenthuset P52</h2>
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent sed diam nec massa consectetur maximus.
@@ -134,70 +203,6 @@
         </div>
     </section>
 
-    <section class="location-flex">
-
-        <!-- <figure> er et Semantic element som ment får spesifisere et selvstending enhet med ett bilde/figur og en
-             bildetekst -->
-        <figure class="location-flex-img">
-            <picture>
-
-                <!-- Bilde blir valgt av device ut i fra hvilken oppløsning som passer best. "w" tallet er bredden
-                     på det bilde. Type forteller device at bildene er webp format-->
-                <source srcset="../images/auditorium-p32-john-hughes/auditorium-p32-john-hughes-small.webp 900w,
-                                ../images/auditorium-p32-john-hughes/auditorium-p32-john-hughes-medium.webp 1350w,
-                                ../images/auditorium-p32-john-hughes/auditorium-p32-john-hughes-large.webp 2100w"
-                        type="image/webp">
-
-                <!-- Backup bilde tilfelle device ikke støtter <picture> eller webp, i tilleg til alt tekst informasjon -->
-                <img src="../images/auditorium-p32-john-hughes/auditorium-p32-john-hughes-large.jpg"
-                     alt="stort auditorium med to etasjer som har gult gulv of oranskje og gule seter"
-                     width="2100" height ="1402">
-            </picture>
-
-            <!-- <figcaption> er et Semantic element for å spesifisere bildetekst til <figure> elementet det er inni -->
-            <figcaption class="img-text">John Hughes / OsloMET</figcaption>
-        </figure>
-
-        <div class="location-flex-text">
-            <h2>Auditorium Andrea Arntzens hus P32</h2>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer fermentum vehicula suscipit. Phasellus
-                urna arcu, condimentum sit amet lacus quis, cursus lobortis metus. Quisque et imperdiet lectus. Vivamus
-                vehicula neque consequat lectus laoreet placerat. Etiam risus tortor, volutpat id nisi sit.</p>
-        </div>
-    </section>
-
-    <section class="location-flex">
-
-        <!-- <figure> er et Semantic element som ment får spesifisere et selvstending enhet med ett bilde/figur og en
-             bildetekst -->
-        <figure class="location-flex-img">
-            <picture>
-
-                <!-- Bilde blir valgt av device ut i fra hvilken oppløsning som passer best. "w" tallet er bredden
-                     på det bilde. Type forteller device at bildene er webp format-->
-                <source srcset="../images/studieplasser-skjalg-bøhmer-vold/studieplasser-skjalg-bøhmer-vold-small.webp 900w,
-                                ../images/studieplasser-skjalg-bøhmer-vold/studieplasser-skjalg-bøhmer-vold-medium.webp 1440w,
-                                ../images/studieplasser-skjalg-bøhmer-vold/studieplasser-skjalg-bøhmer-vold-large.webp 2100w"
-                        type="image/webp">
-
-                <!-- Backup bilde tilfelle device ikke støtter <picture> eller webp, i tilleg til alt tekst informasjon -->
-                <img src="../images/studieplasser-skjalg-bøhmer-vold/studieplasser-skjalg-bøhmer-vold-large.jpg"
-                     alt="lite minihus med trespiler og en åpen vegg med et bord og noen benker,
-                          der man kan sitte å studere i grupper"
-                     width="2100" height ="1400">
-            </picture>
-
-            <!-- <figcaption> er et Semantic element for å spesifisere bildetekst til <figure> elementet det er inni -->
-            <figcaption class="img-text">Skalg Bøhmer Vold / OsloMET</figcaption>
-        </figure>
-
-        <div class="location-flex-text">
-            <h2>Studieplasser til studenter</h2>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras in augue erat. Sed vitae turpis quis leo
-                ornare viverra. Cras volutpat ornare nulla, in gravida felis iaculis vestibulum. Morbi auctor congue ex
-                vitae molestie.</p>
-        </div>
-    </section>
 </main>
 
 <footer>

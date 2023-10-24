@@ -42,6 +42,18 @@ img{
     height: auto;
 }
 
+figure {
+    margin: 0;
+    padding: 0;
+}
+
+figcaption {
+    margin-top: 0;
+    padding-top: 0;
+    font-size: 0.88rem;
+
+}
+
 /*OVERSKRIFTER*/
 
 
@@ -49,21 +61,6 @@ img{
 .ingress {
     font-weight: 550;
     color: darkslategray;
-}
-
-figure {
-    margin: 0;
-    padding-top: 0;
-    padding-bottom: 10px;
-    padding-left: 0;
-    padding-right: 0;
-
-}
-
-figcaption {
-    margin-top: 0;
-    padding-top: 0;
-
 }
 
 /*SPANS*/
@@ -312,14 +309,12 @@ figcaption {
 
 
 /* Main flexbox, for å gjøre slik at overskrift passer med content under*/
-.location-main-grid{
+.location-main-flex{
     /*display: flex;*/
     /*flex-direction: column;*/
-    /*grid-template-columns: 1fr;*/
-    /*grid-auto-rows: auto;*/
 }
 
-.location-main-grid h1{
+.location-main-flex h1{
     box-sizing: border-box;
     /*align-self: center;*/
     /*flex: 1 1;*/
@@ -330,77 +325,67 @@ figcaption {
     padding-top: 1.5%;
     padding-bottom: 1.5%;
     margin: auto;
-
+    font-size: 2.5rem;
 }
 
-/* Flexbox for to bokser */
+/* Horisontal flexbox for to bokser, som er sentrert*/
 .location-flex{
     display: flex;
     flex-direction: row;
-
-    /*display: grid;*/
-    /*grid-template-columns: 1fr 1fr;*/
-    /*grid-auto-rows: auto auto;*/
-
-    padding-bottom: 1.5%;
-    padding-top: 1.5%;
     align-items: center;
     justify-content: center;
+    padding-bottom: 1.5%;
+    padding-top: 1.5%;
 }
 
 .location-flex-img {
+    /*flex: 1 1 auto;*/
+    flex-basis: 50%;
     box-sizing: border-box;
-    /*grid-column: 1/2;*/
     max-width: 600px;
     padding-left: 4%;
     padding-right: 4%;
+    margin-top: 1%;
+    margin-bottom: 1%;
     /*padding-top: 1.6rem;*/
     position: relative;
-    top: 1em;
+    top: 0.65rem;
 }
 
 .location-flex-text {
+    /*flex: 1 1 auto;*/
+    flex-basis: 50%;
     box-sizing: border-box;
-    /*grid-column: 2/3;*/
     max-width: 600px;
     padding-left: 4%;
     padding-right: 4%;
 
-
-    /* margin og padding for h2 inni grid element*/
-    & h2 {
-        /*padding-top: 0;*/
-        /*margin-top: 0;*/
-    }
-    /* For å gjøre at bilde og tekst er litt mere i senter med hverandre på grunn av bildetekst*/
-    & p{
-        /*margin-bottom: 1rem;*/
-    }
 }
 
-/* Alle elementer innenfor elemeter med location-grid classen vil gå fra første(1) til siste(3) grid linke */
-/* Stabler elementer inni i høyden istedenfor vedsinen av hverandre */
-@media (max-width: 700px) {
+/* Endrer flexboks til å være vertikal når viewport mindre enn 700px  */
+@media only screen and (max-width: 700px) {
     .location-flex{
         flex-direction: column;
     }
-    .location-flex > *{
-       grid-column: 1/3;
+    .location-flex-img{
+        max-width: 700px;
+    }
+    .location-flex-text{
+        max-width: 700px;
     }
 }
 
-/* Gjør bakgrunnen på annenhver child element til en annen farge (global secondary color) */
-.location-flex:nth-child(2n){
+/* Gjør bakgrunnen på annenhver child element til en annen farge (main secondary background color) */
+.location-flex:nth-child(odd){
     background-color: var(--main-site-secondary-background-colour);
 }
 
-/* Bytter om på rekkefølgen på annenhver child element (nr 2,4 osv) hvis teksten er bredere en 700 px)*/
-@media (min-width: 700px) {
-    .location-flex:nth-child(2n) .location-flex-img {
+/* Bytter om på rekkefølgen på annenhver child element (nr 2,4 osv) hvis viewport er bredere enn 701 px)*/
+@media only screen and (min-width: 701px) {
+    .location-flex:nth-child(even) .location-flex-img {
         order: 2;
     }
-
-    .location-flex:nth-child(2n) .location-flex-text {
+    .location-flex:nth-child(even) .location-flex-text {
         order: 1;
     }
 }
@@ -418,6 +403,25 @@ figcaption {
 .item1-mainpage{
     grid-column: 1 / span 3;
     grid-row: 1;
+    position: relative;
+    text-align: center;
+    
+}
+
+.bilde-tekst{
+    position: absolute;
+    top: 50%;
+    color: white;
+    width: 100%;
+    right: 50%;
+    transform: translate(50%, -50%);
+    text-shadow: black 0 0 4px;
+    font-size: 2rem;
+    /*background: #777;*/
+}
+
+.item1-mainpage img{
+    /*filter: blur(3px);*/
 }
 
 .item2-mainpage {
@@ -440,15 +444,17 @@ figcaption {
 .item3-mainpage p {
     font-weight: lighter;
 }
-/*ACCESSIBILITY SiDE*/
+
+/*ACCESSIBILITY SIDE*/
+
 .mainAccessibility{
-    background-color: white;
+    background-color: var(--main-site-background-colour);
 }
 .accessibilityTekst{
     max-width: 1300px;
     margin-left: auto;
     margin-right: auto;
-    background-color: white;
+    background-color: var(--main-site-background-colour);
    padding-left: 2%;
     padding-right: 2%;
 }
@@ -534,6 +540,7 @@ footer{
 .item4 b{
     font-size: 20px;
 }
+
 /*Når siden er mindre enn 1005 px skal grid stackes*/
 @media (max-width: 1005px) {
     .footerGrid  {
@@ -569,6 +576,7 @@ footer{
         grid-column: 1;
     }
 }
+
 /*https://www.w3schools.com/howto/howto_css_social_media_buttons.asp
  Ikon kode tatt fra ^
  */
