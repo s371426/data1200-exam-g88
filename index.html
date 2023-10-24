@@ -18,7 +18,15 @@
 
 
 <body>
+
+
 <header>
+
+    <!-- definerer en klasse som jeg kaller navbar. skal refereres til denne klassen i css i lys av styling for header
+    helhetlig: f eks slik at typ farge på bakrunnen av header er (for nå random), også lage en flexbox, og i tillegg
+    justify content med space-between slik at log, ul lenkene, og kontakt knappen har lik lenkene i
+    slik at jeg kan ha logo til venstre, menu links i mitten, og så en kontaktknapp til høyre. -->
+
     <nav class = "navbar">
 
         <div class = "logo-burger-wrapper">
@@ -27,19 +35,23 @@
             <div class="menu-icon"></div>
         </label>
         </div>
+
+        <!-- definer en input id for hamburger element som vi skal bruke på tablet & mobil- versjoner. -->
+
         <input id="burger-toggle" type="checkbox"/>
+
+        <!-- definer en ul class for lenkene i navigasjonsmenyen og linker dem til .html filene i prosjektet -->
 
         <ul class="menu">
             <li><a href="index.html">Home</a></li>
             <li><a href="html/accessibility.html">Accessibility</a></li>
             <li><a href="html/topical.html">Topical</a></li>
             <li><a href="html/locations.html">Lokasjoner</a></li>
-            <li><a href="html/maybepage5.html">Maybepage5</a></li>
+            <!-- <li><a href="html/maybepage5.html">Maybepage5</a></li> -->
         </ul>
-        <a class="contact-button" href="">Kontakt</a>
 
 
-
+        <a class="contact-button" href="html/maybepage5.html">Kontakt</a>
     </nav>
 
 </header>
