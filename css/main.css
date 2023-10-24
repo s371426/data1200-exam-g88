@@ -290,7 +290,6 @@ figcaption {
     padding-bottom: 1.5%;
     margin: auto;
     font-size: 2.5rem;
-
 }
 
 /* Horisontal flexbox for to bokser, som er sentrert*/
@@ -368,6 +367,25 @@ figcaption {
 .item1-mainpage{
     grid-column: 1 / span 3;
     grid-row: 1;
+    position: relative;
+    text-align: center;
+    
+}
+
+.bilde-tekst{
+    position: absolute;
+    top: 50%;
+    color: white;
+    width: 100%;
+    right: 50%;
+    transform: translate(50%, -50%);
+    text-shadow: black 0 0 4px;
+    font-size: 2rem;
+    /*background: #777;*/
+}
+
+.item1-mainpage img{
+    /*filter: blur(3px);*/
 }
 
 .item2-mainpage {
