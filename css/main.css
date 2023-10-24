@@ -137,6 +137,7 @@ figcaption {
 
     }
     .menu {
+        display: none;
         list-style-type: none;
         position: sticky;
         padding-left: 0;
@@ -155,10 +156,6 @@ figcaption {
         overflow: hidden;
     }
    */
-
-    .menu {
-        display: none;
-    }
 
     .contact-button {
         display: none;
