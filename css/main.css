@@ -73,8 +73,9 @@ figcaption {
 /* Logo position and image size */
 #logo-position {
     /* float: left; */
-    height: 70px;
-    width: 100px;
+    height: 40px;
+    width: auto;
+    padding:20%;
     /* position: absolute; */
 }
 
@@ -83,15 +84,12 @@ figcaption {
     display: none;
 }
 
-
 .menu {
     display: flex;
     flex-direction: row;
     justify-content: center;
     list-style-type: none;
-
 }
-
 
 .contact-button {
     background-color: skyblue;
@@ -113,13 +111,6 @@ figcaption {
     background-size: cover;
     height: 40px;
     width: 40px;
-
-}
-
-/* kode for å passe på at hamburger icon ikke dukker opp før nettsiden scaler til andre decvices enn desktop */
-
-.hamburger-toggle-container {
-    display: none;
 }
 
 .navbar {
@@ -130,12 +121,23 @@ figcaption {
     padding-left: 20px;
     padding-right: 20px;
 }
+/* kode for å passe på at hamburger icon ikke dukker opp før nettsiden scaler til andre decvices enn desktop */
+
+.hamburger-toggle-container {
+    display: none;
+}
+
 
 @media (max-width: 800px) {
+
+    nav {
+        display: flex;
+        /*height: 40px;*/
+    }
+
     .navbar {
         flex-direction: column;
         align-items: normal;
-
     }
 
     .menu {
@@ -149,14 +151,8 @@ figcaption {
     .hamburger-toggle-container {
         cursor: pointer;
         display: block;
-
     }
 
-    /*  .menu li{
-          height: 0;
-          overflow: hidden;
-      }
-     */
     /* dette gjør at kontakt-knappen til høyre i navigasjonsbaren ikke er synlig i navigasjonen når den scaler til tablet/mobil */
     .contact-button {
         display: none;
@@ -165,20 +161,8 @@ figcaption {
 
     #burger-toggle:checked ~ .menu {
         display: block;
-        /*
-        height: 1rem;
-        width: auto;
-        padding-left: 0.5rem;
-        padding-right: 0.5rem;
-        padding-bottom: 0.5rem;
-        background-color: green; */
     }
 
-    nav {
-        display: flex;
-        /*height: 40px;*/
-        /*    */
-    }
 }
 
 .logo-burger-wrapper {
@@ -195,7 +179,7 @@ figcaption {
 /* skal style lenkene som vi har i nav class navbar */
 
 .menu a {
-    color: #3D3D3D;
+    color: black;
     padding: 20px;
     text-decoration: none;
     font-weight: bold;
