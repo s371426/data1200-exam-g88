@@ -233,6 +233,14 @@ figcaption {
     margin: 0 0 20px 20px;
 }
 
+.artikkel-sidebar-bilde {
+    border: none;
+    background: transparent;
+    font-size: 13px;
+    padding: 0;
+    margin-top: 6px;
+}
+
     .artikkel-sidebar {
         width: 300px;
         font-size: 14px;
@@ -243,6 +251,7 @@ figcaption {
         border-top: 10px solid #01cd74;
         border-bottom: 4px solid #01cd74;
     }
+
 
 /* må sette media queries for ulike størrelser, 700 px for mobil kanskje og 1005
  laste ned samme bilde i ulike størrelser*/
