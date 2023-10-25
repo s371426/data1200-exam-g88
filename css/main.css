@@ -73,7 +73,6 @@ figcaption {
 #logo-position {
     /* float: left; */
     height: 40px;
-    width: auto;
     padding:10px;
     /* position: absolute; */
 }
@@ -290,10 +289,10 @@ figcaption {
     box-sizing: border-box;
     /*align-self: center;*/
     /*flex: 1 1;*/
-    max-width: 1200px;
+    max-width: 1240px;
     width: 100%;
-    padding-left: 4%;
-    padding-right: 4%;
+    padding-left: 3%;
+    padding-right: 3%;
     padding-top: 1.5%;
     padding-bottom: 1.5%;
     margin: auto;
@@ -314,9 +313,9 @@ figcaption {
     /*flex: 1 1 auto;*/
     flex-basis: 50%;
     box-sizing: border-box;
-    max-width: 600px;
-    padding-left: 4%;
-    padding-right: 4%;
+    max-width: 620px;
+    padding-left: 3%;
+    padding-right: 3%;
     margin-top: 1%;
     margin-bottom: 1%;
     /*padding-top: 1.6rem;*/
@@ -328,9 +327,9 @@ figcaption {
     /*flex: 1 1 auto;*/
     flex-basis: 50%;
     box-sizing: border-box;
-    max-width: 600px;
-    padding-left: 4%;
-    padding-right: 4%;
+    max-width: 620px;
+    padding-left: 3%;
+    padding-right: 3%;
 
 }
 
