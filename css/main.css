@@ -198,6 +198,8 @@ figcaption {
     color: #3D3D3D;
     padding: 20px;
     text-decoration: none;
+    font-weight: bold;
+    font-size: 1.2rem;
 }
 
 /* hover på lenkene i navbar*/
