@@ -73,6 +73,7 @@ figcaption {
 #logo-position {
     /* float: left; */
     height: 40px;
+    width: auto;
     padding:10px;
     /* position: absolute; */
 }
@@ -117,7 +118,7 @@ figcaption {
     display: none;
 }
 
-.contact-button {
+.contact-button {   
     background-color: skyblue;
     color: black;
     border-radius: 30px;
@@ -135,8 +136,8 @@ figcaption {
     display: block;
     background-image: url(../images/menu.png);
     background-size: cover;
-    height: 40px;
-    width: 40px;
+    height: 60px;
+    width: 60px;
 }
 
 /* kode for å passe på at hamburger icon ikke dukker opp før nettsiden scaler til andre decvices enn desktop */
@@ -165,7 +166,6 @@ figcaption {
         padding-left: 0;
     }
 
-
     .hamburger-toggle-container {
         cursor: pointer;
         display: block;
@@ -187,6 +187,7 @@ figcaption {
     display: flex;
     justify-content: space-between;
 }
+
 
 /*TOPICAL PAGE*/
 
@@ -222,8 +223,8 @@ figcaption {
     background-color: #f1f1f1;
 }
 
-/* <!-- må sette media queries for ulike størrelser, 700 px for mobil kanskje og 1005 -->
- <!-- laste ned samme bilde i ulike størrelser -->*/
+/* må sette media queries for ulike størrelser, 700 px for mobil kanskje og 1005
+ laste ned samme bilde i ulike størrelser*/
 @media (max-width: 700px) {
     .topical-grid {
         grid-template-columns: 1fr;
@@ -275,27 +276,24 @@ figcaption {
 
 }
 
-
 /* LOCATION PAGE*/
 
 
-/* Main flexbox, for å gjøre slik at overskrift passer med content under*/
+/* Main flexbox, for blant annet å gjøre slik at overskrift passer med content under*/
 .location-main-flex {
-    /*display: flex;*/
-    /*flex-direction: column;*/
+    display: flex;
+    flex-direction: column;
 }
 
 .location-main-flex h1 {
     box-sizing: border-box;
-    /*align-self: center;*/
-    /*flex: 1 1;*/
+    align-self: center;
     max-width: 1240px;
     width: 100%;
     padding-left: 3%;
     padding-right: 3%;
     padding-top: 1.5%;
     padding-bottom: 1.5%;
-    margin: auto;
     font-size: 2.5rem;
 }
 
@@ -310,30 +308,26 @@ figcaption {
 }
 
 .location-flex-img {
-    /*flex: 1 1 auto;*/
     flex-basis: 50%;
     box-sizing: border-box;
     max-width: 620px;
+    position: relative;
+    top: 0.66rem;
     padding-left: 3%;
     padding-right: 3%;
     margin-top: 1%;
     margin-bottom: 1%;
-    /*padding-top: 1.6rem;*/
-    position: relative;
-    top: 0.66rem;
 }
 
 .location-flex-text {
-    /*flex: 1 1 auto;*/
     flex-basis: 50%;
     box-sizing: border-box;
     max-width: 620px;
     padding-left: 3%;
     padding-right: 3%;
-
 }
 
-/* Endrer flexboks til å være vertikal når viewport mindre enn 700px  */
+/* Endrer flexbox til å være vertikal når viewport mindre enn 700px  */
 @media only screen and (max-width: 700px) {
     .location-flex {
         flex-direction: column;
