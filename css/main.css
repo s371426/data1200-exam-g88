@@ -85,9 +85,12 @@ figcaption {
 .menu {
     display: flex;
     flex-direction: row;
-    justify-content: center;
+   /* justify-content: center; */
     list-style-type: none;
-
+    font-size: 24px;
+    font-weight: bolder;
+    justify-content: space-around;
+   /* gap: 5%; - prøver å flage større gap mellom ul links */
 }
 
 
