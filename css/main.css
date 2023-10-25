@@ -48,8 +48,7 @@ figure {
 }
 
 figcaption {
-    margin-top: 0;
-    padding-top: 0;
+    margin-top: 0.05rem;
     font-size: 0.88rem;
 
 }
@@ -75,13 +74,19 @@ figcaption {
     /* float: left; */
     height: 40px;
     width: auto;
-    padding:20%;
+    padding:10px;
     /* position: absolute; */
 }
 
+/* NAV BAR */
 /* HAMBURGER MENU */
-#burger-toggle {
-    display: none;
+.navbar {
+    background-color: red;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-left: 20px;
+    padding-right: 20px;
 }
 
 .menu {
@@ -89,6 +94,28 @@ figcaption {
     flex-direction: row;
     justify-content: center;
     list-style-type: none;
+}
+
+.menu li {
+
+}
+
+/* skal style lenkene som vi har i nav class navbar */
+.menu a {
+    color: black;
+    padding: 20px;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+
+/* hover på lenkene i navbar*/
+.menu a:hover {
+    background-color: #cfcfd3;
+}
+
+#burger-toggle {
+    display: none;
 }
 
 .contact-button {
@@ -113,14 +140,6 @@ figcaption {
     width: 40px;
 }
 
-.navbar {
-    background-color: red;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding-left: 20px;
-    padding-right: 20px;
-}
 /* kode for å passe på at hamburger icon ikke dukker opp før nettsiden scaler til andre decvices enn desktop */
 
 .hamburger-toggle-container {
@@ -168,28 +187,6 @@ figcaption {
 .logo-burger-wrapper {
     display: flex;
     justify-content: space-between;
-}
-
-/* NAV BAR*/
-
-
-/* skal style listen i klassen .navbar.*/
-
-
-/* skal style lenkene som vi har i nav class navbar */
-
-.menu a {
-    color: black;
-    padding: 20px;
-    text-decoration: none;
-    font-weight: bold;
-    font-size: 1.2rem;
-}
-
-/* hover på lenkene i navbar*/
-
-.menu a:hover {
-    background-color: #cfcfd3;
 }
 
 /*TOPICAL PAGE*/
@@ -324,7 +321,7 @@ figcaption {
     margin-bottom: 1%;
     /*padding-top: 1.6rem;*/
     position: relative;
-    top: 0.65rem;
+    top: 0.66rem;
 }
 
 .location-flex-text {
