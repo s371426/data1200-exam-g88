@@ -220,6 +220,11 @@ figcaption {
 
     background-color: #f1f1f1;
 }
+.bilde {
+    background-size: cover;
+    width: 150px;
+    height: 200px;
+}
 
 /* må sette media queries for ulike størrelser, 700 px for mobil kanskje og 1005
  laste ned samme bilde i ulike størrelser*/
