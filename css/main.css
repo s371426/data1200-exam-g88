@@ -71,11 +71,9 @@ figcaption {
 
 /* Logo position and image size */
 #logo-position {
-    /* float: left; */
     height: 40px;
     width: auto;
     padding:10px;
-    /* position: absolute; */
 }
 
 /* NAV BAR */
