@@ -226,6 +226,24 @@ figcaption {
     height: 200px;
 }
 
+.artikkel-sidebar-høyre {
+    float: right;
+    clear: right;
+    width: 300px;
+    margin: 0 0 20px 20px;
+}
+
+    .artikkel-sidebar {
+        width: 300px;
+        font-size: 14px;
+        color: #000;
+        line-height: 17px;
+        background-color: #fff;
+        padding: 20px;
+        border-top: 10px solid #01cd74;
+        border-bottom: 4px solid #01cd74;
+    }
+
 /* må sette media queries for ulike størrelser, 700 px for mobil kanskje og 1005
  laste ned samme bilde i ulike størrelser*/
 @media (max-width: 700px) {
@@ -271,13 +289,7 @@ figcaption {
 
 }
 
-.andrebox {
-    background-image: url(../images/satelitt-bilde.jpg);
-    background-size: cover;
-    width: 85vw;
-    height: 50vw;
 
-}
 
 /* LOCATION PAGE*/
 
