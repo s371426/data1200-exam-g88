@@ -482,7 +482,7 @@ figcaption {
 
 /*FOOTER*/
 /*Setter fooder på bunn av siden og at bredden skal være 100%*/
-footer {
+footer{
     position: relative;
     bottom: 0;
     width: 100%;
@@ -490,20 +490,21 @@ footer {
 }
 
 /* Grid kode tatt fra: https://www.w3schools.com/css/css_grid.asp*/
-.footerGrid {
+.footer-grid-system {
     display: grid;
     grid-template-columns: auto;
     padding: 0 2% 2%;
     background-color: #8899a4;
+
 }
 
-.footerGrid-item {
+.footer-grid-objekter {
     text-align: left;
     padding: 20px;
 }
 
 /*Setter posisjon på item 1 og setter opp grid i objektet*/
-.item1 {
+.nyhetsbrev {
     grid-column: 1/4;
     grid-row: 1;
     border-bottom: 1px solid;
@@ -514,90 +515,90 @@ footer {
 
 }
 
-.item1item1 {
+.nyhetsbrev-tekst {
     grid-row: 1;
 }
 
-.item1item2 {
+.nyhetsbrev-knapp{
     grid-row: 1;
     text-align: right;
 }
 
-.item2 {
+.sosiale-medie-link{
     grid-row: 2;
     grid-column: 3/4;
 }
 
-.item2 a {
+.sosiale-medie-link a {
     display: block;
     padding: 1%;
     text-decoration: none;
     color: black;
 }
 
-.item2 a:hover {
+.sosiale-medie-link a:hover {
     text-decoration: underline;
 }
-.item3{
+.kontaktinformasjon{
     grid-row: 2;
     grid-column: 1/2;
 
 }
-.item4{
+.side-link{
     grid-row: 2;
     grid-column: 2/3;
 }
-.item4 a {
+.side-link a {
     text-decoration: none;
     color: black;
 }
 
-.item4 a:hover {
+.side-link a:hover {
     text-decoration: underline;
 }
 
-.item4 b {
+.side-link b {
     font-size: 20px;
 }
 
 /*Når siden er mindre enn 1005 px skal grid stackes*/
 @media (max-width: 700px) {
-    .footerGrid {
+    .footer-grid-system {
         grid-template-columns: 1fr;
     }
 
-    .item1 {
+    .nyhetsbrev{
         grid-row: 1;
         grid-column: 1;
     }
 
-    .item1item1 {
+    .nyhetsbrev-tekst {
         grid-row: 1;
         grid-column: 1;
     }
 
-    .item1item2 {
+    .nyhetsbrev-knapp{
         grid-row: 2;
         grid-column: 1;
         text-align: left;
     }
 
-    .item2 {
+    .sosiale-medie-link {
         grid-row: 4;
         grid-column: 1;
         text-align: left;
     }
 
-    .item2 a {
+    .sosiale-medie-link a {
         padding: 1%;
     }
 
-    .item3 {
+    .kontaktinformasjon{
         grid-row: 2;
         grid-column: 1;
     }
 
-    .item4 {
+    .side-link{
         grid-row: 3;
         grid-column: 1;
     }
