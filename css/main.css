@@ -497,13 +497,13 @@ footer{
     background-color: #8899a4;
 
 }
-
+/* endrer på alle grid, og sentrerer tekst */
 .footer-grid-objekter {
     text-align: left;
     padding: 20px;
 }
 
-/*Setter posisjon på item 1 og setter opp grid i objektet*/
+/*Setter posisjon på item 1 og setter opp en ny grid i objektet*/
 .nyhetsbrev {
     grid-column: 1/4;
     grid-row: 1;
@@ -514,7 +514,7 @@ footer{
     align-items: center;
 
 }
-
+/* Bestemmer posisjonen til objektene i gridden til .nyhetsbrev */
 .nyhetsbrev-tekst {
     grid-row: 1;
 }
@@ -561,7 +561,7 @@ footer{
     font-size: 20px;
 }
 
-/*Når siden er mindre enn 1005 px skal grid stackes*/
+/*Når siden er mindre enn 700 px skal grid stackes*/
 @media (max-width: 700px) {
     .footer-grid-system {
         grid-template-columns: 1fr;
@@ -641,7 +641,7 @@ footer{
 footer b {
     font-size: 25px;
 }
-
+/* design til knappen */
 .knapp {
     color: var(--main-site-colour);
     text-decoration: none;
