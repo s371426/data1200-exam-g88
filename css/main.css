@@ -301,12 +301,13 @@ figcaption {
 /* LOCATION PAGE*/
 
 
-/* Main flexbox, for blant annet å gjøre slik at overskrift passer med content under*/
+/* Main flexbox, for blant annet å gjøre slik at overskrift passer med content i location-flex*/
 .location-main-flex {
     display: flex;
     flex-direction: column;
 }
 
+/* Sørger for at h1 er riktig brede forhold til de andre boksene */
 .location-main-flex h1 {
     box-sizing: border-box;
     align-self: center;
@@ -318,7 +319,8 @@ figcaption {
     font-size: 2.5rem;
 }
 
-/* Horisontal flexbox for to bokser, som er sentrert*/
+/* Normalt horisontal flexbox for to bokser, som er sentrert*/
+/* Inneholder location-img og locaiton-text */
 .location-flex {
     display: flex;
     flex-direction: row;
@@ -328,6 +330,7 @@ figcaption {
     padding-top: 1.5%;
 }
 
+/*Er inni location-flex*/
 .location-img {
     flex-basis: 50%;
     box-sizing: border-box;
@@ -340,6 +343,7 @@ figcaption {
     margin-bottom: 0.5rem;
 }
 
+/*Er inni location-flex*/
 .location-text {
     flex-basis: 50%;
     box-sizing: border-box;
@@ -348,18 +352,18 @@ figcaption {
     padding-right: 3%;
 }
 
-/* Endrer flexbox til å være vertikal når viewport mindre enn 700px  */
+/* Endrer flexbox til å være vertikal når viewport mindre enn 700px (Mobile) */
 @media only screen and (max-width: 700px) {
     .location-flex {
         flex-direction: column;
     }
 
     .location-img {
-        max-width: 700px;
+        max-width: none;
     }
 
     .location-text {
-        max-width: 700px;
+        max-width: none;
     }
 }
 
@@ -368,7 +372,7 @@ figcaption {
     background-color: var(--main-site-secondary-background-colour);
 }
 
-/* Bytter om på rekkefølgen på annenhver child element (nr 2,4 osv) hvis viewport er bredere enn 701 px)*/
+/* Bytter om på rekkefølgen på annenhver child element hvis viewport er bredere enn 701 px)*/
 @media only screen and (min-width: 701px) {
     .location-flex:nth-child(even) .location-img {
         order: 2;
