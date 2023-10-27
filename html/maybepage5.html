@@ -17,14 +17,26 @@
 <body>
 <header>
     <nav class="navbar">
-        <ul>
+        <div class="logo-burger-wrapper">
+            <img id="logo-position" src="../images/logo-oslomet-gul.svg" alt="OsloMet sin logo">
+            <label class="hamburger-toggle-container" for="burger-toggle">
+                <span class="menu-icon"></span>
+            </label>
+        </div>
+
+        <!-- definer en input id for hamburger element som vi skal bruke på tablet & mobil- versjoner. -->
+        <input id="burger-toggle" type="checkbox"/>
+
+        <!-- definer en ul class for lenkene i navigasjonsmenyen og linker dem til .html filene i prosjektet -->
+         <ul class="menu">
             <li><a href="../index.html">Home</a></li>
             <li><a href="accessibility.html">Accessibility</a></li>
             <li><a href="topical.html">Topical</a></li>
-            <li><a href="locations.html">>Page4</a></li>
-            <li><a href="maybepage5.html">Maybepage5</a></li>
+            <li><a href="locations.html">Lokasjoner</a></li>
+            <!-- <li><a href="maybepage5.html">Maybepage5</a></li> -->
         </ul>
 
+        <a class="contact-button" href="maybepage5.html">Kontakt</a>
     </nav>
 </header>
 

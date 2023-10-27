@@ -18,14 +18,26 @@
 <body>
 <header>
     <nav class="navbar">
-        <ul>
+        <div class="logo-burger-wrapper">
+            <img id="logo-position" src="../images/logo-oslomet-gul.svg" alt="OsloMet sin logo">
+            <label class="hamburger-toggle-container" for="burger-toggle">
+                <span class="menu-icon"></span>
+            </label>
+        </div>
+
+        <!-- definer en input id for hamburger element som vi skal bruke på tablet & mobil- versjoner. -->
+        <input id="burger-toggle" type="checkbox"/>
+
+        <!-- definer en ul class for lenkene i navigasjonsmenyen og linker dem til .html filene i prosjektet -->
+        <ul class="menu">
             <li><a href="../index.html">Home</a></li>
             <li><a href="accessibility.html">Accessibility</a></li>
             <li><a href="topical.html">Topical</a></li>
-            <li><a href="locations.html">Locations</a></li>
-            <li><a href="maybepage5.html">Maybepage5</a></li>
+            <li><a href="locations.html">Lokasjoner</a></li>
+            <!-- <li><a href="maybepage5.html">Maybepage5</a></li> -->
         </ul>
 
+        <a class="contact-button" href="maybepage5.html">Kontakt</a>
     </nav>
 </header>
 
@@ -36,7 +48,7 @@
 
         <!-- <figure> er et Semantic element som ment får spesifisere et selvstending enhet med ett bilde/figur og en
              bildetekst -->
-        <figure class="location-flex-img">
+        <figure class="location-img">
             <picture>
 
                 <!-- Bilde blir valgt av device ut i fra hvilken oppløsning som passer best. "w" er bredden
@@ -57,7 +69,7 @@
             <figcaption class="img-text">John Hughes / OsloMET</figcaption>
         </figure>
 
-        <div class="location-flex-text">
+        <div class="location-text">
             <h2>Auditorium, Andrea Arntzens hus P32</h2>
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer fermentum vehicula suscipit. Phasellus
                 urna arcu, condimentum sit amet lacus quis, cursus lobortis metus. Quisque et imperdiet lectus. Vivamus
@@ -69,7 +81,7 @@
 
         <!-- <figure> er et Semantic element som ment får spesifisere et selvstending enhet med ett bilde/figur og en
              bildetekst -->
-        <figure class="location-flex-img">
+        <figure class="location-img">
             <picture>
 
                 <!-- Bilde blir valgt av device ut i fra hvilken oppløsning som passer best. "w" er bredden
@@ -90,7 +102,7 @@
             <figcaption class="img-text">Skalg Bøhmer Vold / OsloMET</figcaption>
         </figure>
 
-        <div class="location-flex-text">
+        <div class="location-text">
             <h2>Studieplasser til studenter</h2>
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras in augue erat. Sed vitae turpis quis leo
                 ornare viverra. Cras volutpat ornare nulla, in gravida felis iaculis vestibulum. Morbi auctor congue ex
@@ -102,7 +114,7 @@
 
         <!-- <figure> er et Semantic element som ment får spesifisere et selvstending enhet med ett bilde/figur og en
              bildetekst -->
-        <figure class="location-flex-img">
+        <figure class="location-img">
             <picture>
 
                 <!-- Bilde blir valgt av device ut i fra hvilken oppløsning som passer best. "w" er bredden
@@ -124,7 +136,7 @@
             <figcaption>Skalg Bøhmer Vold / OsloMET</figcaption>
         </figure>
 
-        <div class="location-flex-text">
+        <div class="location-text">
             <h2>Fyrhuset spisested</h2>
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin sed ante mauris. Maecenas porta faucibus
                 sodales. Sed dignissim vitae purus in cursus. Phasellus venenatis diam dui, maximus pretium dui dictum
@@ -136,7 +148,7 @@
 
         <!-- <figure> er et Semantic element som ment får spesifisere et selvstending enhet med ett bilde/figur og en
              bildetekst -->
-        <figure class="location-flex-img">
+        <figure class="location-img">
             <picture>
 
                 <!-- Bilde blir valgt av device ut i fra hvilken oppløsning som passer best. "w" er bredden
@@ -157,7 +169,7 @@
             <figcaption class="img-text">Skalg Bøhmer Vold / OsloMET</figcaption>
         </figure>
 
-        <div class="location-flex-text">
+        <div class="location-text">
             <h2>Fyrhuset spisested, innendørs</h2>
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin tempus, enim vitae iaculis luctus, erat
                 elit elementum odio, in auctor libero lacus eu erat. Pellentesque tincidunt euismod nulla vitae maximus.
@@ -172,7 +184,7 @@
 
         <!-- <figure> er et Semantic element som ment får spesifisere et selvstending enhet med ett bilde/figur og en
              bildetekst -->
-        <figure class="location-flex-img">
+        <figure class="location-img">
             <picture>
 
                 <!-- Bilde blir valgt av device ut i fra hvilken oppløsning som passer best. "w" er bredden
@@ -193,7 +205,7 @@
             <figcaption>Skald Bøhmer Vold / OsloMET</figcaption>
         </figure>
 
-        <div class="location-flex-text">
+        <div class="location-text">
             <h2>Kantine i Studenthuset P52</h2>
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent sed diam nec massa consectetur maximus.
                 Vivamus interdum tristique neque, ac fermentum sem finibus a. Sed euismod tincidunt tortor, vel
@@ -207,39 +219,46 @@
 
 <footer>
     <!-- Grid kode tatt fra: https://www.w3schools.com/css/css_grid.asp-->
-    <div class=" footerGrid">
-        <div class="footerGrid-item item1"><p class="item1item1"><b>*Hold deg oppdatert på vårt nyhetsbrev </b></p>
-            <div class="item1item2"><a href="https://www.oslomet.no/nyhetsbrev" class="knapp">Nyhetsbrev! </a></div>
+    <div class=" footer-grid-system">
+        <!-- nyhetsbrev tekst, markert med * ettersom teksten og knappen er midlertidig. -->
+        <div class="footer-grid-objekter nyhetsbrev"><p class="nyhetsbrev-tekst"><b>*Hold deg oppdatert på vårt nyhetsbrev </b></p>
+            <div class="nyhetsbrev-knapp"><a href="https://www.oslomet.no/nyhetsbrev" class="knapp">Nyhetsbrev! </a></div>
         </div>
 
-        <div class="footerGrid-item item2"><b>Følg oss</b>
-            <div class="ikoner">
-                <a href="https://www.facebook.com/oslomet/"><div  class="fa fa-facebook"></div>Facebook </a>
-                <a href="https://twitter.com/oslomet"> <div class="fa fa-twitter"></div>Twitter</a>
-                <a href="https://www.instagram.com/oslomet/?hl=nb"> <div class="fa fa-instagram"></div>Instagram</a>
-                <a href="https://www.youtube.com/@OsloMetFilm" ><div class="fa fa-youtube"></div>Youtube</a>
-            </div>
+        <!-- Kontakt informasjon til OsloMet -->
+        <div class="footer-grid-objekter kontaktinformasjon">
+            <b>OsloMet</b>
+            <p>Oslo Metropolitan University</p>
+            <p>Storbyuniversitetet</p>
+            <p>Postboks 4, St. Olavs plass</p>
+            <p>0130 Oslo</p>
+            <p>tlf.: 67 23 50 00</p>
         </div>
-
-        <div class="footerGrid-item item3">
-            <div class="kontaktInformasjon">
-                <b>OsloMet</b>
-                <p>Oslo Metropolitan University</p>
-                <p>Storbyuniversitetet</p>
-                <p>Postboks 4, St. Olavs plass</p>
-                <p>0130 Oslo</p>
-                <p>tlf.: 67 23 50 00</p>
-            </div>
-        </div>
-
-        <div class="footerGrid-item item4">
+        <!-- Lenker til de andre sidene på nettsiden vår-->
+        <div class="footer-grid-objekter side-link">
             <p><a href="../index.html"><b>Home</b></a></p>
             <p><a href="accessibility.html"><b>Accessibility</b></a></p>
             <p><a href="topical.html"><b>Topical</b></a></p>
             <p><a href="locations.html"><b>Locations</b></a></p>
             <p><a href="maybepage5.html"><b>Maybepage5</b></a></p>
         </div>
-
+        <!-- sosiale medie lenker -->
+        <div class="footer-grid-objekter sosiale-medie-link"><b>Følg oss</b>
+            <div class="ikoner">
+                <a href="https://www.facebook.com/oslomet/">
+                    <div class="fa fa-facebook"></div>
+                    Facebook </a>
+                <a href="https://twitter.com/oslomet">
+                    <div class="fa fa-twitter"></div>
+                    Twitter</a>
+                <a href="https://www.instagram.com/oslomet/?hl=nb">
+                    <div class="fa fa-instagram"></div>
+                    Instagram</a>
+                <a href="https://www.youtube.com/@OsloMetFilm">
+                    <div class="fa fa-youtube"></div>
+                    Youtube</a>
+            </div>
+        </div>
     </div>
 </footer>
 </body>

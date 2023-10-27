@@ -28,20 +28,18 @@
     slik at jeg kan ha logo til venstre, menu links i mitten, og så en kontaktknapp til høyre. -->
 
     <nav class="navbar">
-
         <div class="logo-burger-wrapper">
-            <img id="logo-position" src="/images/logo-oslomet-gul.svg" alt="OsloMet sin logo">
+            <img id="logo-position" src="images/logo-oslomet-gul.svg" alt="OsloMet sin logo">
             <label class="hamburger-toggle-container" for="burger-toggle">
-                <div class="menu-icon"></div>
+                Meny
+                <span class="menu-icon"></span>
             </label>
         </div>
 
         <!-- definer en input id for hamburger element som vi skal bruke på tablet & mobil- versjoner. -->
-
         <input id="burger-toggle" type="checkbox"/>
 
         <!-- definer en ul class for lenkene i navigasjonsmenyen og linker dem til .html filene i prosjektet -->
-
         <ul class="menu">
             <li><a href="index.html">Home</a></li>
             <li><a href="html/accessibility.html">Accessibility</a></li>
@@ -53,7 +51,6 @@
 
         <a class="contact-button" href="html/maybepage5.html">Kontakt</a>
     </nav>
-
 </header>
 
 <main>
@@ -108,12 +105,31 @@
 
 <footer>
     <!-- Grid kode tatt fra: https://www.w3schools.com/css/css_grid.asp-->
-    <div class=" footerGrid">
-        <div class="footerGrid-item item1"><p class="item1item1"><b>*Hold deg oppdatert på vårt nyhetsbrev </b></p>
-            <div class="item1item2"><a href="https://www.oslomet.no/nyhetsbrev" class="knapp">Nyhetsbrev! </a></div>
+    <div class=" footer-grid-system">
+        <!-- nyhetsbrev tekst, markert med * ettersom teksten og knappen er midlertidig. -->
+        <div class="footer-grid-objekter nyhetsbrev"><p class="nyhetsbrev-tekst"><b>*Hold deg oppdatert på vårt nyhetsbrev </b></p>
+            <div class="nyhetsbrev-knapp"><a href="https://www.oslomet.no/nyhetsbrev" class="knapp">Nyhetsbrev! </a></div>
         </div>
 
-        <div class="footerGrid-item item2"><b>Følg oss</b>
+        <!-- Kontakt informasjon til OsloMet -->
+        <div class="footer-grid-objekter kontaktinformasjon">
+                <b>OsloMet</b>
+                <p>Oslo Metropolitan University</p>
+                <p>Storbyuniversitetet</p>
+                <p>Postboks 4, St. Olavs plass</p>
+                <p>0130 Oslo</p>
+                <p>tlf.: 67 23 50 00</p>
+        </div>
+        <!-- Lenker til de andre sidene på nettsiden vår-->
+        <div class="footer-grid-objekter side-link">
+            <p><a href="index.html"><b>Home</b></a></p>
+            <p><a href="html/accessibility.html"><b>Accessibility</b></a></p>
+            <p><a href="html/topical.html"><b>Topical</b></a></p>
+            <p><a href="html/locations.html"><b>Locations</b></a></p>
+            <p><a href="html/maybepage5.html"><b>Maybepage5</b></a></p>
+        </div>
+        <!-- sosiale medie lenker -->
+        <div class="footer-grid-objekter sosiale-medie-link"><b>Følg oss</b>
             <div class="ikoner">
                 <a href="https://www.facebook.com/oslomet/">
                     <div class="fa fa-facebook"></div>
@@ -129,26 +145,6 @@
                     Youtube</a>
             </div>
         </div>
-
-        <div class="footerGrid-item item3">
-            <div class="kontaktInformasjon">
-                <b>OsloMet</b>
-                <p>Oslo Metropolitan University</p>
-                <p>Storbyuniversitetet</p>
-                <p>Postboks 4, St. Olavs plass</p>
-                <p>0130 Oslo</p>
-                <p>tlf.: 67 23 50 00</p>
-            </div>
-        </div>
-
-        <div class="footerGrid-item item4">
-            <p><a href="index.html"><b>Home</b></a></p>
-            <p><a href="html/accessibility.html"><b>Accessibility</b></a></p>
-            <p><a href="html/topical.html"><b>Topical</b></a></p>
-            <p><a href="html/locations.html"><b>Locations</b></a></p>
-            <p><a href="html/maybepage5.html"><b>Maybepage5</b></a></p>
-        </div>
-
     </div>
 </footer>
 </body>
