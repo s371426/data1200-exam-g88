@@ -233,14 +233,6 @@ figcaption {
     margin: 0 0 20px 20px;
 }
 
-.artikkel-sidebar-bilde {
-    border: none;
-    background: transparent;
-    font-size: 13px;
-    padding: 0;
-    margin-top: 6px;
-}
-
     .artikkel-sidebar {
         width: 300px;
         font-size: 14px;
