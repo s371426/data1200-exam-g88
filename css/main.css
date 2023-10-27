@@ -339,8 +339,8 @@ figcaption {
     top: 0.66rem;
     padding-left: 3%;
     padding-right: 3%;
-    margin-top: 1%;
-    margin-bottom: 1%;
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
 }
 
 .location-text {
