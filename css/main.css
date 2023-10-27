@@ -142,13 +142,9 @@ figcaption {
 
 .hamburger-toggle-container {
     display: none;
-}
-
-.hamburger-toggle-container p {
     font-weight: Bold;
     font-size: 1.2rem;
 }
-
 
 @media (max-width: 800px) {
 
