@@ -48,8 +48,7 @@ figure {
 }
 
 figcaption {
-    margin-top: 0;
-    padding-top: 0;
+    margin-top: 0.05rem;
     font-size: 0.88rem;
 
 }
@@ -72,27 +71,53 @@ figcaption {
 
 /* Logo position and image size */
 #logo-position {
-    height: 70px;
-    width: 100px;
+    height: 40px;
+    width: auto;
+    padding:10px;
 }
 
+/* NAV BAR */
 /* HAMBURGER MENU */
-#burger-toggle {
-    display: none;
+.navbar {
+    background-color: red;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-left: 20px;
+    padding-right: 20px;
 }
-
 
 .menu {
     display: flex;
     flex-direction: row;
    /* justify-content: center; */
     list-style-type: none;
-    font-size: 24px;
-    font-weight: bolder;
     justify-content: space-around;
-   /* gap: 5%; - prøver å flage større gap mellom ul links */
+    /* gap: 5%; - prøver å flage større gap mellom ul links */
 }
 
+.menu li {
+
+}
+
+/* skal style lenkene som vi har i nav class navbar */
+.menu a {
+    color: black;
+    display: block;
+    padding: 20px;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+
+/* hover på lenkene i navbar*/
+.menu a:hover {
+    background-color: #cfcfd3;
+}
+
+#burger-toggle {
+    display: none;
+}
 
 .contact-button {
     background-color: skyblue;
@@ -112,31 +137,28 @@ figcaption {
     display: block;
     background-image: url(../images/menu.png);
     background-size: cover;
-    height: 40px;
-    width: 40px;
-
+    height: 60px;
+    width: 60px;
 }
 
 /* kode for å passe på at hamburger icon ikke dukker opp før nettsiden scaler til andre decvices enn desktop */
 
 .hamburger-toggle-container {
     display: none;
-}
-
-.navbar {
-    background-color: red;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding-left: 20px;
-    padding-right: 20px;
+    font-weight: Bold;
+    font-size: 1.2rem;
 }
 
 @media (max-width: 800px) {
+
+    nav {
+        display: flex;
+        /*height: 40px;*/
+    }
+
     .navbar {
         flex-direction: column;
         align-items: normal;
-
     }
 
     .menu {
@@ -146,11 +168,11 @@ figcaption {
         padding-left: 0;
     }
 
-
     .hamburger-toggle-container {
         cursor: pointer;
-        display: block;
-
+        /*display: block;*/
+        display: inline-flex;
+        align-items: center;
     }
 
     /* dette gjør at kontakt-knappen til høyre i navigasjonsbaren ikke er synlig i navigasjonen når den scaler til tablet/mobil */
@@ -163,9 +185,6 @@ figcaption {
         display: block;
     }
 
-    nav {
-        display: flex;
-    }
 }
 
 .logo-burger-wrapper {
@@ -173,26 +192,6 @@ figcaption {
     justify-content: space-between;
 }
 
-/* NAV BAR*/
-
-
-/* skal style listen i klassen .navbar.*/
-
-
-/* skal style lenkene som vi har i nav class navbar */
-
-.menu a {
-    color: #3D3D3D;
-    display: block;
-    padding: 20px;
-    text-decoration: none;
-}
-
-/* hover på lenkene i navbar*/
-
-.menu a:hover {
-    background-color: #cfcfd3;
-}
 
 /*TOPICAL PAGE*/
 
@@ -227,9 +226,33 @@ figcaption {
 
     background-color: #f1f1f1;
 }
+.bilde {
+    background-size: cover;
+    width: 150px;
+    height: 200px;
+}
 
-/* <!-- må sette media queries for ulike størrelser, 700 px for mobil kanskje og 1005 -->
- <!-- laste ned samme bilde i ulike størrelser -->*/
+.artikkel-sidebar-høyre {
+    float: right;
+    clear: right;
+    width: 300px;
+    margin: 0 0 20px 20px;
+}
+
+    .artikkel-sidebar {
+        width: 300px;
+        font-size: 14px;
+        color: #000;
+        line-height: 17px;
+        background-color: #fff;
+        padding: 20px;
+        border-top: 10px solid #01cd74;
+        border-bottom: 4px solid #01cd74;
+    }
+
+
+/* må sette media queries for ulike størrelser, 700 px for mobil kanskje og 1005
+ laste ned samme bilde i ulike størrelser*/
 @media (max-width: 700px) {
     .topical-grid {
         grid-template-columns: 1fr;
@@ -273,35 +296,25 @@ figcaption {
 
 }
 
-.andrebox {
-    background-image: url(../images/satelitt-bilde.jpg);
-    background-size: cover;
-    width: 85vw;
-    height: 50vw;
-
-}
 
 
 /* LOCATION PAGE*/
 
 
-/* Main flexbox, for å gjøre slik at overskrift passer med content under*/
+/* Main flexbox, for blant annet å gjøre slik at overskrift passer med content under*/
 .location-main-flex {
-    /*display: flex;*/
-    /*flex-direction: column;*/
+    display: flex;
+    flex-direction: column;
 }
 
 .location-main-flex h1 {
     box-sizing: border-box;
-    /*align-self: center;*/
-    /*flex: 1 1;*/
-    max-width: 1200px;
+    align-self: center;
+    max-width: 1240px;
     width: 100%;
-    padding-left: 4%;
-    padding-right: 4%;
-    padding-top: 1.5%;
-    padding-bottom: 1.5%;
-    margin: auto;
+    padding-left: 3%;
+    padding-right: 3%;
+    margin-bottom: 0.2em;
     font-size: 2.5rem;
 }
 
@@ -315,41 +328,37 @@ figcaption {
     padding-top: 1.5%;
 }
 
-.location-flex-img {
-    /*flex: 1 1 auto;*/
+.location-img {
     flex-basis: 50%;
     box-sizing: border-box;
-    max-width: 600px;
-    padding-left: 4%;
-    padding-right: 4%;
-    margin-top: 1%;
-    margin-bottom: 1%;
-    /*padding-top: 1.6rem;*/
+    max-width: 620px;
     position: relative;
-    top: 0.65rem;
+    top: 0.66rem;
+    padding-left: 3%;
+    padding-right: 3%;
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
 }
 
-.location-flex-text {
-    /*flex: 1 1 auto;*/
+.location-text {
     flex-basis: 50%;
     box-sizing: border-box;
-    max-width: 600px;
-    padding-left: 4%;
-    padding-right: 4%;
-
+    max-width: 620px;
+    padding-left: 3%;
+    padding-right: 3%;
 }
 
-/* Endrer flexboks til å være vertikal når viewport mindre enn 700px  */
+/* Endrer flexbox til å være vertikal når viewport mindre enn 700px  */
 @media only screen and (max-width: 700px) {
     .location-flex {
         flex-direction: column;
     }
 
-    .location-flex-img {
+    .location-img {
         max-width: 700px;
     }
 
-    .location-flex-text {
+    .location-text {
         max-width: 700px;
     }
 }
@@ -361,11 +370,11 @@ figcaption {
 
 /* Bytter om på rekkefølgen på annenhver child element (nr 2,4 osv) hvis viewport er bredere enn 701 px)*/
 @media only screen and (min-width: 701px) {
-    .location-flex:nth-child(even) .location-flex-img {
+    .location-flex:nth-child(even) .location-img {
         order: 2;
     }
 
-    .location-flex:nth-child(even) .location-flex-text {
+    .location-flex:nth-child(even) .location-text {
         order: 1;
     }
 }
@@ -470,7 +479,7 @@ figcaption {
 
 /*FOOTER*/
 /*Setter fooder på bunn av siden og at bredden skal være 100%*/
-footer {
+footer{
     position: relative;
     bottom: 0;
     width: 100%;
@@ -478,106 +487,116 @@ footer {
 }
 
 /* Grid kode tatt fra: https://www.w3schools.com/css/css_grid.asp*/
-.footerGrid {
+.footer-grid-system {
     display: grid;
     grid-template-columns: auto;
     padding: 0 2% 2%;
     background-color: #8899a4;
-}
 
-.footerGrid-item {
+}
+/* endrer på alle grid, og sentrerer tekst */
+.footer-grid-objekter {
     text-align: left;
     padding: 20px;
 }
 
-/*Setter posisjon på item 1 og setter opp grid i objektet*/
-.item1 {
-    grid-column: 1 / span 2;
+/*Setter posisjon på item 1 og setter opp en ny grid i objektet*/
+.nyhetsbrev {
+    grid-column: 1/4;
     grid-row: 1;
     border-bottom: 1px solid;
     border-bottom-color: black;
     display: grid;
     grid-template-columns: auto;
     align-items: center;
-}
 
-.item1item1 {
+}
+/* Bestemmer posisjonen til objektene i gridden til .nyhetsbrev */
+.nyhetsbrev-tekst {
     grid-row: 1;
 }
 
-.item1item2 {
+.nyhetsbrev-knapp{
     grid-row: 1;
     text-align: right;
 }
 
-.item2 {
-    grid-column: 3;
-    grid-row: 1 / span 2;
+.sosiale-medie-link{
+    grid-row: 2;
+    grid-column: 3/4;
 }
 
-.item2 a {
+.sosiale-medie-link a {
     display: block;
-    padding: 5%;
+    padding: 1%;
     text-decoration: none;
     color: black;
 }
 
-.item2 a:hover {
+.sosiale-medie-link a:hover {
     text-decoration: underline;
 }
+.kontaktinformasjon{
+    grid-row: 2;
+    grid-column: 1/2;
 
-.item4 a {
+}
+.side-link{
+    grid-row: 2;
+    grid-column: 2/3;
+}
+.side-link a {
     text-decoration: none;
     color: black;
 }
 
-.item4 a:hover {
+.side-link a:hover {
     text-decoration: underline;
 }
 
-.item4 b {
+.side-link b {
     font-size: 20px;
 }
 
-/*Når siden er mindre enn 1005 px skal grid stackes*/
-@media (max-width: 1005px) {
-    .footerGrid {
+/*Når siden er mindre enn 700 px skal grid stackes*/
+@media (max-width: 700px) {
+    .footer-grid-system {
         grid-template-columns: 1fr;
     }
 
-    .item1 {
+    .nyhetsbrev{
         grid-row: 1;
         grid-column: 1;
     }
 
-    .item1item1 {
+    .nyhetsbrev-tekst {
         grid-row: 1;
         grid-column: 1;
     }
 
-    .item1item2 {
+    .nyhetsbrev-knapp{
         grid-row: 2;
         grid-column: 1;
         text-align: left;
     }
 
-    .item2 {
-        grid-row: 2;
+    .sosiale-medie-link {
+        grid-row: 4;
         grid-column: 1;
         text-align: left;
     }
 
-    .item2 a {
+    .sosiale-medie-link a {
         padding: 1%;
     }
 
-    .item3 {
-        grid-row: 3;
+    .kontaktinformasjon{
+        grid-row: 2;
         grid-column: 1;
     }
 
-    .item4 {
-        grid-row: 4;
+    .side-link{
+        grid-row: 3;
         grid-column: 1;
     }
 }
@@ -619,7 +638,7 @@ footer {
 footer b {
     font-size: 25px;
 }
-
+/* design til knappen */
 .knapp {
     color: var(--main-site-colour);
     text-decoration: none;
