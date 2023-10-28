@@ -204,7 +204,7 @@ figcaption {
 
 .topical-grid {
     display: grid;
-    grid-template-columns: minmax(130px, 15%) auto;
+    grid-template-columns: minmax(150px, 15%) minmax(500px, 50vw) auto;
 
     margin-bottom: 2em;
     font-family: Calibri, serif;
@@ -212,20 +212,29 @@ figcaption {
 
 }
 
-.main-bar {
-    grid-column: 2/3;
-    margin-right: 4%;
-    margin-left: 4%;
-
-}
-
 .sidenav {
     grid-column: 1/2;
+    grid-row: 1/2;
     margin-left: 4%;
     margin-right: 4%;
 
     background-color: #f1f1f1;
 }
+
+.main-bar {
+    grid-column: 2/3;
+    grid-row: 1;
+    margin-right: 4%;
+    margin-left: 4%;
+
+}
+
+.topical-bilder {
+    grid-column: 3/ 4;
+    grid-row: 2;
+
+}
+
 .bilde {
     background-size: cover;
     width: 150px;
@@ -250,11 +259,6 @@ figcaption {
     border-bottom: 4px solid #01cd74;
     }
 
-.topical-bilder {
-    grid-column: 3/ span 1;
-    width: 200px;
-    height: 200px;
-}
 
 
 /* må sette media queries for ulike størrelser, 700 px for mobil kanskje og 1005
