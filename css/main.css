@@ -239,16 +239,22 @@ figcaption {
     margin: 0 0 20px 20px;
 }
 
-    .artikkel-sidebar {
-        width: 300px;
-        font-size: 14px;
-        color: #000;
-        line-height: 17px;
-        background-color: #fff;
-        padding: 20px;
-        border-top: 10px solid #01cd74;
-        border-bottom: 4px solid #01cd74;
+.artikkel-sidebar {
+    width: 300px;
+    font-size: 14px;
+    color: #000;
+    line-height: 17px;
+    background-color: #fff;
+    padding: 20px;
+    border-top: 10px solid #01cd74;
+    border-bottom: 4px solid #01cd74;
     }
+
+.topical-bilder {
+    grid-column: 3/ span 1;
+    width: 200px;
+    height: 200px;
+}
 
 
 /* må sette media queries for ulike størrelser, 700 px for mobil kanskje og 1005
