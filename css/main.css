@@ -195,10 +195,17 @@ figcaption {
 
 /*TOPICAL PAGE*/
 
+
+
 .topical-overskrift {
     font-family: "Gill Sans MT", serif;
     font-weight: bolder;
     font-size: 1.8rem;
+    text-align: center;
+    border-bottom: 2px solid;
+    border-bottom-color: chocolate;
+    background-color: goldenrod;
+    color: navy;
 }
 
 
@@ -212,9 +219,15 @@ figcaption {
 
 }
 
+
+.over-skrift {
+    grid-column: 2/4;
+    grid-row: 1;
+}
+
 .sidenav {
     grid-column: 1/2;
-    grid-row: 1/2;
+    grid-row: 1;
     margin-left: 4%;
     margin-right: 4%;
 
@@ -223,7 +236,7 @@ figcaption {
 
 .main-bar {
     grid-column: 2/3;
-    grid-row: 1;
+    grid-row: 2;
     margin-right: 4%;
     margin-left: 4%;
 
@@ -232,6 +245,8 @@ figcaption {
 .topical-bilder {
     grid-column: 3/ 4;
     grid-row: 2;
+    margin-right: 4%;
+    margin-left: 4%;
 
 }
 
@@ -241,23 +256,6 @@ figcaption {
     height: 200px;
 }
 
-.artikkel-sidebar-høyre {
-    float: right;
-    clear: right;
-    width: 300px;
-    margin: 0 0 20px 20px;
-}
-
-.artikkel-sidebar {
-    width: 300px;
-    font-size: 14px;
-    color: #000;
-    line-height: 17px;
-    background-color: #fff;
-    padding: 20px;
-    border-top: 10px solid #01cd74;
-    border-bottom: 4px solid #01cd74;
-    }
 
 
 
@@ -298,13 +296,6 @@ figcaption {
     margin: 0;
 }
 
-.over-skrift {
-    border-bottom: 2px solid;
-    border-bottom-color: chocolate;
-    background-color: goldenrod;
-    color: navy;
-
-}
 
 
 
