@@ -253,6 +253,7 @@ figcaption {
     grid-row: 1;
     margin-right: 2%;
     margin-left: 2%;
+    max-width: 1000px;
 }
 
 .sidenav {
@@ -260,6 +261,7 @@ figcaption {
     grid-row: 1/4;
     margin-left: 4%;
     margin-right: 4%;
+    min-width: 180px;
 
     background-color: #f1f1f1;
 }
@@ -269,6 +271,7 @@ figcaption {
     grid-row: 2;
     margin-right: 4%;
     margin-left: 4%;
+    max-width: 600px;
 
 }
 
@@ -312,6 +315,21 @@ figcaption {
         grid-template-columns: 1fr;
     }
 
+    .over-skrift {
+        grid-column: 1;
+        grid-row: 1;
+    }
+
+    .sidenav {
+        grid-column: 1;
+        grid-row: 2;
+    }
+
+    #introduction {
+        grid-column: 1/ end;
+        grid-row: 3;
+    }
+
     .topical-bilder {
         grid-column: 1;
         grid-row: 4;
@@ -319,17 +337,13 @@ figcaption {
 
     .main-bar {
         grid-column: 1/ end;
-        grid-row: 3;
+        grid-row: 5;
     }
 
-    .sidenav {
-        grid-column: 1;
-        grid-row: 2;
-    }
-    .over-skrift {
-        grid-column: 1;
-        grid-row: 1;
-    }
+
+    /* Refererer til de ulike ID   */
+
+
 }
 
 
