@@ -223,10 +223,8 @@ figcaption {
 .sidenav p {
     padding: 15px;
     color: crimson;
-    border-bottom: 10px;
+    border-bottom: 10px black;
     text-align: center;
-    border-color: crimson;
-
 }
 
 .sidenav ul a {
@@ -258,7 +256,7 @@ figcaption {
 
 .sidenav {
     grid-column: 1/2;
-    grid-row: 1/4;
+    grid-row: 1/ 5;
     margin-left: 4%;
     margin-right: 4%;
     min-width: 180px;
@@ -275,6 +273,7 @@ figcaption {
 
 }
 
+
 .topical-bilder {
     grid-column: 3/ 4;
     grid-row: 2;
@@ -285,7 +284,7 @@ figcaption {
 
 .main-bar1 {
     grid-column: 2/3;
-    grid-row: 4;
+    grid-row: 3;
     margin-right: 4%;
     margin-left: 4%;
     max-width: 600px;
@@ -294,9 +293,25 @@ figcaption {
 
 .topical-bilder1 {
     grid-column: 3/ 4;
+    grid-row: 3;
+    margin-right: 4%;
+    margin-left: 4%;
+}
+
+.topical-bilder2 {
+    grid-column: 3/ 4;
     grid-row: 4;
     margin-right: 4%;
     margin-left: 4%;
+}
+
+.main-bar2 {
+    grid-column: 2/3;
+    grid-row: 4;
+    margin-right: 4%;
+    margin-left: 4%;
+    max-width: 600px;
+
 }
 
 .bilde {
@@ -341,8 +356,8 @@ figcaption {
         grid-row: 2;
     }
 
-    #introduction {
-        grid-column: 1/ end;
+    .main-bar {
+        grid-column: 1;
         grid-row: 3;
     }
 
@@ -351,9 +366,28 @@ figcaption {
         grid-row: 4;
     }
 
-    .main-bar {
-        grid-column: 1/ end;
+    .main-bar1 {
+        grid-column: 1;
         grid-row: 5;
+    }
+
+    .topical-bilder1 {
+        grid-column: 1;
+        grid-row: 6;
+    }
+
+    .main-bar2 {
+        grid-column: 1;
+        grid-row: 7;
+    }
+
+    .topical-bilder2 {
+        grid-column: 1;
+        grid-row: 8;
+    }
+    .main-bar3 {
+        grid-column: 1;
+        grid-row: 9;
     }
 
 
