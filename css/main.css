@@ -283,6 +283,22 @@ figcaption {
 
 }
 
+.main-bar1 {
+    grid-column: 2/3;
+    grid-row: 4;
+    margin-right: 4%;
+    margin-left: 4%;
+    max-width: 600px;
+
+}
+
+.topical-bilder1 {
+    grid-column: 3/ 4;
+    grid-row: 4;
+    margin-right: 4%;
+    margin-left: 4%;
+}
+
 .bilde {
     background-size: cover;
     width: 150px;
