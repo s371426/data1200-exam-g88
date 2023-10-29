@@ -206,6 +206,7 @@ figcaption {
     border-bottom-color: chocolate;
     background-color: goldenrod;
     color: navy;
+    letter-spacing: 1.5px;
 }
 
 
@@ -219,15 +220,44 @@ figcaption {
 
 }
 
+.sidenav p {
+    padding: 15px;
+    color: crimson;
+    border-bottom: 10px;
+    text-align: center;
+    border-color: crimson;
+
+}
+
+.sidenav ul a {
+    padding: 10px;
+    display: block;
+    color: rgb(10, 47, 80);
+
+}
+
+.sidenav ul a:hover {
+    color: white;
+    background-color: dimgray;
+}
+
+.punkter {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
 
 .over-skrift {
     grid-column: 2/4;
     grid-row: 1;
+    margin-right: 2%;
+    margin-left: 2%;
 }
 
 .sidenav {
     grid-column: 1/2;
-    grid-row: 1;
+    grid-row: 1/4;
     margin-left: 4%;
     margin-right: 4%;
 
@@ -256,29 +286,6 @@ figcaption {
     height: 200px;
 }
 
-
-
-
-/* må sette media queries for ulike størrelser, 700 px for mobil kanskje og 1005
- laste ned samme bilde i ulike størrelser*/
-@media (max-width: 700px) {
-    .topical-grid {
-        grid-template-columns: 1fr;
-
-
-    }
-
-    .main-bar {
-        grid-column: 1;
-        grid-row: 2;
-    }
-
-    .sidenav {
-        grid-column: 1;
-        grid-row: 1;
-    }
-}
-
 .sidenav a {
     padding: 10px;
     display: block;
@@ -295,6 +302,36 @@ figcaption {
     padding: 0;
     margin: 0;
 }
+
+
+/* må sette media queries for ulike størrelser, 700 px for mobil
+ laste ned samme bilde i ulike størrelser*/
+@media (max-width: 700px) {
+
+    .topical-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .topical-bilder {
+        grid-column: 1;
+        grid-row: 4;
+    }
+
+    .main-bar {
+        grid-column: 1/ end;
+        grid-row: 3;
+    }
+
+    .sidenav {
+        grid-column: 1;
+        grid-row: 2;
+    }
+    .over-skrift {
+        grid-column: 1;
+        grid-row: 1;
+    }
+}
+
 
 
 
