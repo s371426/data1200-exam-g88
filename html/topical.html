@@ -71,7 +71,7 @@
             <img src = "../images/topical-images/NASA.jpg" alt="Bilde av New York lyst opp av gatebelysning tatt fra verdensrommet"
                  height="1398" width="2100">
         </picture>
-        <figcaption>New York, NASA</figcaption>
+        <figcaption>NASA, New York</figcaption>
     </figure>
 
     <div class="over-skrift">
@@ -103,7 +103,27 @@
         through satellites. Elon Musk’s Starlink is today the largest global provider of satellite internet with over
         4,500 satellites in orbit. They expect to have 42,000 new ones in orbit in the coming years.</p>
 
+    </article>
 
+    <figure class = "topical-bilder1">
+        <p>TESTING</p>
+        <picture lang="no">
+
+            <!-- Bilde blir valgt av device ut i fra hvilken oppløsning som passer best. "w" er bredden
+            på det bildet. Type forteller device at bildene er webp format-->
+            <source srcset="../images/topical-images/imac-small.webp 900w,
+                            ../images/topical-images/imac-medium.webp 1440w,
+                            ../images/topical-images/imac-large.webp 2100w"
+                    type="image/webp"/>
+
+            <!-- Backup bilde tilfelle device ikke støtter <picture> eller webp, i tilleg til alt tekst informasjon -->
+            <img src = "../images/topical-images/imac.jpg" alt="Bilde av flere elektroniske enheter med en iMac i sentrum"
+                 height="4000" width="6000">
+        </picture>
+        <figcaption>Domenico Loia, Unsplash</figcaption>
+    </figure>
+
+    <article class="main-bar1">
         <h2 id="key-terms">Key terms:</h2>
             <p>Critical infrastructure - systems that provide functions necessary for life.</p>
             <p>Technological trajectory – the evolution of technology in a specific field.</p>
