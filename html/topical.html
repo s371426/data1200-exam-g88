@@ -59,12 +59,19 @@
     <figure class = "topical-bilder">
         <p>TESTING</p>
         <picture lang="no">
-            <source srcset="../images/NASA.jpg">
-            <!-- Backup bilde her i tilfelle i jpg!-->
-            <img src = "../images/NASA.jpg" alt="Bilde av New York lyst opp av gatebelysning tatt fra verdensrommet"
-                 height="3280">
+
+            <!-- Bilde blir valgt av device ut i fra hvilken oppløsning som passer best. "w" er bredden
+            på det bildet. Type forteller device at bildene er webp format-->
+            <source srcset="../images/topical-images/NASA-small.webp 900w,
+                            ../images/topical-images/NASA-medium.webp 1440w,
+                            ../images/topical-images/NASA-large.webp 2100w"
+                    type="image/webp"/>
+
+            <!-- Backup bilde tilfelle device ikke støtter <picture> eller webp, i tilleg til alt tekst informasjon -->
+            <img src = "../images/topical-images/NASA.jpg" alt="Bilde av New York lyst opp av gatebelysning tatt fra verdensrommet"
+                 height="1398" width="2100">
         </picture>
-        <figcaption>NASA</figcaption>
+        <figcaption>New York, NASA</figcaption>
     </figure>
 
     <div class="over-skrift">
@@ -94,7 +101,7 @@
         <p>An estimated 2,5 billion people in the world do not yet have access to the internet. To overcome the physical
         limitations of internet cables, companies like Starlink and the EU are working on providing internet access
         through satellites. Elon Musk’s Starlink is today the largest global provider of satellite internet with over
-        4,500 satellites in orbit. They expect to have 42,000 new ones in orbit in the coming years.</p>'
+        4,500 satellites in orbit. They expect to have 42,000 new ones in orbit in the coming years.</p>
 
 
         <h2 id="key-terms">Key terms:</h2>
