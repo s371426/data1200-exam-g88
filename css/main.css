@@ -9,7 +9,7 @@
 /* Custom variable/property om farger som kan gjenbrukes flere steder, enklere å endre senere hvis man vil */
 /* inspirert av Tengel presentasjon og eksempel nettside i faget */
 :root {
-    --main-site-colour: #fde008;
+    --main-site-colour: red;
     --main-site-background-colour: white;
     --main-site-secondary-background-colour: #dddddd;
     --main-site-font-colour: black;
@@ -79,7 +79,7 @@ figcaption {
 /* NAV BAR */
 /* HAMBURGER MENU */
 .navbar {
-    background-color: red;
+    background-color: var(--main-site-colour);
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -112,7 +112,8 @@ figcaption {
 
 /* hover på lenkene i navbar*/
 .menu a:hover {
-    background-color: #cfcfd3;
+    /*background-color: #cfcfd3;*/
+    backdrop-filter: brightness(75%);
 }
 
 #burger-toggle {
