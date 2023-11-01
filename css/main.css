@@ -415,13 +415,13 @@ figcaption {
 /* LOCATION PAGE*/
 
 
-/* Main flexbox, for blant annet å gjøre slik at overskrift passer med content i location-flex*/
+/* Main flexbox, for blant annet å gjøre slik at overskrift passer strukturen til content i location-flex*/
 .location-main-flex {
     display: flex;
     flex-direction: column;
 }
 
-/* Sørger for at h1 er riktig brede forhold til de andre boksene */
+/* Sørger for at h1 er riktig bredde forhold til de andre elementene */
 .location-main-flex h1 {
     box-sizing: border-box;
     align-self: center;
@@ -444,7 +444,7 @@ figcaption {
     padding-top: 1.5%;
 }
 
-/*Er inni location-flex*/
+/* Er inni location-flex, inneholder bilde/bildetekst */
 .location-img {
     flex-basis: 50%;
     box-sizing: border-box;
@@ -457,7 +457,7 @@ figcaption {
     margin-bottom: 0.5rem;
 }
 
-/*Er inni location-flex*/
+/* Er inni location-flex, inneholder ovserktift/tekst */
 .location-text {
     flex-basis: 50%;
     box-sizing: border-box;
@@ -466,7 +466,7 @@ figcaption {
     padding-right: 3%;
 }
 
-/* Endrer flexbox til å være vertikal når viewport mindre enn 700px (Mobile) */
+/* Endrer location-flex flexbox til å være vertikal når viewport mindre enn 700px (Mobile) */
 @media only screen and (max-width: 700px) {
     .location-flex {
         flex-direction: column;
@@ -481,12 +481,14 @@ figcaption {
     }
 }
 
-/* Gjør bakgrunnen på annenhver child element til en annen farge (main secondary background color) */
+/* Gjør bakgrunnen på annenhver sibling element (child av parent element) til en annen farge
+(main secondary background color) */
+/* https://developer.mozilla.org/en-US/docs/Web/CSS/:nth-child */
 .location-flex:nth-child(odd) {
     background-color: var(--main-site-secondary-background-colour);
 }
 
-/* Bytter om på rekkefølgen på annenhver child element hvis viewport er bredere enn 701 px)*/
+/* Bytter om på rekkefølgen på annenhver sibling element hvis viewport 701px eller bredere*/
 @media only screen and (min-width: 701px) {
     .location-flex:nth-child(even) .location-img {
         order: 2;
