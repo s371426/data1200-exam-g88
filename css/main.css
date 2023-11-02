@@ -558,29 +558,36 @@ figcaption {
 
 .mainAccessibility {
     background-color: var(--main-site-background-colour);
-}
+    padding-top: 1.5%;
+    padding-bottom: 1.5%;
 
-.accessibilityTekst {
-    max-width: 1300px;
-    margin-left: auto;
-    margin-right: auto;
-    background-color: var(--main-site-background-colour);
-    padding-left: 2%;
-    padding-right: 2%;
 }
+.accessibilityIntroduksjon{
+    padding-left: 3%;
+    padding-right: 3%;
 
+}
 .accessibilityGrid {
+    padding-right: 3%;
+    padding-left: 3%;
     display: grid;
     grid-template-columns: 1fr 1fr;
+    background-color: var(--main-site-secondary-background-colour);
+
 }
 
 .acGridItem1 {
-
+    background-color: var(--main-site-secondary-background-colour);
 }
 
 .acGridItem2 {
-    background-color: lightgrey;
-    align-items: center;
+    background-color:var(--main-site-secondary-background-colour) ;
+    text-align: center;
+}
+
+.accessibilityTEKST{
+    padding-left: 3%;
+    padding-right: 3%;
 }
 
 @media (max-width: 700px) {
