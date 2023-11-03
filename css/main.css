@@ -543,8 +543,8 @@ figcaption {
 /*bestemmer backgrunnsfarge og padding top og bunn */
 .main-accessibility {
     background-color: var(--main-site-secondary-background-colour);
-    padding-top: 1.5%;
-    padding-bottom: 1.5%;
+
+
     top:0;
 }
 /*setter padding på alle objektene med ac i klassenavn*/
