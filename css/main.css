@@ -118,7 +118,14 @@ figcaption {
 }
 
 #burger-toggle {
-    display: none;
+    opacity: 0;
+    cursor: pointer;
+    position: absolute;
+    margin: 0;
+    height: 50px;
+    width: 50px;
+    top: 5px;
+    right: 25px;
 }
 
 .contact-button {
@@ -523,7 +530,7 @@ figcaption {
 .flex-container {
     display: flex;
     flex-wrap: wrap;
-    bacground-color: var-(--main-site-background-colour);
+    bacground-color: var(--main-site-background-colour);
 }
 
 .flex-container > div{
