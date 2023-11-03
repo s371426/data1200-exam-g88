@@ -9,7 +9,7 @@
 /* Custom variable/property om farger som kan gjenbrukes flere steder, enklere å endre senere hvis man vil */
 /* inspirert av Tengel presentasjon og eksempel nettside i faget */
 :root {
-    --main-site-colour: red;
+    --main-site-colour: #15856d;
     --main-site-background-colour: white;
     --main-site-secondary-background-colour: #dddddd;
     --main-site-font-colour: black;
@@ -503,22 +503,6 @@ figcaption {
 }
 
 
-/* GRID FRONT PAGE */
-/* Grid kode tatt fra https://www.w3schools.com/css/css_grid.asp */
-
-
-.grid-mainpage {
-    display: grid;
-    background-color: #5f788c;
-}
-
-.item1-mainpage {
-    grid-column: 1 / span 3;
-    grid-row: 1;
-    position: relative;
-    text-align: center;
-
-}
 
 .bilde-tekst {
     position: absolute;
@@ -536,25 +520,15 @@ figcaption {
     /*filter: blur(3px);*/
 }
 
-.item2-mainpage {
-    grid-column: 3;
-    grid-row: 2 / span 3;
-    background-color: #718a9b;
-    padding: 20px;
-    margin-bottom: 40px;
+/* FLEX-CONTAINER FORSIDE */
+.flex-container {
+    display: flex;
+    flex-wrap: wrap;
+    bacground-color: var-(--main-site-background-colour);
 }
 
-.item3-mainpage {
-    grid-column: 1 / span 3;
-    grid-row: 3;
-    text-align: left;
-    font-weight: bold;
-    padding: 20px;
-    margin-bottom: 40px;
-}
+.flex-container > div{
 
-.item3-mainpage p {
-    font-weight: lighter;
 }
 
 /*ACCESSIBILITY SIDE*/
