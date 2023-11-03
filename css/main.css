@@ -665,8 +665,10 @@ footer {
     text-decoration: underline;
 }
 
-.side-link b {
+.side-link p {
     font-size: 20px;
+    font-weight: 550;
+
 }
 
 /*Når siden er mindre enn 700 px skal grid stackes*/
