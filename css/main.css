@@ -521,11 +521,25 @@ figcaption {
 }
 
 /* FLEX-CONTAINER FORSIDE */
-.flex-container {
+.home-main-flex {
     display: flex;
-    flex-wrap: wrap;
-    bacground-color: var-(--main-site-background-colour);
+    flex-direction: column;
+    align-self: center;
+    align-items: center;
+    background-color: var(--main-site-background-colour);
 }
+
+.hero-flex{
+    display: flex;
+    flex-direction: column;
+    min-height: 700px;
+}
+
+.hero-text{
+    text-align: center;
+    color: #eeeeee;
+}
+
 
 .flex-container > div{
 
