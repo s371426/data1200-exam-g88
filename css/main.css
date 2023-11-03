@@ -593,6 +593,14 @@ figcaption {
     padding: 3%;
     background-color:var(--main-site-secondary-background-colour);
 }
+.acIndexTekst{
+    padding: 3%;
+    background-color: var(--main-site-background-colour)
+}
+.acTopicalTekst{
+    padding: 3%;
+    background-color:var(--main-site-secondary-background-colour);
+}
 @media (max-width: 700px) {
     .accessibilityGrid {
         grid-template-columns: 1fr;
