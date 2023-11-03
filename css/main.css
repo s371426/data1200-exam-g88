@@ -709,6 +709,7 @@ footer {
         grid-row: 2;
         grid-column: 1;
         text-align: left;
+        padding-bottom: 2%;
     }
 
     .sosiale-medie-link {
