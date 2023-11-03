@@ -31,7 +31,6 @@
         <div class="logo-burger-wrapper">
             <img id="logo-position" src="images/logo-oslomet-gul.svg" alt="OsloMet sin logo">
             <label class="hamburger-toggle-container" for="burger-toggle">
-                Meny
                 <span class="menu-icon"></span>
             </label>
         </div>
@@ -53,12 +52,77 @@
     </nav>
 </header>
 
-<main>
+<main class="home-main-flex">
+    <section class="hero-flex">
+        <div class="hero-text">
+            <h1>Oslo Metropolitan University</h1>
+            <h2>Velkommen til Pilestreted</h2>
+        </div>
 
-    <div class="grid-mainpage">
+        <!-- legge ved fotograf. Skjalg Bøhmer Vold / OsloMet -->
+
+        <picture>
+
+            <!--Bilde blir valgt av device ut i fra hvilken oppløsning som passer best. "w" er bredden på det bildet.
+            Type forteller device at bildene er webp format -->
+
+            <source srcset="images/forsidebilde-arkitektur-p32/arkitektur-p32-skjalg-bøhmer-vold-small.webp 1200w,
+                                images/forsidebilde-arkitektur-p32/arkitektur-p32-skjalg-bøhmer-vold-medium.webp 1800w,
+                                images/forsidebilde-arkitektur-p32/arkitektur-p32-skjalg-bøhmer-vold-large.webp 2400w,
+                                images/forsidebilde-arkitektur-p32/arkitektur-p32-skjalg-bøhmer-vold-very-large.webp 3840p"
+                    media="(min-width: 700px)" type="image/webp">
+
+            <!--Hvis device skjerm er smallere enn 700px vil en av disse bildene bli valgt steden for de over,
+            de er square istedenfor wide -->
+
+            <source srcset="images/forsidebilde-arkitektur-p32/arkitektur-p32-skjalg-bøhmer-vold-square-small.webp 1000w,
+                                images/forsidebilde-arkitektur-p32/arkitektur-p32-skjalg-bøhmer-vold-square-medium.webp 1440w,
+                                images/forsidebilde-arkitektur-p32/arkitektur-p32-skjalg-bøhmer-vold-square-large.jpg 2000w"
+                    media="(max-width: 700px)" type="image/webp">
+
+            <!-- Backup bilde tilfelle device ikke støtter <picture> eller webp, i tilleg til alt tekst informasjon -->
+
+            <img src="images/forsidebilde-arkitektur-p32/arkitektur-p32-skjalg-bøhmer-vold-large.jpg"
+                 alt="[MAGNLER ALT TEKST]"
+                 width="2400" height="1600">
+        </picture>
+    </section>
+
+        <!-- section class for en beskrivelse av områdene rundt campus. -->
+
+        <section class="campus-intro-flex">
+            <figure class="bislettbekken-img">
+                <picture>
+                    <source srcset="../images/bislettbekken/bislettbekken-small.jpg 900w,
+                                    ../images/bislettbekken/bislettbekken-medium.jpg 1350w,
+                                    ../images/bislettbekken/bislettbekken-large.jpg 2100w"
+                            type="image/jpg">
+                    <img src="../images/bislettbekken/bislettbekken.jpg"
+                         alt="bilde av en bekk ved pilestredet"
+                        width="2100" height ="1402">
+                </picture>
+                <figcaption class="img-text">John Hughes / OsloMET</figcaption>
+            </figure>
+
+            <div class="campus-intro-text">
+                <h3>Campus</h3>
+                <h2>Området rundt campus</h2>
+                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+                   Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
+                   when an unknown printer took a galley of type and scrambled it to make a type specimen book.
+                   It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.
+
+                    It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages,
+                    and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum</p>
+            </div>
+        </section>
+
+</main>
+
+    <!--    <div class="grid-mainpage">
         <div class="item1-mainpage">
 
-            <!-- legge ved fotograf. Skjalg Bøhmer Vold / OsloMet-->
+
 
             <div class="bilde-tekst">
                 <h1>Oslo Metropolitan University</h1>
@@ -68,27 +132,30 @@
 
             <picture>
 
-                <!-- Bilde blir valgt av device ut i fra hvilken oppløsning som passer best. "w" er bredden
-                     på det bildet. Type forteller device at bildene er webp format-->
+                Bilde blir valgt av device ut i fra hvilken oppløsning som passer best. "w" er bredden
+                     på det bildet. Type forteller device at bildene er webp format
+
                 <source srcset="images/forsidebilde-arkitektur-p32/arkitektur-p32-skjalg-bøhmer-vold-small.webp 1200w,
                                 images/forsidebilde-arkitektur-p32/arkitektur-p32-skjalg-bøhmer-vold-medium.webp 1800w,
                                 images/forsidebilde-arkitektur-p32/arkitektur-p32-skjalg-bøhmer-vold-large.webp 2400w,
                                 images/forsidebilde-arkitektur-p32/arkitektur-p32-skjalg-bøhmer-vold-very-large.webp 3840p"
                         media="(min-width: 700px)" type="image/webp">
 
-                <!-- Hvis device skjerm er smallere enn 700px vil en av disse bildene bli valgt steden for de over,
-                     de er square istedenfor wide -->
+                Hvis device skjerm er smallere enn 700px vil en av disse bildene bli valgt steden for de over,
+                     de er square istedenfor wide
+
                 <source srcset="images/forsidebilde-arkitektur-p32/arkitektur-p32-skjalg-bøhmer-vold-square-small.webp 1000w,
                                 images/forsidebilde-arkitektur-p32/arkitektur-p32-skjalg-bøhmer-vold-square-medium.webp 1440w,
                                 images/forsidebilde-arkitektur-p32/arkitektur-p32-skjalg-bøhmer-vold-square-large.jpg 2000w"
                         media="(max-width: 700px)" type="image/webp">
 
-                <!-- Backup bilde tilfelle device ikke støtter <picture> eller webp, i tilleg til alt tekst informasjon -->
+                Backup bilde tilfelle device ikke støtter <picture> eller webp, i tilleg til alt tekst informasjon
+
                 <img src="images/forsidebilde-arkitektur-p32/arkitektur-p32-skjalg-bøhmer-vold-large.jpg"
                      alt="[MAGNLER ALT TEKST]"
                      width="2400" height="1600">
             </picture>
-
+-->
         </div>
         <div class="item2-mainpage">
             <h2> Dette er OsloMet</h2>
@@ -100,10 +167,10 @@
             <h2>Tekst her</h2>
             <p></p>
         </div>
-    </div>
 
 
-</main>
+
+
 
 <footer>
     <!-- Grid kode tatt fra: https://www.w3schools.com/css/css_grid.asp-->
