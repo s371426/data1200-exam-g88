@@ -198,7 +198,6 @@ figcaption {
 /*TOPICAL PAGE*/
 
 /* Her starter spaghetti-koden */
-
 .topical-overskrift {
     font-family: "Gill Sans MT", serif;
     font-weight: bolder;
@@ -211,7 +210,7 @@ figcaption {
     letter-spacing: 1.5px;
 }
 
-
+/* Vi bruker grids for å style topical siden */
 .topical-grid {
     display: grid;
     grid-template-columns: minmax(180px, 15%) minmax(500px, 50vw) auto;
@@ -222,6 +221,7 @@ figcaption {
 
 }
 
+/* Alt av stylingen av navbar går under her */
 .sidenav h2 {
     padding: 15px;
     color: white;
@@ -251,7 +251,7 @@ figcaption {
     margin: 0;
 }
 
-
+/* Her så bestemmer vi plasseringene av de ulike elementene i vanlig view */
 .over-skrift {
     grid-column: 2/4;
     grid-row: 1;
@@ -353,8 +353,7 @@ figcaption {
 }
 
 
-/* må sette media queries for ulike størrelser, 700 px for mobil
- laste ned samme bilde i ulike størrelser*/
+/* Vi bruker media queries slik at utseende på nettsiden er annerledes på mobil */
 @media (max-width: 700px) {
 
     .topical-grid {
