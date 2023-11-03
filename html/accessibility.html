@@ -42,63 +42,79 @@
 </header>
 
 <main class="main-accessibility">
-    <div class="accessibility-introduksjon">
-        <h1>Unversal design:</h1>
-        <p>Brukervennlighet handler om å gjøre nettsiden så enkel og intuitiv som mulig. Det skal være enkelt å
-            manøvrere seg på siden, uten å skape forvirring og irritasjon. Det skal være lett å finne det man leter
-            etter, og gi brukerne en god opplevelse. Universal design handler om å gjøre siden tilgjengelig for så
-            mange som mulig, uavhengig av evne og behov. </p>
+    <!-- Definerer alle klasser med "ac", dette gjør jeg for å kunne referere til alle i css, isteden
+     for å gjenta samme kode flere ganger-->
+        <div class="ac accessibility-introduksjon">
+            <h1>Unversal design:</h1>
+            <p>Brukervennlighet handler om å gjøre nettsiden så enkel og intuitiv som mulig. Det skal være enkelt å
+                manøvrere seg på siden, uten å skape forvirring og irritasjon. Det skal være lett å finne det man leter
+                etter, og gi brukerne en god opplevelse. Universal design handler om å gjøre siden tilgjengelig for så
+                mange som mulig, uavhengig av evne og behov. </p>
 
-    </div>
-    <div class="accessibility-grid">
-        <ul class="ac-liste-tekst">
-            <li><h3>Font:</h3> Vi har valgt å bruke "Verdana" som font, og "sans-serif" som backup. "Verdana" har vi valgt
-                ettersom fonten har tydelige former og forskjeller mellom bokstavene, og er tydelig med mange og få piksler.
-                Det er tydelige forskjeller mellom "l" og "I". Vi har valgt å ha en backup font, "sans-serif", som blir hovedfonten
-                dersom brukeren ikke får lastet inn "Verdana".
-            </li>
-            <li><h3>Farge:</h3>
-                På siden har vi "mørk og lys" modus, som blir valgt utifra instillingene på brukerens pc. Lys modusen har hvit
-                bakgrunnsfarge med mørk tekst, og mørk modusen har mørk bakgrunn med hvit tekst. Vi har hatt stort fokus på kontrast
-                mellom tekst og bakgrunn.
-            </li>
-            <li><h3>Struktur:</h3>På sidene har vi valgt å ha en generell utforming, med nav bar på toppen, hovedinnhold i
-                midten og footer på bunn. Vi har brukt tydelige overskrifter og bilder, for å gjøre det enkelt for brukerne å
-                forstå siden uten å lese innholdet.
-            </li>
-            <li><h3>Alt tekster:</h3>la bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla
-                bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla
-                bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla
-            </li>
-        </ul>
-        <div class="ac-grid-item-2">Bilde</div>
-    </div>
-    <!--Classen under har midlertidig navn -->
-    <div class="ac-index-tekst">
-    <h4>Home:</h4><p> bla bla bla bla</p>
-    </div>
-    <div class="ac-topical-tekst">
-    <h4>Topical:</h4><p>BLA BAL BLASKNansdjkak djsank</p>
-    </div>
-    <div class="ac-hamburger-tekst">
-   <h4>Hamburger meny:</h4><p> Den første løsningen vi gjorde for hamburger meny kunne ikke aktiveres med kun tastatur,
-    noe som trengs hvis man har problemer med å bruke mus. Dette var fordi ckecbox ble sat til Display: none i
-    css for å gjemme den. Løsningen for dette, var å sette den til opacity: 0 slik at den bare er usynelig i
-    steden med position: absolute slik at den var riktig sted. [mere tekst om at man ikke ser at den er markert,
-    og at den skal komme opp riktig med screan reader]</p>
-    </div>
+        </div>
+        <div class="ac accessibility-grid">
 
-    <div class="ac-footer-tekst">
-        <h4>Footer:</h4><p> På footeren har vi valgt å imitere oslomet.no sin footer. Vi har lenker nederst på siden, som gjør det
-            enkelt for brukerne å gå videre til neste side, isteden for å måtte manøvrere seg til toppen igjen. Lenkene til
-            sosiale medier har ikoner. Dette har vi gjort for å gjøre det enkelt for brukerne å forstå hvor lenkene går.
-            Lenkene får også strek under seg når man holder musen over, for å indikere at det er en lenke.
-            Ellers har vi kontrast mellom tekst og bakgrunn, samt oversiktlig og leselig tekst.
-        </p>
-    </div>
+                <ul class="ac-liste-tekst">
+                    <li><h3>Font:</h3> Vi har valgt å bruke "Verdana" som font, og "sans-serif" som backup. "Verdana" har vi
+                        valgt
+                        ettersom fonten har tydelige former og forskjeller mellom bokstavene, og er tydelig med mange og få
+                        piksler.
+                        Det er tydelige forskjeller mellom "l" og "I". Vi har valgt å ha en backup font, "sans-serif", som
+                        blir hovedfonten
+                        dersom brukeren ikke får lastet inn "Verdana".
+                    </li>
+                    <li><h3>Farge:</h3>
+                        På siden har vi "mørk og lys" modus, som blir valgt utifra instillingene på brukerens pc. Lys
+                        modusen har hvit
+                        bakgrunnsfarge med mørk tekst, og mørk modusen har mørk bakgrunn med hvit tekst. Vi har hatt stort
+                        fokus på kontrast
+                        mellom tekst og bakgrunn.
+                    </li>
+                    <li><h3>Struktur:</h3>På sidene har vi valgt å ha en generell utforming, med nav bar på toppen,
+                        hovedinnhold i
+                        midten og footer på bunn. Vi har brukt tydelige overskrifter og bilder, for å gjøre det enkelt for
+                        brukerne å
+                        forstå siden uten å lese innholdet.
+                    </li>
+                    <li><h3>Alt tekster:</h3>la bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla
+                        bla
+                        bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla
+                        bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla
+                    </li>
+                </ul>
+                <div class="ac ac-grid-item-2">Bilde</div>
+            </div>
+            <!--Classen under har midlertidig navn -->
+            <div class="ac ac-index-tekst">
+                <h4>Home:</h4>
+                <p> bla bla bla bla</p>
+            </div>
+            <div class="ac ac-topical-tekst">
+                <h4>Topical:</h4>
+                <p>BLA BAL BLASKNansdjkak djsank</p>
+            </div>
+            <div class="ac ac-hamburger-tekst">
+                <h4>Hamburger meny:</h4>
+                <p> Den første løsningen vi gjorde for hamburger meny kunne ikke aktiveres med kun tastatur,
+                    noe som trengs hvis man har problemer med å bruke mus. Dette var fordi ckecbox ble sat til Display: none
+                    i
+                    css for å gjemme den. Løsningen for dette, var å sette den til opacity: 0 slik at den bare er usynelig i
+                    steden med position: absolute slik at den var riktig sted. [mere tekst om at man ikke ser at den er
+                    markert,
+                    og at den skal komme opp riktig med screan reader]</p>
+            </div>
 
-
-
+            <div class="ac ac-footer-tekst">
+                <h4>Footer:</h4>
+                <p> På footeren har vi valgt å imitere oslomet.no sin footer. Vi har lenker nederst på siden, som gjør det
+                    enkelt for brukerne å gå videre til neste side, isteden for å måtte manøvrere seg til toppen igjen.
+                    Lenkene til
+                    sosiale medier har ikoner. Dette har vi gjort for å gjøre det enkelt for brukerne å forstå hvor lenkene
+                    går.
+                    Lenkene får også strek under seg når man holder musen over, for å indikere at det er en lenke.
+                    Ellers har vi kontrast mellom tekst og bakgrunn, samt oversiktlig og leselig tekst.
+                </p>
+            </div>
 
 
 </main>

@@ -523,55 +523,28 @@ figcaption {
 
 /*ACCESSIBILITY SIDE*/
 
+/*bestemmer backgrunnsfarge og padding top og bunn */
 .main-accessibility {
+    background-color: var(--main-site-secondary-background-colour);
+
+
+    top:0;
+}
+/*setter padding på alle objektene med ac i klassenavn*/
+.ac{
+    padding:3% 9%;
+}
+/*Setter at alle oddetalls klasser under ac har den valgte fargen*/
+.ac:nth-child(odd) {
     background-color: var(--main-site-background-colour);
-    padding-top: 1.5%;
-    padding-bottom: 1.5%;
-
-
 }
-.accessibility-introduksjon{
-    padding: 3% 9%;
-}
+/*Lager grid inne i klassen*/
 .accessibility-grid {
-    padding: 3% 9%;
+
     display: grid;
     grid-template-columns: 1fr 1fr;
-    background-color: var(--main-site-secondary-background-colour);
-
 }
-
-.ac-liste-tekst {
-    background-color: var(--main-site-secondary-background-colour);
-    padding: 3% 9%;
-}
-
-.ac-grid-item-2 {
-    background-color:var(--main-site-secondary-background-colour) ;
-    text-align: center;
-    padding: 3% 9%;
-}
-.ac-index-tekst{
-    padding: 3% 9%;
-    background-color: var(--main-site-background-colour)
-}
-.ac-topical-tekst{
-    padding: 3% 9%;
-     background-color:var(--main-site-secondary-background-colour);
- }
-.ac-hamburger-tekst{
-      padding: 3% 9%;
-    background-color: var(--main-site-background-colour)
-
-  }
-.ac-footer-tekst{
-    padding: 3% 9%;
-    background-color:var(--main-site-secondary-background-colour);
-
-}
-
-
-
+/*Rekkefølgen på hvordan objektene skal stackes når skjermen er mindre enn 700px*/
 @media (max-width: 700px) {
     .accessibility-grid {
         grid-template-columns: 1fr;
