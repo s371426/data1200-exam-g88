@@ -214,7 +214,7 @@ figcaption {
 
 .topical-grid {
     display: grid;
-    grid-template-columns: minmax(150px, 15%) minmax(500px, 50vw) auto;
+    grid-template-columns: minmax(180px, 15%) minmax(500px, 50vw) auto;
 
     margin-bottom: 2em;
     font-family: Calibri, serif;
@@ -261,7 +261,6 @@ figcaption {
     grid-row: 1/ 5;
     margin-left: 4%;
     margin-right: 4%;
-    min-width: 180px;
 
     background-color: #f1f1f1;
 }
