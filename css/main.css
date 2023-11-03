@@ -88,11 +88,11 @@ figcaption {
 /* style lenkene i navbar */
 .menu a {
     display: block;
-    padding: 20px;
+    padding: 18px;
     text-decoration: none;
     color: black;
     font-weight: bold;
-    font-size: 1.2rem;
+    font-size: 1.1rem;
 }
 
 /* hover over lenkene i navbar */
@@ -105,8 +105,8 @@ figcaption {
     background-color: skyblue;
     color: black;
     border-radius: 30px;
-    padding-right: 30px;
-    padding-left: 30px;
+    padding-right: 25px;
+    padding-left: 25px;
     padding-top: 15px;
     padding-bottom: 15px;
 }
