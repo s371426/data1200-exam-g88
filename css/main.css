@@ -567,10 +567,10 @@ figcaption {
 
 }
 .accessibilityIntroduksjon{
-    padding: 3%;
+    padding: 3% 9%;
 }
 .accessibilityGrid {
-    padding: 3%;
+    padding: 3% 9%;
     display: grid;
     grid-template-columns: 1fr 1fr;
     background-color: var(--main-site-secondary-background-colour);
@@ -579,29 +579,29 @@ figcaption {
 
 .acListeTekst {
     background-color: var(--main-site-secondary-background-colour);
-    padding: 3%;
+    padding: 3% 9%;
 }
 
 .acGridItem2 {
     background-color:var(--main-site-secondary-background-colour) ;
     text-align: center;
-    padding: 3%;
+    padding: 3% 9%;
 }
 .acIndexTekst{
-    padding: 3%;
+    padding: 3% 9%;
     background-color: var(--main-site-background-colour)
 }
 .acTopicalTekst{
-     padding: 3%;
+    padding: 3% 9%;
      background-color:var(--main-site-secondary-background-colour);
  }
 .acHamburgerTekst{
-      padding: 3%;
+      padding: 3% 9%;
     background-color: var(--main-site-background-colour)
 
   }
 .acFooterTekst{
-    padding: 3%;
+    padding: 3% 9%;
     background-color:var(--main-site-secondary-background-colour);
 
 }
@@ -624,7 +624,7 @@ figcaption {
 
 /*FOOTER*/
 /*Setter fooder på bunn av siden og at bredden skal være 100%*/
-footer{
+footer {
     position: relative;
     bottom: 0;
     width: 100%;
@@ -792,9 +792,7 @@ footer{
 }
 
 /*Slutt på ikonkode*/
-footer b {
-    font-size: 25px;
-}
+
 /* design til knappen */
 .knapp {
     color: var(--main-site-colour);
