@@ -533,17 +533,17 @@ figcaption {
 
 /*ACCESSIBILITY SIDE*/
 
-.mainAccessibility {
+.main-accessibility {
     background-color: var(--main-site-background-colour);
     padding-top: 1.5%;
     padding-bottom: 1.5%;
 
 
 }
-.accessibilityIntroduksjon{
+.accessibility-introduksjon{
     padding: 3% 9%;
 }
-.accessibilityGrid {
+.accessibility-grid {
     padding: 3% 9%;
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -551,30 +551,30 @@ figcaption {
 
 }
 
-.acListeTekst {
+.ac-liste-tekst {
     background-color: var(--main-site-secondary-background-colour);
     padding: 3% 9%;
 }
 
-.acGridItem2 {
+.ac-grid-item-2 {
     background-color:var(--main-site-secondary-background-colour) ;
     text-align: center;
     padding: 3% 9%;
 }
-.acIndexTekst{
+.ac-index-tekst{
     padding: 3% 9%;
     background-color: var(--main-site-background-colour)
 }
-.acTopicalTekst{
+.ac-topical-tekst{
     padding: 3% 9%;
      background-color:var(--main-site-secondary-background-colour);
  }
-.acHamburgerTekst{
+.ac-hamburger-tekst{
       padding: 3% 9%;
     background-color: var(--main-site-background-colour)
 
   }
-.acFooterTekst{
+.ac-footer-tekst{
     padding: 3% 9%;
     background-color:var(--main-site-secondary-background-colour);
 
@@ -583,15 +583,15 @@ figcaption {
 
 
 @media (max-width: 700px) {
-    .accessibilityGrid {
+    .accessibility-grid {
         grid-template-columns: 1fr;
     }
 
-    .acListeTekst {
+    .ac-liste-tekst {
         grid-column: 1;
     }
 
-    .acGridItem2 {
+    .ac-grid-item-2 {
         grid-column: 1;
     }
 }
