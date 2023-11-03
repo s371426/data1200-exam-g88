@@ -129,7 +129,7 @@ figcaption {
 }
 
 /* Logo position and image size */
-#logo-position {
+#nav-logo {
     height: 40px;
     padding:10px;
     width: auto;
@@ -141,7 +141,7 @@ figcaption {
     font-size: 1.2rem;
 }
 
-#burger-toggle {
+#hamburger-toggle {
     opacity: 0;
     cursor: pointer;
     position: absolute;
@@ -179,7 +179,7 @@ figcaption {
         display: none;
     }
 
-    #burger-toggle:checked ~ .menu {
+    #hamburger-toggle:checked ~ .menu {
         display: block;
     }
 }
