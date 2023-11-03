@@ -564,39 +564,41 @@ figcaption {
 
 }
 .accessibilityIntroduksjon{
-    padding-left: 3%;
-    padding-right: 3%;
-
+    padding: 3%;
 }
 .accessibilityGrid {
-    padding-right: 3%;
-    padding-left: 3%;
+    padding: 3%;
     display: grid;
     grid-template-columns: 1fr 1fr;
     background-color: var(--main-site-secondary-background-colour);
 
 }
 
-.acGridItem1 {
+.acListeTekst {
     background-color: var(--main-site-secondary-background-colour);
+    padding: 3%;
 }
 
 .acGridItem2 {
     background-color:var(--main-site-secondary-background-colour) ;
     text-align: center;
+    padding: 3%;
 }
 
-.accessibilityTEKST{
-    padding-left: 3%;
-    padding-right: 3%;
+.acFooterTekst{
+    padding: 3%;
+    background-color: var(--main-site-background-colour)
 }
-
+.acHamburgerTekst{
+    padding: 3%;
+    background-color:var(--main-site-secondary-background-colour);
+}
 @media (max-width: 700px) {
     .accessibilityGrid {
         grid-template-columns: 1fr;
     }
 
-    .acGridItem1 {
+    .acListeTekst {
         grid-column: 1;
     }
 
