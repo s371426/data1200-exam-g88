@@ -561,6 +561,7 @@ figcaption {
     padding-top: 1.5%;
     padding-bottom: 1.5%;
 
+
 }
 .accessibilityIntroduksjon{
     padding-left: 3%;
@@ -610,17 +611,15 @@ footer{
     position: relative;
     bottom: 0;
     width: 100%;
+    display: grid;
+    grid-template-columns: auto;
+
+    background-color: #8899a4;
 
 }
 
 /* Grid kode tatt fra: https://www.w3schools.com/css/css_grid.asp*/
-.footer-grid-system {
-    display: grid;
-    grid-template-columns: auto;
-    padding: 0 2% 2%;
-    background-color: #8899a4;
 
-}
 /* endrer på alle grid, og sentrerer tekst */
 .footer-grid-objekter {
     text-align: left;
