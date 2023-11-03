@@ -222,17 +222,21 @@ figcaption {
 
 }
 
-.sidenav p {
+.sidenav h2 {
     padding: 15px;
-    color: crimson;
+    color: white;
     border-bottom: 10px black;
     text-align: center;
+    background-color: rgb(10, 47, 80);
+    margin-bottom: 0;
 }
 
 .sidenav ul a {
-    padding: 10px;
+    padding: 15px;
     display: block;
-    color: rgb(10, 47, 80);
+    background-color: rgb(24, 65, 101);
+    color: rgb(210, 210, 210);
+    text-align: center;
 
 }
 
