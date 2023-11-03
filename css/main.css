@@ -68,16 +68,9 @@ figcaption {
 /*DIVs*/
 
 /*HEADER*/
-
-/* Logo position and image size */
-#logo-position {
-    height: 40px;
-    width: auto;
-    padding:10px;
-}
-
 /* NAV BAR */
 /* HAMBURGER MENU */
+
 .navbar {
     background-color: var(--main-site-colour);
     display: flex;
@@ -93,12 +86,8 @@ figcaption {
     flex-direction: row;
     list-style-type: none;
     justify-content: space-around;
-    width: 80vw;
+    width: 100%;
     max-width: 900px;
-}
-
-.menu li {
-
 }
 
 /* skal style lenkene som vi har i nav class navbar */
@@ -117,16 +106,6 @@ figcaption {
     backdrop-filter: brightness(75%);
 }
 
-#burger-toggle {
-    opacity: 0;
-    cursor: pointer;
-    position: absolute;
-    margin: 0;
-    height: 50px;
-    width: 50px;
-    top: 5px;
-    right: 25px;
-}
 
 .contact-button {
     background-color: skyblue;
@@ -150,7 +129,10 @@ figcaption {
     width: 60px;
 }
 
-/* kode for å passe på at hamburger icon ikke dukker opp før nettsiden scaler til andre decvices enn desktop */
+.logo-burger-wrapper {
+    display: flex;
+    justify-content: space-between;
+}
 
 .hamburger-toggle-container {
     display: none;
@@ -158,6 +140,25 @@ figcaption {
     font-size: 1.2rem;
 }
 
+#burger-toggle {
+    opacity: 0;
+    cursor: pointer;
+    position: absolute;
+    margin: 0;
+    height: 50px;
+    width: 50px;
+    top: 5px;
+    right: 25px;
+}
+
+/* Logo position and image size */
+#logo-position {
+    height: 40px;
+    width: auto;
+    padding:10px;
+}
+
+/* kode for å passe på at hamburger icon ikke dukker opp før nettsiden scaler til andre decvices enn desktop */
 @media (max-width: 800px) {
 
     nav {
@@ -179,7 +180,6 @@ figcaption {
 
     .hamburger-toggle-container {
         cursor: pointer;
-        /*display: block;*/
         display: inline-flex;
         align-items: center;
     }
@@ -196,10 +196,6 @@ figcaption {
 
 }
 
-.logo-burger-wrapper {
-    display: flex;
-    justify-content: space-between;
-}
 
 
 /*TOPICAL PAGE*/
