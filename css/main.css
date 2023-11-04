@@ -407,7 +407,6 @@ figcaption {
 
 /* LOCATION PAGE*/
 
-
 /* Main flexbox, for blant annet å gjøre slik at overskrift passer strukturen til content i location-flex*/
 .location-main-flex {
     display: flex;
@@ -441,9 +440,9 @@ figcaption {
 .location-img {
     flex-basis: 50%;
     box-sizing: border-box;
-    max-width: 620px;
     position: relative;
     top: 0.66rem;
+    max-width: 620px;
     padding-left: 3%;
     padding-right: 3%;
     margin-top: 0.5rem;
