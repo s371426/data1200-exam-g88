@@ -494,7 +494,7 @@ figcaption {
 
 
 
-.bilde-tekst {
+/*.bilde-tekst {
     position: absolute;
     top: 50%;
     color: white;
@@ -503,12 +503,13 @@ figcaption {
     transform: translate(50%, -50%);
     text-shadow: black 0 0 4px;
     font-size: 2rem;
-    /*background: #777;*/
+    /*background: #777;
 }
 
 .item1-mainpage img {
     /*filter: blur(3px);*/
 }
+
 
 /* FLEX-CONTAINER FORSIDE */
 .home-main-flex {
