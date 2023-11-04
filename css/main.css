@@ -6,8 +6,8 @@
 
 /*DIVERSE*/
 
-/* Custom variable/property om farger som kan gjenbrukes flere steder, enklere å endre senere og gjøre darkmode */
-/* inspirert av Tengel presentasjon og eksempel nettside i faget */
+/* Custom property om farger som kan gjenbrukes flere steder, enklere å endre senere og gjøre darkmode */
+/* Inspirert av Tengel presentasjon, eksempel nettside i faget og Mozilla web docs*/
 :root {
     --main-site-colour: #15856d;
     --main-site-background-colour: white;
@@ -88,7 +88,7 @@ figcaption {
 /* style lenkene i navbar */
 .menu a {
     display: block;
-    padding: 18px;
+    padding: 20px 17px;
     text-decoration: none;
     color: black;
     font-weight: bold;
@@ -109,6 +109,8 @@ figcaption {
     padding-left: 25px;
     padding-top: 15px;
     padding-bottom: 15px;
+    text-decoration: none;
+    font-weight: bold;
 }
 
 .contact-button:hover {
@@ -137,8 +139,8 @@ figcaption {
 
 .hamburger-toggle-container {
     display: none;
-    font-weight: bold;
-    font-size: 1.2rem;
+    /*font-weight: bold;*/
+    /*font-size: 1.2rem;*/
 }
 
 #hamburger-toggle {
@@ -464,10 +466,7 @@ figcaption {
         flex-direction: column;
     }
 
-    .location-img {
-        max-width: none;
-    }
-
+    .location-img,
     .location-text {
         max-width: none;
     }
