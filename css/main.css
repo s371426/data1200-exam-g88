@@ -193,6 +193,27 @@ figcaption {
 }
 
 
+/* FLEX-CONTAINER FORSIDE */
+.home-main-flex {
+    display: flex;
+    flex-direction: column;
+    align-self: center;
+    align-items: center;
+    background-color: var(--main-site-background-colour);
+}
+
+.hero-flex{
+    display: flex;
+    flex-direction: column;
+    min-height: 700px;
+}
+
+.hero-text{
+    text-align: center;
+    color: #eeeeee;
+}
+
+
 /*TOPICAL PAGE*/
 
 /* Her starter spaghetti-koden */
@@ -512,27 +533,6 @@ figcaption {
 
 .item1-mainpage img {
     filter: blur(3px);
-}
-
-
-/* FLEX-CONTAINER FORSIDE */
-.home-main-flex {
-    display: flex;
-    flex-direction: column;
-    align-self: center;
-    align-items: center;
-    background-color: var(--main-site-background-colour);
-}
-
-.hero-flex{
-    display: flex;
-    flex-direction: column;
-    min-height: 700px;
-}
-
-.hero-text{
-    text-align: center;
-    color: #eeeeee;
 }
 
 /*ACCESSIBILITY SIDE*/
