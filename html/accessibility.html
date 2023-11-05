@@ -19,15 +19,15 @@
 <header>
     <nav class="navbar">
         <div class="logo-burger-wrapper">
-            <a href="../index.html" title="Home"><img id="nav-logo" src="../images/logo-oslomet-gul.svg"
-                                                      alt="OsloMet sin logo"></a>
-            <label class="hamburger-toggle-container" for="hamburger-toggle">
+            <a href="../index.html" title="Tilbake til forsiden"><img id="nav-logo" src="../images/logo-oslomet-gul.svg"
+                                                                      alt="OsloMet sin logo"></a>
+            <label class="hamburger-toggle-container" for="hamburger-toggle" >
                 <span class="menu-icon"></span>
             </label>
         </div>
 
         <!-- definer en input id for hamburger element som vi skal bruke på tablet & mobil- versjoner. -->
-        <input id="hamburger-toggle" type="checkbox"/>
+        <input id="hamburger-toggle" type="checkbox" aria-label="Åpne navigasjonsmeny"/>
 
         <!-- definer en ul class for lenkene i navigasjonsmenyen og linker dem til .html filene i prosjektet -->
         <ul class="menu">
@@ -102,12 +102,11 @@
     <div class="ac ac-hamburger-tekst">
         <h4>Hamburger meny:</h4>
         <p> Den første løsningen vi gjorde for hamburger meny kunne ikke aktiveres med kun tastatur,
-            noe som trengs hvis man har problemer med å bruke mus. Dette var fordi ckecbox ble sat til Display: none
-            i
-            css for å gjemme den. Løsningen for dette, var å sette den til opacity: 0 slik at den bare er usynelig i
-            steden med position: absolute slik at den var riktig sted. [mere tekst om at man ikke ser at den er
-            markert,
-            og at den skal komme opp riktig med screan reader]</p>
+            noe som trengs hvis man har problemer med å bruke mus. Dette var fordi checkbox ble satt til Display: none
+            i css for å gjemme den. Løsningen for dette, var å sette den til opacity: 0 isteden slik at den bare er
+            usynelig i steden med position: absolute slik at den var riktig sted på siden. For brukere som bruker
+            screen readers, la vi til "aria-label" på knappen slik at funksjonen dens blir tydelig. 
+            [mere tekst om at man ikke ser at den er markert.]</p>
     </div>
 
     <div class="ac ac-footer-tekst">
