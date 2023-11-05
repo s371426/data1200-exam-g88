@@ -6,8 +6,8 @@
 
 /*DIVERSE*/
 
-/* Custom variable/property om farger som kan gjenbrukes flere steder, enklere å endre senere og gjøre darkmode */
-/* inspirert av Tengel presentasjon og eksempel nettside i faget */
+/* Custom property om farger som kan gjenbrukes flere steder, enklere å endre senere og gjøre darkmode */
+/* Inspirert av Tengel presentasjon, eksempel nettside i faget og Mozilla web docs*/
 :root {
     --main-site-colour: #15856d;
     --main-site-background-colour: white;
@@ -88,7 +88,7 @@ figcaption {
 /* style lenkene i navbar */
 .menu a {
     display: block;
-    padding: 18px;
+    padding: 20px 17px;
     text-decoration: none;
     color: black;
     font-weight: bold;
@@ -109,6 +109,8 @@ figcaption {
     padding-left: 25px;
     padding-top: 15px;
     padding-bottom: 15px;
+    text-decoration: none;
+    font-weight: bold;
 }
 
 .contact-button:hover {
@@ -137,12 +139,12 @@ figcaption {
 
 .hamburger-toggle-container {
     display: none;
-    font-weight: bold;
-    font-size: 1.2rem;
+    /*font-weight: bold;*/
+    /*font-size: 1.2rem;*/
 }
 
 #hamburger-toggle {
-    opacity: 0;
+    display: none;
     cursor: pointer;
     position: absolute;
     height: 50px;
@@ -150,6 +152,7 @@ figcaption {
     top: 5px;
     right: 25px;
     margin: 0;
+
 }
 
 /* kode for å passe på at hamburger icon ikke dukker opp før nettsiden scaler til andre decvices enn desktop */
@@ -168,15 +171,20 @@ figcaption {
         padding-left: 0;
     }
 
+    /* dette gjør at kontakt-knappen til høyre i navigasjonsbaren ikke er synlig i navigasjonen når den scaler til tablet/mobil */
+    .contact-button {
+        display: none;
+    }
+
     .hamburger-toggle-container {
         display: inline-flex;
         align-items: center;
         cursor: pointer;
     }
 
-    /* dette gjør at kontakt-knappen til høyre i navigasjonsbaren ikke er synlig i navigasjonen når den scaler til tablet/mobil */
-    .contact-button {
-        display: none;
+    #hamburger-toggle{
+        display: block;
+        opacity: 0;
     }
 
     #hamburger-toggle:checked ~ .menu {
@@ -407,7 +415,6 @@ figcaption {
 
 /* LOCATION PAGE*/
 
-
 /* Main flexbox, for blant annet å gjøre slik at overskrift passer strukturen til content i location-flex*/
 .location-main-flex {
     display: flex;
@@ -441,9 +448,9 @@ figcaption {
 .location-img {
     flex-basis: 50%;
     box-sizing: border-box;
-    max-width: 620px;
     position: relative;
     top: 0.66rem;
+    max-width: 620px;
     padding-left: 3%;
     padding-right: 3%;
     margin-top: 0.5rem;
@@ -465,10 +472,7 @@ figcaption {
         flex-direction: column;
     }
 
-    .location-img {
-        max-width: none;
-    }
-
+    .location-img,
     .location-text {
         max-width: none;
     }
@@ -540,26 +544,27 @@ figcaption {
 
 /*bestemmer backgrunnsfarge og padding top og bunn */
 .main-accessibility {
-    background-color: var(--main-site-secondary-background-colour);
-
-
     top:0;
+    background-color: var(--main-site-secondary-background-colour);
 }
-/*setter padding på alle objektene med ac i klassenavn*/
-.ac{
-    padding:3% 9%;
-}
-/*Setter at alle oddetalls klasser under ac har den valgte fargen*/
-.ac:nth-child(odd) {
-    background-color: var(--main-site-background-colour);
-}
-/*Lager grid inne i klassen*/
-.accessibility-grid {
 
+/* Lager grid inne i klassen */
+.accessibility-grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
 }
-/*Rekkefølgen på hvordan objektene skal stackes når skjermen er mindre enn 700px*/
+
+/* Setter padding på alle objektene med ac i klassenavn */
+.ac{
+    padding:3% 9%;
+}
+
+/* Setter at alle oddetalls klasser under ac har den valgte fargen */
+.ac:nth-child(odd) {
+    background-color: var(--main-site-background-colour);
+}
+
+/* Rekkefølgen på hvordan objektene skal stackes når skjermen er mindre enn 700px */
 @media (max-width: 700px) {
     .accessibility-grid {
         grid-template-columns: 1fr;
@@ -574,14 +579,14 @@ figcaption {
     }
 }
 
-/*FOOTER*/
-/*Setter fooder på bunn av siden og at bredden skal være 100%*/
+/* FOOTER */
+/* Setter fooder på bunn av siden og at bredden skal være 100% */
 footer {
+    display: grid;
+    grid-template-columns: auto;
     position: relative;
     bottom: 0;
     width: 100%;
-    display: grid;
-    grid-template-columns: auto;
     background-color: #8899a4;
     padding-bottom: 2%;
 }
@@ -592,21 +597,20 @@ footer {
 .footer-grid-objekter {
     text-align: left;
     padding-left: 20px;
-
 }
 
-/*Setter posisjon på item 1 og setter opp en ny grid i objektet*/
+/* Setter posisjon på item 1 og setter opp en ny grid i objektet */
 .nyhetsbrev {
     grid-column: 1/4;
     grid-row: 1;
-    border-bottom: 1px solid;
-    border-bottom-color: black;
     display: grid;
     grid-template-columns: auto;
     align-items: center;
+    border-bottom: 1px solid;
+    border-bottom-color: black;
     padding-right: 2%;
-
 }
+
 /* Bestemmer posisjonen til objektene i gridden til .nyhetsbrev */
 .nyhetsbrev-tekst {
     grid-row: 1;
@@ -617,6 +621,49 @@ footer {
 .nyhetsbrev-knapp{
     grid-row: 1;
     text-align: right;
+}
+
+/* design til knappen */
+.knapp {
+    padding: 3px;
+    color: var(--main-site-colour);
+    background-color: black;
+    text-decoration: none;
+    font-size: 23px;
+}
+
+.knapp:hover {
+    text-decoration: underline;
+}
+
+.kontaktinformasjon{
+    grid-row: 2;
+    grid-column: 1/2;
+}
+
+.kontaktinformasjon p:first-of-type{
+    font-weight: bold;
+    font-size: 25px;
+}
+
+.side-link{
+    grid-row: 2;
+    grid-column: 2/3;
+    padding-top: 2.5%;
+}
+
+.side-link a {
+    text-decoration: none;
+    color: black;
+}
+
+.side-link a:hover {
+    text-decoration: underline;
+}
+
+.side-link p {
+    font-size: 20px;
+    font-weight: 550;
 }
 
 .sosiale-medie-link{
@@ -635,95 +682,22 @@ footer {
 .sosiale-medie-link a:hover {
     text-decoration: underline;
 }
+
 .sosiale-medie-link p{
     font-weight: bold;
     font-size: 25px;
 }
-.kontaktinformasjon{
-    grid-row: 2;
-    grid-column: 1/2;
 
-
-}
-.kontaktinformasjon p:first-of-type{
-    font-weight: bold;
-    font-size: 25px;
-}
-.side-link{
-    grid-row: 2;
-    grid-column: 2/3;
-    padding-top: 2.5%;
-}
-.side-link a {
-    text-decoration: none;
-    color: black;
-}
-
-.side-link a:hover {
-    text-decoration: underline;
-}
-
-.side-link p {
-    font-size: 20px;
-    font-weight: 550;
-
-}
-
-/*Når siden er mindre enn 700 px skal grid stackes*/
-@media (max-width: 700px) {
-    .footer-grid-system {
-        grid-template-columns: 1fr;
-    }
-
-    .nyhetsbrev{
-        grid-row: 1;
-        grid-column: 1;
-    }
-
-    .nyhetsbrev-tekst {
-        grid-row: 1;
-        grid-column: 1;
-    }
-
-    .nyhetsbrev-knapp{
-        grid-row: 2;
-        grid-column: 1;
-        text-align: left;
-        padding-bottom: 2%;
-    }
-
-    .sosiale-medie-link {
-        grid-row: 4;
-        grid-column: 1;
-        text-align: left;
-    }
-
-    .sosiale-medie-link a {
-        padding: 1%;
-    }
-
-    .kontaktinformasjon{
-        grid-row: 2;
-        grid-column: 1;
-    }
-
-    .side-link{
-        grid-row: 3;
-        grid-column: 1;
-    }
-}
-
-/*https://www.w3schools.com/howto/howto_css_social_media_buttons.asp
- Ikon kode tatt fra ^
- */
+/* Ikon kode tatt fra:
+https://www.w3schools.com/howto/howto_css_social_media_buttons.asp */
 .fa {
-    padding: 10px;
-    font-size: 30px;
     width: 15px;
+    border-radius: 50%;
+    padding: 10px;
+    margin-right: 2%;
     text-align: center;
     text-decoration: none;
-    border-radius: 50%;
-    margin-right: 2%;
+    font-size: 30px;
 }
 
 .fa-facebook {
@@ -748,15 +722,46 @@ footer {
 
 /*Slutt på ikonkode*/
 
-/* design til knappen */
-.knapp {
-    color: var(--main-site-colour);
-    text-decoration: none;
-    font-size: 23px;
-    background-color: black;
-    padding: 3px;
-}
+/*Når siden er mindre enn 700 px skal grid stackes*/
+@media (max-width: 700px) {
+    .footer-grid-system {
+        grid-template-columns: 1fr;
+    }
 
-.knapp:hover {
-    text-decoration: underline;
+    .nyhetsbrev{
+        grid-row: 1;
+        grid-column: 1;
+    }
+
+    .nyhetsbrev-tekst {
+        grid-row: 1;
+        grid-column: 1;
+    }
+
+    .nyhetsbrev-knapp{
+        grid-row: 2;
+        grid-column: 1;
+        text-align: left;
+        padding-bottom: 2%;
+    }
+
+    .kontaktinformasjon{
+        grid-row: 2;
+        grid-column: 1;
+    }
+
+    .side-link{
+        grid-row: 3;
+        grid-column: 1;
+    }
+
+    .sosiale-medie-link {
+        grid-row: 4;
+        grid-column: 1;
+        text-align: left;
+    }
+
+    .sosiale-medie-link a {
+        padding: 1%;
+    }
 }
