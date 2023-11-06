@@ -213,6 +213,7 @@ nav {
 
 .home-main-flex-container {
     display: flex;
+    flex-direction: column;
 
 }
 
@@ -227,7 +228,6 @@ nav {
 
 .hero-flex{
     display: flex;
-    width: 100vw;
     height: 100vh;
     background-size: cover;
     background: url('/images/forsidebilde-arkitektur-p32/arkitektur-p32-skjalg-bøhmer-vold-square-large.jpg') no-repeat center;
