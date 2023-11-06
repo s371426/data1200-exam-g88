@@ -487,8 +487,8 @@ figcaption {
     padding-right: 3%;
 }
 
-/* Endrer location-flex flexbox til å være vertikal når viewport mindre enn 700px (Mobile) */
-@media only screen and (max-width: 700px) {
+/* Endrer location-flex flexbox til å være vertikal når viewport mindre enn 760px (Mobil) */
+@media only screen and (max-width: 760px) {
     .location-flex {
         flex-direction: column;
     }
@@ -506,8 +506,8 @@ figcaption {
     background-color: var(--main-site-secondary-background-colour);
 }
 
-/* Bytter om på rekkefølgen på annenhver sibling element hvis viewport 701px eller bredere*/
-@media only screen and (min-width: 701px) {
+/* Bytter om på rekkefølgen på annenhver sibling element hvis viewport 761px eller bredere*/
+@media only screen and (min-width: 761px) {
     .location-flex:nth-child(even) .location-img {
         order: 2;
     }
@@ -560,7 +560,7 @@ figcaption {
 }
 
 /* Rekkefølgen på hvordan objektene skal stackes når skjermen er mindre enn 700px */
-@media (max-width: 700px) {
+@media (max-width: 760px) {
     .accessibility-grid {
         grid-template-columns: 1fr;
     }
@@ -591,7 +591,7 @@ footer {
 /* endrer på alle grid, og sentrerer tekst */
 .footer-grid-objekter {
     text-align: left;
-    padding-left: 20px;
+    padding-left: 25px;
 }
 
 /* Setter posisjon på item 1 og setter opp en ny grid i objektet */
@@ -718,7 +718,7 @@ https://www.w3schools.com/howto/howto_css_social_media_buttons.asp */
 /*Slutt på ikonkode*/
 
 /*Når siden er mindre enn 700 px skal grid stackes*/
-@media (max-width: 700px) {
+@media (max-width: 760px) {
     .footer-grid-system {
         grid-template-columns: 1fr;
     }
