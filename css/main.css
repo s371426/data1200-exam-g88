@@ -13,7 +13,8 @@
     --main-site-background-colour: white;
     --main-site-secondary-background-colour: #dddddd;
     --main-site-font-colour: black;
-    --topical-site-navbar-h2-background-color:
+    --topical-site-navbar-h2-background-color: rgb(80, 128, 169);
+    --topical-site-navbar-a-borders-color: black;
 }
 
 /* Darkmode som blir aktivert når device er satt til darkmode */
@@ -218,7 +219,6 @@ nav {
 .topical-grid {
     display: grid;
     grid-template-columns: minmax(180px, 15%) minmax(500px, 50vw) auto;
-
     margin-bottom: 2em;
     font-family: Calibri, serif;
     font-weight: normal;
@@ -230,17 +230,21 @@ nav {
     padding: 15px;
     text-align: center;
     margin-bottom: 0;
+    color: white;
     background-color: var(--topical-site-navbar-h2-background-color);
 }
 
 .sidenav ul a {
     padding: 15px;
     display: block;
+    border-bottom-style: solid;
+    border-color: black;
     text-align: center;
     text-decoration: none;
+    color: var(--main-site-font-colour);
     background-color: var(--topical-site-navbar-a-background-color);
-
 }
+
 
 .sidenav ul a:hover {
     color: white;
@@ -271,7 +275,6 @@ nav {
     grid-row: 1/ 5;
     margin-left: 4%;
     margin-right: 2%;
-
 }
 
 .main-bar {
