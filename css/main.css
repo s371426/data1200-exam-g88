@@ -209,9 +209,7 @@ nav {
     width: 85%;
 }
 
-
-
-
+/*main flex container for contenet på home-page*/
 
 .home-main-flex {
     display: flex;
