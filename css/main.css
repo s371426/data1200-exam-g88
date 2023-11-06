@@ -13,6 +13,7 @@
     --main-site-background-colour: white;
     --main-site-secondary-background-colour: #dddddd;
     --main-site-font-colour: black;
+    --topical-site-navbar-h2-background-color:
 }
 
 /* Darkmode som blir aktivert når device er satt til darkmode */
@@ -22,6 +23,9 @@
         --main-site-background-colour: #222222;
         --main-site-font-colour: #eeeeee;
         --main-site-secondary-background-colour: #333333;
+        --topical-site-navbar-h2-background-color: rgb(10, 47, 80);
+        --topical-site-navbar-a-background-color: rgb(12, 59, 100);
+
     }
 }
 
@@ -222,20 +226,17 @@ figcaption {
 /* Alt av stylingen av navbar går under her */
 .sidenav h2 {
     padding: 15px;
-    color: white;
-    border-bottom: 10px black;
     text-align: center;
-    background-color: rgb(10, 47, 80);
     margin-bottom: 0;
+    background-color: var(--topical-site-navbar-h2-background-color);
 }
 
 .sidenav ul a {
     padding: 15px;
     display: block;
-    background-color: rgb(24, 65, 101);
-    color: rgb(210, 210, 210);
     text-align: center;
     text-decoration: none;
+    background-color: var(--topical-site-navbar-a-background-color);
 
 }
 
@@ -248,6 +249,10 @@ figcaption {
     list-style-type: none;
     padding: 0;
     margin: 0;
+}
+
+#forfatter {
+    color: darkorange;
 }
 
 /* Her så bestemmer vi plasseringene av de ulike elementene i vanlig view */
@@ -263,9 +268,8 @@ figcaption {
     grid-column: 1/2;
     grid-row: 1/ 5;
     margin-left: 4%;
-    margin-right: 4%;
+    margin-right: 2%;
 
-    background-color: #f1f1f1;
 }
 
 .main-bar {
@@ -283,6 +287,7 @@ figcaption {
     grid-row: 3;
     margin-right: 4%;
     margin-left: 4%;
+    min-width: 300px;
 
 }
 
@@ -290,7 +295,7 @@ figcaption {
     grid-column: 2/3;
     grid-row: 3;
     margin-right: 4%;
-    margin-left: 4%;
+    margin-left: 2%;
     max-width: 600px;
 
 }
@@ -300,13 +305,14 @@ figcaption {
     grid-row: 4;
     margin-right: 4%;
     margin-left: 4%;
+    min-width: 300px;
 }
 
 .main-bar2 {
     grid-column: 2/3;
     grid-row: 4;
     margin-right: 4%;
-    margin-left: 4%;
+    margin-left: 2%;
     max-width: 600px;
 
 }
@@ -316,6 +322,7 @@ figcaption {
     grid-row: 5;
     margin-right: 4%;
     margin-left: 4%;
+    min-width: 300px;
 }
 
 
@@ -323,37 +330,13 @@ figcaption {
     grid-column: 2/3;
     grid-row: 5;
     margin-right: 4%;
-    margin-left: 4%;
+    margin-left: 2%;
     max-width: 600px;
 
 }
 
-.bilde {
-    background-size: cover;
-    width: 150px;
-    height: 200px;
-}
-
-.sidenav a {
-    padding: 10px;
-    display: block;
-    color: chocolate;
-}
-
-.sidenav a:hover {
-    color: white;
-    background-color: dimgray;
-}
-
-.punkter {
-    list-style-type: none;
-    padding: 0;
-    margin: 0;
-}
-
-
 /* Vi bruker media queries slik at utseende på nettsiden er annerledes på mobil */
-@media (max-width: 700px) {
+@media (max-width: 900px) {
 
     .topical-grid {
         grid-template-columns: 1fr;
