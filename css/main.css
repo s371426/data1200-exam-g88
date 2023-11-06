@@ -199,23 +199,40 @@ nav {
 
 
 /* FLEX-CONTAINER FORSIDE */
-.home-main-flex {
+
+/* utility class for å legge content inni hver seksjon horisontalt på homepage og holde det consistent for hver del*/
+.row {
     display: flex;
-    flex-direction: column;
-    align-self: center;
+    justify-content: space-between;
     align-items: center;
-    background-color: var(--main-site-background-colour);
+    margin: auto;
+    width: 85%;
 }
 
-/*.hero-flex{
+
+
+
+
+.home-main-flex {
     display: flex;
-    flex-direction: column;
-    min-height: 700px;
 }
-/*.hero-text{
-    text-align: center;
-    color: #eeeeee;
-}*/
+
+/* base style for hver av seksjonene på homepage */
+
+.home-main-flex section{
+    padding-top: 100px;
+    padding-right: 0;
+    padding-left: 0;
+    padding-bottom: 100px;
+}
+
+.hero-flex{
+    display: flex;
+    height: 100vh;
+    background-size: cover;
+    background: url('/images/forsidebilde-arkitektur-p32/arkitektur-p32-skjalg-bøhmer-vold-square-large.jpg') no-repeat center;
+
+}
 
 
 /*TOPICAL PAGE*/
