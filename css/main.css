@@ -69,9 +69,11 @@ figcaption {
 /*DIVs*/
 
 /*HEADER*/
+
 /* NAV BAR */
-.navbar {
+nav {
     display: flex;
+    flex-direction: row;
     align-items: center;
     justify-content: space-between;
     background-color: var(--main-site-colour);
@@ -89,7 +91,7 @@ figcaption {
     max-width: 900px;
 }
 
-/* style lenkene i navbar */
+/* Style lenkene i navbar */
 .menu a {
     display: block;
     padding: 20px 17px;
@@ -104,7 +106,7 @@ figcaption {
     backdrop-filter: brightness(75%);
 }
 
-/* kontakt knapp i navbar styling*/
+/* Kontakt knapp i navbar styling */
 .contact-button {
     background-color: skyblue;
     color: black;
@@ -121,7 +123,8 @@ figcaption {
     background-color: cadetblue;
 }
 
-.menu-icon {
+/* Hamburger meny ikon */
+.menu-icon {                           /* KANSKJE BYTTE NAVN*/
     display: block;
     background-image: url(../images/menu.png);
     background-size: cover;
@@ -156,33 +159,31 @@ figcaption {
     top: 5px;
     right: 25px;
     margin: 0;
-
 }
 
-/* kode for å passe på at hamburger icon ikke dukker opp før nettsiden scaler til andre decvices enn desktop */
+/* Sjuler linker på navbar og viser hamburger meny knapp når bredde er mindre enn 800px*/
 @media (max-width: 800px) {
-    .navbar {
-        display: flex;
+    /* Endrer  meny */
+    nav {
         flex-direction: column;
         align-items: normal;
-        max-height: none;
+        max-height: none;   
     }
 
     .menu {
         display: none;
-        list-style-type: none;
-        position: sticky;
+        position: sticky;            /* HVA GJØR DENNE*/
         padding-left: 0;
     }
 
-    /* dette gjør at kontakt-knappen til høyre i navigasjonsbaren ikke er synlig i navigasjonen når den scaler til tablet/mobil */
+    /* Kontakt knappen blir skjult */
     .contact-button {
         display: none;
     }
 
     .hamburger-toggle-container {
-        display: inline-flex;
-        align-items: center;
+        display: inline-flex;       /* KANSKJE BYTTES til block */
+        /*align-items: center;*/    /* KANSKJE FJERNES*/
         cursor: pointer;
     }
 
@@ -191,6 +192,7 @@ figcaption {
         opacity: 0;
     }
 
+    /* Navigasjons meny blir synlig når checkbox er aktivert */
     #hamburger-toggle:checked ~ .menu {
         display: block;
     }
