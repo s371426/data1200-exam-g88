@@ -14,7 +14,7 @@
     --main-site-secondary-background-colour: #dddddd;
     --main-site-font-colour: black;
     --topical-site-navbar-h2-background-color: rgb(80, 128, 169);
-    --topical-site-header-background-color: #51e2f5;
+
 }
 
 /* Darkmode som blir aktivert når device er satt til darkmode */
@@ -26,7 +26,7 @@
         --main-site-secondary-background-colour: #333333;
         --topical-site-navbar-h2-background-color: rgb(10, 47, 80);
         --topical-site-navbar-a-background-color: rgb(12, 59, 100);
-        --topical-site-header-background-color: dark grey;
+
 
     }
 }
@@ -217,8 +217,6 @@ nav {
     font-size: 1.8rem;
     text-align: center;
     border-bottom: 2px solid;
-    background-color: var(--topical-site-header-background-color);
-    color: var(main-site-font-color);
     letter-spacing: 1.5px;
 
 }
