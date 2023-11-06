@@ -14,7 +14,7 @@
     --main-site-secondary-background-colour: #dddddd;
     --main-site-font-colour: black;
     --topical-site-navbar-h2-background-color: rgb(80, 128, 169);
-    --topical-site-navbar-a-borders-color: black;
+    --topical-site-header-background-color: #51e2f5;
 }
 
 /* Darkmode som blir aktivert når device er satt til darkmode */
@@ -26,6 +26,7 @@
         --main-site-secondary-background-colour: #333333;
         --topical-site-navbar-h2-background-color: rgb(10, 47, 80);
         --topical-site-navbar-a-background-color: rgb(12, 59, 100);
+        --topical-site-header-background-color: dark grey;
 
     }
 }
@@ -59,10 +60,6 @@ figcaption {
 
 
 /*PARAGRAFER*/
-.ingress {
-    font-weight: 550;
-    color: darkslategray;
-}
 
 /*SPANS*/
 
@@ -203,17 +200,6 @@ nav {
 /*TOPICAL PAGE*/
 
 /* Her starter spaghetti-koden */
-.topical-overskrift {
-    font-family: "Gill Sans MT", serif;
-    font-weight: bolder;
-    font-size: 1.8rem;
-    text-align: center;
-    border-bottom: 2px solid;
-    border-bottom-color: chocolate;
-    background-color: goldenrod;
-    color: navy;
-    letter-spacing: 1.5px;
-}
 
 /* Vi bruker grids for å style topical siden */
 .topical-grid {
@@ -225,6 +211,18 @@ nav {
 
 }
 
+.topical-overskrift {
+    font-family: "Gill Sans MT", serif;
+    font-weight: bolder;
+    font-size: 1.8rem;
+    text-align: center;
+    border-bottom: 2px solid;
+    background-color: var(--topical-site-header-background-color);
+    color: var(main-site-font-color);
+    letter-spacing: 1.5px;
+
+}
+
 /* Alt av stylingen av navbar går under her */
 .sidenav h2 {
     padding: 15px;
@@ -233,6 +231,11 @@ nav {
     color: white;
     background-color: var(--topical-site-navbar-h2-background-color);
 }
+
+.ingress {
+    font-weight: 550;
+}
+
 
 .sidenav ul a {
     padding: 15px;
@@ -262,7 +265,7 @@ nav {
 }
 
 /* Her så bestemmer vi plasseringene av de ulike elementene i vanlig view */
-.over-skrift {
+.overskrift {
     grid-column: 2/4;
     grid-row: 1;
     margin-right: 2%;
@@ -347,7 +350,7 @@ nav {
         grid-template-columns: 1fr;
     }
 
-    .over-skrift {
+    .overskrift {
         grid-column: 1;
         grid-row: 1;
     }
