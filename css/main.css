@@ -342,7 +342,7 @@ nav {
 }
 
 /* Vi bruker media queries slik at utseende på nettsiden er annerledes på mobil */
-@media (max-width: 900px) {
+@media (max-width: 1000px) {
 
     .topical-grid {
         grid-template-columns: 1fr;
