@@ -63,6 +63,11 @@ figcaption {
 
 /*PARAGRAFER*/
 
+/* For accessibility, gjør tekst enklere å lese */
+p {
+    line-height: 1.5;
+}
+
 /*SPANS*/
 
 
