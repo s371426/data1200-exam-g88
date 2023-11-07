@@ -229,6 +229,10 @@ nav {
 
 }
 
+.headline p {
+    font-weight: 550;
+}
+
 /* Alt av stylingen av navbar går under her */
 .sidenav h2 {
     padding: 15px;
@@ -236,10 +240,6 @@ nav {
     margin-bottom: 0;
     color: white;
     background-color: var(--topical-site-navbar-h2-background-color);
-}
-
-.ingress {
-    font-weight: 550;
 }
 
 
@@ -253,7 +253,6 @@ nav {
     color: var(--main-site-font-colour);
     background-color: var(--topical-site-navbar-a-background-color);
 }
-
 
 .sidenav ul a:hover {
     color: white;
