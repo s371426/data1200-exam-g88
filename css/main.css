@@ -39,6 +39,7 @@ main {
     background-color: var(--main-site-background-colour);
 }
 
+/* Img fyller det elementet det er inni */
 img {
     width: 100%;
     height: auto;
@@ -71,6 +72,7 @@ figcaption {
 /*HEADER*/
 
 /* NAV BAR */
+/* Inneh*/
 nav {
     display: flex;
     flex-direction: row;
@@ -101,7 +103,7 @@ nav {
     font-size: 1.1rem;
 }
 
-/* hover over lenkene i navbar */
+/* Hover over lenkene i navbar mørkere*/
 .menu a:hover {
     backdrop-filter: brightness(75%);
 }
@@ -126,7 +128,7 @@ nav {
 /* Hamburger meny ikon */
 .menu-icon {                           /* KANSKJE BYTTE NAVN*/
     display: block;
-    background-image: url(../images/menu.png);
+    background-image: url(../images/menu.png);      /* KANSJE FLYTTE TIL HTML */
     background-size: cover;
     height: 60px;
     width: 60px;
@@ -135,19 +137,18 @@ nav {
 .logo-burger-wrapper {
     display: flex;
     justify-content: space-between;
+    max-height: 60px;
 }
 
 /* Logo position and image size */
 #nav-logo {
     height: 40px;
-    padding:10px;
     width: auto;
+    padding:10px;
 }
 
 .hamburger-toggle-container {
     display: none;
-    /*font-weight: bold;*/
-    /*font-size: 1.2rem;*/
 }
 
 #hamburger-toggle {
@@ -163,7 +164,7 @@ nav {
 
 /* Sjuler linker på navbar og viser hamburger meny knapp når bredde er mindre enn 800px*/
 @media (max-width: 800px) {
-    /* Endrer  meny */
+    /* Endrer  meny til vertikal istedenfor horisontal */
     nav {
         flex-direction: column;
         align-items: normal;
@@ -172,7 +173,7 @@ nav {
 
     .menu {
         display: none;
-        position: sticky;            /* HVA GJØR DENNE*/
+        /*position: sticky;            !* HVA GJØR DENNE*!*/
         padding-left: 0;
     }
 
@@ -182,8 +183,7 @@ nav {
     }
 
     .hamburger-toggle-container {
-        display: inline-flex;       /* KANSKJE BYTTES til block */
-        /*align-items: center;*/    /* KANSKJE FJERNES*/
+        display: block;
         cursor: pointer;
     }
 
