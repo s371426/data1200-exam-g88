@@ -13,7 +13,9 @@
     --main-site-background-colour: white;
     --main-site-secondary-background-colour: #dddddd;
     --main-site-font-colour: black;
-    --topical-site-navbar-h2-background-color:
+    --topical-site-navbar-h2-background-color: rgb(80, 128, 169);
+    --topical-site-navbar-a-background-color: rgb(243, 250, 255);
+
 }
 
 /* Darkmode som blir aktivert når device er satt til darkmode */
@@ -25,6 +27,7 @@
         --main-site-secondary-background-colour: #333333;
         --topical-site-navbar-h2-background-color: rgb(10, 47, 80);
         --topical-site-navbar-a-background-color: rgb(12, 59, 100);
+
 
     }
 }
@@ -59,10 +62,6 @@ figcaption {
 
 
 /*PARAGRAFER*/
-.ingress {
-    font-weight: 550;
-    color: darkslategray;
-}
 
 /*SPANS*/
 
@@ -202,26 +201,24 @@ nav {
 /*TOPICAL PAGE*/
 
 /* Her starter spaghetti-koden */
+
+/* Vi bruker grids for å style topical siden */
+.topical-grid {
+    display: grid;
+    grid-template-columns: minmax(180px, 15%) minmax(500px, 50vw) auto;
+    margin-bottom: 2em;
+    font-family: Calibri, serif;
+    font-weight: normal;
+
+}
+
 .topical-overskrift {
     font-family: "Gill Sans MT", serif;
     font-weight: bolder;
     font-size: 1.8rem;
     text-align: center;
     border-bottom: 2px solid;
-    border-bottom-color: chocolate;
-    background-color: goldenrod;
-    color: navy;
     letter-spacing: 1.5px;
-}
-
-/* Vi bruker grids for å style topical siden */
-.topical-grid {
-    display: grid;
-    grid-template-columns: minmax(180px, 15%) minmax(500px, 50vw) auto;
-
-    margin-bottom: 2em;
-    font-family: Calibri, serif;
-    font-weight: normal;
 
 }
 
@@ -230,17 +227,26 @@ nav {
     padding: 15px;
     text-align: center;
     margin-bottom: 0;
+    color: white;
     background-color: var(--topical-site-navbar-h2-background-color);
 }
+
+.ingress {
+    font-weight: 550;
+}
+
 
 .sidenav ul a {
     padding: 15px;
     display: block;
+    border-bottom-style: solid;
+    border-color: black;
     text-align: center;
     text-decoration: none;
+    color: var(--main-site-font-colour);
     background-color: var(--topical-site-navbar-a-background-color);
-
 }
+
 
 .sidenav ul a:hover {
     color: white;
@@ -258,7 +264,7 @@ nav {
 }
 
 /* Her så bestemmer vi plasseringene av de ulike elementene i vanlig view */
-.over-skrift {
+.overskrift {
     grid-column: 2/4;
     grid-row: 1;
     margin-right: 2%;
@@ -271,14 +277,13 @@ nav {
     grid-row: 1/ 5;
     margin-left: 4%;
     margin-right: 2%;
-
 }
 
 .main-bar {
     grid-column: 2/3;
     grid-row: 2;
     margin-right: 4%;
-    margin-left: 4%;
+    margin-left: 2%;
     max-width: 600px;
 
 }
@@ -338,13 +343,13 @@ nav {
 }
 
 /* Vi bruker media queries slik at utseende på nettsiden er annerledes på mobil */
-@media (max-width: 900px) {
+@media (max-width: 1000px) {
 
     .topical-grid {
         grid-template-columns: 1fr;
     }
 
-    .over-skrift {
+    .overskrift {
         grid-column: 1;
         grid-row: 1;
     }
