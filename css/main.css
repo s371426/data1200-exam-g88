@@ -164,6 +164,13 @@ nav {
     margin: 0;
 }
 
+nav:has(#hamburger-toggle:focus) .hamburger-toggle-container{
+    outline: 2px solid white;
+    outline: auto;
+    outline-offset: 4px;
+    border: white;
+}
+
 /* Sjuler linker på navbar og viser hamburger meny knapp når bredde er mindre enn 800px*/
 @media (max-width: 800px) {
     /* Meny blir vertikal istedenfor horisontal */
