@@ -27,8 +27,6 @@
         --main-site-secondary-background-colour: #333333;
         --topical-site-navbar-h2-background-color: rgb(10, 47, 80);
         --topical-site-navbar-a-background-color: rgb(12, 59, 100);
-
-
     }
 }
 
@@ -60,7 +58,6 @@ figcaption {
 
 /*OVERSKRIFTER*/
 
-
 /*PARAGRAFER*/
 
 /* For accessibility, gjør tekst enklere å lese */
@@ -68,15 +65,12 @@ p {
     line-height: 1.5;
 }
 
-/*SPANS*/
-
-
 /*DIVs*/
 
 /*HEADER*/
 
 /* NAV BAR */
-/* Inneh*/
+/* Hoved flexboks navbar */
 nav {
     display: flex;
     flex-direction: row;
@@ -88,6 +82,7 @@ nav {
     max-height: 60px;
 }
 
+/* Flex for at nav linker list blir fordelt jevnt utover */
 .menu {
     display: flex;
     flex-direction: row;
@@ -107,7 +102,7 @@ nav {
     font-size: 1.1rem;
 }
 
-/* Hover over lenkene i navbar mørkere*/
+/* Lenker navbar bakgrunn mørere under hover */
 .menu a:hover {
     backdrop-filter: brightness(75%);
 }
@@ -129,8 +124,27 @@ nav {
     background-color: cadetblue;
 }
 
+/* Secondær flexbox med logo/hamburger, slik at de blir fordelt på navbar separat fra linke liste */
+.logo-hamburger-wrapper {
+    display: flex;
+    justify-content: space-between;
+    max-height: 60px;
+}
+
+/* Nav Logo størelse */
+#nav-logo {
+    height: 40px;
+    width: auto;
+    padding: 10px;
+}
+
+/* Hamburger meny vises ikke */
+.hamburger-toggle-container {
+    display: none;
+}
+
 /* Hamburger meny ikon */
-.menu-icon {                           /* KANSKJE BYTTE NAVN*/
+.hamburger-icon {
     display: block;
     background-image: url(../images/menu.png);      /* KANSJE FLYTTE TIL HTML */
     background-size: cover;
@@ -138,23 +152,7 @@ nav {
     width: 60px;
 }
 
-.logo-burger-wrapper {
-    display: flex;
-    justify-content: space-between;
-    max-height: 60px;
-}
-
-/* Logo position and image size */
-#nav-logo {
-    height: 40px;
-    width: auto;
-    padding:10px;
-}
-
-.hamburger-toggle-container {
-    display: none;
-}
-
+/* Hamburger meny checkbox input */
 #hamburger-toggle {
     display: none;
     cursor: pointer;
@@ -168,16 +166,16 @@ nav {
 
 /* Sjuler linker på navbar og viser hamburger meny knapp når bredde er mindre enn 800px*/
 @media (max-width: 800px) {
-    /* Endrer  meny til vertikal istedenfor horisontal */
+    /* Meny blir vertikal istedenfor horisontal */
     nav {
         flex-direction: column;
         align-items: normal;
-        max-height: none;   
+        max-height: none;
     }
 
+    /* Navigasjons meny linker vises ikke */
     .menu {
         display: none;
-        /*position: sticky;            !* HVA GJØR DENNE*!*/
         padding-left: 0;
     }
 
@@ -186,17 +184,19 @@ nav {
         display: none;
     }
 
+    /* Hamburger meny blir synlig */
     .hamburger-toggle-container {
         display: block;
         cursor: pointer;
     }
 
+    /* Hamburger checkbox er der men er usynelig */
     #hamburger-toggle{
         display: block;
         opacity: 0;
     }
 
-    /* Navigasjons meny blir synlig når checkbox er aktivert */
+    /* Navigasjons meny linker blir synlig når checkbox er aktivert */
     #hamburger-toggle:checked ~ .menu {
         display: block;
     }
