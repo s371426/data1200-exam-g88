@@ -190,13 +190,13 @@ nav {
         cursor: pointer;
     }
 
-    /* Hamburger checkbox er der men er usynelig */
+    /* Hamburger checkbox er der men er usynelig, for at den skal være valgbar med tastatur/tab */
     #hamburger-toggle{
         display: block;
         opacity: 0;
     }
 
-    /* Navigasjons meny linker blir synlig når checkbox er aktivert */
+    /* Når checkbox er aktivert blir Navigasjons meny linker synlig*/
     #hamburger-toggle:checked ~ .menu {
         display: block;
     }
@@ -311,8 +311,6 @@ nav {
 
 
 }
-
-
 
 
 
