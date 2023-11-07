@@ -211,7 +211,7 @@ nav {
 .topical-grid {
     display: grid;
     grid-template-columns: minmax(180px, 15%) minmax(500px, 50vw) auto;
-    margin-bottom: 2em;
+    padding-bottom: 2em;
     font-family: Calibri, serif;
     font-weight: normal;
 
@@ -265,7 +265,7 @@ nav {
 }
 
 #forfatter {
-    color: darkorange;
+    color: orangered;
 }
 
 /* Her så bestemmer vi plasseringene av de ulike elementene i vanlig view */
@@ -344,6 +344,7 @@ nav {
     margin-right: 4%;
     margin-left: 2%;
     max-width: 600px;
+
 
 }
 
