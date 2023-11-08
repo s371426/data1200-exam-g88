@@ -165,11 +165,13 @@ nav {
 }
 
 nav:has(#hamburger-toggle:focus) .hamburger-toggle-container{
-    outline: 2px solid white;
     outline: auto;
-    outline-offset: 4px;
-    border: white;
 }
+
+@supports selector(:focus-visible) {
+  nav:has(#hamburger-toggle:not(:focus-visible)) .hamburger-toggle-container{
+    outline: none;
+  }
 
 /* Sjuler linker på navbar og viser hamburger meny knapp når bredde er mindre enn 800px*/
 @media (max-width: 800px) {
