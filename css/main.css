@@ -164,14 +164,15 @@ nav {
     margin: 0;
 }
 
-nav:has(#hamburger-toggle:focus) .hamburger-toggle-container{
+/* Alle nettlesere som støtter :has() støtter også :focus-visible, så trenger ikke @supports rule*/
+nav:has(#hamburger-toggle:focus-visible) .hamburger-toggle-container{
     outline: auto;
 }
 
-@supports selector(:focus-visible) {
-  nav:has(#hamburger-toggle:not(:focus-visible)) .hamburger-toggle-container{
-    outline: none;
-  }
+/*@supports selector(:focus-visible) {*/
+/*  nav:has(#hamburger-toggle:not(:focus-visible)) .hamburger-toggle-container{*/
+/*    outline: none;*/
+/*  }*/
 
 /* Sjuler linker på navbar og viser hamburger meny knapp når bredde er mindre enn 800px*/
 @media (max-width: 800px) {
