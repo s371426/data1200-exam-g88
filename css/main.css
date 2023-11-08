@@ -209,7 +209,7 @@ nav {
     width: 85%;
 }
 
-/*main flex container for contenet på home-page*/
+/*main flex container for content på home-page*/
 
 .home-main-flex-container {
     display: flex;
@@ -220,22 +220,28 @@ nav {
 /* base style for hver av seksjonene på homepage */
 
 .home-main-flex-container section{
-    padding-top: 100px;
+    /*padding-top: 100px; */
     padding-right: 0;
     padding-left: 0;
-    padding-bottom: 100px;
+    /*padding-bottom: 100px; */
 }
 
-.hero-flex{
+.hero-flex {
     display: flex;
     height: 100vh;
+    background: url('/images/forsidebilde-arkitektur-p32/arkitektur-p32-skjalg-bøhmer-vold-square-large.jpg') no-repeat;
     background-size: cover;
-    background: url('/images/forsidebilde-arkitektur-p32/arkitektur-p32-skjalg-bøhmer-vold-square-large.jpg') no-repeat center;
-
+    align-items: center;
+    justify-content: center;
 }
 
 .hero-text h1{
+    font-size: 5.5rem;
+    display: flex;
+}
 
+.hero-text h2{
+    font-size: 4.5rem;
 }
 
 
@@ -244,6 +250,7 @@ nav {
 /* Her starter spaghetti-koden */
 
 /* Vi bruker grids for å style topical siden */
+
 .topical-grid {
     display: grid;
     grid-template-columns: minmax(180px, 15%) minmax(500px, 50vw) auto;
@@ -264,6 +271,7 @@ nav {
 }
 
 /* Alt av stylingen av navbar går under her */
+
 .sidenav h2 {
     padding: 15px;
     text-align: center;
@@ -305,6 +313,7 @@ nav {
 }
 
 /* Her så bestemmer vi plasseringene av de ulike elementene i vanlig view */
+
 .overskrift {
     grid-column: 2/4;
     grid-row: 1;
@@ -429,6 +438,7 @@ nav {
         grid-column: 1;
         grid-row: 8;
     }
+
     .main-bar3 {
         grid-column: 1;
         grid-row: 9;
@@ -441,18 +451,17 @@ nav {
 }
 
 
-
-
-
 /* LOCATION PAGE*/
 
 /* Main flexbox, for blant annet å gjøre slik at overskrift passer strukturen til content i location-flex*/
+
 .location-main-flex {
     display: flex;
     flex-direction: column;
 }
 
 /* Sørger for at h1 er riktig bredde forhold til de andre elementene */
+
 .location-main-flex h1 {
     box-sizing: border-box;
     align-self: center;
@@ -466,6 +475,7 @@ nav {
 
 /* Normalt horisontal flexbox for to bokser, som er sentrert*/
 /* Inneholder location-img og locaiton-text */
+
 .location-flex {
     display: flex;
     flex-direction: row;
@@ -476,6 +486,7 @@ nav {
 }
 
 /* Er inni location-flex, inneholder bilde/bildetekst */
+
 .location-img {
     flex-basis: 50%;
     box-sizing: border-box;
@@ -489,6 +500,7 @@ nav {
 }
 
 /* Er inni location-flex, inneholder ovserktift/tekst */
+
 .location-text {
     flex-basis: 50%;
     box-sizing: border-box;
@@ -512,6 +524,7 @@ nav {
 /* Gjør bakgrunnen på annenhver sibling element (child av parent element) til en annen farge
 (main secondary background color) */
 /* https://developer.mozilla.org/en-US/docs/Web/CSS/:nth-child */
+
 .location-flex:nth-child(odd) {
     background-color: var(--main-site-secondary-background-colour);
 }
@@ -526,7 +539,6 @@ nav {
         order: 1;
     }
 }
-
 
 
 /*.bilde-tekst {
@@ -548,23 +560,27 @@ nav {
 /*ACCESSIBILITY SIDE*/
 
 /*bestemmer backgrunnsfarge og padding top og bunn */
+
 .main-accessibility {
-    top:0;
+    top: 0;
     background-color: var(--main-site-secondary-background-colour);
 }
 
 /* Lager grid inne i klassen */
+
 .accessibility-grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
 }
 
 /* Setter padding på alle objektene med ac i klassenavn */
-.ac{
-    padding:3% 9%;
+
+.ac {
+    padding: 3% 9%;
 }
 
 /* Setter at alle oddetalls klasser under ac har den valgte fargen */
+
 .ac:nth-child(odd) {
     background-color: var(--main-site-background-colour);
 }
@@ -586,6 +602,7 @@ nav {
 
 /* FOOTER */
 /* Setter fooder på bunn av siden og at bredden skal være 100% */
+
 footer {
     display: grid;
     grid-template-columns: auto;
@@ -599,12 +616,14 @@ footer {
 /* Grid kode tatt fra: https://www.w3schools.com/css/css_grid.asp*/
 
 /* endrer på alle grid, og sentrerer tekst */
+
 .footer-grid-objekter {
     text-align: left;
     padding-left: 25px;
 }
 
 /* Setter posisjon på item 1 og setter opp en ny grid i objektet */
+
 .nyhetsbrev {
     grid-column: 1/4;
     grid-row: 1;
@@ -617,18 +636,20 @@ footer {
 }
 
 /* Bestemmer posisjonen til objektene i gridden til .nyhetsbrev */
+
 .nyhetsbrev-tekst {
     grid-row: 1;
     font-weight: bold;
     font-size: 25px;
 }
 
-.nyhetsbrev-knapp{
+.nyhetsbrev-knapp {
     grid-row: 1;
     text-align: right;
 }
 
 /* design til knappen */
+
 .knapp {
     padding: 3px;
     color: var(--main-site-colour);
@@ -641,17 +662,17 @@ footer {
     text-decoration: underline;
 }
 
-.kontaktinformasjon{
+.kontaktinformasjon {
     grid-row: 2;
     grid-column: 1/2;
 }
 
-.kontaktinformasjon p:first-of-type{
+.kontaktinformasjon p:first-of-type {
     font-weight: bold;
     font-size: 25px;
 }
 
-.side-link{
+.side-link {
     grid-row: 2;
     grid-column: 2/3;
     padding-top: 2.5%;
@@ -671,7 +692,7 @@ footer {
     font-weight: 550;
 }
 
-.sosiale-medie-link{
+.sosiale-medie-link {
     grid-row: 2;
     grid-column: 3/4;
     padding-top: 0;
@@ -688,13 +709,14 @@ footer {
     text-decoration: underline;
 }
 
-.sosiale-medie-link p{
+.sosiale-medie-link p {
     font-weight: bold;
     font-size: 25px;
 }
 
 /* Ikon kode tatt fra:
 https://www.w3schools.com/howto/howto_css_social_media_buttons.asp */
+
 .fa {
     width: 15px;
     border-radius: 50%;
@@ -733,7 +755,7 @@ https://www.w3schools.com/howto/howto_css_social_media_buttons.asp */
         grid-template-columns: 1fr;
     }
 
-    .nyhetsbrev{
+    .nyhetsbrev {
         grid-row: 1;
         grid-column: 1;
     }
@@ -743,19 +765,19 @@ https://www.w3schools.com/howto/howto_css_social_media_buttons.asp */
         grid-column: 1;
     }
 
-    .nyhetsbrev-knapp{
+    .nyhetsbrev-knapp {
         grid-row: 2;
         grid-column: 1;
         text-align: left;
         padding-bottom: 2%;
     }
 
-    .kontaktinformasjon{
+    .kontaktinformasjon {
         grid-row: 2;
         grid-column: 1;
     }
 
-    .side-link{
+    .side-link {
         grid-row: 3;
         grid-column: 1;
     }
