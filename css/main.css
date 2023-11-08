@@ -11,7 +11,7 @@
 :root {
     --main-site-colour: #15856d;
     --main-site-background-colour: white;
-    --main-site-secondary-background-colour: #dddddd;
+    --main-site-secondary-background-colour: #f0f0f0;
     --main-site-font-colour: black;
     --topical-site-navbar-h2-background-color: rgb(80, 128, 169);
     --topical-site-navbar-a-background-color: rgb(243, 250, 255);
@@ -22,9 +22,9 @@
 /* Inspirert av Tengel presentasjon og eksempel nettside i faget */
 @media (prefers-color-scheme: dark) {
     :root {
-        --main-site-background-colour: #222222;
+        --main-site-background-colour: #212121;
         --main-site-font-colour: #eeeeee;
-        --main-site-secondary-background-colour: #333333;
+        --main-site-secondary-background-colour: #292929;
         --topical-site-navbar-h2-background-color: rgb(10, 47, 80);
         --topical-site-navbar-a-background-color: rgb(12, 59, 100);
     }
