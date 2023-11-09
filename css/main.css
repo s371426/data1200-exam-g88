@@ -15,6 +15,8 @@
     --main-site-font-colour: black;
     --topical-site-navbar-h2-background-color: rgb(80, 128, 169);
     --topical-site-navbar-a-background-color: rgb(243, 250, 255);
+    --topical-site-a-color: rgb(77,77,255);
+    --topical-site-a-color-visited: #551A8B;
 
 }
 
@@ -27,12 +29,15 @@
         --main-site-secondary-background-colour: #292929;
         --topical-site-navbar-h2-background-color: rgb(10, 47, 80);
         --topical-site-navbar-a-background-color: rgb(12, 59, 100);
+        --topical-site-a-color: #58a6ff;
+        --topical-site-a-color-visited: rgb(182, 97, 255);
     }
 }
 
 body {
     margin: 0;
     font-family: Verdana, sans-serif;
+    background-color: var(--main-site-background-colour);
 }
 
 main {
@@ -261,7 +266,11 @@ nav {
     font-family: Calibri, serif;
     font-weight: normal;
     grid-auto-flow: row;
-    padding: 2px 20px 5px 20px;
+    padding: 2px 3% 5px 3%;
+    max-width: 1200px;
+    margin-right: auto;
+    margin-left: auto;
+
 
 }
 
@@ -320,15 +329,22 @@ nav {
     grid-column: 1/-1;
     grid-row: 1;
     max-width: 1200px;
-    margin-left: auto;
-    margin-right: auto;
+    justify-self: center;
 }
 .main-bar {
     grid-column: 1;
-    margin-left: auto;
+/*    margin-left: auto;
     margin-right: auto;
-    max-width: 695px;
+    max-width: 695px; */
 
+}
+
+.main-bar a {
+    color: var(--topical-site-a-color);
+}
+
+.main-bar a:visited {
+    color: var(--topical-site-a-color-visited);
 }
 
 .sidenav {
@@ -349,14 +365,13 @@ nav {
     .topical-grid {
         grid-template-columns: 1fr;
         grid-auto-flow: row;
-        max-width: 700px;
-        margin-left: auto;
-        margin-right: auto;
+        max-width: none;
     }
 
     .headline {
         grid-column: 1;
         grid-row: 1;
+        justify-self: center;
     }
 
     .sidenav {
@@ -479,7 +494,7 @@ nav {
 
 /*bestemmer backgrunnsfarge og padding top og bunn */
 .main-accessibility {
-    top: 0;
+    top:0;
     background-color: var(--main-site-secondary-background-colour);
 }
 
