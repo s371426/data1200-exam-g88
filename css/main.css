@@ -726,3 +726,16 @@ https://www.w3schools.com/howto/howto_css_social_media_buttons.asp
         padding: 1%;
     }
 }
+.top-button{
+    top: 90%;
+    text-decoration:none;
+    font-size: 3.5rem;
+    text-align: right;
+    position: fixed;
+    bottom: 20px;
+    z-index: 999;
+    right: 10px;
+    border: 2px solid black;
+    border-radius: 100%;
+    background-color: lightgrey;*/
+ }
