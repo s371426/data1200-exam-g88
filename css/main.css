@@ -545,13 +545,17 @@ nav {
     padding-right: 3%;
 }
 
+.accessibility-flex:nth-child(even){
+    background-color: var(--secondary-background-color);
+}
+
 /* FLEX SLUTT */
 
 
 /*bestemmer backgrunnsfarge og padding top og bunn */
 .main-accessibility {
     top:0;
-    background-color: var(--secondary-background-color);
+    /*background-color: var(--secondary-background-color);*/
 }
 
 /* Lager grid inne i klassen */
@@ -566,8 +570,8 @@ nav {
 }
 
 /* Setter at alle oddetalls klasser under ac har den valgte fargen */
-.ac:nth-child(odd) {
-    background-color: var(--main-background-color);
+.ac:nth-child(even) {
+    background-color: var(--secondary-background-color);
 }
 
 /* Rekkefølgen på hvordan objektene skal stackes når skjermen er mindre enn 700px */
