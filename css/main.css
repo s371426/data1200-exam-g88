@@ -9,14 +9,14 @@
 /* Custom property om farger som kan gjenbrukes flere steder, enklere å endre senere og gjøre darkmode */
 /* Inspirert av Tengel presentasjon, eksempel nettside i faget og Mozilla web docs*/
 :root {
-    --main-site-colour: #15856d;
-    --main-site-background-colour: white;
-    --main-site-secondary-background-colour: #f0f0f0;
-    --main-site-font-colour: black;
-    --topical-site-navbar-h2-background-color: rgb(80, 128, 169);
-    --topical-site-navbar-a-background-color: rgb(243, 250, 255);
-    --topical-site-a-color: rgb(77,77,255);
-    --topical-site-a-color-visited: #551A8B;
+    --main-color: #15856d;
+    --main-font-color: black;
+    --main-background-color: white;
+    --secondary-background-color: #f0f0f0;
+    --topical-navbar-h2-background-color: rgb(80, 128, 169);
+    --topical-navbar-a-background-color: rgb(243, 250, 255);
+    --topical-a-color: rgb(77,77,255);
+    --topical-a-color-visited: #551A8B;
 
 }
 
@@ -24,13 +24,13 @@
 /* Inspirert av Tengel presentasjon og eksempel nettside i faget */
 @media (prefers-color-scheme: dark) {
     :root {
-        --main-site-background-colour: #212121;
-        --main-site-font-colour: #eeeeee;
-        --main-site-secondary-background-colour: #292929;
-        --topical-site-navbar-h2-background-color: rgb(10, 47, 80);
-        --topical-site-navbar-a-background-color: rgb(12, 59, 100);
-        --topical-site-a-color: #58a6ff;
-        --topical-site-a-color-visited: rgb(182, 97, 255);
+        --main-background-color: #212121;
+        --main-font-color: #eeeeee;
+        --secondary-background-color: #292929;
+        --topical-navbar-h2-background-color: rgb(10, 47, 80);
+        --topical-navbar-a-background-color: rgb(12, 59, 100);
+        --topical-a-color: #58a6ff;
+        --topical-a-color-visited: rgb(182, 97, 255);
     }
 }
 * {
@@ -39,12 +39,12 @@
 body {
     margin: 0;
     font-family: Verdana, sans-serif;
-    background-color: var(--main-site-background-colour);
+    background-color: var(--main-background-color);
 }
 
 main {
-    color: var(--main-site-font-colour);
-    background-color: var(--main-site-background-colour);
+    color: var(--main-font-color);
+    background-color: var(--main-background-color);
 }
 
 /* Img fyller det elementet det er inni */
@@ -83,7 +83,7 @@ nav {
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
-    background-color: var(--main-site-colour);
+    background-color: var(--main-color);
     padding-left: 20px;
     padding-right: 20px;
     max-height: 60px;
@@ -270,7 +270,7 @@ nav {
 /* Vi bruker grids for å style topical siden */
 .topical-grid {
     display: grid;
-    grid-template-columns: minmax(600px, 60vw) auto;
+    grid-template-columns: auto minmax(200px, 15vw);
     font-family: Calibri, serif;
     font-weight: normal;
     grid-auto-flow: row;
@@ -304,7 +304,7 @@ nav {
     text-align: center;
     margin-bottom: 0;
     color: white;
-    background-color: var(--topical-site-navbar-h2-background-color);
+    background-color: var(--topical-navbar-h2-background-color);
 }
 
 
@@ -315,8 +315,8 @@ nav {
     border-color: black;
     text-align: center;
     text-decoration: none;
-    color: var(--main-site-font-colour);
-    background-color: var(--topical-site-navbar-a-background-color);
+    color: var(--main-font-color);
+    background-color: var(--topical-navbar-a-background-color);
 }
 
 .sidenav ul a:hover {
@@ -350,17 +350,17 @@ nav {
 .topical-img-with-text {
     width: 50%;
     float: right;
-    padding-left: 10px;
+    padding-left: 30px;
     padding-bottom: 10px;
 }
 
 
 .main-bar a {
-    color: var(--topical-site-a-color);
+    color: var(--topical-a-color);
 }
 
 .main-bar a:visited {
-    color: var(--topical-site-a-color-visited);
+    color: var(--topical-a-color-visited);
 }
 
 .sidenav {
@@ -371,12 +371,8 @@ nav {
 }
 .topical-img {
     grid-column: 2;
-    padding-top: 50px;
-
+    padding-top: 20px;
 }
-
-
-
 
 
 /* Vi bruker media queries slik at utseende på nettsiden er annerledes på mobil */
@@ -481,7 +477,7 @@ nav {
 (main secondary background color) */
 /* https://developer.mozilla.org/en-US/docs/Web/CSS/:nth-child */
 .location-flex:nth-child(odd) {
-    background-color: var(--main-site-secondary-background-colour);
+    background-color: var(--secondary-background-color);
 }
 
 /* Bytter om på rekkefølgen på annenhver sibling element hvis viewport 761px eller bredere*/
@@ -517,7 +513,7 @@ nav {
 /*bestemmer backgrunnsfarge og padding top og bunn */
 .main-accessibility {
     top:0;
-    background-color: var(--main-site-secondary-background-colour);
+    background-color: var(--secondary-background-color);
 }
 
 /* Lager grid inne i klassen */
@@ -533,7 +529,7 @@ nav {
 
 /* Setter at alle oddetalls klasser under ac har den valgte fargen */
 .ac:nth-child(odd) {
-    background-color: var(--main-site-background-colour);
+    background-color: var(--main-background-color);
 }
 
 /* Rekkefølgen på hvordan objektene skal stackes når skjermen er mindre enn 700px */
@@ -593,7 +589,7 @@ footer h3{
 /* design til knappen */
 .knapp {
     padding: 3px;
-    color: var(--main-site-colour);
+    color: var(--main-color);
     background-color: black;
     text-decoration: none;
     font-size: 1.563rem;
