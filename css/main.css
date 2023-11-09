@@ -510,6 +510,44 @@ nav {
 
 /*ACCESSIBILITY SIDE*/
 
+/* FLEX START */
+
+.accessibility-flex{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    padding-bottom: 1.5%;
+    padding-top: 1.5%;
+}
+
+.accessibility-text{
+    flex-basis: 50%;
+    box-sizing: border-box;
+    max-width: 620px;
+    padding-left: 3%;
+    padding-right: 3%;
+}
+
+.accessibility-image{
+    flex-basis: 50%;
+    box-sizing: border-box;
+    max-width: 620px;
+    padding-left: 3%;
+    padding-right: 3%;
+}
+
+.accessibility-text-only{
+    flex-basis: 100%;
+    box-sizing: border-box;
+    max-width: 1240px;
+    padding-left: 3%;
+    padding-right: 3%;
+}
+
+/* FLEX SLUTT */
+
+
 /*bestemmer backgrunnsfarge og padding top og bunn */
 .main-accessibility {
     top:0;
