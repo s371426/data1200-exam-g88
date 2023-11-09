@@ -547,7 +547,7 @@ footer {
     padding-bottom: 2%;
 }
 footer h3{
-    font-size: 25px;
+    font-size: 1.563rem;
 }
 /* Grid kode tatt fra: https://www.w3schools.com/css/css_grid.asp*/
 /* endrer på alle grid, og sentrerer tekst */
@@ -564,7 +564,7 @@ footer h3{
     border-bottom: 1px solid;
     border-bottom-color: black;
     font-weight: bold;
-    font-size: 25px;
+    font-size: 1.563rem;
 }
 .nyhetsbrev-knapp{
     grid-row: 1;
@@ -582,7 +582,7 @@ footer h3{
     color: var(--main-site-colour);
     background-color: black;
     text-decoration: none;
-    font-size: 23px;
+    font-size: 1.563rem;
 }
 
 .knapp:hover {
@@ -610,7 +610,7 @@ footer h3{
 }
 
 .side-link p {
-    font-size: 20px;
+    font-size: 1.25rem;
     font-weight: 550;
 }
 
@@ -633,7 +633,7 @@ footer h3{
 
 .sosiale-medie-link p {
     font-weight: bold;
-    font-size: 25px;
+    font-size: 1.563rem;
 }
 
 /* Ikon kode tatt fra:
@@ -646,7 +646,7 @@ https://www.w3schools.com/howto/howto_css_social_media_buttons.asp
     margin-right: 2%;
     text-align: center;
     text-decoration: none;
-    font-size: 30px;
+    font-size: 1.875rem;
 }
 
 .fa-facebook {
