@@ -164,18 +164,13 @@ nav {
     margin: 0;
 }
 
-/* */
+/* Sørger for at det er outline rundt hamburgermeny når den er i fokus med tastatur, men ikke med mus.*/
 /* Alle nettlesere som støtter :has() støtter også :focus-visible, så trenger ikke @supports rule da ingenting skjer
 hvis :has() ikke støttes */
 /* :has() støttes av Chrome/Safari fra september 2022 og av av Firefox versjon 121 fra desember 2023 */
 nav:has(#hamburger-toggle:focus-visible) .hamburger-toggle-container{
     outline: auto;
 }
-
-/*@supports selector(:focus-visible) {*/
-/*  nav:has(#hamburger-toggle:not(:focus-visible)) .hamburger-toggle-container{*/
-/*    outline: none;*/
-/*  }*/
 
 /* Sjuler linker på navbar og viser hamburger meny knapp når bredde er mindre enn 800px*/
 @media (max-width: 800px) {
