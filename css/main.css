@@ -272,7 +272,7 @@ nav {
     font-family: Calibri, serif;
     font-weight: normal;
     grid-auto-flow: row;
-    padding: 2px 3% 5px 3%;
+    padding: 0 3em 2.3em 3em;
     max-width: 1200px;
     margin-right: auto;
     margin-left: auto;
@@ -284,10 +284,11 @@ nav {
 .headline h1 {
     font-family: "Gill Sans MT", serif;
     font-weight: bolder;
-    font-size: 1.8rem;
+    font-size: 2.1rem;
     text-align: center;
     border-bottom: 2px solid;
     letter-spacing: 0.1em;
+    padding-top: 0.2em;
 
 }
 
