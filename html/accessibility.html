@@ -18,11 +18,11 @@
 <body>
 <header>
     <nav class="navbar">
-        <div class="logo-burger-wrapper">
+        <div class="logo-hamburger-wrapper">
             <a href="../index.html" title="Tilbake til forsiden"><img id="nav-logo" src="../images/logo-oslomet-gul.svg"
                                                                       alt="OsloMet sin logo" width="67.56" height="40"></a>
             <label class="hamburger-toggle-container" for="hamburger-toggle" >
-                <span class="menu-icon"></span>
+                <span class="hamburger-icon"></span>
             </label>
         </div>
 
@@ -57,50 +57,58 @@
     <div class="ac accessibility-grid">
 
         <ul class="ac-liste-tekst">
-            <li><h3>Font:</h3> Vi har valgt å bruke "Verdana" som font, og "sans-serif" som backup. "Verdana" har vi
+            <li><h2>Font:</h2>
+                <p>Vi har valgt å bruke "Verdana" som font, og "sans-serif" som backup. "Verdana" har vi
                 valgt
                 ettersom fonten har tydelige former og forskjeller mellom bokstavene, og er tydelig med mange og få
                 piksler.
                 Det er tydelige forskjeller mellom "l" og "I". Vi har valgt å ha en backup font, "sans-serif", som
                 blir hovedfonten
-                dersom brukeren ikke får lastet inn "Verdana".
+                dersom brukeren ikke får lastet inn "Verdana".</p>
             </li>
-            <li><h3>Farge:</h3>
-                På siden har vi "mørk og lys" modus, som blir valgt utifra instillingene på brukerens pc. Lys
-                modusen har hvit
-                bakgrunnsfarge med mørk tekst, og mørk modusen har mørk bakgrunn med hvit tekst. Vi har hatt stort
-                fokus på kontrast
-                mellom tekst og bakgrunn.
+            <li>
+                <h2>Tekst</h2>
+                <p>Vi satt line height på paragrafer til 1.5 fordi det er det some er anbefalt da det gjør det enklere
+                    å lese</p>
             </li>
-            <li><h3>Struktur:</h3>På sidene har vi valgt å ha en generell utforming, med nav bar på toppen,
+            <li><h2>Farge:</h2>
+                <p>På siden har vi "mørk og lys" modus, som blir valgt utifra instillingene på brukerens pc. Lys
+                    modusen har hvit
+                    bakgrunnsfarge med mørk tekst, og mørk modusen har mørk bakgrunn med hvit tekst. Vi har hatt stort
+                    fokus på kontrast
+                    mellom tekst og bakgrunn.</p>
+            </li>
+            <li><h2>Struktur:</h2>
+                <p>På sidene har vi valgt å ha en generell utforming, med nav bar på toppen,
                 hovedinnhold i
                 midten og footer på bunn. Vi har brukt tydelige overskrifter og bilder, for å gjøre det enkelt for
                 brukerne å
-                forstå siden uten å lese innholdet.
+                forstå siden uten å lese innholdet.</p>
             </li>
-            <li><h3>Alt tekster:</h3>la bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla
+            <li><h2>Alt tekster:</h2>
+                <p>la bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla
                 bla
                 bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla
-                bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla
+                bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla</p>
             </li>
         </ul>
-
+    <!-- midelertidig klasse og klassenavn   s -->
         <div class="ac ac-grid-item-2">Bilde</div>
     </div>
 
         <!--Classen under har midlertidig navn -->
     <div class="ac ac-index-tekst">
-        <h4>Home:</h4>
+        <h2>Home:</h2>
         <p> bla bla bla bla</p>
     </div>
 
     <div class="ac ac-topical-tekst">
-        <h4>Topical:</h4>
+        <h2>Topical:</h2>
         <p>BLA BAL BLASKNansdjkak djsank</p>
     </div>
 
     <div class="ac ac-hamburger-tekst">
-        <h4>Hamburger meny:</h4>
+        <h2>Hamburger meny:</h2>
         <p> Den første løsningen vi gjorde for hamburger meny kunne ikke aktiveres med kun tastatur,
             noe som trengs hvis man har problemer med å bruke mus. Dette var fordi checkbox ble satt til Display: none
             i css for å gjemme den. Løsningen for dette, var å sette den til opacity: 0 isteden slik at den bare er
@@ -110,7 +118,7 @@
     </div>
 
     <div class="ac ac-footer-tekst">
-        <h4>Footer:</h4>
+        <h2>Footer:</h2>
         <p> På footeren har vi valgt å imitere oslomet.no sin footer. Vi har lenker nederst på siden, som gjør det
             enkelt for brukerne å gå videre til neste side, isteden for å måtte manøvrere seg til toppen igjen.
             Lenkene til
@@ -120,21 +128,20 @@
             Ellers har vi kontrast mellom tekst og bakgrunn, samt oversiktlig og leselig tekst.
         </p>
     </div>
-
 </main>
-
 <footer>
     <!-- Grid kode tatt fra: https://www.w3schools.com/css/css_grid.asp-->
-
         <!-- nyhetsbrev tekst, markert med * ettersom teksten og knappen er midlertidig. -->
         <section class="footer-grid-objekter nyhetsbrev">
-            <p class="nyhetsbrev-tekst">*Hold deg oppdatert på vårt nyhetsbrev</p>
-            <div class="nyhetsbrev-knapp"><a href="https://www.oslomet.no/nyhetsbrev" class="knapp">Nyhetsbrev! </a></div>
+            <p>*Hold deg oppdatert på hva som skjer</p>
         </section>
 
+        <section class="nyhetsbrev-knapp">
+                <a href="https://www.oslomet.no/nyhetsbrev" class="knapp">Nyhetsbrev! </a>
+        </section>
         <!-- Kontakt informasjon til OsloMet -->
         <section class="footer-grid-objekter kontaktinformasjon">
-            <p>OsloMet</p>
+            <h3>OsloMet</h3>
             <p>Oslo Metropolitan University</p>
             <p>Storbyuniversitetet</p>
             <p>Postboks 4, St. Olavs plass</p>
@@ -144,7 +151,7 @@
 
         <!-- Lenker til de andre sidene på nettsiden vår-->
         <section class="footer-grid-objekter side-link">
-            <h2>Navigasjon</h2>
+            <h3>Navigasjon</h3>
             <p><a href="../index.html">Home</a></p>
             <p><a href="accessibility.html">Accessibility</a></p>
             <p><a href="topical.html">Topical</a></p>
@@ -154,7 +161,7 @@
 
         <!-- sosiale medie lenker -->
         <section class="footer-grid-objekter sosiale-medie-link">
-            <p>Følg oss</p>
+            <h3>Følg oss</h3>
             <div class="ikoner">
                 <a href="https://www.facebook.com/oslomet/">
                     <div class="fa fa-facebook"></div>
