@@ -111,10 +111,10 @@
         <h2>Hamburger meny:</h2>
         <p> Den første løsningen vi gjorde for hamburger meny kunne ikke aktiveres med kun tastatur,
             noe som trengs hvis man har problemer med å bruke mus. Dette var fordi checkbox ble satt til Display: none
-            i css for å gjemme den. Løsningen for dette, var å sette den til opacity: 0 isteden slik at den bare er
-            usynelig i steden med position: absolute slik at den var riktig sted på siden. For brukere som bruker
-            screen readers, la vi til "aria-label" på knappen slik at funksjonen dens blir tydelig. 
-            [mere tekst om at man ikke ser at den er markert.]</p>
+            i css for å gjemme den. Løsningen for dette, var å sette den til opacity: 0 og position: absolute for
+            posisjon isteden slik at den bare er usynelig isteden.  Sørget også for at hamburger får outline når den er valgt med tastatur da den ikke vanligvis
+            gjør det med opacity sat til 0. For brukere som bruker screen readers, la vi til "aria-label" på knappen slik at funksjonen dens
+            blir tydelig.</p>
     </div>
 
     <div class="ac ac-footer-tekst">
