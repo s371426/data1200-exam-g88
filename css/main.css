@@ -505,7 +505,9 @@ footer {
     background-color: #8899a4;
     padding-bottom: 2%;
 }
-
+footer h3{
+    font-size: 25px;
+}
 /* Grid kode tatt fra: https://www.w3schools.com/css/css_grid.asp*/
 /* endrer på alle grid, og sentrerer tekst */
 .footer-grid-objekter {
@@ -531,9 +533,6 @@ footer {
     border-bottom-color: black;
     padding-top: 25px;
     padding-right: 15px;
-
-
-
 }
 
 /* design til knappen */
@@ -552,11 +551,6 @@ footer {
 .kontaktinformasjon{
     grid-row: 2;
     grid-column: 1/2;
-}
-
-.kontaktinformasjon p:first-of-type{
-    font-weight: bold;
-    font-size: 25px;
 }
 
 .side-link{
