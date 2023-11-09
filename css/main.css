@@ -349,7 +349,7 @@ nav {
 
 
 .topical-img-with-text {
-    max-width: 50%;
+    width: 50%;
     float: right;
     padding-left: 10px;
     padding-bottom: 10px;
@@ -384,7 +384,7 @@ nav {
 
 
 /* Vi bruker media queries slik at utseende på nettsiden er annerledes på mobil */
-@media (max-width: 900px) {
+@media (max-width: 760px) {
     .topical-grid {
         grid-template-columns: 1fr;
         grid-auto-flow: row;
@@ -395,6 +395,11 @@ nav {
         grid-column: 1;
         grid-row: 1;
         justify-self: center;
+    }
+    .topical-img-with-text {
+        float:none;
+        width: 100%;
+        padding-left: 0;
     }
 
 
