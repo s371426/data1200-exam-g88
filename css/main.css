@@ -241,7 +241,7 @@ nav {
 .hero-flex {
     display: flex;
     height: 100vh;
-    background: url('/images/forsidebilde-arkitektur-p32/arkitektur-p32-skjalg-bøhmer-vold-square-large.jpg') no-repeat;
+    background: url('../images/forsidebilde-arkitektur-p32/arkitektur-p32-skjalg-bøhmer-vold-square-large.jpg') no-repeat;
     background-size: cover;
     align-items: center;
     justify-content: center;
