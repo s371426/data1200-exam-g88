@@ -538,11 +538,9 @@ nav {
     .accessibility-grid {
         grid-template-columns: 1fr;
     }
-
     .ac-list-text {
         grid-column: 1;
     }
-
     .ac-grid-item-2 {
         grid-column: 1;
     }
