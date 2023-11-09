@@ -276,6 +276,7 @@ nav {
     max-width: 1200px;
     margin-right: auto;
     margin-left: auto;
+    grid-column-gap: 60px;
 
 
 }
@@ -286,7 +287,7 @@ nav {
     font-size: 1.8rem;
     text-align: center;
     border-bottom: 2px solid;
-    letter-spacing: 1.5px;
+    letter-spacing: 0.1em;
 
 }
 
@@ -337,6 +338,7 @@ nav {
     max-width: 1200px;
     justify-self: center;
 }
+
 .main-bar {
     grid-column: 1;
 /*    margin-left: auto;
@@ -344,6 +346,15 @@ nav {
     max-width: 695px; */
 
 }
+
+
+.topical-img-with-text {
+    max-width: 50%;
+    float: right;
+    padding-left: 10px;
+    padding-bottom: 10px;
+}
+
 
 .main-bar a {
     color: var(--topical-site-a-color);
@@ -355,7 +366,7 @@ nav {
 
 .sidenav {
     grid-column: 2;
-    grid-row: 2;
+    grid-row: 2/4;
 
 
 }
@@ -364,6 +375,12 @@ nav {
     padding-top: 50px;
 
 }
+
+.main-bar1 {
+    grid-column: 1;
+    grid-row: 2/3;
+}
+
 
 
 /* Vi bruker media queries slik at utseende på nettsiden er annerledes på mobil */
@@ -380,13 +397,12 @@ nav {
         justify-self: center;
     }
 
+
     .sidenav {
         grid-column: 1;
         grid-row: 2;
     }
-    .topical-img {
-        grid-column: 1;
-    }
+
 
 
     /* Refererer til de ulike ID   */

@@ -44,7 +44,7 @@
 
 <!-- Dette er navigation baren til siden som linker til de ulike underoverskriftene i artikkelen -->
 <!-- Bruker id og hyperlinks for å linke til de ulikene delene av artikkelen -->
-<main class="topical-grid">
+<main class="topical-grid" lang="en">
 
     <div class="headline">
         <h1>The Interplay between Technology and Society</h1>
@@ -91,7 +91,7 @@
     </div>
 
 
-    <article class="main-bar">
+    <article class="main-bar1">
         <h2 id="introduction">Introduction</h2>
 
         <!-- Vi endrer ikke på farger på hyperlinks slik at linker ser ut som link (?)-->
@@ -116,9 +116,24 @@
     </article>
 
 
-
-    <article class="main-bar">
+    <article>
         <h2 id="key-terms">Key terms:</h2>
+        <figure class="topical-img-with-text">
+            <picture lang="no">
+
+                <!-- Bilde blir valgt av device ut i fra hvilken oppløsning som passer best. "w" er bredden
+                på det bildet. Type forteller device at bildene er webp format-->
+                <source srcset="../images/topical-images/NASA-small.webp 600w
+                            ../images/topical-images/NASA.webp 1200w"
+                        type="image/webp"/>
+
+                <!-- Backup bilde tilfelle device ikke støtter <picture> eller webp, i tillegg til alt tekst informasjon -->
+                <img src="../images/topical-images/NASA.jpg"
+                     alt="Bilde av New York lyst opp av gatebelysning tatt fra verdensrommet"
+                     height="1200" width="1200">
+            </picture>
+            <figcaption>NASA, New York</figcaption>
+        </figure>
         <p>Technological trajectory – the evolution of technology in a specific field.</p>
         <p>Co-production – when experts from different fields work together to produce new technologies.</p>
         <p>Critical infrastructure - systems that provide functions necessary for life.</p>
@@ -132,24 +147,6 @@
             and economically.</p>
 
     </article>
-
-    <figure class="topical-img">
-        <picture lang="no">
-
-            <!-- Bilde blir valgt av device ut i fra hvilken oppløsning som passer best. "w" er bredden
-            på det bildet. Type forteller device at bildene er webp format-->
-            <source srcset="../images/topical-images/nasa-small.webp 900w,
-                            ../images/topical-images/nasa-medium.webp 1440w,
-                            ../images/topical-images/nasa-large.webp 2100w"
-                    type="image/webp"/>
-
-            <!-- Backup bilde tilfelle device ikke støtter <picture> eller webp, i tillegg til alt tekst informasjon -->
-            <img src="../images/topical-images/nasa.jpg"
-                 alt="Bilde av New York lyst opp av gatebelysning tatt fra verdensrommet"
-                 height="1398" width="2100">
-        </picture>
-        <figcaption>NASA, New York</figcaption>
-    </figure>
 
     <article class="main-bar">
         <h2 id="immediate-reactions">Describe your immediate reactions:</h2>
