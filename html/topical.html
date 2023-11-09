@@ -123,6 +123,10 @@
 
                 <!-- Bilde blir valgt av device ut i fra hvilken oppløsning som passer best. "w" er bredden
                 på det bildet. Type forteller device at bildene er webp format-->
+                <source srcset="../images/topical-images/NASA-mobile-view.webp 800w"
+                        type="image/webp"
+                        media="(max-width: 760px)"/>
+
                 <source srcset="../images/topical-images/NASA-small.webp 600w
                             ../images/topical-images/NASA.webp 1200w"
                         type="image/webp"/>
@@ -165,27 +169,27 @@
                 if they end up colliding with other satellites.
             </li>
         </ul>
-    </article>
+        <figure class="topical-img">
+            <picture lang="no">
 
-    <figure class="topical-img">
-        <picture lang="no">
-
-            <!-- Bilde blir valgt av device ut i fra hvilken oppløsning som passer best. "w" er bredden
-            på det bildet. Type forteller device at bildene er webp format-->
-            <source srcset="../images/topical-images/imac-small.webp 900w,
+                <!-- Bilde blir valgt av device ut i fra hvilken oppløsning som passer best. "w" er bredden
+                på det bildet. Type forteller device at bildene er webp format-->
+                <source srcset="../images/topical-images/imac-small.webp 900w,
                             ../images/topical-images/imac-medium.webp 1440w,
                             ../images/topical-images/imac-large.webp 2100w"
-                    type="image/webp"/>
+                        type="image/webp"/>
 
-            <!-- Backup bilde tilfelle device ikke støtter <picture> eller webp, i tillegg til alt tekst informasjon -->
-            <img src="../images/topical-images/imac.jpg" alt="Bilde av flere elektroniske enheter med en iMac i sentrum"
-                 height="4000" width="6000">
-        </picture>
-        <figcaption>Domenico Loia, Unsplash</figcaption>
-    </figure>
+                <!-- Backup bilde tilfelle device ikke støtter <picture> eller webp, i tillegg til alt tekst informasjon -->
+                <img src="../images/topical-images/imac.jpg" alt="Bilde av flere elektroniske enheter med en iMac i sentrum"
+                     height="4000" width="6000">
+            </picture>
+            <figcaption>Domenico Loia, Unsplash</figcaption>
+        </figure>
+    </article>
 
 
     <article class="main-bar">
+
         <h2 id="positive-aspects">Describe three potentially positive aspects of this development:</h2>
         <p>Satellite internet is now globally spread and gives us good access to others very quickly. It has become so
             widespread
@@ -197,6 +201,24 @@
             research
             and discover more. It´s also relatively cheap which makes it even more accessible for everyone.</p>
 
+        <figure class="topical-img-with-text">
+            <picture lang="no">
+
+                <!-- Bilde blir valgt av device ut i fra hvilken oppløsning som passer best. "w" er bredden
+                på det bildet. Type forteller device at bildene er webp format-->
+                <source srcset="../images/topical-images/circuit-small.webp 900w,
+                            ../images/topical-images/circuit-medium.webp 1440w,
+                            ../images/topical-images/circuit-large.webp 2100w"
+                        type="image/webp"/>
+
+                <!-- Backup bilde tilfelle device ikke støtter <picture> eller webp, i tillegg til alt tekst informasjon -->
+                <img src="../images/topical-images/circuit.jpg" alt="Bilde av en PCB, også kjent som en kretskort. Kretskort blir
+            brukt til å koble sammen flere elektroniske komponenter inni en maskin"
+                     height="2597" width="3895">
+            </picture>
+            <figcaption>Umberto, Unsplash</figcaption>
+        </figure>
+
         <h2 id="negative-aspects">Describe three potentially negative aspects of this development:</h2>
         <p>There are negative consequences of this technology. Such technology can invade the private lives of others.
             Information sent over the internet can be stolen and end up in the wrong hands. The expansion of the
@@ -207,23 +229,6 @@
             information.</p>
     </article>
 
-    <figure class="topical-img">
-        <picture lang="no">
-
-            <!-- Bilde blir valgt av device ut i fra hvilken oppløsning som passer best. "w" er bredden
-            på det bildet. Type forteller device at bildene er webp format-->
-            <source srcset="../images/topical-images/circuit-small.webp 900w,
-                            ../images/topical-images/circuit-medium.webp 1440w,
-                            ../images/topical-images/circuit-large.webp 2100w"
-                    type="image/webp"/>
-
-            <!-- Backup bilde tilfelle device ikke støtter <picture> eller webp, i tillegg til alt tekst informasjon -->
-            <img src="../images/topical-images/circuit.jpg" alt="Bilde av en PCB, også kjent som en kretskort. Kretskort blir
-            brukt til å koble sammen flere elektroniske komponenter inni en maskin"
-                 height="2597" width="3895">
-        </picture>
-        <figcaption>Umberto, Unsplash</figcaption>
-    </figure>
 
     <article class="main-bar">
         <h2 id="consequences">Identify potential consequences:</h2>
