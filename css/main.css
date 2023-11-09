@@ -168,6 +168,8 @@ nav {
 /* Alle nettlesere som støtter :has() støtter også :focus-visible, så trenger ikke @supports rule da ingenting skjer
 hvis :has() ikke støttes */
 /* :has() støttes av Chrome/Safari fra september 2022 og av av Firefox versjon 121 fra desember 2023 */
+/* Inspirert av: https://unused-css.com/blog/css-only-hamburger-menu/
+                 https://developer.mozilla.org/en-US/docs/Web/CSS/:has */
 nav:has(#hamburger-toggle:focus-visible) .hamburger-toggle-container{
     outline: auto;
 }
