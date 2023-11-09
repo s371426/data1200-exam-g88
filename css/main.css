@@ -248,10 +248,16 @@ nav {
 .hero-text h1{
     font-size: 5.5rem;
     display: flex;
+    font-weight: 900;
+    color: white;
 }
 
 .hero-text h2{
-    font-size: 4.5rem;
+    font-size: 2.7rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
 }
 
 
