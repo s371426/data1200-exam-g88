@@ -284,10 +284,11 @@ nav {
 .headline h1 {
     font-family: "Gill Sans MT", serif;
     font-weight: bolder;
-    font-size: 1.8rem;
+    font-size: 2.1rem;
     text-align: center;
     border-bottom: 2px solid;
     letter-spacing: 0.1em;
+    padding-top: 0.2em;
 
 }
 
