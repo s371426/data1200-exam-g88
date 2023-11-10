@@ -257,6 +257,7 @@ nav:has(#hamburger-toggle:focus-visible) .hamburger-toggle-container{
     align-items: center;
     justify-content: center;
     box-shadow: 20px 0 black;
+    filter: brightness(50%); /* skal påvirke kun bilde og ikke hele seksjonen*/
 }
 
 .hero-text h1{
