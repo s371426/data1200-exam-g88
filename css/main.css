@@ -439,26 +439,27 @@ nav {
     padding-top: 1.5%;
 }
 
-/* Er inni location-flex, inneholder bilde/bildetekst */
-.location-img {
+/* To bokser inni location-flex, gjør at de er like store*/
+.location-img,
+.location-text{
     flex-basis: 50%;
     box-sizing: border-box;
-    position: relative;
-    top: 0.66rem;
     max-width: 620px;
     padding-left: 3%;
     padding-right: 3%;
+}
+
+/* Er inni location-flex, inneholder bilde/bildetekst */
+.location-img {
+    position: relative;
+    top: 0.66rem;
     margin-top: 0.5rem;
     margin-bottom: 0.5rem;
 }
 
 /* Er inni location-flex, inneholder ovserktift/tekst */
 .location-text {
-    flex-basis: 50%;
-    box-sizing: border-box;
-    max-width: 620px;
-    padding-left: 3%;
-    padding-right: 3%;
+
 }
 
 /* Endrer location-flex flexbox til å være vertikal når viewport mindre enn 760px (Mobil) */
