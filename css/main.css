@@ -29,9 +29,12 @@
         --topical-a-color-visited: rgb(182, 97, 255);
     }
 }
+
+/* Skroller smooth når det scrolles via linker til andre steder på siden, gjelder alle elements*/
 * {
     scroll-behavior: smooth;
 }
+
 body {
     margin: 0;
     font-family: Verdana, sans-serif;
