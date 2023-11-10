@@ -102,7 +102,7 @@ nav {
 /* Style lenkene i navbar */
 .menu a {
     display: block;
-    padding: 20px 17px;
+    padding: 20px 16px;
     text-decoration: none;
     color: black;
     font-weight: bold;
@@ -172,7 +172,7 @@ nav {
 }
 
 /* Sjuler linker på navbar og viser hamburger meny knapp når bredde er mindre enn 800px*/
-@media (max-width: 800px) {
+@media (max-width: 810px) {
     /* Meny blir vertikal istedenfor horisontal */
     nav {
         flex-direction: column;
