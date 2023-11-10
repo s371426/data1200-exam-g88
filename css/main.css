@@ -559,6 +559,17 @@ nav:has(#hamburger-toggle:focus-visible) .hamburger-toggle-container{
     background-color: var(--secondary-background-color);
 }
 
+@media (max-width: 760px) {
+    .accessibility-flex{
+        flex-direction: column;
+    }
+
+    .accessibility-image,
+    .accessibility-text{
+        max-width: none;
+    }
+}
+
 /* FLEX SLUTT */
 
 
