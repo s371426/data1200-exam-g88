@@ -522,7 +522,8 @@ nav {
     padding-top: 1.5%;
 }
 
-.accessibility-text{
+.accessibility-text,
+.accessibility-image{
     flex-basis: 50%;
     box-sizing: border-box;
     max-width: 620px;
@@ -530,12 +531,12 @@ nav {
     padding-right: 3%;
 }
 
+.accessibility-text{
+
+}
+
 .accessibility-image{
-    flex-basis: 50%;
-    box-sizing: border-box;
-    max-width: 620px;
-    padding-left: 3%;
-    padding-right: 3%;
+
 }
 
 .accessibility-text-only{
