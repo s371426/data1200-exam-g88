@@ -177,7 +177,7 @@ nav {
     nav {
         flex-direction: column;
         align-items: normal;
-        max-height: none;
+        /*max-height: none;*/
     }
 
     /* Navigasjons meny linker vises ikke */
@@ -207,6 +207,12 @@ nav {
     #hamburger-toggle:checked ~ .menu {
         display: block;
     }
+}
+
+nav:has(#hamburger-toggle:checked){
+    max-height: 100vw;
+    transition-property: max-height;
+    transition-duration: 0.5s;
 }
 
 
