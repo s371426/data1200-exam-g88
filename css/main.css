@@ -1,9 +1,5 @@
 /*DATA1200 Home Exam 2023*/
 
-/* Hadde kyst til å bruke CSS nesting  som ble CSS spec veldig nylig https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_nesting*/
-/*Men tengel sa at vi skulle unngå å bruke det */
-
-
 /*DIVERSE*/
 
 /* Custom property om farger som kan gjenbrukes flere steder, enklere å endre senere og gjøre darkmode */
@@ -33,9 +29,12 @@
         --topical-a-color-visited: rgb(182, 97, 255);
     }
 }
+
+/* Skroller smooth når det scrolles via linker til andre steder på siden, gjelder alle elements*/
 * {
     scroll-behavior: smooth;
 }
+
 body {
     margin: 0;
     font-family: Verdana, sans-serif;
@@ -102,7 +101,7 @@ nav {
 /* Style lenkene i navbar */
 .menu a {
     display: block;
-    padding: 20px 17px;
+    padding: 20px 16px;
     text-decoration: none;
     color: black;
     font-weight: bold;
@@ -171,8 +170,19 @@ nav {
     margin: 0;
 }
 
+/* Outline rundt hamburgermeny når den er i fokus med tastatur, men ikke med mus.*/
+/* :has() er CSS 4 ikke 3 men trengs fordi hvordan hamburgermeny/navbar setup er.
+   Nettlesere som støtter :has() støtter også :focus-visible, så trenger ikke @supports rule da ingenting skjer
+   hvis :has() ikke støttes. Det er ikke site-breaking.
+   :has() støttes: Chrome/Safari fra september 2022/Firefox versjon 121 fra desember 2023 */
+/* Inspirert av: https://unused-css.com/blog/css-only-hamburger-menu/
+                 https://developer.mozilla.org/en-US/docs/Web/CSS/:has */
+nav:has(#hamburger-toggle:focus-visible) .hamburger-toggle-container{
+    outline: auto;
+}
+
 /* Sjuler linker på navbar og viser hamburger meny knapp når bredde er mindre enn 800px*/
-@media (max-width: 800px) {
+@media (max-width: 810px) {
     /* Meny blir vertikal istedenfor horisontal */
     nav {
         flex-direction: column;
