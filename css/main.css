@@ -9,14 +9,14 @@
 /* Custom property om farger som kan gjenbrukes flere steder, enklere å endre senere og gjøre darkmode */
 /* Inspirert av Tengel presentasjon, eksempel nettside i faget og Mozilla web docs*/
 :root {
-    --main-site-colour: #15856d;
-    --main-site-background-colour: white;
-    --main-site-secondary-background-colour: #f0f0f0;
-    --main-site-font-colour: black;
-    --topical-site-navbar-h2-background-color: rgb(80, 128, 169);
-    --topical-site-navbar-a-background-color: rgb(243, 250, 255);
-    --topical-site-a-color: rgb(77,77,255);
-    --topical-site-a-color-visited: #551A8B;
+    --main-color: #15856d;
+    --main-font-color: black;
+    --main-background-color: white;
+    --secondary-background-color: #f0f0f0;
+    --topical-navbar-h2-background-color: rgb(80, 128, 169);
+    --topical-navbar-a-background-color: rgb(243, 250, 255);
+    --topical-a-color: rgb(77,77,255);
+    --topical-a-color-visited: #551A8B;
 
 }
 
@@ -24,25 +24,27 @@
 /* Inspirert av Tengel presentasjon og eksempel nettside i faget */
 @media (prefers-color-scheme: dark) {
     :root {
-        --main-site-background-colour: #212121;
-        --main-site-font-colour: #eeeeee;
-        --main-site-secondary-background-colour: #292929;
-        --topical-site-navbar-h2-background-color: rgb(10, 47, 80);
-        --topical-site-navbar-a-background-color: rgb(12, 59, 100);
-        --topical-site-a-color: #58a6ff;
-        --topical-site-a-color-visited: rgb(182, 97, 255);
+        --main-background-color: #212121;
+        --main-font-color: #eeeeee;
+        --secondary-background-color: #292929;
+        --topical-navbar-h2-background-color: rgb(10, 47, 80);
+        --topical-navbar-a-background-color: rgb(12, 59, 100);
+        --topical-a-color: #58a6ff;
+        --topical-a-color-visited: rgb(182, 97, 255);
     }
 }
-
+* {
+    scroll-behavior: smooth;
+}
 body {
     margin: 0;
     font-family: Verdana, sans-serif;
-    background-color: var(--main-site-background-colour);
+    background-color: var(--main-background-color);
 }
 
 main {
-    color: var(--main-site-font-colour);
-    background-color: var(--main-site-background-colour);
+    color: var(--main-font-color);
+    background-color: var(--main-background-color);
 }
 
 /* Img fyller det elementet det er inni */
@@ -81,7 +83,7 @@ nav {
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
-    background-color: var(--main-site-colour);
+    background-color: var(--main-color);
     padding-left: 20px;
     padding-right: 20px;
     max-height: 60px;
@@ -239,7 +241,7 @@ nav {
 .hero-flex {
     display: flex;
     height: 100vh;
-    background: url('/images/forsidebilde-arkitektur-p32/arkitektur-p32-skjalg-bøhmer-vold-square-large.jpg') no-repeat;
+    background: url('../images/forsidebilde-arkitektur-p32/arkitektur-p32-skjalg-bøhmer-vold-square-large.jpg') no-repeat;
     background-size: cover;
     align-items: center;
     justify-content: center;
@@ -270,14 +272,15 @@ nav {
 /* Vi bruker grids for å style topical siden */
 .topical-grid {
     display: grid;
-    grid-template-columns: minmax(600px, 60vw) auto;
+    grid-template-columns: auto minmax(200px, 15vw);
     font-family: Calibri, serif;
     font-weight: normal;
     grid-auto-flow: row;
-    padding: 2px 3% 5px 3%;
+    padding: 0 3em 2.3em 3em;
     max-width: 1200px;
     margin-right: auto;
     margin-left: auto;
+    grid-column-gap: 60px;
 
 
 }
@@ -285,10 +288,11 @@ nav {
 .headline h1 {
     font-family: "Gill Sans MT", serif;
     font-weight: bolder;
-    font-size: 1.8rem;
+    font-size: 2.1rem;
     text-align: center;
     border-bottom: 2px solid;
-    letter-spacing: 1.5px;
+    letter-spacing: 0.1em;
+    padding-top: 0.2em;
 
 }
 
@@ -302,7 +306,7 @@ nav {
     text-align: center;
     margin-bottom: 0;
     color: white;
-    background-color: var(--topical-site-navbar-h2-background-color);
+    background-color: var(--topical-navbar-h2-background-color);
 }
 
 
@@ -313,8 +317,8 @@ nav {
     border-color: black;
     text-align: center;
     text-decoration: none;
-    color: var(--main-site-font-colour);
-    background-color: var(--topical-site-navbar-a-background-color);
+    color: var(--main-font-color);
+    background-color: var(--topical-navbar-a-background-color);
 }
 
 .sidenav ul a:hover {
@@ -339,37 +343,42 @@ nav {
     max-width: 1200px;
     justify-self: center;
 }
+
 .main-bar {
     grid-column: 1;
-/*    margin-left: auto;
-    margin-right: auto;
-    max-width: 695px; */
-
 }
 
+
+.topical-img-with-text {
+    width: 50%;
+    float: right;
+    padding-left: 30px;
+    padding-bottom: 10px;
+}
+
+
 .main-bar a {
-    color: var(--topical-site-a-color);
+    color: var(--topical-a-color);
 }
 
 .main-bar a:visited {
-    color: var(--topical-site-a-color-visited);
+    color: var(--topical-a-color-visited);
 }
 
 .sidenav {
     grid-column: 2;
-    grid-row: 2;
+    grid-row: 2/4;
 
 
 }
 .topical-img {
     grid-column: 2;
-    padding-top: 50px;
-
+    padding-top: 20px;
 }
 
 
 /* Vi bruker media queries slik at utseende på nettsiden er annerledes på mobil */
-@media (max-width: 900px) {
+@media (max-width: 760px) {
     .topical-grid {
         grid-template-columns: 1fr;
         grid-auto-flow: row;
@@ -381,14 +390,17 @@ nav {
         grid-row: 1;
         justify-self: center;
     }
+    .topical-img-with-text {
+        float:none;
+        width: 100%;
+        padding-left: 0;
+    }
 
     .sidenav {
         grid-column: 1;
         grid-row: 2;
     }
-    .topical-img {
-        grid-column: 1;
-    }
+
 
 
     /* Refererer til de ulike ID   */
@@ -467,7 +479,7 @@ nav {
 (main secondary background color) */
 /* https://developer.mozilla.org/en-US/docs/Web/CSS/:nth-child */
 .location-flex:nth-child(odd) {
-    background-color: var(--main-site-secondary-background-colour);
+    background-color: var(--secondary-background-color);
 }
 
 /* Bytter om på rekkefølgen på annenhver sibling element hvis viewport 761px eller bredere*/
@@ -500,10 +512,52 @@ nav {
 
 /*ACCESSIBILITY SIDE*/
 
+/* FLEX START */
+
+.accessibility-flex{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    padding-bottom: 1.5%;
+    padding-top: 1.5%;
+}
+
+.accessibility-text{
+    flex-basis: 50%;
+    box-sizing: border-box;
+    max-width: 620px;
+    padding-left: 3%;
+    padding-right: 3%;
+}
+
+.accessibility-image{
+    flex-basis: 50%;
+    box-sizing: border-box;
+    max-width: 620px;
+    padding-left: 3%;
+    padding-right: 3%;
+}
+
+.accessibility-text-only{
+    flex-basis: 100%;
+    box-sizing: border-box;
+    max-width: 1240px;
+    padding-left: 3%;
+    padding-right: 3%;
+}
+
+.accessibility-flex:nth-child(even){
+    background-color: var(--secondary-background-color);
+}
+
+/* FLEX SLUTT */
+
+
 /*bestemmer backgrunnsfarge og padding top og bunn */
 .main-accessibility {
     top:0;
-    background-color: var(--main-site-secondary-background-colour);
+    /*background-color: var(--secondary-background-color);*/
 }
 
 /* Lager grid inne i klassen */
@@ -518,8 +572,8 @@ nav {
 }
 
 /* Setter at alle oddetalls klasser under ac har den valgte fargen */
-.ac:nth-child(odd) {
-    background-color: var(--main-site-background-colour);
+.ac:nth-child(even) {
+    background-color: var(--secondary-background-color);
 }
 
 /* Rekkefølgen på hvordan objektene skal stackes når skjermen er mindre enn 700px */
@@ -527,11 +581,9 @@ nav {
     .accessibility-grid {
         grid-template-columns: 1fr;
     }
-
-    .ac-liste-tekst {
+    .ac-list-text {
         grid-column: 1;
     }
-
     .ac-grid-item-2 {
         grid-column: 1;
     }
@@ -553,13 +605,13 @@ footer h3{
 }
 /* Grid kode tatt fra: https://www.w3schools.com/css/css_grid.asp*/
 /* endrer på alle grid, og sentrerer tekst */
-.footer-grid-objekter {
+.footer-grid-objects {
     text-align: left;
     padding-left: 25px;
 }
 
 /* Setter posisjon på item 1 og setter opp en ny grid i objektet */
-.nyhetsbrev {
+.newletter {
     grid-column: 1/3;
     grid-row: 1;
     align-items: center;
@@ -568,7 +620,7 @@ footer h3{
     font-weight: bold;
     font-size: 1.563rem;
 }
-.nyhetsbrev-knapp{
+.newsletter-button{
     grid-row: 1;
     grid-column: 3/4;
     text-align: right;
@@ -581,7 +633,7 @@ footer h3{
 /* design til knappen */
 .knapp {
     padding: 3px;
-    color: var(--main-site-colour);
+    color: var(--main-color);
     background-color: black;
     text-decoration: none;
     font-size: 1.563rem;
@@ -591,49 +643,49 @@ footer h3{
     text-decoration: underline;
 }
 
-.kontaktinformasjon{
+.contactsinformation{
     grid-row: 2;
     grid-column: 1/2;
 }
 
-.side-link{
+.site-links{
     grid-row: 2;
     grid-column: 2/3;
     padding-top: 2.5%;
 }
 
-.side-link a {
+.site-links a {
     text-decoration: none;
     color: black;
 }
 
-.side-link a:hover {
+.site-links a:hover {
     text-decoration: underline;
 }
 
-.side-link p {
+.site-links p {
     font-size: 1.25rem;
     font-weight: 550;
 }
 
-.sosiale-medie-link {
+.social-media-links {
     grid-row: 2;
     grid-column: 3/4;
     padding-top: 0;
 }
 
-.sosiale-medie-link a {
+.social-media-links a {
     display: block;
     padding: 1%;
     text-decoration: none;
     color: black;
 }
 
-.sosiale-medie-link a:hover {
+.social-media-links a:hover {
     text-decoration: underline;
 }
 
-.sosiale-medie-link p {
+.social-media-links p {
     font-weight: bold;
     font-size: 1.563rem;
 }
@@ -679,13 +731,13 @@ https://www.w3schools.com/howto/howto_css_social_media_buttons.asp
         grid-template-columns: 1fr;
     }
 /*setter plassen til grid, og fjerner underlinja til gridden*/
-    .nyhetsbrev {
+    .newletter {
         grid-row: 1;
         grid-column: 1;
         border-bottom: 0;
     }
     /*setter posisjon og legger til underlinje i grid*/
-    .nyhetsbrev-knapp{
+    .newsletter-button{
         grid-row: 2;
         grid-column: 1;
         text-align: left;
@@ -694,23 +746,36 @@ https://www.w3schools.com/howto/howto_css_social_media_buttons.asp
         padding: 0 0 3% 3%;
     }
 
-    .kontaktinformasjon{
+    .contactsinformation{
         grid-row: 3;
         grid-column: 1;
     }
 
-    .side-link{
+    .site-links{
         grid-row: 4;
         grid-column: 1;
     }
 
-    .sosiale-medie-link {
+    .social-media-links {
         grid-row: 5;
         grid-column: 1;
         text-align: left;
     }
 
-    .sosiale-medie-link a {
+    .social-media-links a {
         padding: 1%;
     }
 }
+.top-button{
+    top: 90%;
+    text-decoration:none;
+    font-size: 3.5rem;
+    text-align: right;
+    position: fixed;
+    bottom: 20px;
+    z-index: 999;
+    right: 10px;
+    border: 2px solid black;
+    border-radius: 100%;
+    background-color: lightgrey;
+ }

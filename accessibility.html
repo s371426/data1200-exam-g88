@@ -6,9 +6,9 @@
     <meta charset="UTF-8">
     <!-- Sørger for at initial skalering og zoom er riktig på forskjellige devices -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../css/main.css">
+    <link rel="stylesheet" href="css/main.css">
     <!-- Linker til favicon !-->
-    <link rel="icon" type="image/x-icon" href="../images/universitet.png">
+    <link rel="icon" type="image/x-icon" href="images/universitet.png">
     <!-- Ikon bibliotek brukt i footer -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <title>Accessibility</title>
@@ -16,11 +16,11 @@
 </head>
 
 <body>
-<header>
+<header id="top-test">
     <nav class="navbar">
         <div class="logo-hamburger-wrapper">
-            <a href="../index.html" title="Tilbake til forsiden"><img id="nav-logo" src="../images/logo-oslomet-gul.svg"
-                                                                      alt="OsloMet sin logo" width="67.56" height="40"></a>
+            <a href="index.html" title="Tilbake til forsiden"><img id="nav-logo" src="images/logo-oslomet-gul.svg"
+                                                                   alt="OsloMet sin logo" width="67.56" height="40"></a>
             <label class="hamburger-toggle-container" for="hamburger-toggle" >
                 <span class="hamburger-icon"></span>
             </label>
@@ -31,7 +31,7 @@
 
         <!-- definer en ul class for lenkene i navigasjonsmenyen og linker dem til .html filene i prosjektet -->
         <ul class="menu">
-            <li><a href="../index.html">Home</a></li>
+            <li><a href="index.html">Home</a></li>
             <li><a href="accessibility.html">Accessibility</a></li>
             <li><a href="topical.html">Topical</a></li>
             <li><a href="locations.html">Lokasjoner</a></li>
@@ -44,9 +44,103 @@
 
 <main class="main-accessibility">
 
+    <!-- FLEX START   -->
+
+    <div class="accessibility-flex">
+        <div class="accessibility-text-only">
+            <h1>Unversal design:</h1>
+            <p>Brukervennlighet handler om å gjøre nettsiden så enkel og intuitiv som mulig. Det skal være enkelt å
+                manøvrere seg på siden, uten å skape forvirring og irritasjon. Det skal være lett å finne det man leter
+                etter, og gi brukerne en god opplevelse. Universal design handler om å gjøre siden tilgjengelig for så
+                mange som mulig, uavhengig av evne og behov. </p>
+        </div>
+    </div>
+    
+    <div class="accessibility-flex">
+        <ul class="accessibility-text">
+            <li><h2>Font:</h2>
+                <p>Vi har valgt å bruke "Verdana" som font, og "sans-serif" som backup. "Verdana" har vi
+                valgt
+                ettersom fonten har tydelige former og forskjeller mellom bokstavene, og er tydelig med mange og få
+                piksler.
+                Det er tydelige forskjeller mellom "l" og "I". Vi har valgt å ha en backup font, "sans-serif", som
+                blir hovedfonten
+                dersom brukeren ikke får lastet inn "Verdana".</p>
+            </li>
+            <li>
+                <h2>Tekst</h2>
+                <p>Vi satt line height på paragrafer til 1.5 fordi det er det some er anbefalt da det gjør det enklere
+                    å lese</p>
+            </li>
+            <li><h2>Farge:</h2>
+                <p>På siden har vi "mørk og lys" modus, som blir valgt utifra instillingene på brukerens pc. Lys
+                    modusen har hvit
+                    bakgrunnsfarge med mørk tekst, og mørk modusen har mørk bakgrunn med hvit tekst. Vi har hatt stort
+                    fokus på kontrast
+                    mellom tekst og bakgrunn.</p>
+            </li>
+            <li><h2>Struktur:</h2>
+                <p>På sidene har vi valgt å ha en generell utforming, med nav bar på toppen,
+                hovedinnhold i
+                midten og footer på bunn. Vi har brukt tydelige overskrifter og bilder, for å gjøre det enkelt for
+                brukerne å
+                forstå siden uten å lese innholdet.</p>
+            </li>
+            <li><h2>Alt tekster:</h2>
+                <p>la bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla
+                bla
+                bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla
+                bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla</p>
+            </li>
+        </ul>
+        <picture class="accessibility-image">
+            BILDE
+        </picture>
+    </div>
+
+    <div class="accessibility-flex">
+       <div class="accessibility-text-only">
+           <h2>Topical:</h2>
+           <p>BLA BAL BLASKNansdjkak djsank</p>
+       </div>
+    </div>
+
+    <div class="accessibility-flex">
+        <div class="accessibility-text">
+            <h2>Hamburger meny:</h2>
+            <p> Den første løsningen vi gjorde for hamburger meny kunne ikke aktiveres med kun tastatur,
+                noe som trengs hvis man har problemer med å bruke mus. Dette var fordi checkbox ble satt til Display: none
+                i css for å gjemme den. Løsningen for dette, var å sette den til opacity: 0 og position: absolute for
+                posisjon isteden slik at den bare er usynelig isteden.  Sørget også for at hamburger får outline når den er valgt med tastatur da den ikke vanligvis
+                gjør det med opacity sat til 0. For brukere som bruker screen readers, la vi til "aria-label" på knappen slik at funksjonen dens
+                blir tydelig.</p>
+        </div>
+        <picture class="accessibility-image">
+            BILDE
+        </picture>
+    </div>
+
+    <div class="accessibility-flex">
+        <div class="accessibility-text-only">
+            <h2>Footer:</h2>
+            <p> På footeren har vi valgt å imitere oslomet.no sin footer. Vi har lenker nederst på siden, som gjør det
+                enkelt for brukerne å gå videre til neste side, isteden for å måtte manøvrere seg til toppen igjen.
+                Lenkene til
+                sosiale medier har ikoner. Dette har vi gjort for å gjøre det enkelt for brukerne å forstå hvor lenkene
+                går.
+                Lenkene får også strek under seg når man holder musen over, for å indikere at det er en lenke.
+                Ellers har vi kontrast mellom tekst og bakgrunn, samt oversiktlig og leselig tekst.
+            </p>
+        </div>
+    </div>
+
+<!--    FLEX SLUTT-->
+
+<!--    GRID START-->
+
     <!-- Definerer alle klasser med "ac", dette gjør jeg for å kunne referere til alle i css, isteden
      for å gjenta samme kode flere ganger-->
-    <div class="ac accessibility-introduksjon">
+    <div class="ac accessibility-introction">
         <h1>Unversal design:</h1>
         <p>Brukervennlighet handler om å gjøre nettsiden så enkel og intuitiv som mulig. Det skal være enkelt å
             manøvrere seg på siden, uten å skape forvirring og irritasjon. Det skal være lett å finne det man leter
@@ -56,7 +150,7 @@
 
     <div class="ac accessibility-grid">
 
-        <ul class="ac-liste-tekst">
+        <ul class="ac-list-text">
             <li><h2>Font:</h2>
                 <p>Vi har valgt å bruke "Verdana" som font, og "sans-serif" som backup. "Verdana" har vi
                 valgt
@@ -97,17 +191,17 @@
     </div>
 
         <!--Classen under har midlertidig navn -->
-    <div class="ac ac-index-tekst">
+    <div class="ac ac-index-text">
         <h2>Home:</h2>
         <p> bla bla bla bla</p>
     </div>
 
-    <div class="ac ac-topical-tekst">
+    <div class="ac ac-topical-text">
         <h2>Topical:</h2>
         <p>BLA BAL BLASKNansdjkak djsank</p>
     </div>
 
-    <div class="ac ac-hamburger-tekst">
+    <div class="ac ac-hamburger-text">
         <h2>Hamburger meny:</h2>
         <p> Den første løsningen vi gjorde for hamburger meny kunne ikke aktiveres med kun tastatur,
             noe som trengs hvis man har problemer med å bruke mus. Dette var fordi checkbox ble satt til Display: none
@@ -117,7 +211,7 @@
             blir tydelig.</p>
     </div>
 
-    <div class="ac ac-footer-tekst">
+    <div class="ac ac-footer-text">
         <h2>Footer:</h2>
         <p> På footeren har vi valgt å imitere oslomet.no sin footer. Vi har lenker nederst på siden, som gjør det
             enkelt for brukerne å gå videre til neste side, isteden for å måtte manøvrere seg til toppen igjen.
@@ -132,15 +226,15 @@
 <footer>
     <!-- Grid kode tatt fra: https://www.w3schools.com/css/css_grid.asp-->
         <!-- nyhetsbrev tekst, markert med * ettersom teksten og knappen er midlertidig. -->
-        <section class="footer-grid-objekter nyhetsbrev">
+        <section class="footer-grid-objects newletter">
             <p>*Hold deg oppdatert på hva som skjer</p>
         </section>
 
-        <section class="nyhetsbrev-knapp">
+        <section class="newsletter-button">
                 <a href="https://www.oslomet.no/nyhetsbrev" class="knapp">Nyhetsbrev! </a>
         </section>
         <!-- Kontakt informasjon til OsloMet -->
-        <section class="footer-grid-objekter kontaktinformasjon">
+        <section class="footer-grid-objects contactsinformation">
             <h3>OsloMet</h3>
             <p>Oslo Metropolitan University</p>
             <p>Storbyuniversitetet</p>
@@ -150,17 +244,17 @@
         </section>
 
         <!-- Lenker til de andre sidene på nettsiden vår-->
-        <section class="footer-grid-objekter side-link">
+        <section class="footer-grid-objects site-links">
             <h3>Navigasjon</h3>
-            <p><a href="../index.html">Home</a></p>
-            <p><a href="accessibility.html">Accessibility</a></p>
+            <p><a href="index.html">Hjem</a></p>
+            <p><a href="accessibility.html">Tilgjengelighet</a></p>
             <p><a href="topical.html">Topical</a></p>
-            <p><a href="locations.html">Locations</a></p>
+            <p><a href="locations.html">Lokasjoner</a></p>
             <p><a href="maybepage5.html">Maybepage5</a></p>
         </section>
 
         <!-- sosiale medie lenker -->
-        <section class="footer-grid-objekter sosiale-medie-link">
+        <section class="footer-grid-objects social-media-links">
             <h3>Følg oss</h3>
             <div class="ikoner">
                 <a href="https://www.facebook.com/oslomet/">
@@ -177,7 +271,9 @@
                     Youtube</a>
             </div>
         </section>
-
+    <div class="top-button">
+        <a class="top" href="#top-test">&#x1F51D;</a>
+    </div>
 </footer>
 </body>
 </html>

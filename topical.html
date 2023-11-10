@@ -6,9 +6,9 @@
     <meta charset="UTF-8">
     <!-- Sørger for at initial skalering og zoom er riktig på forskjellige devices -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../css/main.css">
+    <link rel="stylesheet" href="css/main.css">
     <!-- Linker til favicon !-->
-    <link rel="icon" type="image/x-icon" href="../images/universitet.png">
+    <link rel="icon" type="image/x-icon" href="images/universitet.png">
     <!-- Ikon bibliotek brukt i footer -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <title>Topical</title>
@@ -19,8 +19,8 @@
 <header>
     <nav class="navbar">
         <div class="logo-hamburger-wrapper">
-            <a href="../index.html" title="Tilbake til forsiden"><img id="nav-logo" src="../images/logo-oslomet-gul.svg"
-                                                                      alt="OsloMet sin logo" width="67.56" height="40"></a>
+            <a href="index.html" title="Tilbake til forsiden"><img id="nav-logo" src="images/logo-oslomet-gul.svg"
+                                                                   alt="OsloMet sin logo" width="67.56" height="40"></a>
             <label class="hamburger-toggle-container" for="hamburger-toggle">
                 <span class="hamburger-icon"></span>
             </label>
@@ -31,7 +31,7 @@
 
         <!-- definer en ul class for lenkene i navigasjonsmenyen og linker dem til .html filene i prosjektet -->
         <ul class="menu">
-            <li><a href="../index.html">Home</a></li>
+            <li><a href="index.html">Home</a></li>
             <li><a href="accessibility.html">Accessibility</a></li>
             <li><a href="topical.html">Topical</a></li>
             <li><a href="locations.html">Lokasjoner</a></li>
@@ -44,7 +44,7 @@
 
 <!-- Dette er navigation baren til siden som linker til de ulike underoverskriftene i artikkelen -->
 <!-- Bruker id og hyperlinks for å linke til de ulikene delene av artikkelen -->
-<main class="topical-grid">
+<main class="topical-grid" lang="en">
 
     <div class="headline">
         <h1>The Interplay between Technology and Society</h1>
@@ -63,13 +63,13 @@
             <picture lang="no">
                 <!-- Bilde blir valgt av device ut i fra hvilken oppløsning som passer best. "w" er bredden
                 på det bildet. Type forteller device at bildene er webp format-->
-                <source srcset="../images/topical-images/spacex-small.webp 1072w,
-                            ../images/topical-images/spacex-medium.webp 2144w,
-                            ../images/topical-images/spacex-large.webp 4288w"
+                <source srcset="images/topical-images/spacex-small.webp 1072w,
+                                images/topical-images/spacex-medium.webp 2144w,
+                                images/topical-images/spacex-large.webp 4288w"
                         type="image/webp"/>
 
                 <!-- Backup bilde tilfelle device ikke støtter <picture> eller webp, i tillegg til alt tekst informasjon -->
-                <img src="../images/topical-images/spacex.jpg" alt="Bilde av en satelitt med jordkloden i bakgrunnen"
+                <img src="images/topical-images/spacex.jpg" alt="Bilde av en satelitt med jordkloden i bakgrunnen"
                      height="2848" width="4288">
             </picture>
             <figcaption>SpaceX, Pexels</figcaption>
@@ -77,7 +77,7 @@
     </div>
 
     <div class="sidenav">
-        <h2>MENU</h2>
+        <h2>Menu</h2>
         <ul class="punkter">
             <li><a href="#introduction">Introduction</a></li>
             <li><a href="#key-terms">Key terms</a></li>
@@ -116,9 +116,28 @@
     </article>
 
 
-
-    <article class="main-bar">
+    <article>
         <h2 id="key-terms">Key terms:</h2>
+        <figure class="topical-img-with-text">
+            <picture lang="no">
+
+                <!-- Bilde blir valgt av device ut i fra hvilken oppløsning som passer best. "w" er bredden
+                på det bildet. Type forteller device at bildene er webp format-->
+                <source srcset="images/topical-images/NASA-mobile-view.webp 800w"
+                        type="image/webp"
+                        media="(max-width: 760px)"/>
+
+                <source srcset="images/topical-images/NASA-small.webp 600w
+                                images/topical-images/NASA.webp 1200w"
+                        type="image/webp"/>
+
+                <!-- Backup bilde tilfelle device ikke støtter <picture> eller webp, i tillegg til alt tekst informasjon -->
+                <img src="images/topical-images/NASA.jpg"
+                     alt="Bilde av New York lyst opp av gatebelysning tatt fra verdensrommet"
+                     height="1200" width="1200">
+            </picture>
+            <figcaption>NASA, New York</figcaption>
+        </figure>
         <p>Technological trajectory – the evolution of technology in a specific field.</p>
         <p>Co-production – when experts from different fields work together to produce new technologies.</p>
         <p>Critical infrastructure - systems that provide functions necessary for life.</p>
@@ -132,24 +151,6 @@
             and economically.</p>
 
     </article>
-
-    <figure class="topical-img">
-        <picture lang="no">
-
-            <!-- Bilde blir valgt av device ut i fra hvilken oppløsning som passer best. "w" er bredden
-            på det bildet. Type forteller device at bildene er webp format-->
-            <source srcset="../images/topical-images/nasa-small.webp 900w,
-                            ../images/topical-images/nasa-medium.webp 1440w,
-                            ../images/topical-images/nasa-large.webp 2100w"
-                    type="image/webp"/>
-
-            <!-- Backup bilde tilfelle device ikke støtter <picture> eller webp, i tillegg til alt tekst informasjon -->
-            <img src="../images/topical-images/nasa.jpg"
-                 alt="Bilde av New York lyst opp av gatebelysning tatt fra verdensrommet"
-                 height="1398" width="2100">
-        </picture>
-        <figcaption>NASA, New York</figcaption>
-    </figure>
 
     <article class="main-bar">
         <h2 id="immediate-reactions">Describe your immediate reactions:</h2>
@@ -168,27 +169,27 @@
                 if they end up colliding with other satellites.
             </li>
         </ul>
+        <figure class="topical-img">
+            <picture lang="no">
+
+                <!-- Bilde blir valgt av device ut i fra hvilken oppløsning som passer best. "w" er bredden
+                på det bildet. Type forteller device at bildene er webp format-->
+                <source srcset="images/topical-images/imac-small.webp 900w,
+                                images/topical-images/imac-medium.webp 1440w,
+                                images/topical-images/imac-large.webp 2100w"
+                        type="image/webp"/>
+
+                <!-- Backup bilde tilfelle device ikke støtter <picture> eller webp, i tillegg til alt tekst informasjon -->
+                <img src="images/topical-images/imac.jpg" alt="Bilde av flere elektroniske enheter med en iMac i sentrum"
+                     height="4000" width="6000">
+            </picture>
+            <figcaption>Domenico Loia, Unsplash</figcaption>
+        </figure>
     </article>
-
-    <figure class="topical-img">
-        <picture lang="no">
-
-            <!-- Bilde blir valgt av device ut i fra hvilken oppløsning som passer best. "w" er bredden
-            på det bildet. Type forteller device at bildene er webp format-->
-            <source srcset="../images/topical-images/imac-small.webp 900w,
-                            ../images/topical-images/imac-medium.webp 1440w,
-                            ../images/topical-images/imac-large.webp 2100w"
-                    type="image/webp"/>
-
-            <!-- Backup bilde tilfelle device ikke støtter <picture> eller webp, i tillegg til alt tekst informasjon -->
-            <img src="../images/topical-images/imac.jpg" alt="Bilde av flere elektroniske enheter med en iMac i sentrum"
-                 height="4000" width="6000">
-        </picture>
-        <figcaption>Domenico Loia, Unsplash</figcaption>
-    </figure>
 
 
     <article class="main-bar">
+
         <h2 id="positive-aspects">Describe three potentially positive aspects of this development:</h2>
         <p>Satellite internet is now globally spread and gives us good access to others very quickly. It has become so
             widespread
@@ -200,6 +201,24 @@
             research
             and discover more. It´s also relatively cheap which makes it even more accessible for everyone.</p>
 
+        <figure class="topical-img-with-text">
+            <picture lang="no">
+
+                <!-- Bilde blir valgt av device ut i fra hvilken oppløsning som passer best. "w" er bredden
+                på det bildet. Type forteller device at bildene er webp format-->
+                <source srcset="images/topical-images/circuit-small.webp 900w,
+                                images/topical-images/circuit-medium.webp 1440w,
+                                images/topical-images/circuit-large.webp 2100w"
+                        type="image/webp"/>
+
+                <!-- Backup bilde tilfelle device ikke støtter <picture> eller webp, i tillegg til alt tekst informasjon -->
+                <img src="images/topical-images/circuit.jpg" alt="Bilde av en PCB, også kjent som en kretskort. Kretskort blir
+            brukt til å koble sammen flere elektroniske komponenter inni en maskin"
+                     height="2597" width="3895">
+            </picture>
+            <figcaption>Umberto, Unsplash</figcaption>
+        </figure>
+
         <h2 id="negative-aspects">Describe three potentially negative aspects of this development:</h2>
         <p>There are negative consequences of this technology. Such technology can invade the private lives of others.
             Information sent over the internet can be stolen and end up in the wrong hands. The expansion of the
@@ -210,23 +229,6 @@
             information.</p>
     </article>
 
-    <figure class="topical-img">
-        <picture lang="no">
-
-            <!-- Bilde blir valgt av device ut i fra hvilken oppløsning som passer best. "w" er bredden
-            på det bildet. Type forteller device at bildene er webp format-->
-            <source srcset="../images/topical-images/circuit-small.webp 900w,
-                            ../images/topical-images/circuit-medium.webp 1440w,
-                            ../images/topical-images/circuit-large.webp 2100w"
-                    type="image/webp"/>
-
-            <!-- Backup bilde tilfelle device ikke støtter <picture> eller webp, i tillegg til alt tekst informasjon -->
-            <img src="../images/topical-images/circuit.jpg" alt="Bilde av en PCB, også kjent som en kretskort. Kretskort blir
-            brukt til å koble sammen flere elektroniske komponenter inni en maskin"
-                 height="2597" width="3895">
-        </picture>
-        <figcaption>Umberto, Unsplash</figcaption>
-    </figure>
 
     <article class="main-bar">
         <h2 id="consequences">Identify potential consequences:</h2>
@@ -254,13 +256,15 @@
     <!-- Grid kode tatt fra: https://www.w3schools.com/css/css_grid.asp-->
 
     <!-- nyhetsbrev tekst, markert med * ettersom teksten og knappen er midlertidig. -->
-    <section class="footer-grid-objekter nyhetsbrev">
-        <p class="nyhetsbrev-tekst">*Hold deg oppdatert på vårt nyhetsbrev</p>
-        <div class="nyhetsbrev-knapp"><a href="https://www.oslomet.no/nyhetsbrev" class="knapp">Nyhetsbrev! </a></div>
+    <section class="footer-grid-objects newletter">
+        <p>*Hold deg oppdatert på hva som skjer</p>
     </section>
 
+    <section class="newsletter-button">
+        <a href="https://www.oslomet.no/nyhetsbrev" class="knapp">Nyhetsbrev! </a>
+    </section>
     <!-- Kontakt informasjon til OsloMet -->
-    <section class="footer-grid-objekter kontaktinformasjon">
+    <section class="footer-grid-objects contactsinformation">
         <p>OsloMet</p>
         <p>Oslo Metropolitan University</p>
         <p>Storbyuniversitetet</p>
@@ -270,16 +274,16 @@
     </section>
 
     <!-- Lenker til de andre sidene på nettsiden vår-->
-    <section class="footer-grid-objekter side-link">
-        <p><a href="../index.html"><b>Home</b></a></p>
-        <p><a href="accessibility.html"><b>Accessibility</b></a></p>
+    <section class="footer-grid-objects site-links">
+        <p><a href="index.html"><b>Hjem</b></a></p>
+        <p><a href="accessibility.html"><b>Tilgjengelighet</b></a></p>
         <p><a href="topical.html"><b>Topical</b></a></p>
-        <p><a href="locations.html"><b>Locations</b></a></p>
+        <p><a href="locations.html"><b>Lokasjoner</b></a></p>
         <p><a href="maybepage5.html"><b>Maybepage5</b></a></p>
     </section>
 
     <!-- sosiale medie lenker -->
-    <section class="footer-grid-objekter sosiale-medie-link">
+    <section class="footer-grid-objects social-media-links">
         <p>Følg oss</p>
         <div class="ikoner">
             <a href="https://www.facebook.com/oslomet/">
