@@ -238,6 +238,7 @@ nav {
     /*padding-bottom: 100px; */
 }
 
+
 .hero-flex {
     display: flex;
     height: 100vh;
@@ -245,6 +246,7 @@ nav {
     background-size: cover;
     align-items: center;
     justify-content: center;
+    box-shadow: 20px 0 black;
 }
 
 .hero-text h1{
