@@ -448,8 +448,8 @@ nav:has(#hamburger-toggle:focus-visible) .hamburger-toggle-container{
     font-size: 2.5rem;
 }
 
-/* Normalt horisontal flexbox for to bokser, som er sentrert*/
-/* Inneholder location-img og locaiton-text */
+/* Normalt horisontal flexbox for to bokser, som er sentrert
+   Inneholder location-img og locaiton-text */
 .location-flex {
     display: flex;
     flex-direction: row;
@@ -459,7 +459,9 @@ nav:has(#hamburger-toggle:focus-visible) .hamburger-toggle-container{
     padding-top: 1.5%;
 }
 
-/* Er inni location-flex, inneholder bilde/bildetekst */
+/* Er inni location-flex, inneholder bilde/bildetekst
+   position for å komangsere for bildetekst*/
+
 .location-img {
     flex-basis: 50%;
     box-sizing: border-box;
@@ -718,22 +720,22 @@ https://www.w3schools.com/howto/howto_css_social_media_buttons.asp
 }
 
 .fa-facebook {
-    background: #3B5998;
+    background-color: #3B5998;
     color: white;
 }
 
 .fa-twitter {
-    background: #55ACEE;
+    background-color: #55ACEE;
     color: white;
 }
 
 .fa-instagram {
-    background: #125688;
+    background-color: #125688;
     color: white;
 }
 
 .fa-youtube {
-    background: #bb0000;
+    background-color: #bb0000;
     color: white;
 }
 
