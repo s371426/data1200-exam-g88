@@ -124,16 +124,17 @@
 
                 <!-- Bilde blir valgt av device ut i fra hvilken oppløsning som passer best. "w" er bredden
                 på det bildet. Type forteller device at bildene er webp format-->
-                <source srcset="images/topical-images/NASA-mobile-view.webp 800w"
+                <!-- Bruk av media sikrer at bildene beholder sine opprinnelige dimensjoner i mobile view -->
+                <source srcset="images/topical-images/nasa-mobile-view.webp 900w"
                         type="image/webp"
                         media="(max-width: 760px)"/>
 
-                <source srcset="images/topical-images/NASA-small.webp 600w
-                                images/topical-images/NASA.webp 1200w"
+                <source srcset="images/topical-images/nasa-small.webp 600w,
+                                images/topical-images/nasa.webp 1200w"
                         type="image/webp"/>
 
                 <!-- Backup bilde tilfelle device ikke støtter <picture> eller webp, i tillegg til alt tekst informasjon -->
-                <img src="images/topical-images/NASA.jpg"
+                <img src="images/topical-images/nasa.jpg"
                      alt="New York sett ovenifra på kvelden, der gatebelysning dominerer landskapet"
                      height="1200" width="1200">
             </picture>
@@ -175,6 +176,7 @@
 
                 <!-- Bilde blir valgt av device ut i fra hvilken oppløsning som passer best. "w" er bredden
                 på det bildet. Type forteller device at bildene er webp format-->
+                <!-- Bildene beholder sine opprinnelige dimensjoner i mobile view -->
                 <source srcset="images/topical-images/imac-small.webp 900w,
                                 images/topical-images/imac-medium.webp 1440w,
                                 images/topical-images/imac-large.webp 2100w"
@@ -207,6 +209,7 @@
 
                 <!-- Bilde blir valgt av device ut i fra hvilken oppløsning som passer best. "w" er bredden
                 på det bildet. Type forteller device at bildene er webp format-->
+                <!-- Bildene beholder sine opprinnelige dimensjoner i mobile view -->
                 <source srcset="images/topical-images/circuit-small.webp 900w,
                                 images/topical-images/circuit-medium.webp 1440w,
                                 images/topical-images/circuit-large.webp 2100w"
