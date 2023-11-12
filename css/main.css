@@ -217,6 +217,11 @@ nav:has(#hamburger-toggle:focus-visible) .hamburger-toggle-container{
     #hamburger-toggle:checked ~ .menu {
         display: block;
     }
+
+    /* Bytter ut hamburger ikon når menyen er åpen */
+    #hamburger-toggle:checked ~ .logo-hamburger-wrapper .hamburger-icon{
+        background-image: url(../images/logo-oslomet-svart.svg);
+    }
 }
 
 
