@@ -306,7 +306,7 @@ nav:has(#hamburger-toggle:focus-visible) .hamburger-toggle-container{
     padding-right: 3em;
     padding-bottom: 2.3em;
     padding-left: 3em;
-    max-width: 1200px;
+    max-width: 1300px;
     margin-right: auto;
     margin-left: auto;
     grid-column-gap: 60px;
@@ -448,7 +448,7 @@ nav:has(#hamburger-toggle:focus-visible) .hamburger-toggle-container{
 .location-main-flex h1 {
     box-sizing: border-box;
     align-self: center;
-    max-width: 1240px;
+    max-width: 1300px;
     width: 100%;
     padding-left: 3%;
     padding-right: 3%;
@@ -475,7 +475,7 @@ nav:has(#hamburger-toggle:focus-visible) .hamburger-toggle-container{
     box-sizing: border-box;
     position: relative;
     top: 0.66rem;
-    max-width: 620px;
+    max-width: 650px;
     padding-left: 3%;
     padding-right: 3%;
     margin-top: 0.5rem;
@@ -486,7 +486,7 @@ nav:has(#hamburger-toggle:focus-visible) .hamburger-toggle-container{
 .location-text {
     flex-basis: 50%;
     box-sizing: border-box;
-    max-width: 620px;
+    max-width: 650px;
     padding-left: 3%;
     padding-right: 3%;
 }
@@ -539,7 +539,7 @@ nav:has(#hamburger-toggle:focus-visible) .hamburger-toggle-container{
 .accessibility-text{
     flex-basis: 50%;
     box-sizing: border-box;
-    max-width: 620px;
+    max-width: 650px;
     padding-left: 3%;
     padding-right: 3%;
 }
@@ -547,7 +547,7 @@ nav:has(#hamburger-toggle:focus-visible) .hamburger-toggle-container{
 .accessibility-image{
     flex-basis: 50%;
     box-sizing: border-box;
-    max-width: 620px;
+    max-width: 650px;
     padding-left: 3%;
     padding-right: 3%;
 }
@@ -555,7 +555,7 @@ nav:has(#hamburger-toggle:focus-visible) .hamburger-toggle-container{
 .accessibility-text-only{
     flex-basis: 100%;
     box-sizing: border-box;
-    max-width: 1240px;
+    max-width: 1300px;
     padding-left: 3%;
     padding-right: 3%;
 }
