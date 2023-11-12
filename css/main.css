@@ -476,8 +476,8 @@ nav:has(#hamburger-toggle:focus-visible) .hamburger-toggle-container{
     position: relative;
     top: 0.66rem;
     max-width: 650px;
-    padding-left: 3%;
-    padding-right: 3%;
+    padding-left: 2.5%;
+    padding-right: 2.5%;
     margin-top: 0.5rem;
     margin-bottom: 0.5rem;
 }
@@ -487,8 +487,8 @@ nav:has(#hamburger-toggle:focus-visible) .hamburger-toggle-container{
     flex-basis: 50%;
     box-sizing: border-box;
     max-width: 650px;
-    padding-left: 3%;
-    padding-right: 3%;
+    padding-left: 2.5%;
+    padding-right: 2.5%;
 }
 
 /* Endrer location-flex flexbox til å være vertikal når viewport mindre enn 760px (Mobil) */
@@ -540,24 +540,24 @@ nav:has(#hamburger-toggle:focus-visible) .hamburger-toggle-container{
     flex-basis: 50%;
     box-sizing: border-box;
     max-width: 650px;
-    padding-left: 3%;
-    padding-right: 3%;
+    padding-left: 2.5%;
+    padding-right: 2.5%;
 }
 
 .accessibility-image{
     flex-basis: 50%;
     box-sizing: border-box;
     max-width: 650px;
-    padding-left: 3%;
-    padding-right: 3%;
+    padding-left: 2.5%;
+    padding-right: 2.5%;
 }
 
 .accessibility-text-only{
     flex-basis: 100%;
     box-sizing: border-box;
     max-width: 1300px;
-    padding-left: 3%;
-    padding-right: 3%;
+    padding-left: 2.5%;
+    padding-right: 2.5%;
 }
 
 .accessibility-flex:nth-child(even){
