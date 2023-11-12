@@ -290,9 +290,8 @@ nav:has(#hamburger-toggle:focus-visible) .hamburger-toggle-container{
 
 /*TOPICAL PAGE*/
 
-/* Her starter spaghetti-koden */
-
 /* Vi bruker grids for å style topical siden */
+/* Bruk av grid-auto-flow for automatisk plassering av grid items, som reduserer hvor mye koding som trengs for plassering */
 .topical-grid {
     display: grid;
     grid-template-columns: auto minmax(200px, 15vw);
@@ -321,7 +320,7 @@ nav:has(#hamburger-toggle:focus-visible) .hamburger-toggle-container{
     font-weight: 550;
 }
 
-/* Alt av stylingen av navbar går under her */
+/* Alt av stylingen av sidenav går under her */
 .sidenav h2 {
     padding: 15px;
     text-align: center;
@@ -346,7 +345,7 @@ nav:has(#hamburger-toggle:focus-visible) .hamburger-toggle-container{
     background-color: dimgray;
 }
 
-.punkter {
+.list {
     list-style-type: none;
     padding: 0;
     margin: 0;
@@ -357,6 +356,7 @@ nav:has(#hamburger-toggle:focus-visible) .hamburger-toggle-container{
 }
 
 /* Her så bestemmer vi plasseringene av de ulike elementene i vanlig view */
+/* Grid-auto-flow plasserer resten av grid items slik som de har blitt plassert på HTML*/
 .headline {
     grid-column: 1/-1;
     grid-row: 1;
@@ -368,23 +368,6 @@ nav:has(#hamburger-toggle:focus-visible) .hamburger-toggle-container{
     grid-column: 1;
 }
 
-
-.topical-img-with-text {
-    width: 50%;
-    float: right;
-    padding-left: 30px;
-    padding-bottom: 10px;
-}
-
-
-.main-bar a {
-    color: var(--topical-a-color);
-}
-
-.main-bar a:visited {
-    color: var(--topical-a-color-visited);
-}
-
 .sidenav {
     grid-column: 2;
     grid-row: 2/4;
@@ -394,8 +377,25 @@ nav:has(#hamburger-toggle:focus-visible) .hamburger-toggle-container{
     padding-top: 20px;
 }
 
+.topical-img-with-text {
+    width: 50%;
+    float: right;
+    padding-left: 30px;
+    padding-bottom: 10px;
+}
 
-/* Vi bruker media queries slik at utseende på nettsiden er annerledes på mobil */
+/* Vi skaper større kontraster for hyperlinks på dark mode, samtidig som vi beholder fargene assosiert med hyperlinks */
+.main-bar a {
+    color: var(--topical-a-color);
+}
+.main-bar a:visited {
+    color: var(--topical-a-color-visited);
+}
+
+
+
+/* Vi bruker media queries slik at layouten passer bedre for de på mobile-view */
+/* Bruk av grid-auto-flow igjen for mobile-view */
 @media (max-width: 760px) {
     .topical-grid {
         grid-template-columns: 1fr;
@@ -408,6 +408,7 @@ nav:has(#hamburger-toggle:focus-visible) .hamburger-toggle-container{
         grid-row: 1;
         justify-self: center;
     }
+
     .topical-img-with-text {
         float:none;
         width: 100%;
