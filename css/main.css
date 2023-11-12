@@ -491,6 +491,10 @@ nav:has(#hamburger-toggle:focus-visible) .hamburger-toggle-container{
     padding-right: 2.5%;
 }
 
+.location-flex img:active{
+    transform: scale(1.15);
+}
+
 /* Endrer location-flex flexbox til å være vertikal når viewport mindre enn 760px (Mobil) */
 @media only screen and (max-width: 760px) {
     .location-flex {
