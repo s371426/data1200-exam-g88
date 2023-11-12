@@ -158,7 +158,7 @@ nav {
     width: 60px;
 }
 
-/* Hamburger meny checkbox input */
+/* Hamburger meny checkbox input normal sjult. Posisjonert der hamburgermeny er*/
 #hamburger-toggle {
     display: none;
     cursor: pointer;
@@ -277,6 +277,21 @@ nav:has(#hamburger-toggle:focus-visible) .hamburger-toggle-container{
     text-shadow: 4px 0 20px black;
 }
 
+/*.bilde-tekst {
+    position: absolute;
+    top: 50%;
+    color: white;
+    width: 100%;
+    right: 50%;
+    transform: translate(50%, -50%);
+    text-shadow: black 0 0 4px;
+    font-size: 2rem;
+    background: #777;
+}
+
+.item1-mainpage img {
+    filter: blur(3px);
+} */
 
 /*TOPICAL PAGE*/
 
@@ -295,7 +310,6 @@ nav:has(#hamburger-toggle:focus-visible) .hamburger-toggle-container{
     margin-left: auto;
     grid-column-gap: 60px;
 
-
 }
 
 .headline h1 {
@@ -306,7 +320,6 @@ nav:has(#hamburger-toggle:focus-visible) .hamburger-toggle-container{
     border-bottom: 2px solid;
     letter-spacing: 0.1em;
     padding-top: 0.2em;
-
 }
 
 .headline p {
@@ -321,7 +334,6 @@ nav:has(#hamburger-toggle:focus-visible) .hamburger-toggle-container{
     color: white;
     background-color: var(--topical-navbar-h2-background-color);
 }
-
 
 .sidenav ul a {
     padding: 15px;
@@ -381,8 +393,6 @@ nav:has(#hamburger-toggle:focus-visible) .hamburger-toggle-container{
 .sidenav {
     grid-column: 2;
     grid-row: 2/4;
-
-
 }
 .topical-img {
     grid-column: 2;
@@ -443,8 +453,8 @@ nav:has(#hamburger-toggle:focus-visible) .hamburger-toggle-container{
     font-size: 2.5rem;
 }
 
-/* Normalt horisontal flexbox for to bokser, som er sentrert*/
-/* Inneholder location-img og locaiton-text */
+/* Normalt horisontal flexbox for to bokser, som er sentrert
+   Inneholder location-img og locaiton-text */
 .location-flex {
     display: flex;
     flex-direction: row;
@@ -454,7 +464,9 @@ nav:has(#hamburger-toggle:focus-visible) .hamburger-toggle-container{
     padding-top: 1.5%;
 }
 
-/* Er inni location-flex, inneholder bilde/bildetekst */
+/* Er inni location-flex, inneholder bilde/bildetekst
+   position for å komangsere for bildetekst*/
+
 .location-img {
     flex-basis: 50%;
     box-sizing: border-box;
@@ -507,23 +519,8 @@ nav:has(#hamburger-toggle:focus-visible) .hamburger-toggle-container{
 }
 
 
-/*.bilde-tekst {
-    position: absolute;
-    top: 50%;
-    color: white;
-    width: 100%;
-    right: 50%;
-    transform: translate(50%, -50%);
-    text-shadow: black 0 0 4px;
-    font-size: 2rem;
-    background: #777;
-}
 
-.item1-mainpage img {
-    filter: blur(3px);
-}
-
-/*ACCESSIBILITY SIDE*/
+/* ACCESSIBILITY SIDE */
 
 /* FLEX START */
 
@@ -562,6 +559,17 @@ nav:has(#hamburger-toggle:focus-visible) .hamburger-toggle-container{
 
 .accessibility-flex:nth-child(even){
     background-color: var(--secondary-background-color);
+}
+
+@media (max-width: 760px) {
+    .accessibility-flex{
+        flex-direction: column;
+    }
+
+    .accessibility-image,
+    .accessibility-text{
+        max-width: none;
+    }
 }
 
 /* FLEX SLUTT */
@@ -667,6 +675,11 @@ footer h3{
     padding-top: 2.5%;
 }
 
+.site-links p {
+    font-size: 1.25rem;
+    font-weight: 550;
+}
+
 .site-links a {
     text-decoration: none;
     color: black;
@@ -676,15 +689,15 @@ footer h3{
     text-decoration: underline;
 }
 
-.site-links p {
-    font-size: 1.25rem;
-    font-weight: 550;
-}
-
 .social-media-links {
     grid-row: 2;
     grid-column: 3/4;
     padding-top: 0;
+}
+
+.social-media-links p {
+    font-weight: bold;
+    font-size: 1.563rem;
 }
 
 .social-media-links a {
@@ -696,11 +709,6 @@ footer h3{
 
 .social-media-links a:hover {
     text-decoration: underline;
-}
-
-.social-media-links p {
-    font-weight: bold;
-    font-size: 1.563rem;
 }
 
 /* Ikon kode tatt fra:
@@ -717,39 +725,39 @@ https://www.w3schools.com/howto/howto_css_social_media_buttons.asp
 }
 
 .fa-facebook {
-    background: #3B5998;
+    background-color: #3B5998;
     color: white;
 }
 
 .fa-twitter {
-    background: #55ACEE;
+    background-color: #55ACEE;
     color: white;
 }
 
 .fa-instagram {
-    background: #125688;
+    background-color: #125688;
     color: white;
 }
 
 .fa-youtube {
-    background: #bb0000;
+    background-color: #bb0000;
     color: white;
 }
 
-/*Slutt på ikonkode*/
+/* Slutt på ikonkode */
 
-/*Når siden er mindre enn 700 px skal grid stackes*/
+/* Når siden er mindre enn 700 px skal grid stackes */
 @media (max-width: 760px) {
     .footer-grid-system {
         grid-template-columns: 1fr;
     }
-/*setter plassen til grid, og fjerner underlinja til gridden*/
+/* Setter plassen til grid, og fjerner underlinja til gridden */
     .newletter {
         grid-row: 1;
         grid-column: 1;
         border-bottom: 0;
     }
-    /*setter posisjon og legger til underlinje i grid*/
+    /* Setter posisjon og legger til underlinje i grid */
     .newsletter-button{
         grid-row: 2;
         grid-column: 1;
