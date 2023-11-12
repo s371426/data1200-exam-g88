@@ -306,13 +306,13 @@ nav:has(#hamburger-toggle:focus-visible) .hamburger-toggle-container{
 
 }
 
+/* Vi gjør overskriften mer tydelig, sentrert og litt større avstand på bokstavene for lettere lesing */
 .headline h1 {
-    font-family: "Gill Sans MT", serif;
     font-weight: bolder;
-    font-size: 2.1rem;
+    font-size: 2.3rem;
     text-align: center;
     border-bottom: 2px solid;
-    letter-spacing: 0.1em;
+    letter-spacing: 0.09em;
     padding-top: 0.2em;
 }
 
