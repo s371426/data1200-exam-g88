@@ -298,7 +298,9 @@ nav:has(#hamburger-toggle:focus-visible) .hamburger-toggle-container{
     font-family: Calibri, serif;
     font-weight: normal;
     grid-auto-flow: row;
-    padding: 0 3em 2.3em 3em;
+    padding-right: 3em;
+    padding-bottom: 2.3em;
+    padding-left: 3em;
     max-width: 1200px;
     margin-right: auto;
     margin-left: auto;
