@@ -376,7 +376,10 @@ nav:has(#hamburger-toggle:focus-visible) .hamburger-toggle-container{
 
 .sidenav {
     grid-column: 2;
-    grid-row: 2/4;
+    grid-row: 2/5;
+    align-self: start;
+    position: sticky;
+    top: 2em;
 }
 .topical-img {
     grid-column: 2;
