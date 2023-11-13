@@ -487,7 +487,6 @@ nav:has(#hamburger-toggle:focus-visible) .hamburger-toggle-container{
 
 /* Er inni location-flex, inneholder ovserktift/tekst */
 .location-text {
-
 }
 
 /* Endrer location-flex flexbox til å være vertikal når viewport mindre enn 760px (Mobil) */
@@ -545,11 +544,9 @@ nav:has(#hamburger-toggle:focus-visible) .hamburger-toggle-container{
 }
 
 .accessibility-text{
-
 }
 
 .accessibility-image{
-
 }
 
 .accessibility-text-only{
@@ -624,9 +621,11 @@ footer {
     background-color: #8899a4;
     padding-bottom: 2%;
 }
+
 footer h3{
     font-size: 1.563rem;
 }
+
 /* Grid kode tatt fra: https://www.w3schools.com/css/css_grid.asp*/
 /* endrer på alle grid, og sentrerer tekst */
 .footer-grid-objects {
@@ -644,6 +643,7 @@ footer h3{
     font-weight: bold;
     font-size: 1.563rem;
 }
+
 .newsletter-button{
     grid-row: 1;
     grid-column: 3/4;
