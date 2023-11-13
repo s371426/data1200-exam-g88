@@ -12,26 +12,27 @@
     <link rel="icon" type="image/x-icon" href="images/universitet.png">
     <!-- Ikon bibliotek brukt i footer -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <title>Homepage</title>
+    <title>Forside</title>
     <meta name="description" content="XXXXXXXXX">
 </head>
 
 <body>
 <header>
-    <!--    -->
+    <!-- Navigasjonsbar med hamburgermeny -->
     <nav>
+        <!-- Input checkbox for hamburger toggle (label)-->
+        <input id="hamburger-toggle" type="checkbox" aria-label="Åpne navigasjonsmeny"/>
+
         <div class="logo-hamburger-wrapper">
             <!-- Logo på navbar -->
-            <a href="index.html" title="Tilbake til forsiden"><img id="nav-logo" src="images/logo-oslomet-gul.svg"
-                                                                    alt="OsloMet sin logo" width="67.56" height="40"></a>
+            <a href="index.html" title="Tilbake til forsiden" tabindex="1">
+                <img id="nav-logo" src="images/logo-oslomet-gul.svg" alt="OsloMet sin logo" width="68" height="40">
+            </a>
             <!-- Label for input checkbox og hamburger meny ikon-->
             <label class="hamburger-toggle-container" for="hamburger-toggle">
                 <span class="hamburger-icon"></span>
             </label>
         </div>
-
-        <!-- Input checkbox for hamburger toggle (label)-->
-        <input id="hamburger-toggle" type="checkbox" aria-label="Åpne navigasjonsmeny"/>
 
         <!-- Navigasjons meny side lenker-->
         <ul class="menu">
@@ -216,12 +217,12 @@
     <!-- Grid kode tatt fra: https://www.w3schools.com/css/css_grid.asp-->
 
     <!-- nyhetsbrev tekst, markert med * ettersom teksten og knappen er midlertidig. -->
-    <section class="footer-grid-objects newletter">
+    <section class="footer-grid-objects newsletter">
         <p>*Hold deg oppdatert på hva som skjer</p>
     </section>
 
     <section class="newsletter-button">
-        <a href="https://www.oslomet.no/nyhetsbrev" class="knapp">Nyhetsbrev! </a>
+        <a href="https://www.oslomet.no/nyhetsbrev" class="button">Nyhetsbrev! </a>
     </section>
 
     <!-- Kontakt informasjon til OsloMet -->
@@ -234,7 +235,7 @@
         <p>tlf.: 67 23 50 00</p>
     </section>
 
-    <!-- Lenker til de andre sidene på nettsiden vår-->
+    <!-- Lenker til de andre sidene på nettsiden vår -->
     <section class="footer-grid-objekter side-link">
         <p><a href="index.html"><b>Hjem</b></a></p>
         <p><a href="accessibility.html"><b>Tilgjengelighet</b></a></p>
