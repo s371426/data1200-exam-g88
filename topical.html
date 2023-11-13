@@ -1,7 +1,7 @@
 <!-- DATA1200 Home Exam 2023 -->
 
 <!DOCTYPE html>
-<html lang="en no">
+<html lang="no">
 <head>
     <meta charset="UTF-8">
     <!-- Sørger for at initial skalering og zoom er riktig på forskjellige devices -->
@@ -42,10 +42,8 @@
     </nav>
 </header>
 
-<!-- Dette er navigation baren til siden som linker til de ulike underoverskriftene i artikkelen -->
-<!-- Bruker id og hyperlinks for å linke til de ulikene delene av artikkelen -->
+<!-- Vi tar i bruk grids for å style nettsiden, slik at det blir lettere og enklere å designe nettsiden slik vi vil ha det -->
 <main class="topical-grid" lang="en">
-
     <div class="headline">
         <h1>The Interplay between Technology and Society</h1>
         <p>Imagine that you are part of a group of experts in computer technology that have been given
@@ -69,16 +67,19 @@
                         type="image/webp"/>
 
                 <!-- Backup bilde tilfelle device ikke støtter <picture> eller webp, i tillegg til alt tekst informasjon -->
-                <img src="images/topical-images/spacex.jpg" alt="Bilde av en satelitt med jordkloden i bakgrunnen"
+                <img src="images/topical-images/spacex.jpg"
+                     alt="En satelitt i verdensrommet med jorden som belyser bakgrunnen"
                      height="2848" width="4288">
             </picture>
             <figcaption>SpaceX, Pexels</figcaption>
         </figure>
     </div>
 
+    <!-- Dette er navigation baren som skal gjøre det lettere for brukere å navigere artikkelen -->
+    <!-- Bruker id og hyperlinks for å linke til de ulikene delene av artikkelen -->
     <div class="sidenav">
         <h2>Menu</h2>
-        <ul class="punkter">
+        <ul class="list">
             <li><a href="#introduction">Introduction</a></li>
             <li><a href="#key-terms">Key terms</a></li>
             <li><a href="#identify">Identify the Situation</a></li>
@@ -94,7 +95,7 @@
     <article class="main-bar">
         <h2 id="introduction">Introduction</h2>
 
-        <!-- Vi endrer ikke på farger på hyperlinks slik at linker ser ut som link (?)-->
+        <!-- Vi endrer fargen på hyperlinks slik at det er større kontraster i dark mode -->
         <p>Today the global infrastructure of the internet is, to a large degree, dependent on physical sub-sea and
             underground cables.
             Despite the global nature of the internet, the very fact that it relies on physical cables makes its flow of
@@ -123,17 +124,18 @@
 
                 <!-- Bilde blir valgt av device ut i fra hvilken oppløsning som passer best. "w" er bredden
                 på det bildet. Type forteller device at bildene er webp format-->
-                <source srcset="images/topical-images/NASA-mobile-view.webp 800w"
+                <!-- Bruk av media sikrer at bildene beholder sine opprinnelige dimensjoner i mobile view -->
+                <source srcset="images/topical-images/nasa-mobile-view.webp 900w"
                         type="image/webp"
                         media="(max-width: 760px)"/>
 
-                <source srcset="images/topical-images/NASA-small.webp 600w
-                                images/topical-images/NASA.webp 1200w"
+                <source srcset="images/topical-images/nasa-small.webp 600w,
+                                images/topical-images/nasa.webp 1200w"
                         type="image/webp"/>
 
                 <!-- Backup bilde tilfelle device ikke støtter <picture> eller webp, i tillegg til alt tekst informasjon -->
-                <img src="images/topical-images/NASA.jpg"
-                     alt="Bilde av New York lyst opp av gatebelysning tatt fra verdensrommet"
+                <img src="images/topical-images/nasa.jpg"
+                     alt="New York sett ovenifra på kvelden, der gatebelysning dominerer landskapet"
                      height="1200" width="1200">
             </picture>
             <figcaption>NASA, New York</figcaption>
@@ -174,13 +176,14 @@
 
                 <!-- Bilde blir valgt av device ut i fra hvilken oppløsning som passer best. "w" er bredden
                 på det bildet. Type forteller device at bildene er webp format-->
+                <!-- Bildene beholder sine opprinnelige dimensjoner i mobile view -->
                 <source srcset="images/topical-images/imac-small.webp 900w,
                                 images/topical-images/imac-medium.webp 1440w,
                                 images/topical-images/imac-large.webp 2100w"
                         type="image/webp"/>
 
                 <!-- Backup bilde tilfelle device ikke støtter <picture> eller webp, i tillegg til alt tekst informasjon -->
-                <img src="images/topical-images/imac.jpg" alt="Bilde av flere elektroniske enheter med en iMac i sentrum"
+                <img src="images/topical-images/imac.jpg" alt="Flere ulike elektroniske enheter med en iMac i sentrum"
                      height="4000" width="6000">
             </picture>
             <figcaption>Domenico Loia, Unsplash</figcaption>
@@ -206,13 +209,14 @@
 
                 <!-- Bilde blir valgt av device ut i fra hvilken oppløsning som passer best. "w" er bredden
                 på det bildet. Type forteller device at bildene er webp format-->
+                <!-- Bildene beholder sine opprinnelige dimensjoner i mobile view -->
                 <source srcset="images/topical-images/circuit-small.webp 900w,
                                 images/topical-images/circuit-medium.webp 1440w,
                                 images/topical-images/circuit-large.webp 2100w"
                         type="image/webp"/>
 
                 <!-- Backup bilde tilfelle device ikke støtter <picture> eller webp, i tillegg til alt tekst informasjon -->
-                <img src="images/topical-images/circuit.jpg" alt="Bilde av en PCB, også kjent som en kretskort. Kretskort blir
+                <img src="images/topical-images/circuit.jpg" alt="En PCB, også kjent som en kretskort. Kretskort blir
             brukt til å koble sammen flere elektroniske komponenter inni en maskin"
                      height="2597" width="3895">
             </picture>
@@ -256,15 +260,15 @@
     <!-- Grid kode tatt fra: https://www.w3schools.com/css/css_grid.asp-->
 
     <!-- nyhetsbrev tekst, markert med * ettersom teksten og knappen er midlertidig. -->
-    <section class="footer-grid-objects newletter">
+    <section class="footer-grid-objects newsletter">
         <p>*Hold deg oppdatert på hva som skjer</p>
     </section>
 
     <section class="newsletter-button">
-        <a href="https://www.oslomet.no/nyhetsbrev" class="knapp">Nyhetsbrev! </a>
+        <a href="https://www.oslomet.no/nyhetsbrev" class="button">Nyhetsbrev! </a>
     </section>
     <!-- Kontakt informasjon til OsloMet -->
-    <section class="footer-grid-objects contactsinformation">
+    <section class="footer-grid-objects contact-information">
         <p>OsloMet</p>
         <p>Oslo Metropolitan University</p>
         <p>Storbyuniversitetet</p>
@@ -273,7 +277,7 @@
         <p>tlf.: 67 23 50 00</p>
     </section>
 
-    <!-- Lenker til de andre sidene på nettsiden vår-->
+    <!-- Lenker til de andre sidene på nettsiden vår -->
     <section class="footer-grid-objects site-links">
         <p><a href="index.html"><b>Hjem</b></a></p>
         <p><a href="accessibility.html"><b>Tilgjengelighet</b></a></p>
