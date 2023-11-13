@@ -11,7 +11,7 @@
     <link rel="icon" type="image/x-icon" href="images/universitet.png">
     <!-- Ikon bibliotek brukt i footer -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <title>Accessibility</title>
+    <title>Tilgjengelighet</title>
     <meta name="description" content="XXXXXXXXX">
 </head>
 
@@ -48,7 +48,7 @@
 
     <div class="accessibility-flex">
         <div class="accessibility-text-only">
-            <h1>Unversal design:</h1>
+            <h1>Universal design:</h1>
             <p>Brukervennlighet handler om å gjøre nettsiden så enkel og intuitiv som mulig. Det skal være enkelt å
                 manøvrere seg på siden, uten å skape forvirring og irritasjon. Det skal være lett å finne det man leter
                 etter, og gi brukerne en god opplevelse. Universal design handler om å gjøre siden tilgjengelig for så
@@ -70,7 +70,7 @@
             <li>
                 <h2>Tekst</h2>
                 <p>Vi satt line height på paragrafer til 1.5 fordi det er det some er anbefalt da det gjør det enklere
-                    å lese</p>
+                    å lese. Tekst størrelse er bare rem slik at den vil skalere riktig utifra brukerbehov</p>
             </li>
             <li><h2>Farge:</h2>
                 <p>På siden har vi "mørk og lys" modus, som blir valgt utifra instillingene på brukerens pc. Lys
@@ -84,13 +84,25 @@
                 hovedinnhold i
                 midten og footer på bunn. Vi har brukt tydelige overskrifter og bilder, for å gjøre det enkelt for
                 brukerne å
-                forstå siden uten å lese innholdet.</p>
+                forstå siden uten å lese innholdet.
+                Maks bredde på siden vår er satt til 1300px slik at man ikke må vri hode for å lese hvis man bruker en
+                stor skjerm.</p>
             </li>
             <li><h2>Alt tekster:</h2>
                 <p>la bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla
                 bla
                 bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla
                 bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla</p>
+            </li>
+            <li><h2>Bilder</h2>
+                <p>Vi har valgt å bruker WebP på alle bildene våres, fordi med WebP kan vi komprimere bilder uten stor
+                tap av kvalitet.
+                Dette sikrer at alle bildene vi har er under 1 mb som gjør at nettsidene våres lastes inn kjappere, som
+                gjør nettsidene bedre tilgjengelig for de som har treg internett hastighet.
+                Vi har også lastet opp flere versjoner av de samme bildene med ulike dimensjoner slik at filstørrelsene
+                er enda mindre avhengig av dimensjonene på enheten.
+                Vi har lastet opp jpg versjon av bildene som backup, der disse også er under 1 mb.</p>
+
             </li>
         </ul>
         <picture class="accessibility-image">
@@ -101,7 +113,17 @@
     <div class="accessibility-flex">
        <div class="accessibility-text-only">
            <h2>Topical:</h2>
-           <p>BLA BAL BLASKNansdjkak djsank BLA BLA BLA BLA BLA BLA BLA</p>
+           <p>Bruken av grids hjelper å forkorte koden og holde den ryddig. Bruk av grid-auto-flow hjalp veldig mye
+           med å forkorte koden, der vi tidligere hadde implementert flere klasser og definert flere plasseringer inne i koden.</p>
+           <p>Vi så under implementeringen av dark mode at det ikke var nok kontrast mellom bakgrunnen og hyperlinks. Løsningen her
+           var å endre litt på fargen på hyperlinks når nettsiden oppdager at brukeren bruker dark mode. Vi endret marginalt på fargen
+           slik at det er fremdeles de samme fargene assosiert med hyperlinks.</p>
+           <p>Vi har "beskjært" nasa bildet slik at de passer bedre inn i teksten. Dette sikrer mer plass for teksten
+           som gjør skaleringen av nettsiden bedre, der leseren slipper å bevege like mye på øynene.
+           Dette bildet er også godt egnet til å beskjære, forid det er ingen viktige elementer som blir skjært ut.
+           Vi beholder opprinnelige dimensjoner på mobile view fordi bilder er ikke lenger plassert ved siden av teksten.
+           Da kan vi unngå å beskjære bildet for å sikre god skalering av tekst.</p>
+
        </div>
     </div>
 
@@ -226,15 +248,15 @@
 <footer>
     <!-- Grid kode tatt fra: https://www.w3schools.com/css/css_grid.asp-->
         <!-- nyhetsbrev tekst, markert med * ettersom teksten og knappen er midlertidig. -->
-        <section class="footer-grid-objects newletter">
+        <section class="footer-grid-objects newsletter">
             <p>*Hold deg oppdatert på hva som skjer</p>
         </section>
 
         <section class="newsletter-button">
-                <a href="https://www.oslomet.no/nyhetsbrev" class="knapp">Nyhetsbrev! </a>
+                <a href="https://www.oslomet.no/nyhetsbrev" class="button">Nyhetsbrev! </a>
         </section>
         <!-- Kontakt informasjon til OsloMet -->
-        <section class="footer-grid-objects contactsinformation">
+        <section class="footer-grid-objects contact-information">
             <h3>OsloMet</h3>
             <p>Oslo Metropolitan University</p>
             <p>Storbyuniversitetet</p>
@@ -243,7 +265,7 @@
             <p>Tlf.: <a href="tel:67235000">67 23 50 00</a></p>
         </section>
 
-        <!-- Lenker til de andre sidene på nettsiden vår-->
+        <!-- Lenker til de andre sidene på nettsiden vår -->
         <section class="footer-grid-objects site-links">
             <h3>Navigasjon</h3>
             <p><a href="index.html">Hjem</a></p>
@@ -253,7 +275,7 @@
             <p><a href="maybepage5.html">Maybepage5</a></p>
         </section>
 
-        <!-- sosiale medie lenker -->
+        <!-- Sosiale medie lenker -->
         <section class="footer-grid-objects social-media-links">
             <h3>Følg oss</h3>
             <div class="ikoner">

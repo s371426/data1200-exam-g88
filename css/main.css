@@ -217,6 +217,11 @@ nav:has(#hamburger-toggle:focus-visible) .hamburger-toggle-container{
     #hamburger-toggle:checked ~ .menu {
         display: block;
     }
+
+    /* Bytter ut hamburger ikon når menyen er åpen */
+    #hamburger-toggle:checked ~ .logo-hamburger-wrapper .hamburger-icon{
+        background-image: url(../images/logo-oslomet-svart.svg);
+    }
 }
 
 
@@ -295,30 +300,31 @@ nav:has(#hamburger-toggle:focus-visible) .hamburger-toggle-container{
 
 /*TOPICAL PAGE*/
 
-/* Her starter spaghetti-koden */
-
 /* Vi bruker grids for å style topical siden */
+/* Bruk av grid-auto-flow for automatisk plassering av grid items, som reduserer hvor mye koding som trengs for plassering */
 .topical-grid {
     display: grid;
     grid-template-columns: auto minmax(200px, 15vw);
     font-family: Calibri, serif;
     font-weight: normal;
     grid-auto-flow: row;
-    padding: 0 3em 2.3em 3em;
-    max-width: 1200px;
+    padding-right: 3em;
+    padding-bottom: 2.3em;
+    padding-left: 3em;
+    max-width: 1300px;
     margin-right: auto;
     margin-left: auto;
     grid-column-gap: 60px;
 
 }
 
+/* Vi gjør overskriften mer tydelig, sentrert og litt større avstand på bokstavene for lettere lesing */
 .headline h1 {
-    font-family: "Gill Sans MT", serif;
     font-weight: bolder;
-    font-size: 2.1rem;
+    font-size: 2.3rem;
     text-align: center;
     border-bottom: 2px solid;
-    letter-spacing: 0.1em;
+    letter-spacing: 0.09em;
     padding-top: 0.2em;
 }
 
@@ -326,7 +332,7 @@ nav:has(#hamburger-toggle:focus-visible) .hamburger-toggle-container{
     font-weight: 550;
 }
 
-/* Alt av stylingen av navbar går under her */
+/* Alt av stylingen av sidenav går under her */
 .sidenav h2 {
     padding: 15px;
     text-align: center;
@@ -351,7 +357,7 @@ nav:has(#hamburger-toggle:focus-visible) .hamburger-toggle-container{
     background-color: dimgray;
 }
 
-.punkter {
+.list {
     list-style-type: none;
     padding: 0;
     margin: 0;
@@ -362,32 +368,15 @@ nav:has(#hamburger-toggle:focus-visible) .hamburger-toggle-container{
 }
 
 /* Her så bestemmer vi plasseringene av de ulike elementene i vanlig view */
+/* Grid-auto-flow plasserer resten av grid items slik som de har blitt plassert på HTML*/
 .headline {
     grid-column: 1/-1;
     grid-row: 1;
-    max-width: 1200px;
     justify-self: center;
 }
 
 .main-bar {
     grid-column: 1;
-}
-
-
-.topical-img-with-text {
-    width: 50%;
-    float: right;
-    padding-left: 30px;
-    padding-bottom: 10px;
-}
-
-
-.main-bar a {
-    color: var(--topical-a-color);
-}
-
-.main-bar a:visited {
-    color: var(--topical-a-color-visited);
 }
 
 .sidenav {
@@ -399,8 +388,25 @@ nav:has(#hamburger-toggle:focus-visible) .hamburger-toggle-container{
     padding-top: 20px;
 }
 
+.topical-img-with-text {
+    width: 50%;
+    float: right;
+    padding-left: 30px;
+    padding-bottom: 10px;
+}
 
-/* Vi bruker media queries slik at utseende på nettsiden er annerledes på mobil */
+/* Vi skaper større kontraster for hyperlinks på dark mode, samtidig som vi beholder fargene assosiert med hyperlinks */
+.main-bar a {
+    color: var(--topical-a-color);
+}
+.main-bar a:visited {
+    color: var(--topical-a-color-visited);
+}
+
+
+
+/* Vi bruker media queries slik at layouten passer bedre for de på mobile-view */
+/* Bruk av grid-auto-flow igjen for mobile-view */
 @media (max-width: 760px) {
     .topical-grid {
         grid-template-columns: 1fr;
@@ -413,6 +419,7 @@ nav:has(#hamburger-toggle:focus-visible) .hamburger-toggle-container{
         grid-row: 1;
         justify-self: center;
     }
+
     .topical-img-with-text {
         float:none;
         width: 100%;
@@ -445,7 +452,7 @@ nav:has(#hamburger-toggle:focus-visible) .hamburger-toggle-container{
 .location-main-flex h1 {
     box-sizing: border-box;
     align-self: center;
-    max-width: 1240px;
+    max-width: 1300px;
     width: 100%;
     padding-left: 3%;
     padding-right: 3%;
@@ -464,28 +471,28 @@ nav:has(#hamburger-toggle:focus-visible) .hamburger-toggle-container{
     padding-top: 1.5%;
 }
 
-/* Er inni location-flex, inneholder bilde/bildetekst
-   position for å komangsere for bildetekst*/
-
-.location-img {
+/* To bokser inni location-flex, gjør at de er like store*/
+.location-img,
+.location-text{
     flex-basis: 50%;
     box-sizing: border-box;
+    max-width: 650px;
+    padding-left: 2.5%;
+    padding-right: 2.5%;
+}
+
+/* Er inni location-flex, inneholder bilde/bildetekst
+   position for å kompensere for bildetekst */
+.location-img {
     position: relative;
     top: 0.66rem;
-    max-width: 620px;
-    padding-left: 3%;
-    padding-right: 3%;
     margin-top: 0.5rem;
     margin-bottom: 0.5rem;
 }
 
 /* Er inni location-flex, inneholder ovserktift/tekst */
 .location-text {
-    flex-basis: 50%;
-    box-sizing: border-box;
-    max-width: 620px;
-    padding-left: 3%;
-    padding-right: 3%;
+
 }
 
 /* Endrer location-flex flexbox til å være vertikal når viewport mindre enn 760px (Mobil) */
@@ -533,28 +540,29 @@ nav:has(#hamburger-toggle:focus-visible) .hamburger-toggle-container{
     padding-top: 1.5%;
 }
 
-.accessibility-text{
-    flex-basis: 50%;
-    box-sizing: border-box;
-    max-width: 620px;
-    padding-left: 3%;
-    padding-right: 3%;
-}
-
+.accessibility-text,
 .accessibility-image{
     flex-basis: 50%;
     box-sizing: border-box;
-    max-width: 620px;
-    padding-left: 3%;
-    padding-right: 3%;
+    max-width: 650px;
+    padding-left: 2.5%;
+    padding-right: 2.5%;
+}
+
+.accessibility-text{
+
+}
+
+.accessibility-image{
+
 }
 
 .accessibility-text-only{
     flex-basis: 100%;
     box-sizing: border-box;
-    max-width: 1240px;
-    padding-left: 3%;
-    padding-right: 3%;
+    max-width: 1300px;
+    padding-left: 2.5%;
+    padding-right: 2.5%;
 }
 
 .accessibility-flex:nth-child(even){
@@ -632,7 +640,7 @@ footer h3{
 }
 
 /* Setter posisjon på item 1 og setter opp en ny grid i objektet */
-.newletter {
+.newsletter {
     grid-column: 1/3;
     grid-row: 1;
     align-items: center;
@@ -652,7 +660,7 @@ footer h3{
 }
 
 /* design til knappen */
-.knapp {
+.button {
     padding: 3px;
     color: var(--main-color);
     background-color: black;
@@ -660,11 +668,11 @@ footer h3{
     font-size: 1.563rem;
 }
 
-.knapp:hover {
+.button:hover {
     text-decoration: underline;
 }
 
-.contactsinformation{
+.contact-information{
     grid-row: 2;
     grid-column: 1/2;
 }
@@ -711,6 +719,11 @@ footer h3{
     text-decoration: underline;
 }
 
+.social-media-links p {
+    font-weight: bold;
+    font-size: 1.563rem;
+}
+
 /* Ikon kode tatt fra:
 https://www.w3schools.com/howto/howto_css_social_media_buttons.asp
 */
@@ -752,7 +765,7 @@ https://www.w3schools.com/howto/howto_css_social_media_buttons.asp
         grid-template-columns: 1fr;
     }
 /* Setter plassen til grid, og fjerner underlinja til gridden */
-    .newletter {
+    .newsletter {
         grid-row: 1;
         grid-column: 1;
         border-bottom: 0;
@@ -767,7 +780,7 @@ https://www.w3schools.com/howto/howto_css_social_media_buttons.asp
         padding: 0 0 3% 3%;
     }
 
-    .contactsinformation{
+    .contact-information{
         grid-row: 3;
         grid-column: 1;
     }

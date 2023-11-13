@@ -11,7 +11,7 @@
     <link rel="icon" type="image/x-icon" href="images/universitet.png">
     <!-- Ikon bibliotek brukt i footer -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <title>Locations</title>
+    <title>Lokasjoner</title>
     <meta name="description" content="XXXXXXXXX">
 </head>
 
@@ -47,18 +47,22 @@
 
     <!-- Semantic element som betyr at det er et friståenede del av siden,
          og ikke ikke har en annen sematic element som passer den bedre -->
+    <!-- Section med bilde og tekst over en lokasjon på OsloMET. -->
     <section class="location-flex">
 
         <!-- <figure> er et semantic element som ment får spesifisere et selvstending enhet med ett bilde/figur og en
              bildetekst -->
+        <!-- Bilde og bildetekst(fotograf) om lokasjonen på OsloMET-->
         <figure class="location-img">
             <picture>
 
                 <!-- Bilde blir valgt av device ut i fra hvilken oppløsning som passer best. "w" er bredden
                      på det bildet. Type forteller device at bildene er webp format-->
-                <source srcset="images/auditorium-p32/auditorium-p32-john-hughes-small.webp 900w,
-                                images/auditorium-p32/auditorium-p32-john-hughes-medium.webp 1350w,
+                <source srcset="images/auditorium-p32/auditorium-p32-john-hughes-very-small.webp 600w,
+                                images/auditorium-p32/auditorium-p32-john-hughes-small.webp 990w,
+                                images/auditorium-p32/auditorium-p32-john-hughes-medium.webp 1440w,
                                 images/auditorium-p32/auditorium-p32-john-hughes-large.webp 2100w"
+                        sizes="(max-width: 760px) 95vw, (min-width: 760px) 44vw"
                         type="image/webp">
 
                 <!-- Backup bilde tilfelle device ikke støtter <picture> eller webp, i tilleg til alt tekst informasjon -->
@@ -69,9 +73,11 @@
             </picture>
 
             <!-- Semantic element for å spesifisere bildetekst til <figure> elementet det er en del av -->
+            <!-- Bildetekst/forfatter for tilhørende bilde, fra https://foto.oslomet.no/fotoweb/-->
             <figcaption class="img-text">John Hughes / OsloMET</figcaption>
         </figure>
 
+        <!-- Teksten tilhørende lokasjonen på OsloMET -->
         <div class="location-text">
             <h2>Auditorium, Andrea Arntzens hus P32</h2>
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer fermentum vehicula suscipit. Phasellus
@@ -91,9 +97,11 @@
 
                 <!-- Bilde blir valgt av device ut i fra hvilken oppløsning som passer best. "w" er bredden
                      på det bildet. Type forteller device at bildene er webp format-->
-                <source srcset="images/studieplasser/studieplasser-skjalg-bøhmer-vold-small.webp 900w,
+                <source srcset="images/studieplasser/studieplasser-skjalg-bøhmer-vold-very-small.webp 600w,
+                                images/studieplasser/studieplasser-skjalg-bøhmer-vold-small.webp 1020w,
                                 images/studieplasser/studieplasser-skjalg-bøhmer-vold-medium.webp 1440w,
                                 images/studieplasser/studieplasser-skjalg-bøhmer-vold-large.webp 2100w"
+                        sizes="(max-width: 760px) 95vw, (min-width: 760px) 44vw"
                         type="image/webp">
 
                 <!-- Backup bilde tilfelle device ikke støtter <picture> eller webp, i tilleg til alt tekst informasjon -->
@@ -126,9 +134,11 @@
 
                 <!-- Bilde blir valgt av device ut i fra hvilken oppløsning som passer best. "w" er bredden
                      på det bildet. Type forteller device at bildene er webp format-->
-                <source srcset="images/fyrhuset-utendørs/fyrhuset-utendørs-skjalg-bøhmer-vold-small.webp 900w,
+                <source srcset="images/fyrhuset-utendørs/fyrhuset-utendørs-skjalg-bøhmer-vold-very-small.webp 600w,
+                                images/fyrhuset-utendørs/fyrhuset-utendørs-skjalg-bøhmer-vold-small.webp 1020w,
                                 images/fyrhuset-utendørs/fyrhuset-utendørs-skjalg-bøhmer-vold-medium.webp 1440w,
                                 images/fyrhuset-utendørs/fyrhuset-utendørs-skjalg-bøhmer-vold-large.webp 2100w"
+                        sizes="(max-width: 760px) 95vw, (min-width: 760px) 44vw"
                         type="image/webp">
 
                 <!-- Backup bilde tilfelle device ikke støtter <picture> eller webp, i tilleg til alt tekst informasjon -->
@@ -162,9 +172,11 @@
 
                 <!-- Bilde blir valgt av device ut i fra hvilken oppløsning som passer best. "w" er bredden
                      på det bildet. Type forteller device at bildene er webp format-->
-                <source srcset="images/fyrhuset-innendørs/fyrhuset-innendørs-skjalg-bøhmer-vold-small.webp 900w,
+                <source srcset="images/fyrhuset-innendørs/fyrhuset-innendørs-skjalg-bøhmer-vold-very-small.webp 600w,
+                                images/fyrhuset-innendørs/fyrhuset-innendørs-skjalg-bøhmer-vold-small.webp 1020w,
                                 images/fyrhuset-innendørs/fyrhuset-innendørs-skjalg-bøhmer-vold-medium.webp 1440w,
                                 images/fyrhuset-innendørs/fyrhuset-innendørs-skjalg-bøhmer-vold-large.webp 2100w"
+                        sizes="(max-width: 760px) 95vw, (min-width: 760px) 44vw"
                         type="image/webp">
 
                 <!-- Backup bilde tilfelle device ikke støtter <picture> eller webp, i tilleg til alt tekst informasjon -->
@@ -200,9 +212,11 @@
 
                 <!-- Bilde blir valgt av device ut i fra hvilken oppløsning som passer best. "w" er bredden
                      på det bildet. Type forteller device at bildene er webp format-->
-                <source srcset="images/kantine-p52/kantine-p52-skjalg-bøhmer-vold-small.webp 900w,
+                <source srcset="images/kantine-p52/kantine-p52-skjalg-bøhmer-vold-very-small.webp 600w,
+                                images/kantine-p52/kantine-p52-skjalg-bøhmer-vold-small.webp 1020w,
                                 images/kantine-p52/kantine-p52-skjalg-bøhmer-vold-medium.webp 1440w,
                                 images/kantine-p52/kantine-p52-skjalg-bøhmer-vold-large.webp 2100w"
+                        sizes="(max-width: 760px) 95vw, (min-width: 760px) 44vw"
                         type="image/webp">
 
                 <!-- Backup bilde tilfelle device ikke støtter <picture> eller webp, i tilleg til alt tekst informasjon -->
@@ -232,15 +246,15 @@
     <!-- Grid kode tatt fra: https://www.w3schools.com/css/css_grid.asp-->
 
     <!-- nyhetsbrev tekst, markert med * ettersom teksten og knappen er midlertidig. -->
-    <section class="footer-grid-objects newletter">
+    <section class="footer-grid-objects newsletter">
         <p>*Hold deg oppdatert på hva som skjer</p>
     </section>
 
     <section class="newsletter-button">
-        <a href="https://www.oslomet.no/nyhetsbrev" class="knapp">Nyhetsbrev! </a>
+        <a href="https://www.oslomet.no/nyhetsbrev" class="button">Nyhetsbrev! </a>
     </section>
     <!-- Kontakt informasjon til OsloMet -->
-    <section class="footer-grid-objects contactsinformation">
+    <section class="footer-grid-objects contact-information">
         <p>OsloMet</p>
         <p>Oslo Metropolitan University</p>
         <p>Storbyuniversitetet</p>
@@ -249,7 +263,7 @@
         <p>tlf.: 67 23 50 00</p>
     </section>
 
-    <!-- Lenker til de andre sidene på nettsiden vår-->
+    <!-- Lenker til de andre sidene på nettsiden vår -->
     <section class="footer-grid-objects site-links">
         <p><a href="index.html"><b>Hjem</b></a></p>
         <p><a href="accessibility.html"><b>Tilgjengelighet</b></a></p>
