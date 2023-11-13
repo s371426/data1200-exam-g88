@@ -367,7 +367,6 @@ nav:has(#hamburger-toggle:focus-visible) .hamburger-toggle-container{
 .headline {
     grid-column: 1/-1;
     grid-row: 1;
-    max-width: 1200px;
     justify-self: center;
 }
 
