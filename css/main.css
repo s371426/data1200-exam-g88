@@ -177,8 +177,21 @@ nav {
    :has() støttes: Chrome/Safari fra september 2022/Firefox versjon 121 fra desember 2023 */
 /* Inspirert av: https://unused-css.com/blog/css-only-hamburger-menu/
                  https://developer.mozilla.org/en-US/docs/Web/CSS/:has */
-nav:has(#hamburger-toggle:focus-visible) .hamburger-toggle-container{
+/*nav:has(#hamburger-toggle:focus-visible) .hamburger-toggle-container{*/
+/*    outline: auto;*/
+/*}*/
+
+/* Støtte for outline: auto er god, så det holder*/
+#hamburger-toggle:focus ~ .logo-hamburger-wrapper .hamburger-toggle-container{
     outline: auto;
+}
+
+/* Støtte for :focus-visible er bare siden 2020-2022 så sjekker om den støttes, hvis det gjør det,
+   blir outline sjult når den er i fokus av mus og ikke tastatur*/
+@supports selector(:focus-visible) {
+    #hamburger-toggle:not(:focus-visible) ~ .logo-hamburger-wrapper .hamburger-toggle-container{
+        outline: none;
+    }
 }
 
 /* Sjuler linker på navbar og viser hamburger meny knapp når bredde er mindre enn 800px*/
