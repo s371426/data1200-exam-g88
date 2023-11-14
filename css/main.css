@@ -233,7 +233,9 @@ nav:has(#hamburger-toggle:focus-visible) .hamburger-toggle-container{
     justify-content: space-between;
     align-items: center;
     margin: auto;
-    width: 85%;
+    width: 100%;
+    padding-top: 50px;
+    padding-bottom: 50px;
 }
 
 /*main flex container for content på home-page*/
@@ -257,12 +259,14 @@ nav:has(#hamburger-toggle:focus-visible) .hamburger-toggle-container{
 .hero-flex {
     display: flex;
     height: 100vh;
-    background: url('../images/forsidebilde-arkitektur-p32/arkitektur-p32-skjalg-bøhmer-vold-square-large.jpg') no-repeat;
+    background-image: linear-gradient(to bottom,rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('../images/forsidebilde-arkitektur-p32/arkitektur-p32-skjalg-bøhmer-vold-square-large.jpg');
+    background-repeat: no-repeat;
     background-size: cover;
     align-items: center;
     justify-content: center;
-    box-shadow: 20px 0 black;
-    filter: brightness(50%); /* skal påvirke kun bilde og ikke hele seksjonen*/
+    /*box-shadow: 1000px 10000px rgba(0,0,0, 0.5) inset; */
+    text-shadow: 8px -4px 20px black;
+
 }
 
 .hero-text h1{
@@ -270,7 +274,8 @@ nav:has(#hamburger-toggle:focus-visible) .hamburger-toggle-container{
     display: flex;
     font-weight: 900;
     color: white;
-    text-shadow: 8px -4px 20px black;
+    /*text-shadow: 8px -4px 20px black; */
+
 }
 
 .hero-text h2{
@@ -279,9 +284,14 @@ nav:has(#hamburger-toggle:focus-visible) .hamburger-toggle-container{
     align-items: center;
     justify-content: center;
     color: white;
-    text-shadow: 4px 0 20px black;
+   /*text-shadow: 4px 0 20px black; */
 }
 
+.campus-intro-flex{
+    display: flex;
+
+
+}
 /*.bilde-tekst {
     position: absolute;
     top: 50%;
