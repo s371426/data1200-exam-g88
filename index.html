@@ -107,10 +107,13 @@
             <div class="historie-box-2">
                 <figure class="studiestart-img">
                     <picture>
+                        <!-- Bilde blir valgt av device ut i fra hvilken oppløsning som passer best. "w" er bredden på det bildet.
+                        Type forteller device at bildene er webp format -->
                         <source srcset="images/oslomet-studiestart/oslomet-studiestart.jpg 900w,
                                         images/oslomet-studiestart/oslomet-studiestart.jpg 1350w,
                                         images/oslomet-studiestart/oslomet-studiestart.jpg 2000w"
                                 type="image/jpg">
+                        <!-- Backup bilde tilfelle device ikke støtter <picture> eller webp, i tilleg til alt tekst informasjon -->
                         <img src="images/oslomet-studiestart/oslomet-studiestart.jpg"
                              alt="bilde av studiestart på oslomet"
                              width="2700" height ="1793">
@@ -164,43 +167,7 @@
             </div>
         </div>
     </section>
-    <!-- seksjon for whatevs vi velger -->
-    <section class="whatevs">
-        <h3>tommaboy suger</h3>
-    </section>
 
-        <!-- <picture>
-
-            Bilde blir valgt av device ut i fra hvilken oppløsning som passer best. "w" er bredden på det bildet.
-            Type forteller device at bildene er webp format
-
-            <source srcset="images/forsidebilde-arkitektur-p32/arkitektur-p32-skjalg-bøhmer-vold-small.webp 1200w,
-                                images/forsidebilde-arkitektur-p32/arkitektur-p32-skjalg-bøhmer-vold-medium.webp 1800w,
-                                images/forsidebilde-arkitektur-p32/arkitektur-p32-skjalg-bøhmer-vold-large.webp 2400w,
-                                images/forsidebilde-arkitektur-p32/arkitektur-p32-skjalg-bøhmer-vold-very-large.webp 3840p"
-                    media="(min-width: 700px)" type="image/webp">
-
-            Hvis device skjerm er smallere enn 700px vil en av disse bildene bli valgt steden for de over,
-            de er square istedenfor wide
-
-            <source srcset="images/forsidebilde-arkitektur-p32/arkitektur-p32-skjalg-bøhmer-vold-square-small.webp 1000w,
-                                images/forsidebilde-arkitektur-p32/arkitektur-p32-skjalg-bøhmer-vold-square-medium.webp 1440w,
-                                images/forsidebilde-arkitektur-p32/arkitektur-p32-skjalg-bøhmer-vold-square-large.jpg 2000w"
-                    media="(max-width: 700px)" type="image/webp">
-
-            Backup bilde tilfelle device ikke støtter <picture> eller webp, i tilleg til alt tekst informasjon
-
-            <img src="images/forsidebilde-arkitektur-p32/arkitektur-p32-skjalg-bøhmer-vold-large.jpg"
-                 alt="[MAGNLER ALT TEKST]"
-                 width="2400" height="1600">
-        </picture> -->
-
-
-    <!-- legge ved fotograf. Skjalg Bøhmer Vold / OsloMet -->
-
-
-<!--
-        <picture>
 
             Bilde blir valgt av device ut i fra hvilken oppløsning som passer best. "w" er bredden på det bildet.
             Type forteller device at bildene er webp format
