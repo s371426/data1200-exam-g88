@@ -641,7 +641,7 @@ footer h3{
     border-bottom: 1px solid;
     border-bottom-color: black;
     font-weight: bold;
-    font-size: 1.563rem;
+    font-size: 1.55rem;
 }
 
 .newsletter-button{
@@ -660,7 +660,7 @@ footer h3{
     color: var(--main-color);
     background-color: black;
     text-decoration: none;
-    font-size: 1.563rem;
+    font-size: 1.55rem;
 }
 
 .button:hover {
@@ -698,9 +698,9 @@ footer h3{
     padding-top: 0;
 }
 
-.social-media-links p {
-    font-weight: bold;
-    font-size: 1.563rem;
+.social-media-links p {              /* Det er ikke lenger p element innenfor denne klassen etter det ble endret til h */
+    font-weight: bold;               /* Jeg ser at det er p rund a i navigasjon men ikke sosiale medier linker, hvem av dem er riktig? */
+    font-size: 1.6rem;               /* Burde kanskje bli gjort likt på begge steder Tror egentlig de begge burde være lister*/
 }
 
 .social-media-links a {
@@ -714,11 +714,6 @@ footer h3{
     text-decoration: underline;
 }
 
-.social-media-links p {
-    font-weight: bold;
-    font-size: 1.563rem;
-}
-
 /* Ikon kode tatt fra:
 https://www.w3schools.com/howto/howto_css_social_media_buttons.asp
 */
@@ -729,34 +724,31 @@ https://www.w3schools.com/howto/howto_css_social_media_buttons.asp
     margin-right: 2%;
     text-align: center;
     text-decoration: none;
-    font-size: 1.875rem;
+    color: white;
+    font-size: 1.9rem;               /* Tror ikke denne gjør noe som helst */
 }
 
 .fa-facebook {
     background-color: #3B5998;
-    color: white;
 }
 
 .fa-twitter {
     background-color: #55ACEE;
-    color: white;
 }
 
 .fa-instagram {
     background-color: #125688;
-    color: white;
 }
 
 .fa-youtube {
     background-color: #bb0000;
-    color: white;
 }
 
 /* Slutt på ikonkode */
 
 /* Når siden er mindre enn 700 px skal grid stackes */
 @media (max-width: 760px) {
-    .footer-grid-system {
+    .footer-grid {
         grid-template-columns: 1fr;
     }
 /* Setter plassen til grid, og fjerner underlinja til gridden */
