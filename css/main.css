@@ -449,8 +449,8 @@ nav:has(#hamburger-toggle:focus-visible) .hamburger-toggle-container{
     align-self: center;
     max-width: 1300px;
     width: 100%;
-    padding-left: 3%;
-    padding-right: 3%;
+    padding-left: 2.5%;
+    padding-right: 2.5%;
     margin-bottom: 0.2em;
     font-size: 2.5rem;
 }
