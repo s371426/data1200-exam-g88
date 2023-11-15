@@ -523,8 +523,6 @@ seg av resten */
 
 /* ACCESSIBILITY SIDE */
 
-/* FLEX START */
-
 .accessibility-flex{
     display: flex;
     flex-direction: row;
@@ -569,44 +567,6 @@ seg av resten */
     .accessibility-image,
     .accessibility-text{
         max-width: none;
-    }
-}
-
-/* FLEX SLUTT */
-
-
-/*bestemmer backgrunnsfarge og padding top og bunn */
-.main-accessibility {
-    top:0;
-    /*background-color: var(--secondary-background-color);*/
-}
-
-/* Lager grid inne i klassen */
-.accessibility-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-}
-
-/* Setter padding på alle objektene med ac i klassenavn */
-.ac{
-    padding:3% 9%;
-}
-
-/* Setter at alle oddetalls klasser under ac har den valgte fargen */
-.ac:nth-child(even) {
-    background-color: var(--secondary-background-color);
-}
-
-/* Rekkefølgen på hvordan objektene skal stackes når skjermen er mindre enn 700px */
-@media (max-width: 760px) {
-    .accessibility-grid {
-        grid-template-columns: 1fr;
-    }
-    .ac-list-text {
-        grid-column: 1;
-    }
-    .ac-grid-item-2 {
-        grid-column: 1;
     }
 }
 
