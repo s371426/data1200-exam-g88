@@ -322,6 +322,8 @@ som reduserer hvor mye koding som trengs for plassering */
     padding-bottom: 2.3em;
     font-family: Calibri, serif;
     font-weight: normal;
+    margin-right: auto;
+    margin-left: auto;
 }
 
 .headline {
