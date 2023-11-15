@@ -570,6 +570,29 @@ seg av resten */
     }
 }
 
+/* GALLERY*/
+
+.gallery-flex{
+    display:flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+
+}
+
+.gallery-flex picture{
+    min-width: 200px;
+    max-width: 500px;
+    margin: 20px
+}
+
+#location-images:checked ~ .gallery-flex .gallery-location-img{
+    display: none;
+}
+
+#topical-images:checked ~ .gallery-flex .gallery-topical-img{
+    display: none;
+}
+
 /* FOOTER */
 /* Setter fooder på bunn av siden og at bredden skal være 100% */
 footer {

@@ -43,7 +43,151 @@
 </header>
 
 <main>
+    <input id="location-images" type="checkbox"> <p>Lokasjoner Bilder</p>
 
+    <input id="topical-images" type="checkbox"> <p>Topical Bilder</p>
+
+    <section class="gallery-flex">
+
+        <picture class="gallery-location-img">
+
+            <!-- Bilde blir valgt av device ut i fra hvilken oppløsning som passer best. "w" er bredden
+                 på det bildet. Type forteller device at bildene er webp format-->
+            <source srcset="images/auditorium-p32/auditorium-p32-john-hughes-very-small.webp 600w,
+                            images/auditorium-p32/auditorium-p32-john-hughes-small.webp 990w,
+                            images/auditorium-p32/auditorium-p32-john-hughes-medium.webp 1440w,
+                            images/auditorium-p32/auditorium-p32-john-hughes-large.webp 2100w"
+                    sizes="(max-width: 760px) 95vw, (min-width: 760px) 44vw"
+                    type="image/webp">
+
+            <!-- Backup bilde tilfelle device ikke støtter <picture> eller webp, i tilleg til alt tekst informasjon -->
+            <img src="images/auditorium-p32/auditorium-p32-john-hughes-large.jpg"
+                 alt="stort auditorium med to etasjer som har gult gulv og oranskje og gule seter.
+                      vegger å tak er av metall og taket er bølgete"
+                 width="2100" height ="1402">
+        </picture>
+
+        <picture class="gallery-location-img">
+
+            <!-- Bilde blir valgt av device ut i fra hvilken oppløsning som passer best. "w" er bredden
+                 på det bildet. Type forteller device at bildene er webp format-->
+            <source srcset="images/studieplasser/studieplasser-skjalg-bøhmer-vold-very-small.webp 600w,
+                            images/studieplasser/studieplasser-skjalg-bøhmer-vold-small.webp 1020w,
+                            images/studieplasser/studieplasser-skjalg-bøhmer-vold-medium.webp 1440w,
+                            images/studieplasser/studieplasser-skjalg-bøhmer-vold-large.webp 2100w"
+                    sizes="(max-width: 760px) 95vw, (min-width: 760px) 44vw"
+                    type="image/webp">
+
+            <!-- Backup bilde tilfelle device ikke støtter <picture> eller webp, i tilleg til alt tekst informasjon -->
+            <img src="images/studieplasser/studieplasser-skjalg-bøhmer-vold-large.jpg"
+                 alt="lite innendørs minihus med trespiler og en åpen vegg. innni er det bord og noen benker
+                      med puter, der man kan sitte å studere i grupper"
+                 width="2100" height ="1400">
+        </picture>
+
+        <picture class="gallery-location-img">
+
+            <!-- Bilde blir valgt av device ut i fra hvilken oppløsning som passer best. "w" er bredden
+                 på det bildet. Type forteller device at bildene er webp format-->
+            <source srcset="images/fyrhuset-utendørs/fyrhuset-utendørs-skjalg-bøhmer-vold-very-small.webp 600w,
+                            images/fyrhuset-utendørs/fyrhuset-utendørs-skjalg-bøhmer-vold-small.webp 1020w,
+                            images/fyrhuset-utendørs/fyrhuset-utendørs-skjalg-bøhmer-vold-medium.webp 1440w,
+                            images/fyrhuset-utendørs/fyrhuset-utendørs-skjalg-bøhmer-vold-large.webp 2100w"
+                    sizes="(max-width: 760px) 95vw, (min-width: 760px) 44vw"
+                    type="image/webp">
+
+            <!-- Backup bilde tilfelle device ikke støtter <picture> eller webp, i tilleg til alt tekst informasjon -->
+            <img src="images/fyrhuset-utendørs/fyrhuset-utendørs-skjalg-bøhmer-vold-large.jpg"
+                 alt="gammelt bygg av rød murstein med gamle høye viduer med buer øverst i første etasje,
+                      og like, men mye mindre vinduer i andre etasje.  resten er uten vinduer.
+                      bygget er plassert på en steinlagt plass"
+                 width="2100" height ="1400">
+        </picture>
+
+        <picture class="gallery-location-img">
+
+            <!-- Bilde blir valgt av device ut i fra hvilken oppløsning som passer best. "w" er bredden
+                 på det bildet. Type forteller device at bildene er webp format-->
+            <source srcset="images/fyrhuset-innendørs/fyrhuset-innendørs-skjalg-bøhmer-vold-very-small.webp 600w,
+                            images/fyrhuset-innendørs/fyrhuset-innendørs-skjalg-bøhmer-vold-small.webp 1020w,
+                            images/fyrhuset-innendørs/fyrhuset-innendørs-skjalg-bøhmer-vold-medium.webp 1440w,
+                            images/fyrhuset-innendørs/fyrhuset-innendørs-skjalg-bøhmer-vold-large.webp 2100w"
+                    sizes="(max-width: 760px) 95vw, (min-width: 760px) 44vw"
+                    type="image/webp">
+
+            <!-- Backup bilde tilfelle device ikke støtter <picture> eller webp, i tilleg til alt tekst informasjon -->
+            <img src="images/fyrhuset-innendørs/fyrhuset-innendørs-skjalg-bøhmer-vold-large.jpg"
+                 alt="koselig spisested med høye gamle vinduer med buet topp, svarte fliser på gulvet,
+                      og bord med treplater"
+                 width="2100" height ="1400">
+        </picture>
+
+         <picture class="gallery-location-img">
+
+            <!-- Bilde blir valgt av device ut i fra hvilken oppløsning som passer best. "w" er bredden
+                 på det bildet. Type forteller device at bildene er webp format-->
+            <source srcset="images/kantine-p52/kantine-p52-skjalg-bøhmer-vold-very-small.webp 600w,
+                            images/kantine-p52/kantine-p52-skjalg-bøhmer-vold-small.webp 1020w,
+                            images/kantine-p52/kantine-p52-skjalg-bøhmer-vold-medium.webp 1440w,
+                            images/kantine-p52/kantine-p52-skjalg-bøhmer-vold-large.webp 2100w"
+                    sizes="(max-width: 760px) 95vw, (min-width: 760px) 44vw"
+                    type="image/webp">
+
+            <!-- Backup bilde tilfelle device ikke støtter <picture> eller webp, i tilleg til alt tekst informasjon -->
+            <img src="images/kantine-p52/kantine-p52-skjalg-bøhmer-vold-large.jpg"
+                 alt="koselig rom med bra lyes og søyler av stein. taket er bugd opp av hvite buer med
+                        lamper formet som kuler. det er også border og stoler på det svart/beige rutete gulvet"
+                 width="2100" height ="1400">
+        </picture>
+
+         <picture class="gallery-topical-img">
+             <!-- Bilde blir valgt av device ut i fra hvilken oppløsning som passer best. "w" er bredden
+            på det bildet. Type forteller device at bildene er webp format-->
+            <!-- Bruk av media sikrer at bildene beholder sine opprinnelige dimensjoner i mobile view -->
+            <source srcset="images/topical-images/nasa-mobile-view.webp 900w"
+                    type="image/webp"/>
+
+            <!-- Backup bilde tilfelle device ikke støtter <picture> eller webp, i tillegg til alt tekst informasjon -->
+            <img src="images/topical-images/nasa.jpg"
+                 alt="New York sett ovenifra på kvelden, der gatebelysning dominerer landskapet"
+                 height="1200" width="1200">
+        </picture>
+
+        <picture class="gallery-topical-img">
+
+            <!-- Bilde blir valgt av device ut i fra hvilken oppløsning som passer best. "w" er bredden
+            på det bildet. Type forteller device at bildene er webp format-->
+            <!-- Bildene beholder sine opprinnelige dimensjoner i mobile view -->
+            <source srcset="images/topical-images/imac-small.webp 900w,
+                        images/topical-images/imac-medium.webp 1440w,
+                        images/topical-images/imac-large.webp 2100w"
+                    type="image/webp"/>
+
+            <!-- Backup bilde tilfelle device ikke støtter <picture> eller webp, i tillegg til alt tekst informasjon -->
+            <img src="images/topical-images/imac.jpg"
+                 alt="Flere ulike elektroniske enheter med en iMac i sentrum"
+                 height="4000" width="6000">
+        </picture>
+
+        <picture class="gallery-topical-img">
+
+            <!-- Bilde blir valgt av device ut i fra hvilken oppløsning som passer best. "w" er bredden
+            på det bildet. Type forteller device at bildene er webp format-->
+            <!-- Bildene beholder sine opprinnelige dimensjoner i mobile view -->
+            <source srcset="images/topical-images/circuit-small.webp 900w,
+                        images/topical-images/circuit-medium.webp 1440w,
+                        images/topical-images/circuit-large.webp 2100w"
+                    type="image/webp"/>
+
+            <!-- Backup bilde tilfelle device ikke støtter <picture> eller webp, i tillegg til alt tekst informasjon -->
+            <img src="images/topical-images/circuit.jpg" alt="En PCB, også kjent som en kretskort. Kretskort blir
+                 brukt til å koble sammen flere elektroniske komponenter inni en maskin"
+                 height="2597" width="3895">
+        </picture>
+
+
+
+    </section>
 </main>
 
 <footer>
