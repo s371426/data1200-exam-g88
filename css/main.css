@@ -592,8 +592,9 @@ seg av resten */
     object-fit: cover;
 }
 
-#location-images:checked ~ .gallery-flex .gallery-location-img,
-#topical-images:checked ~ .gallery-flex .gallery-topical-img {
+#home-images:checked ~ .gallery-flex .gallery-home-img,
+#topical-images:checked ~ .gallery-flex .gallery-topical-img,
+#location-images:checked ~ .gallery-flex .gallery-location-img {
     display: block;
 }
 
