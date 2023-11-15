@@ -74,8 +74,8 @@ p {
 /*DIVs*/
 
 /*HEADER*/
-
 /* NAV BAR */
+
 /* Hoved flexboks navbar */
 nav {
     display: flex;
@@ -137,7 +137,7 @@ nav {
     max-height: 60px;
 }
 
-/* Nav Logo størelse */
+/* Nav Logo størrelse */
 #nav-logo {
     height: 40px;
     width: auto;
@@ -177,8 +177,21 @@ nav {
    :has() støttes: Chrome/Safari fra september 2022/Firefox versjon 121 fra desember 2023 */
 /* Inspirert av: https://unused-css.com/blog/css-only-hamburger-menu/
                  https://developer.mozilla.org/en-US/docs/Web/CSS/:has */
-nav:has(#hamburger-toggle:focus-visible) .hamburger-toggle-container{
+/*nav:has(#hamburger-toggle:focus-visible) .hamburger-toggle-container{*/
+/*    outline: auto;*/
+/*}*/
+
+/* Støtte for outline: auto er god, så det holder*/
+#hamburger-toggle:focus ~ .logo-hamburger-wrapper .hamburger-toggle-container{
     outline: auto;
+}
+
+/* Støtte for :focus-visible er bare siden 2020-2022 så sjekker om den støttes, hvis det gjør det,
+   blir outline sjult når den er i fokus av mus og ikke tastatur*/
+@supports selector(:focus-visible) {
+    #hamburger-toggle:not(:focus-visible) ~ .logo-hamburger-wrapper .hamburger-toggle-container{
+        outline: none;
+    }
 }
 
 /* Sjuler linker på navbar og viser hamburger meny knapp når bredde er mindre enn 800px*/
@@ -295,45 +308,64 @@ nav:has(#hamburger-toggle:focus-visible) .hamburger-toggle-container{
 
 /*TOPICAL PAGE*/
 
-/* Vi bruker grids for å style topical siden */
-/* Bruk av grid-auto-flow for automatisk plassering av grid items, som reduserer hvor mye koding som trengs for plassering */
+/* Grid-container her, der vi definerer en grid med to kolonner */
+/* Bruk av grid-auto-flow for automatisk plassering av grid items slik de har blitt plassert på HTML,
+som reduserer hvor mye koding som trengs for plassering */
 .topical-grid {
     display: grid;
     grid-template-columns: auto minmax(200px, 15vw);
+    grid-auto-flow: row;
+    grid-column-gap: 60px;
+    max-width: 1300px;
+    padding-right: 3em;
+    padding-left: 3em;
+    padding-bottom: 2.3em;
     font-family: Calibri, serif;
     font-weight: normal;
-    grid-auto-flow: row;
-    padding-right: 3em;
-    padding-bottom: 2.3em;
-    padding-left: 3em;
-    max-width: 1300px;
     margin-right: auto;
     margin-left: auto;
-    grid-column-gap: 60px;
+}
 
+.headline {
+    grid-column: 1/-1;
+    grid-row: 1;
+    justify-self: center;
 }
 
 /* Vi gjør overskriften mer tydelig, sentrert og litt større avstand på bokstavene for lettere lesing */
 .headline h1 {
+    padding-top: 0.2em;
+    border-bottom: 2px solid;
+    text-align: center;
     font-weight: bolder;
     font-size: 2.3rem;
-    text-align: center;
-    border-bottom: 2px solid;
     letter-spacing: 0.09em;
-    padding-top: 0.2em;
 }
 
 .headline p {
     font-weight: 550;
 }
 
-/* Alt av stylingen av sidenav går under her */
+.sidenav {
+    grid-column: 2;
+    grid-row: 2/4;
+    align-self: start;
+    position: sticky;
+    top: 2em;
+}
+
 .sidenav h2 {
+    background-color: var(--topical-navbar-h2-background-color);
     padding: 15px;
     text-align: center;
     margin-bottom: 0;
     color: white;
-    background-color: var(--topical-navbar-h2-background-color);
+}
+
+.sidenav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
 }
 
 .sidenav ul a {
@@ -348,41 +380,18 @@ nav:has(#hamburger-toggle:focus-visible) .hamburger-toggle-container{
 }
 
 .sidenav ul a:hover {
-    color: white;
     background-color: dimgray;
+    color: white;
 }
 
-.list {
-    list-style-type: none;
-    padding: 0;
-    margin: 0;
-}
-
-#author {
-    color: orangered;
-}
-
-/* Her så bestemmer vi plasseringene av de ulike elementene i vanlig view */
-/* Grid-auto-flow plasserer resten av grid items slik som de har blitt plassert på HTML*/
-.headline {
-    grid-column: 1/-1;
-    grid-row: 1;
-    justify-self: center;
-}
-
+/* Her sier vi at grid-item main-bar som inneholder teksten skal holde seg innenfor første kolonnen. Grid-auto-flow tar
+seg av resten */
 .main-bar {
     grid-column: 1;
 }
 
-.sidenav {
-    grid-column: 2;
-    grid-row: 2/5;
-    align-self: start;
-    position: sticky;
-    top: 2em;
-}
+
 .topical-img {
-    grid-column: 2;
     padding-top: 20px;
 }
 
@@ -393,6 +402,10 @@ nav:has(#hamburger-toggle:focus-visible) .hamburger-toggle-container{
     padding-bottom: 10px;
 }
 
+#author {
+    color: orangered;
+}
+
 /* Vi skaper større kontraster for hyperlinks på dark mode, samtidig som vi beholder fargene assosiert med hyperlinks */
 .main-bar a {
     color: var(--topical-a-color);
@@ -400,8 +413,6 @@ nav:has(#hamburger-toggle:focus-visible) .hamburger-toggle-container{
 .main-bar a:visited {
     color: var(--topical-a-color-visited);
 }
-
-
 
 /* Vi bruker media queries slik at layouten passer bedre for de på mobile-view */
 /* Bruk av grid-auto-flow igjen for mobile-view */
@@ -419,7 +430,7 @@ nav:has(#hamburger-toggle:focus-visible) .hamburger-toggle-container{
     }
 
     .topical-img-with-text {
-        float:none;
+        float: none;
         width: 100%;
         padding-left: 0;
     }
@@ -428,14 +439,7 @@ nav:has(#hamburger-toggle:focus-visible) .hamburger-toggle-container{
         grid-column: 1;
         grid-row: 2;
     }
-
-
-
-    /* Refererer til de ulike ID   */
-
-
 }
-
 
 
 /* LOCATION PAGE*/
@@ -452,8 +456,8 @@ nav:has(#hamburger-toggle:focus-visible) .hamburger-toggle-container{
     align-self: center;
     max-width: 1300px;
     width: 100%;
-    padding-left: 3%;
-    padding-right: 3%;
+    padding-left: 2.5%;
+    padding-right: 2.5%;
     margin-bottom: 0.2em;
     font-size: 2.5rem;
 }
@@ -469,28 +473,27 @@ nav:has(#hamburger-toggle:focus-visible) .hamburger-toggle-container{
     padding-top: 1.5%;
 }
 
-/* Er inni location-flex, inneholder bilde/bildetekst
-   position for å komangsere for bildetekst*/
-
-.location-img {
+/* To bokser inni location-flex, gjør at de er like store*/
+.location-img,
+.location-text{
     flex-basis: 50%;
     box-sizing: border-box;
-    position: relative;
-    top: 0.66rem;
     max-width: 650px;
     padding-left: 2.5%;
     padding-right: 2.5%;
+}
+
+/* Er inni location-flex, inneholder bilde/bildetekst
+   position for å kompensere for bildetekst */
+.location-img {
+    position: relative;
+    top: 0.66rem;
     margin-top: 0.5rem;
     margin-bottom: 0.5rem;
 }
 
 /* Er inni location-flex, inneholder ovserktift/tekst */
 .location-text {
-    flex-basis: 50%;
-    box-sizing: border-box;
-    max-width: 650px;
-    padding-left: 2.5%;
-    padding-right: 2.5%;
 }
 
 /* Endrer location-flex flexbox til å være vertikal når viewport mindre enn 760px (Mobil) */
@@ -523,11 +526,7 @@ nav:has(#hamburger-toggle:focus-visible) .hamburger-toggle-container{
     }
 }
 
-
-
 /* ACCESSIBILITY SIDE */
-
-/* FLEX START */
 
 .accessibility-flex{
     display: flex;
@@ -538,7 +537,8 @@ nav:has(#hamburger-toggle:focus-visible) .hamburger-toggle-container{
     padding-top: 1.5%;
 }
 
-.accessibility-text{
+.accessibility-text,
+.accessibility-image{
     flex-basis: 50%;
     box-sizing: border-box;
     max-width: 650px;
@@ -546,12 +546,10 @@ nav:has(#hamburger-toggle:focus-visible) .hamburger-toggle-container{
     padding-right: 2.5%;
 }
 
+.accessibility-text{
+}
+
 .accessibility-image{
-    flex-basis: 50%;
-    box-sizing: border-box;
-    max-width: 650px;
-    padding-left: 2.5%;
-    padding-right: 2.5%;
 }
 
 .accessibility-text-only{
@@ -577,44 +575,6 @@ nav:has(#hamburger-toggle:focus-visible) .hamburger-toggle-container{
     }
 }
 
-/* FLEX SLUTT */
-
-
-/*bestemmer backgrunnsfarge og padding top og bunn */
-.main-accessibility {
-    top:0;
-    /*background-color: var(--secondary-background-color);*/
-}
-
-/* Lager grid inne i klassen */
-.accessibility-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-}
-
-/* Setter padding på alle objektene med ac i klassenavn */
-.ac{
-    padding:3% 9%;
-}
-
-/* Setter at alle oddetalls klasser under ac har den valgte fargen */
-.ac:nth-child(even) {
-    background-color: var(--secondary-background-color);
-}
-
-/* Rekkefølgen på hvordan objektene skal stackes når skjermen er mindre enn 700px */
-@media (max-width: 760px) {
-    .accessibility-grid {
-        grid-template-columns: 1fr;
-    }
-    .ac-list-text {
-        grid-column: 1;
-    }
-    .ac-grid-item-2 {
-        grid-column: 1;
-    }
-}
-
 /* FOOTER */
 /* Setter fooder på bunn av siden og at bredden skal være 100% */
 footer {
@@ -623,12 +583,14 @@ footer {
     position: relative;
     bottom: 0;
     width: 100%;
-    background-color: #8899a4;
+    background-color:var(--main-color) ;
     padding-bottom: 2%;
 }
+
 footer h3{
-    font-size: 1.563rem;
+    font-size: 1.55rem;
 }
+
 /* Grid kode tatt fra: https://www.w3schools.com/css/css_grid.asp*/
 /* endrer på alle grid, og sentrerer tekst */
 .footer-grid-objects {
@@ -640,12 +602,12 @@ footer h3{
 .newsletter {
     grid-column: 1/3;
     grid-row: 1;
-    align-items: center;
     border-bottom: 1px solid;
     border-bottom-color: black;
     font-weight: bold;
-    font-size: 1.563rem;
+    font-size: 1.55rem;
 }
+
 .newsletter-button{
     grid-row: 1;
     grid-column: 3/4;
@@ -659,10 +621,10 @@ footer h3{
 /* design til knappen */
 .button {
     padding: 3px;
-    color: var(--main-color);
+    color: yellow;
     background-color: black;
     text-decoration: none;
-    font-size: 1.563rem;
+    font-size: 1.55rem;
 }
 
 .button:hover {
@@ -673,11 +635,13 @@ footer h3{
     grid-row: 2;
     grid-column: 1/2;
 }
+.contact-information a{
+    color: lightblue;
+}
 
 .site-links{
     grid-row: 2;
     grid-column: 2/3;
-    padding-top: 2.5%;
 }
 
 .site-links p {
@@ -698,11 +662,6 @@ footer h3{
     grid-row: 2;
     grid-column: 3/4;
     padding-top: 0;
-}
-
-.social-media-links p {
-    font-weight: bold;
-    font-size: 1.563rem;
 }
 
 .social-media-links a {
@@ -726,34 +685,30 @@ https://www.w3schools.com/howto/howto_css_social_media_buttons.asp
     margin-right: 2%;
     text-align: center;
     text-decoration: none;
-    font-size: 1.875rem;
+    color: white;
 }
 
 .fa-facebook {
     background-color: #3B5998;
-    color: white;
 }
 
 .fa-twitter {
     background-color: #55ACEE;
-    color: white;
 }
 
 .fa-instagram {
     background-color: #125688;
-    color: white;
 }
 
 .fa-youtube {
     background-color: #bb0000;
-    color: white;
 }
 
 /* Slutt på ikonkode */
 
-/* Når siden er mindre enn 700 px skal grid stackes */
+/* Når siden er mindre enn 760 px skal grid stackes */
 @media (max-width: 760px) {
-    .footer-grid-system {
+    .footer-grid {
         grid-template-columns: 1fr;
     }
 /* Setter plassen til grid, og fjerner underlinja til gridden */
@@ -792,16 +747,3 @@ https://www.w3schools.com/howto/howto_css_social_media_buttons.asp
         padding: 1%;
     }
 }
-.top-button{
-    top: 90%;
-    text-decoration:none;
-    font-size: 3.5rem;
-    text-align: right;
-    position: fixed;
-    bottom: 20px;
-    z-index: 999;
-    right: 10px;
-    border: 2px solid black;
-    border-radius: 100%;
-    background-color: lightgrey;
- }
