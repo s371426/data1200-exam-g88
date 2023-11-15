@@ -576,22 +576,27 @@ seg av resten */
     display:flex;
     flex-direction: row;
     flex-wrap: wrap;
-
+    justify-content: center;
 }
 
 .gallery-flex picture{
-    min-width: 200px;
-    max-width: 500px;
-    margin: 20px
+    flex-grow: 1;
+    flex-shrink: 1;
+    flex-basis: 350px;
+    display: none;
+    max-width: 800px;
+    margin: 10px;
+
+}
+.gallery-flex img {
+    object-fit: cover;
 }
 
-#location-images:checked ~ .gallery-flex .gallery-location-img{
-    display: none;
+#location-images:checked ~ .gallery-flex .gallery-location-img,
+#topical-images:checked ~ .gallery-flex .gallery-topical-img {
+    display: block;
 }
 
-#topical-images:checked ~ .gallery-flex .gallery-topical-img{
-    display: none;
-}
 
 /* FOOTER */
 /* Setter fooder på bunn av siden og at bredden skal være 100% */
