@@ -533,7 +533,7 @@ figure.flex-img {
 }
 
 
-.flex-text-doubble-width{
+.flex-text-double-width{
     flex-basis: 100%;
     box-sizing: border-box;
     max-width: 1300px;
