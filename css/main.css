@@ -438,6 +438,8 @@ seg av resten */
     .sidenav {
         grid-column: 1;
         grid-row: 2;
+        position: relative;
+        top: 0;
     }
 }
 
