@@ -618,7 +618,7 @@ footer {
     position: relative;
     bottom: 0;
     width: 100%;
-    background-color: #8899a4;
+    background-color:var(--main-color) ;
     padding-bottom: 2%;
 }
 
@@ -656,7 +656,7 @@ footer h3{
 /* design til knappen */
 .button {
     padding: 3px;
-    color: var(--main-color);
+    color: yellow;
     background-color: black;
     text-decoration: none;
     font-size: 1.55rem;
@@ -669,6 +669,9 @@ footer h3{
 .contact-information{
     grid-row: 2;
     grid-column: 1/2;
+}
+.contact-information a{
+    color: lightblue;
 }
 
 .site-links{
