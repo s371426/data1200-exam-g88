@@ -469,8 +469,8 @@ seg av resten */
 }
 
 /* To bokser inni location-flex, gjør at de er like store*/
-.location-img,
-.location-text{
+.flex-img,
+.flex-text{
     flex-basis: 50%;
     box-sizing: border-box;
     max-width: 650px;
@@ -480,7 +480,7 @@ seg av resten */
 
 /* Er inni location-flex, inneholder bilde/bildetekst
    position for å kompensere for bildetekst */
-.location-img {
+figure.flex-img {
     position: relative;
     top: 0.66rem;
     margin-top: 0.5rem;
@@ -488,7 +488,7 @@ seg av resten */
 }
 
 /* Er inni location-flex, inneholder ovserktift/tekst */
-.location-text {
+.flex-text {
 }
 
 /* Endrer location-flex flexbox til å være vertikal når viewport mindre enn 760px (Mobil) */
@@ -497,8 +497,8 @@ seg av resten */
         flex-direction: column;
     }
 
-    .location-img,
-    .location-text {
+    .flex-img,
+    .flex-text {
         max-width: none;
     }
 }
@@ -512,11 +512,11 @@ seg av resten */
 
 /* Bytter om på rekkefølgen på annenhver sibling element hvis viewport 761px eller bredere*/
 @media only screen and (min-width: 761px) {
-    .location-flex:nth-child(even) .location-img {
+    .location-flex:nth-child(even) .flex-img {
         order: 2;
     }
 
-    .location-flex:nth-child(even) .location-text {
+    .location-flex:nth-child(even) .flex-text {
         order: 1;
     }
 }
@@ -532,22 +532,8 @@ seg av resten */
     padding-top: 1.5%;
 }
 
-.accessibility-text,
-.accessibility-image{
-    flex-basis: 50%;
-    box-sizing: border-box;
-    max-width: 650px;
-    padding-left: 2.5%;
-    padding-right: 2.5%;
-}
 
-.accessibility-text{
-}
-
-.accessibility-image{
-}
-
-.accessibility-text-only{
+.flex-text-doubble-width{
     flex-basis: 100%;
     box-sizing: border-box;
     max-width: 1300px;
@@ -562,11 +548,6 @@ seg av resten */
 @media (max-width: 760px) {
     .accessibility-flex{
         flex-direction: column;
-    }
-
-    .accessibility-image,
-    .accessibility-text{
-        max-width: none;
     }
 }
 
