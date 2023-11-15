@@ -459,7 +459,8 @@ seg av resten */
 
 /* Normalt horisontal flexbox for to bokser, som er sentrert
    Inneholder location-img og locaiton-text */
-.location-flex {
+.location-flex,
+.accessibility-flex {
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -487,13 +488,11 @@ figure.flex-img {
     margin-bottom: 0.5rem;
 }
 
-/* Er inni location-flex, inneholder ovserktift/tekst */
-.flex-text {
-}
 
 /* Endrer location-flex flexbox til å være vertikal når viewport mindre enn 760px (Mobil) */
 @media only screen and (max-width: 760px) {
-    .location-flex {
+    .location-flex,
+    .accessibility-flex {
         flex-direction: column;
     }
 
@@ -506,7 +505,8 @@ figure.flex-img {
 /* Gjør bakgrunnen på annenhver sibling element (child av parent element) til en annen farge
 (main secondary background color) */
 /* https://developer.mozilla.org/en-US/docs/Web/CSS/:nth-child */
-.location-flex:nth-child(odd) {
+.location-flex:nth-child(odd),
+.accessibility-flex:nth-child(even) {
     background-color: var(--secondary-background-color);
 }
 
@@ -523,14 +523,14 @@ figure.flex-img {
 
 /* ACCESSIBILITY SIDE */
 
-.accessibility-flex{
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
-    padding-bottom: 1.5%;
-    padding-top: 1.5%;
-}
+/*.accessibility-flex{*/
+/*    display: flex;*/
+/*    flex-direction: row;*/
+/*    align-items: center;*/
+/*    justify-content: center;*/
+/*    padding-bottom: 1.5%;*/
+/*    padding-top: 1.5%;*/
+/*}*/
 
 
 .flex-text-full-width{
@@ -541,15 +541,15 @@ figure.flex-img {
     padding-right: 2.5%;
 }
 
-.accessibility-flex:nth-child(even){
-    background-color: var(--secondary-background-color);
-}
+/*.accessibility-flex:nth-child(even){*/
+/*    background-color: var(--secondary-background-color);*/
+/*}*/
 
-@media (max-width: 760px) {
-    .accessibility-flex{
-        flex-direction: column;
-    }
-}
+/*@media (max-width: 760px) {*/
+/*    .accessibility-flex{*/
+/*        flex-direction: column;*/
+/*    }*/
+/*}*/
 
 /* FOOTER */
 /* Setter fooder på bunn av siden og at bredden skal være 100% */
