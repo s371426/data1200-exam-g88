@@ -412,6 +412,10 @@ seg av resten */
     color: var(--topical-a-color);
 }
 
+.author-text {
+    font-size: small;
+}
+
 /* Vi skaper større kontraster for hyperlinks på dark mode, samtidig som vi beholder fargene assosiert med hyperlinks */
 .main-bar a {
     color: var(--topical-a-color);
