@@ -413,9 +413,11 @@ seg av resten */
     color: var(--topical-a-color-visited);
 }
 
+/* Vi bruker media queries slik at layouten passer bedre for de med mindre skjerm */
+/* Max-width på 900px sikrer at nettsiden skaleres bedre, der sidenav flyttes over slik at det er mer plass til bildene */
 @media (max-width: 900px) {
     .topical-grid {
-        grid-template-columns: 1fr auto;
+        grid-template-columns: 1fr;
         grid-auto-flow: row;
         max-width: none;
     }
@@ -423,7 +425,6 @@ seg av resten */
     .headline {
         grid-column: 1;
         grid-row: 1;
-        justify-self: center;
     }
 
     .sidenav {
