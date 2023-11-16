@@ -390,7 +390,6 @@ seg av resten */
     grid-column: 1;
 }
 
-
 .topical-img {
     padding-top: 20px;
 }
@@ -414,6 +413,27 @@ seg av resten */
     color: var(--topical-a-color-visited);
 }
 
+@media (max-width: 900px) {
+    .topical-grid {
+        grid-template-columns: 1fr auto;
+        grid-auto-flow: row;
+        max-width: none;
+    }
+
+    .headline {
+        grid-column: 1;
+        grid-row: 1;
+        justify-self: center;
+    }
+
+    .sidenav {
+        grid-column: 1;
+        grid-row: 2;
+        position: relative;
+        top: 0;
+    }
+
+}
 /* Vi bruker media queries slik at layouten passer bedre for de på mobile-view */
 /* Bruk av grid-auto-flow igjen for mobile-view */
 @media (max-width: 760px) {
