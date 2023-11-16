@@ -5,7 +5,7 @@
 /* Custom property om farger som kan gjenbrukes flere steder, enklere å endre senere og gjøre darkmode */
 /* Inspirert av Tengel presentasjon, eksempel nettside i faget og Mozilla web docs*/
 :root {
-    --main-color: #15856d;
+    --main-color: #749bbe;
     --main-font-color: black;
     --main-background-color: white;
     --secondary-background-color: #f0f0f0;
