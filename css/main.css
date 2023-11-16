@@ -587,7 +587,11 @@ footer {
 footer h3{
     font-size: 1.55rem;
 }
-
+footer ul{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
 /* Grid kode tatt fra: https://www.w3schools.com/css/css_grid.asp*/
 /* endrer på alle grid, og sentrerer tekst */
 .footer-grid-objects {
@@ -658,12 +662,12 @@ footer h3{
 .social-media-links {
     grid-row: 2;
     grid-column: 3/4;
-    padding-top: 0;
+
 }
 
 .social-media-links a {
     display: block;
-    padding: 1%;
+    padding-bottom:5%;
     text-decoration: none;
     color: black;
 }
