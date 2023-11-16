@@ -310,9 +310,9 @@ som reduserer hvor mye koding som trengs for plassering */
     max-width: 1300px;
     margin-right: auto;
     margin-left: auto;
-    padding-right: 3em;
-    padding-bottom: 2.3em;
-    padding-left: 3em;
+    padding-right: 3%;
+    padding-bottom: 2.5%;
+    padding-left: 3%;
     font-family: Calibri, serif;
     font-weight: normal;
 }
