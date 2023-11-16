@@ -223,8 +223,10 @@ nav {
     }
 
     /* Bytter ut hamburger ikon når menyen er åpen */
+    /*https://iconscout.com/free-icon/close-147
+    "Free Close Icon in Glyph Style" By Benjamin J sperry*/
     #hamburger-toggle:checked ~ .logo-hamburger-wrapper .hamburger-icon{
-        background-image: url(../images/stor_svart_x.png);
+        background-image: url(../images/svart_x_meny.svg);
     }
 }
 
