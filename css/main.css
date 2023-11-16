@@ -244,11 +244,11 @@ nav {
 .row {
     display: flex;
     justify-content: space-between;
+    width: 80%;
     align-items: center;
     margin: auto;
-    width: 100%;
-    padding-top: 50px;
-    padding-bottom: 50px;
+    /*padding-top: 50px;*/
+    /*padding-bottom: 50px; */
 }
 
 /*main flex container for content på home-page*/
@@ -262,6 +262,10 @@ nav {
 /* base style for hver av seksjonene på homepage */
 
 .home-main-flex-container section{
+    display: flex;
+    flex-direction: column;
+    padding-left: 20px;
+    padding-right: 20px;
     /*padding-top: 100px; */
     /*padding-right: 0;*/
     /*padding-left: 0;*/
@@ -271,12 +275,13 @@ nav {
 /*hero section*/
 .hero-flex {
     display: flex;
-    height: 70vh;
+    justify-content: center;
+    height: 100vh;
     background-image: linear-gradient(to bottom,rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('../images/forsidebilde-arkitektur-p32/arkitektur-p32-skjalg-bøhmer-vold-square-large.jpg');
     background-repeat: no-repeat;
     background-size: cover;
+    background-position: center;
     align-items: center;
-    justify-content: center;
     text-shadow: 8px -4px 20px black;
 
 }
