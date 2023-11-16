@@ -262,8 +262,6 @@ nav {
 /* base style for hver av seksjonene på homepage */
 
 .home-main-flex-container section{
-    /*display: flex;
-    flex-direction: column; */
     padding: 100px 0;
 }
 
