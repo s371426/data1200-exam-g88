@@ -604,14 +604,9 @@ seg av resten */
     opacity: 0;
 }
 
-#home-images:checked ~ section .checkbox-home-toggle,
-#topical-images:not:checked ~ section .checkbox-topical-toggle,
-#location-images:not:checked ~ section .checkbox-topical-toggle{
-    background-color: #3B5998;
-    color: red;
-}
-
-.checkbox-home-toggle{
+#home-images:not(:checked) ~ .test-gallery.checkbox-home-toggle,
+#topical-images:not(:checked) ~ .test-gallery .checkbox-topical-toggle,
+#location-images:not(:checked) ~ .test-gallery .checkbox-location-toggle{
     background-color: #3B5998;
 }
 
