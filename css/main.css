@@ -572,6 +572,8 @@ seg av resten */
 
 /* GALLERY*/
 
+.gallery-grid
+
 .gallery-flex{
     display:flex;
     flex-direction: row;
@@ -590,6 +592,17 @@ seg av resten */
 }
 .gallery-flex img {
     object-fit: cover;
+}
+
+#home-images,
+#topical-images,
+#location-images{
+    position: absolute;
+    opacity: 0;
+}
+
+.gallery-grid label {
+    cursor: pointer;
 }
 
 #home-images:checked ~ .gallery-flex .gallery-home-img,
