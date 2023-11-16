@@ -12,7 +12,7 @@
     <!-- Ikon bibliotek brukt i footer -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <title>Topical</title>
-    <meta name="description" content="XXXXXXXXX">
+    <meta name="description" content="´Aktuelt´ siden til OsloMet sin hjemmeside">
 </head>
 
 <body>
@@ -65,9 +65,11 @@
                 <picture lang="no">
                     <!-- Bilde blir valgt av device ut i fra hvilken oppløsning som passer best. "w" er bredden
                     på det bildet. Type forteller device at bildene er webp format-->
-                    <source srcset="images/topical-images/spacex-small.webp 1072w,
+                    <source srcset="images/topical-images/spacex-very-small.webp 600w,
+                                images/topical-images/spacex-small.webp 1072w,
                                 images/topical-images/spacex-medium.webp 2144w,
                                 images/topical-images/spacex-large.webp 4288w"
+                            sizes= "90vw"
                             type="image/webp"/>
 
                     <!-- Backup bilde tilfelle device ikke støtter <picture> eller webp, i tillegg til alt tekst informasjon -->
@@ -124,18 +126,21 @@
                     <!-- Bilde blir valgt av device ut i fra hvilken oppløsning som passer best. "w" er bredden
                     på det bildet. Type forteller device at bildene er webp format-->
                     <!-- Bruk av media sikrer at bildene beholder sine opprinnelige dimensjoner i mobile view -->
-                    <source srcset="images/topical-images/nasa-mobile-view.webp 900w"
+                    <source srcset="images/topical-images/nasa-mobile-view.webp 900w,
+                                    images/topical-images/nasa-small-mobile-view.webp 600w"
+                            sizes="(max-width: 760px) 90vw"
                             type="image/webp"
                             media="(max-width: 760px)"/>
 
                     <source srcset="images/topical-images/nasa-small.webp 600w,
-                                images/topical-images/nasa.webp 1200w"
+                                    images/topical-images/nasa.webp 1200w"
+                            sizes="(max-width: 900px) 45vw, (min-width: 901) 35vw"
                             type="image/webp"/>
 
                     <!-- Backup bilde tilfelle device ikke støtter <picture> eller webp, i tillegg til alt tekst informasjon -->
                     <img src="images/topical-images/nasa.jpg"
                          alt="New York sett ovenifra på kvelden, der gatebelysning dominerer landskapet"
-                         height="1200" width="1200">
+                         height="1394" width="1394">
                 </picture>
                 <figcaption>NASA, New York</figcaption>
             </figure>
@@ -175,9 +180,11 @@
                     <!-- Bilde blir valgt av device ut i fra hvilken oppløsning som passer best. "w" er bredden
                     på det bildet. Type forteller device at bildene er webp format-->
                     <!-- Bildene beholder sine opprinnelige dimensjoner i mobile view -->
-                    <source srcset="images/topical-images/imac-small.webp 900w,
-                                images/topical-images/imac-medium.webp 1440w,
-                                images/topical-images/imac-large.webp 2100w"
+                    <source srcset="images/topical-images/imac-very-small.webp 600w,
+                                    images/topical-images/imac-small.webp 900w,
+                                    images/topical-images/imac-medium.webp 1440w,
+                                    images/topical-images/imac-large.webp 2100w"
+                            sizes="(max-width: 760px) 90vw, (min-width: 761) 75vw"
                             type="image/webp"/>
 
                     <!-- Backup bilde tilfelle device ikke støtter <picture> eller webp, i tillegg til alt tekst informasjon -->
@@ -206,9 +213,11 @@
                     <!-- Bilde blir valgt av device ut i fra hvilken oppløsning som passer best. "w" er bredden
                     på det bildet. Type forteller device at bildene er webp format-->
                     <!-- Bildene beholder sine opprinnelige dimensjoner i mobile view -->
-                    <source srcset="images/topical-images/circuit-small.webp 900w,
-                                images/topical-images/circuit-medium.webp 1440w,
-                                images/topical-images/circuit-large.webp 2100w"
+                    <source srcset="images/topical-images/circuit-very-small.webp 600w,
+                                    images/topical-images/circuit-small.webp 900w,
+                                    images/topical-images/circuit-medium.webp 1440w,
+                                    images/topical-images/circuit-large.webp 2100w"
+                            sizes="(max-width: 760px) 90vw, (max-width: 900px) 45vw, (min-width: 901) 35vw"
                             type="image/webp"/>
 
                     <!-- Backup bilde tilfelle device ikke støtter <picture> eller webp, i tillegg til alt tekst informasjon -->
