@@ -394,7 +394,7 @@ seg av resten */
 }
 
 #author {
-    color: orangered;
+    color: var(--topical-a-color);
 }
 
 /* Vi skaper større kontraster for hyperlinks på dark mode, samtidig som vi beholder fargene assosiert med hyperlinks */
