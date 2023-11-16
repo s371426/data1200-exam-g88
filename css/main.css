@@ -13,7 +13,6 @@
     --topical-navbar-a-background-color: rgb(243, 250, 255);
     --topical-a-color: rgb(77,77,255);
     --topical-a-color-visited: #551A8B;
-
 }
 
 /* Darkmode som blir aktivert når device er satt til darkmode */
@@ -225,7 +224,7 @@ nav {
 
     /* Bytter ut hamburger ikon når menyen er åpen */
     #hamburger-toggle:checked ~ .logo-hamburger-wrapper .hamburger-icon{
-        background-image: url(../images/logo-oslomet-svart.svg);
+        background-image: url(../images/stor_svart_x.png);
     }
 }
 
@@ -602,6 +601,7 @@ footer {
 footer h3{
     font-size: 1.55rem;
 }
+/*Fjerner punktene i listen, og fjerner tab mellomrommet*/
 footer ul{
     list-style-type: none;
     margin: 0;
