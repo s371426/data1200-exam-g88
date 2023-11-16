@@ -349,7 +349,6 @@ som reduserer hvor mye koding som trengs for plassering */
     padding-right: 3%;
     padding-bottom: 2.5%;
     padding-left: 3%;
-    font-family: Calibri, serif;
     font-weight: normal;
 }
 
@@ -363,10 +362,9 @@ som reduserer hvor mye koding som trengs for plassering */
 .headline h1 {
     padding-top: 0.2em;
     border-bottom: 2px solid;
-    text-align: center;
     font-weight: bolder;
     font-size: 2.3rem;
-    letter-spacing: 0.09em;
+    letter-spacing: 0.07em;
 }
 
 .headline p {
