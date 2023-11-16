@@ -43,19 +43,25 @@
 </header>
 
 <main class="gallery-grid">
-    <label for="home-images">
-        Home Bilder
-    </label>
-    <label for="topical-images">
-        Topical Bilder
-    </label>
-    <label for="location-images">
-        Lokasjoner Bilder
-    </label>
-    <h1>Galleri</h1>
     <input id="home-images" type="checkbox" checked>
     <input id="topical-images" type="checkbox" checked>
     <input id="location-images" type="checkbox" checked>
+    <section>
+        <label class="checkbox-home-toggle" for="home-images">
+            <span class="checkbox-home-icon"></span>
+            Home Bilder
+        </label>
+        <label class="checkbox-topical-toggle" for="topical-images">
+            <span class="checkbox-topical-icon"></span>
+            Topical Bilder
+        </label>
+        <label class="checkbox-topical-toggle" for="location-images">
+            <span class="checkbox-location-icon"></span>
+            Lokasjoner Bilder
+        </label>
+    </section>
+
+    <h1>Galleri</h1>
 
     <section class="gallery-flex">
 

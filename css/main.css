@@ -572,7 +572,6 @@ seg av resten */
 
 /* GALLERY*/
 
-.gallery-grid
 
 .gallery-flex{
     display:flex;
@@ -594,6 +593,10 @@ seg av resten */
     object-fit: cover;
 }
 
+.gallery-grid label {
+    cursor: pointer;
+}
+
 #home-images,
 #topical-images,
 #location-images{
@@ -601,8 +604,15 @@ seg av resten */
     opacity: 0;
 }
 
-.gallery-grid label {
-    cursor: pointer;
+#home-images:checked ~ section .checkbox-home-toggle,
+#topical-images:not:checked ~ section .checkbox-topical-toggle,
+#location-images:not:checked ~ section .checkbox-topical-toggle{
+    background-color: #3B5998;
+    color: red;
+}
+
+.checkbox-home-toggle{
+    background-color: #3B5998;
 }
 
 #home-images:checked ~ .gallery-flex .gallery-home-img,
@@ -610,6 +620,7 @@ seg av resten */
 #location-images:checked ~ .gallery-flex .gallery-location-img {
     display: block;
 }
+
 
 
 /* FOOTER */
