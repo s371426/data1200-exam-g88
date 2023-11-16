@@ -17,27 +17,34 @@
 
 <body>
 <header>
-    <nav class="navbar">
+    <!-- Navigasjonsbar med logo og hamburgermeny -->
+    <nav>
+
+        <!-- Input checkbox for hamburger toggle (label)-->
+        <input id="hamburger-toggle" type="checkbox" aria-label="Åpne navigasjonsmeny"/>
+
         <div class="logo-hamburger-wrapper">
-            <a href="index.html" title="Tilbake til forsiden"><img id="nav-logo" src="images/logo-oslomet-gul.svg"
-                                                                   alt="OsloMet sin logo" width="67.56" height="40"></a>
-            <label class="hamburger-toggle-container" for="hamburger-toggle" >
+
+            <!-- Logo på navbar -->
+            <a href="index.html" title="Tilbake til forsiden" tabindex="1">
+                <img id="nav-logo" src="images/logo-oslomet-gul.svg" alt="OsloMet sin logo" width="68" height="40">
+            </a>
+
+            <!-- Label for input checkbox og hamburger meny ikon-->
+            <label class="hamburger-toggle-container" for="hamburger-toggle">
                 <span class="hamburger-icon"></span>
             </label>
         </div>
 
-        <!-- definer en input id for hamburger element som vi skal bruke på tablet & mobil- versjoner. -->
-        <input id="hamburger-toggle" type="checkbox" aria-label="Åpne navigasjonsmeny"/>
-
-        <!-- definer en ul class for lenkene i navigasjonsmenyen og linker dem til .html filene i prosjektet -->
+        <!-- Navigasjons meny side lenker-->
         <ul class="menu">
             <li><a href="index.html">Hjem</a></li>
             <li><a href="accessibility.html">Tilgjengelighet</a></li>
             <li><a href="topical.html">Topical</a></li>
             <li><a href="locations.html">Lokasjoner</a></li>
-            <!-- <li><a href="maybepage5.html">Maybepage5</a></li> -->
         </ul>
 
+        <!-- Kontakt knapp på navigasjonsbar -->
         <a class="contact-button" href="maybepage5.html">Kontakt</a>
     </nav>
 </header>
@@ -55,54 +62,41 @@
     </div>
     
     <div class="accessibility-flex">
-        <ul class="accessibility-text">
-            <li><h2>Font:</h2>
-                <p>Vi har valgt å bruke "Verdana" som font, og "sans-serif" som backup. "Verdana" har vi
-                valgt
-                ettersom fonten har tydelige former og forskjeller mellom bokstavene, og er tydelig med mange og få
-                piksler.
-                Det er tydelige forskjeller mellom "l" og "I". Vi har valgt å ha en backup font, "sans-serif", som
-                blir hovedfonten
-                dersom brukeren ikke får lastet inn "Verdana".</p>
-            </li>
-            <li>
-                <h2>Tekst</h2>
-                <p>Vi satt line height på paragrafer til 1.5 fordi det er det some er anbefalt da det gjør det enklere
-                    å lese. Tekst størrelse er bare rem slik at den vil skalere riktig utifra brukerbehov</p>
-            </li>
-            <li><h2>Farge:</h2>
-                <p>På siden har vi "mørk og lys" modus, som blir valgt utifra instillingene på brukerens pc. Lys
-                    modusen har hvit
-                    bakgrunnsfarge med mørk tekst, og mørk modusen har mørk bakgrunn med hvit tekst. Vi har hatt stort
-                    fokus på kontrast
-                    mellom tekst og bakgrunn.</p>
-            </li>
-            <li><h2>Struktur:</h2>
-                <p>På sidene har vi valgt å ha en generell utforming, med nav bar på toppen,
-                hovedinnhold i
-                midten og footer på bunn. Vi har brukt tydelige overskrifter og bilder, for å gjøre det enkelt for
-                brukerne å
-                forstå siden uten å lese innholdet.
-                Maks bredde på siden vår er satt til 1300px slik at man ikke må vri hode for å lese hvis man bruker en
-                stor skjerm.</p>
-            </li>
-            <li><h2>Alt tekster:</h2>
-                <p>la bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla
-                bla
-                bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla
-                bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla</p>
-            </li>
-            <li><h2>Bilder</h2>
-                <p>Vi har valgt å bruker WebP på alle bildene våres, fordi med WebP kan vi komprimere bilder uten stor
-                tap av kvalitet.
-                Dette sikrer at alle bildene vi har er under 1 mb som gjør at nettsidene våres lastes inn kjappere, som
-                gjør nettsidene bedre tilgjengelig for de som har treg internett hastighet.
-                Vi har også lastet opp flere versjoner av de samme bildene med ulike dimensjoner slik at filstørrelsene
-                er enda mindre avhengig av dimensjonene på enheten.
-                Vi har lastet opp jpg versjon av bildene som backup, der disse også er under 1 mb.</p>
+        <div class="accessibility-text">
+            <h2>Font:</h2>
+            <p>Vi har valgt å bruke "Verdana" som font, og "sans-serif" som backup. "Verdana" har vi valgt ettersom
+                fonten har tydelige former og forskjeller mellom bokstavene, og er tydelig med mange og få piksler.
+                Det er tydelige forskjeller mellom "l" og "I". Vi har valgt å ha en backup font, "sans-serif", som blir
+                hovedfonten dersom brukeren ikke får lastet inn "Verdana".</p>
 
-            </li>
-        </ul>
+            <h2>Tekst</h2>
+            <p>Vi satt line height på paragrafer til 1.5 fordi det er det some er anbefalt da det gjør det enklere
+                å lese. Tekst størrelse er bare rem slik at den vil skalere riktig utifra brukerbehov</p>
+
+            <h2>Farge:</h2>
+            <p>På siden har vi "mørk og lys" modus, som blir valgt utifra instillingene på brukerens pc. Lys modusen
+                har hvit bakgrunnsfarge med mørk tekst, og mørk modusen har mørk bakgrunn med hvit tekst. Vi har hatt
+                stort fokus på kontrast mellom tekst og bakgrunn.</p>
+
+            <h2>Struktur:</h2>
+            <p>På sidene har vi valgt å ha en generell utforming, med nav bar på toppen, hovedinnhold i midten og
+                på bunn. Vi har brukt tydelige overskrifter og bilder, for å gjøre det enkelt for brukerne å forstå
+                siden uten å lese innholdet. Maks bredde på siden vår er satt til 1300px slik at man ikke må vri hode
+                for å lese hvis man bruker en stor skjerm.</p>
+
+            <h2>Alt tekster:</h2>
+            <p>la bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla
+            bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla
+            bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla</p>
+            <h2>Bilder</h2>
+            <p>Vi har valgt å bruker WebP på alle bildene våres, fordi med WebP kan vi komprimere bilder uten stor tap
+                av kvalitet. Dette sikrer at alle bildene vi har er under 1 mb som gjør at nettsidene våres lastes inn
+                kjappere, som gjør nettsidene bedre tilgjengelig for de som har treg internett hastighet. Vi har også
+                lastet opp flere versjoner av de samme bildene med ulike dimensjoner slik at filstørrelsene er enda
+                mindre avhengig av dimensjonene på enheten. Vi har lastet opp jpg versjon av bildene som backup, der
+                disse også er under 1 mb.</p>
+
+        </div>
         <picture class="accessibility-image">
             BILDE
         </picture>
@@ -145,11 +139,9 @@
             <h2>Footer:</h2>
             <p> På footeren har vi valgt å imitere oslomet.no sin footer. Vi har lenker nederst på siden, som gjør det
                 enkelt for brukerne å gå videre til neste side, isteden for å måtte manøvrere seg til toppen igjen.
-                Lenkene til
-                sosiale medier har ikoner. Dette har vi gjort for å gjøre det enkelt for brukerne å forstå hvor lenkene
-                går.
-                Lenkene får også strek under seg når man holder musen over, for å indikere at det er en lenke.
-                Ellers har vi kontrast mellom tekst og bakgrunn, samt oversiktlig og leselig tekst.
+                Lenkene til sosiale medier har ikoner. Dette har vi gjort for å gjøre det enkelt for brukerne å forstå
+                hvor lenkene går. Lenkene får også strek under seg når man holder musen over, for å indikere at det er
+                en lenke. Ellers har vi kontrast mellom tekst og bakgrunn, samt oversiktlig og leselig tekst.
             </p>
         </div>
     </div>
@@ -168,40 +160,44 @@
         <!-- Kontakt informasjon til OsloMet -->
         <section class="footer-grid-objects contact-information">
             <h3>KontaktInformasjon</h3>
-            <p>Oslo Metropolitan University</p>
-            <p>Storbyuniversitetet</p>
-            <p>Postboks 4, St. Olavs plass</p>
-            <p>0130 Oslo</p>
-            <p>Tlf.: <a href="tel:67235000">67 23 50 00</a></p>
+            <ul>
+                <li><p>Oslo Metropolitan University</p></li>
+                <li><p>Storbyuniversitetet</p></li>
+                <li><p>Postboks 4, St. Olavs plass</p></li>
+                <li><p>0130 Oslo</p></li>
+                <li><p>Tlf.: <a href="tel:67235000">67 23 50 00</a></p></li>
+            </ul>
         </section>
 
         <!-- Lenker til de andre sidene på nettsiden vår -->
         <section class="footer-grid-objects site-links">
             <h3>Navigasjon</h3>
-            <p><a href="index.html">Hjem</a></p>
-            <p><a href="accessibility.html">Tilgjengelighet</a></p>
-            <p><a href="topical.html">Topical</a></p>
-            <p><a href="locations.html">Lokasjoner</a></p>
-            <p><a href="maybepage5.html">Maybepage5</a></p>
+            <ul>
+                <li><p><a href="index.html">Hjem</a></p></li>
+                <li><p><a href="accessibility.html">Tilgjengelighet</a></p></li>
+                <li><p><a href="topical.html">Topical</a></p></li>
+                <li><p><a href="locations.html">Lokasjoner</a></p></li>
+                <li><p><a href="maybepage5.html">Maybepage5</a></p></li>
+            </ul>
         </section>
 
         <!-- Sosiale medie lenker -->
         <section class="footer-grid-objects social-media-links">
             <h3>Følg oss</h3>
-            <div class="ikoner">
-                <a href="https://www.facebook.com/oslomet/">
+            <ul>
+               <li> <a href="https://www.facebook.com/oslomet/">
                     <div class="fa fa-facebook"></div>
-                    Facebook </a>
-                <a href="https://twitter.com/oslomet">
+                   Facebook </a></li>
+               <li><a href="https://twitter.com/oslomet">
                     <div class="fa fa-twitter"></div>
-                    Twitter</a>
-                <a href="https://www.instagram.com/oslomet/?hl=nb">
+                   Twitter</a></li>
+                <li><a href="https://www.instagram.com/oslomet/?hl=nb">
                     <div class="fa fa-instagram"></div>
-                    Instagram</a>
-                <a href="https://www.youtube.com/@OsloMetFilm">
+                    Instagram</a></li>
+                <li><a href="https://www.youtube.com/@OsloMetFilm">
                     <div class="fa fa-youtube"></div>
-                    Youtube</a>
-            </div>
+                    Youtube</a></li>
+            </ul>
         </section>
 </footer>
 </body>
