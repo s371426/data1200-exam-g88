@@ -426,7 +426,7 @@ seg av resten */
 }
 
 #author {
-    color: orangered;
+    color: var(--topical-a-color);
 }
 
 /* Vi skaper større kontraster for hyperlinks på dark mode, samtidig som vi beholder fargene assosiert med hyperlinks */
@@ -682,6 +682,8 @@ footer ul{
     grid-row: 2;
     grid-column: 1/2;
 }
+
+/*fargen på linken før og etter den har blitt trykket på*/
 .contact-information a{
     color: #0000a4;
 }
