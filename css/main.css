@@ -5,7 +5,7 @@
 /* Custom property om farger som kan gjenbrukes flere steder, enklere å endre senere og gjøre darkmode */
 /* Inspirert av Tengel presentasjon, eksempel nettside i faget og Mozilla web docs*/
 :root {
-    --main-color: #15856d;
+    --main-color: #749bbe;
     --main-font-color: black;
     --main-background-color: white;
     --secondary-background-color: #f0f0f0;
@@ -13,7 +13,6 @@
     --topical-navbar-a-background-color: #F3FAFF;
     --topical-a-color: #4D4DFF;
     --topical-a-color-visited: #551A8B;
-
 }
 
 /* Darkmode som blir aktivert når device er satt til darkmode */
@@ -127,7 +126,7 @@ nav {
 }
 
 .contact-button:hover {
-    background-color: cadetblue;
+    -webkit-filter: brightness(60%);
 }
 
 /* Secondær flexbox med logo/hamburger, slik at de blir fordelt på navbar separat fra linke liste */
@@ -225,7 +224,7 @@ nav {
 
     /* Bytter ut hamburger ikon når menyen er åpen */
     #hamburger-toggle:checked ~ .logo-hamburger-wrapper .hamburger-icon{
-        background-image: url(../images/logo-oslomet-svart.svg);
+        background-image: url(../images/stor_svart_x.png);
     }
 }
 
@@ -546,8 +545,8 @@ seg av resten */
     flex-direction: row;
     align-items: center;
     justify-content: center;
-    padding-bottom: 1.5%;
     padding-top: 1.5%;
+    padding-bottom: 1.5%;
 }
 
 .accessibility-text,
@@ -555,8 +554,8 @@ seg av resten */
     flex-basis: 50%;
     box-sizing: border-box;
     max-width: 650px;
-    padding-left: 2.5%;
     padding-right: 2.5%;
+    padding-left: 2.5%;
 }
 
 .accessibility-text{
@@ -569,8 +568,9 @@ seg av resten */
     flex-basis: 100%;
     box-sizing: border-box;
     max-width: 1300px;
-    padding-left: 2.5%;
     padding-right: 2.5%;
+    padding-left: 2.5%;
+
 }
 
 .accessibility-flex:nth-child(even){
@@ -603,6 +603,7 @@ footer {
 footer h3{
     font-size: 1.55rem;
 }
+/*Fjerner punktene i listen, og fjerner tab mellomrommet*/
 footer ul{
     list-style-type: none;
     margin: 0;
@@ -643,19 +644,13 @@ footer ul{
     text-decoration: none;
     font-size: 1.55rem;
 }
-
 .button:hover {
     text-decoration: underline;
 }
-
 .contact-information{
     grid-row: 2;
     grid-column: 1/2;
 }
-.contact-information a{
-    color: lightblue;
-}
-
 .site-links{
     grid-row: 2;
     grid-column: 2/3;
@@ -741,7 +736,10 @@ https://www.w3schools.com/howto/howto_css_social_media_buttons.asp
         text-align: left;
         border-bottom: 1px solid;
         border-bottom-color: black;
-        padding: 0 0 3% 3%;
+        padding-top: 0;
+        padding-right: 0;
+        padding-bottom: 3%;
+        padding-left: 3%;
     }
 
     .contact-information{
