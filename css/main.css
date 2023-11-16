@@ -317,13 +317,13 @@ som reduserer hvor mye koding som trengs for plassering */
     grid-auto-flow: row;
     grid-column-gap: 60px;
     max-width: 1300px;
+    margin-right: auto;
+    margin-left: auto;
     padding-right: 3em;
     padding-left: 3em;
     padding-bottom: 2.3em;
     font-family: Calibri, serif;
     font-weight: normal;
-    margin-right: auto;
-    margin-left: auto;
 }
 
 .headline {
