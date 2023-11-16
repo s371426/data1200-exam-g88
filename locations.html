@@ -17,27 +17,34 @@
 
 <body>
 <header>
-    <nav class="navbar">
+    <!-- Navigasjonsbar med logo og hamburgermeny -->
+    <nav>
+
+        <!-- Input checkbox for hamburger toggle (label)-->
+        <input id="hamburger-toggle" type="checkbox" aria-label="Åpne navigasjonsmeny"/>
+
         <div class="logo-hamburger-wrapper">
-            <a href="index.html" title="Tilbake til forsiden"><img id="nav-logo" src="images/logo-oslomet-gul.svg"
-                                                                   alt="OsloMet sin logo" width="67.56" height="40"></a>
+
+            <!-- Logo på navbar -->
+            <a href="index.html" title="Tilbake til forsiden" tabindex="1">
+                <img id="nav-logo" src="images/logo-oslomet-gul.svg" alt="OsloMet sin logo" width="68" height="40">
+            </a>
+
+            <!-- Label for input checkbox og hamburger meny ikon-->
             <label class="hamburger-toggle-container" for="hamburger-toggle">
                 <span class="hamburger-icon"></span>
             </label>
         </div>
 
-        <!-- definer en input id for hamburger element som vi skal bruke på tablet & mobil- versjoner. -->
-        <input id="hamburger-toggle" type="checkbox" aria-label="Åpne navigasjonsmeny"/>
-
-        <!-- definer en ul class for lenkene i navigasjonsmenyen og linker dem til .html filene i prosjektet -->
+        <!-- Navigasjons meny side lenker-->
         <ul class="menu">
             <li><a href="index.html">Hjem</a></li>
             <li><a href="accessibility.html">Tilgjengelighet</a></li>
             <li><a href="topical.html">Topical</a></li>
             <li><a href="locations.html">Lokasjoner</a></li>
-            <!-- <li><a href="maybepage5.html">Maybepage5</a></li> -->
         </ul>
 
+        <!-- Kontakt knapp på navigasjonsbar -->
         <a class="contact-button" href="maybepage5.html">Kontakt</a>
     </nav>
 </header>
@@ -245,49 +252,52 @@
     <!-- Grid kode tatt fra: https://www.w3schools.com/css/css_grid.asp-->
     <!-- nyhetsbrev tekst, markert med * ettersom teksten og knappen er midlertidig. -->
     <section class="footer-grid-objects newsletter">
-        <p>*Hold deg oppdatert på hva som skjer</p>
+        <p>OsloMet</p>
     </section>
-
     <section class="newsletter-button">
         <a href="https://www.oslomet.no/nyhetsbrev" class="button">Nyhetsbrev! </a>
     </section>
     <!-- Kontakt informasjon til OsloMet -->
     <section class="footer-grid-objects contact-information">
-        <h3>OsloMet</h3>
-        <p>Oslo Metropolitan University</p>
-        <p>Storbyuniversitetet</p>
-        <p>Postboks 4, St. Olavs plass</p>
-        <p>0130 Oslo</p>
-        <p>Tlf.: <a href="tel:67235000">67 23 50 00</a></p>
+        <h3>KontaktInformasjon</h3>
+        <ul>
+            <li><p>Oslo Metropolitan University</p></li>
+            <li><p>Storbyuniversitetet</p></li>
+            <li><p>Postboks 4, St. Olavs plass</p></li>
+            <li><p>0130 Oslo</p></li>
+            <li><p>Tlf.: <a href="tel:67235000">67 23 50 00</a></p></li>
+        </ul>
     </section>
 
     <!-- Lenker til de andre sidene på nettsiden vår -->
     <section class="footer-grid-objects site-links">
         <h3>Navigasjon</h3>
-        <p><a href="index.html">Hjem</a></p>
-        <p><a href="accessibility.html">Tilgjengelighet</a></p>
-        <p><a href="topical.html">Topical</a></p>
-        <p><a href="locations.html">Lokasjoner</a></p>
-        <p><a href="maybepage5.html">Maybepage5</a></p>
+        <ul>
+            <li><p><a href="index.html">Hjem</a></p></li>
+            <li><p><a href="accessibility.html">Tilgjengelighet</a></p></li>
+            <li><p><a href="topical.html">Topical</a></p></li>
+            <li><p><a href="locations.html">Lokasjoner</a></p></li>
+            <li><p><a href="maybepage5.html">Maybepage5</a></p></li>
+        </ul>
     </section>
 
     <!-- Sosiale medie lenker -->
     <section class="footer-grid-objects social-media-links">
         <h3>Følg oss</h3>
-        <div class="ikoner">
-            <a href="https://www.facebook.com/oslomet/">
+        <ul>
+            <li> <a href="https://www.facebook.com/oslomet/">
                 <div class="fa fa-facebook"></div>
-                Facebook </a>
-            <a href="https://twitter.com/oslomet">
+                Facebook </a></li>
+            <li><a href="https://twitter.com/oslomet">
                 <div class="fa fa-twitter"></div>
-                Twitter</a>
-            <a href="https://www.instagram.com/oslomet/?hl=nb">
+                Twitter</a></li>
+            <li><a href="https://www.instagram.com/oslomet/?hl=nb">
                 <div class="fa fa-instagram"></div>
-                Instagram</a>
-            <a href="https://www.youtube.com/@OsloMetFilm">
+                Instagram</a></li>
+            <li><a href="https://www.youtube.com/@OsloMetFilm">
                 <div class="fa fa-youtube"></div>
-                Youtube</a>
-        </div>
+                Youtube</a></li>
+        </ul>
     </section>
 </footer>
 </body>
