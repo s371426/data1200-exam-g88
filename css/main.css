@@ -9,9 +9,9 @@
     --main-font-color: black;
     --main-background-color: white;
     --secondary-background-color: #f0f0f0;
-    --topical-navbar-h2-background-color: rgb(80, 128, 169);
-    --topical-navbar-a-background-color: rgb(243, 250, 255);
-    --topical-a-color: rgb(77,77,255);
+    --topical-navbar-h2-background-color: #5080A9;
+    --topical-navbar-a-background-color: #F3FAFF;
+    --topical-a-color: #4D4DFF;
     --topical-a-color-visited: #551A8B;
 
 }
@@ -23,10 +23,10 @@
         --main-background-color: #212121;
         --main-font-color: #eeeeee;
         --secondary-background-color: #292929;
-        --topical-navbar-h2-background-color: rgb(10, 47, 80);
-        --topical-navbar-a-background-color: rgb(12, 59, 100);
+        --topical-navbar-h2-background-color: #0A2F50;
+        --topical-navbar-a-background-color: #0C3B64;
         --topical-a-color: #58a6ff;
-        --topical-a-color-visited: rgb(182, 97, 255);
+        --topical-a-color-visited: #B661FF;
     }
 }
 
