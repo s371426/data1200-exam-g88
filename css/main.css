@@ -305,6 +305,14 @@ nav {
 
 }
 
+/*historie-intro section*/
+.historie-box-1,
+.historie-box-2,
+.historie-box-3 {
+    flex-basis: 33%;
+    padding: 1.6rem;
+}
+
 
 
 /*TOPICAL PAGE*/
