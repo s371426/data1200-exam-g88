@@ -338,6 +338,7 @@ som reduserer hvor mye koding som trengs for plassering */
     font-weight: 550;
 }
 
+/* Position: sticky sørger for at når brukeren scroller ned, så følger sidenav slik at man har den alltid tilgjengelig */
 .sidenav {
     grid-column: 2;
     grid-row: 2/4;
@@ -405,8 +406,8 @@ seg av resten */
     color: var(--topical-a-color-visited);
 }
 
-/* Vi bruker media queries slik at layouten passer bedre for de med mindre skjerm */
-/* Max-width på 900px sikrer at nettsiden skaleres bedre, der sidenav flyttes over slik at det er mer plass til bildene */
+/* Vi bruker media queries slik at layouten passer bedre for de med mindre skjerm, og når man skalerer skjermen */
+/* Max-width på 900px sikrer at vi kan flytte på sidenav over slik at bildene kan benytte seg tomrommet for bedre skalering */
 @media (max-width: 900px) {
     .topical-grid {
         grid-template-columns: auto;
@@ -426,7 +427,7 @@ seg av resten */
     }
 
 }
-/* Vi bruker media queries igjen slik at layouten passer bedre for de på mobile-view */
+/* Nå sørger vi for at alle bildene går under og over teksten, og ikke ved siden av for bedre view */
 @media (max-width: 760px) {
     .topical-grid {
         grid-template-columns: auto;
