@@ -295,13 +295,10 @@ nav {
     align-items: center;
 }
 
-.campus-box-1 {
-    width: 33%;
-}
-
+.campus-box-1,
 .campus-box-2 {
-    width: 66%;
-    padding: 0 5%;
+    flex-basis: 50%;
+    padding: 1.6rem;
 }
 
 .campus-box-2 h2 {
@@ -315,11 +312,19 @@ nav {
 }
 
 /*historie-intro section*/
+
+.historie-intro-flex {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
 .historie-box-1,
 .historie-box-2 {
     flex-basis: 50%;
     padding: 1.6rem;
-}
+
 
 /* spisesteder section*/
 
