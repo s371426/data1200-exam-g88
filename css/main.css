@@ -349,6 +349,9 @@ som reduserer hvor mye koding som trengs for plassering */
 .sidenav {
     grid-column: 2;
     grid-row: 2/4;
+    align-self: start;
+    position: sticky;
+    top: 2em;
 }
 
 .sidenav h2 {
@@ -435,6 +438,8 @@ seg av resten */
     .sidenav {
         grid-column: 1;
         grid-row: 2;
+        position: relative;
+        top: 0;
     }
 }
 
