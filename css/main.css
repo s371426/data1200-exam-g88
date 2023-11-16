@@ -301,7 +301,17 @@ nav {
 
 .campus-box-2 {
     width: 66%;
-    padding: 0 10%;
+    padding: 0 5%;
+}
+
+.campus-box-2 h2 {
+    font-size: 1.4rem;
+    font-weight: 300;
+}
+
+.campus-box-2 h3 {
+    font-size: 2.6rem;
+    font-weight: 700;
 }
 
 /*historie-intro section*/
