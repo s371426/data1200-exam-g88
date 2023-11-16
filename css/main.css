@@ -545,8 +545,8 @@ seg av resten */
     flex-direction: row;
     align-items: center;
     justify-content: center;
-    padding-bottom: 1.5%;
     padding-top: 1.5%;
+    padding-bottom: 1.5%;
 }
 
 .accessibility-text,
@@ -554,8 +554,8 @@ seg av resten */
     flex-basis: 50%;
     box-sizing: border-box;
     max-width: 650px;
-    padding-left: 2.5%;
     padding-right: 2.5%;
+    padding-left: 2.5%;
 }
 
 .accessibility-text{
@@ -568,8 +568,9 @@ seg av resten */
     flex-basis: 100%;
     box-sizing: border-box;
     max-width: 1300px;
-    padding-left: 2.5%;
     padding-right: 2.5%;
+    padding-left: 2.5%;
+
 }
 
 .accessibility-flex:nth-child(even){
@@ -643,19 +644,13 @@ footer ul{
     text-decoration: none;
     font-size: 1.55rem;
 }
-
 .button:hover {
     text-decoration: underline;
 }
-
 .contact-information{
     grid-row: 2;
     grid-column: 1/2;
 }
-.contact-information a{
-    color: lightblue;
-}
-
 .site-links{
     grid-row: 2;
     grid-column: 2/3;
@@ -741,7 +736,10 @@ https://www.w3schools.com/howto/howto_css_social_media_buttons.asp
         text-align: left;
         border-bottom: 1px solid;
         border-bottom-color: black;
-        padding: 0 0 3% 3%;
+        padding-top: 0;
+        padding-right: 0;
+        padding-bottom: 3%;
+        padding-left: 3%;
     }
 
     .contact-information{
