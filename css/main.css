@@ -126,7 +126,7 @@ nav {
 }
 
 .contact-button:hover {
-    background-color: cadetblue;
+    -webkit-filter: brightness(60%);
 }
 
 /* Secondær flexbox med logo/hamburger, slik at de blir fordelt på navbar separat fra linke liste */
