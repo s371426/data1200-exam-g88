@@ -233,17 +233,6 @@ nav {
 
 /* FLEX-CONTAINER FORSIDE */
 
-/* utility class for å legge content inni hver seksjon horisontalt på homepage og holde det consistent for hver del*/
-/*.row {
-    display: flex;
-    justify-content: space-between;
-    width: 80%;
-    align-items: center;
-    margin: auto; */
-    /*padding-top: 50px;*/
-    /*padding-bottom: 50px; */
-
-
 /*main flex container for content på home-page*/
 
 .home-main-flex-container {
