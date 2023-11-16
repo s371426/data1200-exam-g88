@@ -240,7 +240,7 @@ nav {
     margin: auto; */
     /*padding-top: 50px;*/
     /*padding-bottom: 50px; */
-}
+
 
 /*main flex container for content på home-page*/
 
@@ -253,7 +253,7 @@ nav {
 /* base style for hver av seksjonene på homepage */
 
 .home-main-flex-container section{
-    margin: 20px 0;
+    padding: 20px 0;
 }
 
 /*hero section*/
@@ -290,10 +290,18 @@ nav {
 /*campus-intro section*/
 .campus-intro-flex {
     display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
 }
 
 .campus-box-1 {
+    width: 33%;
+}
 
+.campus-box-2 {
+    width: 66%;
+    padding: 0 10%;
 }
 
 /*historie-intro section*/
