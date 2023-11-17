@@ -572,13 +572,13 @@ seg av resten */
 
 /* GALLERY*/
 
-.gallery-grid{
+.gallery-grid {
     display: grid;
     grid-template-columns: 20px 1fr 20px;
     grid-auto-rows: auto;
 }
 
-.test-gallery{
+.test-gallery {
     grid-column: 2;
     grid-row: 2;
 }
@@ -588,7 +588,7 @@ seg av resten */
     grid-row: 1;
 }
 
-.gallery-flex{
+.gallery-flex {
     grid-column: 2;
     grid-row: 3;
     display:flex;
@@ -597,7 +597,7 @@ seg av resten */
     justify-content: center;
 }
 
-.gallery-flex picture{
+.gallery-flex picture {
     flex-grow: 1;
     flex-shrink: 1;
     flex-basis: 350px;
@@ -616,7 +616,8 @@ seg av resten */
 
 #home-images,
 #topical-images,
-#location-images{
+#location-images,
+#larger-images {
     position: absolute;
     opacity: 0;
 }
@@ -633,10 +634,28 @@ seg av resten */
     display: block;
 }
 
-#larger-images:checked ~ .gallery-flex picture{
+#larger-images:checked ~ .gallery-flex picture {
     flex-basis: 500px;
 }
 
+
+@media (min-width: 1400px) {
+    .gallery-grid {
+        grid-template-columns: 20px 150px 1fr 20px;
+    }
+    .test-gallery {
+        grid-column: 2;
+
+    }
+    .gallery-grid h1 {
+        grid-column: 3;
+        grid-row: 1;
+    }
+    .gallery-flex {
+        grid-column: 3;
+        grid-row: 2;
+    }
+}
 
 /* FOOTER */
 /* Setter fooder på bunn av siden og at bredden skal være 100% */
