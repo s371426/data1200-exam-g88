@@ -256,6 +256,7 @@ nav {
 /*hero section*/
 .hero-flex {
     display: flex;
+    flex-direction: column;
     justify-content: center;
     height: 100vh;
     background-image: linear-gradient(to bottom,rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('../images/forsidebilde-arkitektur-p32/arkitektur-p32-skjalg-bøhmer-vold-square-large.jpg');
@@ -264,24 +265,21 @@ nav {
     background-position: center;
     align-items: center;
     text-shadow: 8px -4px 20px black;
+    color: white;
+
 
 }
 /*main heading i hero section*/
-.hero-text h1{
+.hero-flex h1{
     font-size: 5.5rem;
-   /* display: flex; */
     font-weight: 900;
-    color: white;
+
 
 }
 /*mindre heading i hero section*/
 
-.hero-text h2{
+.hero-flex h2{
     font-size: 2.7rem;
-  /*  display: flex; */
-    align-items: center;
-    justify-content: center;
-    color: white;
 }
 
 /*campus-intro section*/
