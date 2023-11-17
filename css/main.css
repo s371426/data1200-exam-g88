@@ -1,9 +1,9 @@
-/*DATA1200 Home Exam 2023*/
+/* DATA1200 Home Exam 2023 */
 
-/*DIVERSE*/
+/* DIVERSE */
 
 /* Custom property om farger som kan gjenbrukes flere steder, enklere å endre senere og gjøre darkmode */
-/* Inspirert av Tengel presentasjon, eksempel nettside i faget og Mozilla web docs*/
+/* Inspirert av Tengel presentasjon, eksempel nettside i faget og Mozilla web docs */
 :root {
     --main-color: #749bbe;
     --main-background-color: white;
@@ -29,28 +29,25 @@
     }
 }
 
-/* Scroller smooth når det scrolles via linker til andre steder på siden, gjelder alle elements*/
-* {
+/* Scroller smooth når det scrolles via linker til andre steder på siden, gjelder alt */
+html {
     scroll-behavior: smooth;
 }
 
+/* Generell bakgrunsfarrge, og font */
 body {
     background-color: var(--main-background-color);
     margin: 0;
     font-family: Verdana, sans-serif;
 }
 
+/* Font farge tekst i main, men ikke eks. Navbar eller footer */
 main {
     background-color: var(--main-background-color);
     color: var(--main-font-color);
 }
 
-/* Img fyller det elementet det er inni */
-img {
-    height: auto;
-    width: 100%;
-}
-
+/* Generell figure styling*/
 figure {
     margin: 0;
     padding: 0;
@@ -61,21 +58,27 @@ figcaption {
     font-size: 0.88rem;
 }
 
-/*OVERSKRIFTER*/
+/* Img fyller det elementet det er inni */
+img {
+    height: auto;
+    width: 100%;
+}
 
-/*PARAGRAFER*/
+/* OVERSKRIFTER */
+
+/* PARAGRAFER */
 
 /* For accessibility, gjør tekst enklere å lese */
 p {
     line-height: 1.5;
 }
 
-/*DIVs*/
+/* DIVs */
 
-/*HEADER*/
+/* HEADER */
 /* NAV BAR */
 
-/* Hoved flexboks navbar */
+/* Hoved flexboks navbar  fordeler conent utover bar */
 nav {
     display: flex;
     flex-direction: row;
