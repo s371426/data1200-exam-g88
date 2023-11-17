@@ -20,23 +20,23 @@
     <!-- Navigasjonsbar med logo og hamburgermeny -->
     <nav>
 
-        <!-- Input checkbox for hamburger toggle (label)-->
+        <!-- Input checkbox for hamburger toggle (label), aria-label for screen readers -->
         <input id="hamburger-toggle" type="checkbox" aria-label="Åpne navigasjonsmeny">
 
         <div class="logo-hamburger-wrapper">
 
-            <!-- Logo på navbar -->
+            <!-- Logo på navbar, tabindex for at den skal velges i riktig rekkefølge (venstre mot høyre) -->
             <a href="index.html" title="Tilbake til forsiden" tabindex="1">
                 <img id="nav-logo" src="images/logo-oslomet-gul.svg" alt="OsloMet sin logo" width="68" height="40">
             </a>
 
-            <!-- Label for input checkbox og hamburger meny ikon-->
+            <!-- Label for input checkbox og hamburger meny ikon -->
             <label class="hamburger-toggle-container" for="hamburger-toggle">
                 <span class="hamburger-icon"></span>
             </label>
         </div>
 
-        <!-- Navigasjons meny side lenker-->
+        <!-- Navigasjons meny side lenker -->
         <ul class="menu">
             <li><a href="index.html">Hjem</a></li>
             <li><a href="accessibility.html">Tilgjengelighet</a></li>
@@ -259,8 +259,8 @@
 </main>
 
 <footer>
-    <!-- Grid kode tatt fra: https://www.w3schools.com/css/css_grid.asp-->
-    <!-- nyhetsbrev tekst, markert med * ettersom teksten og knappen er midlertidig. -->
+    <!-- Grid kode tatt fra: https://www.w3schools.com/css/css_grid.asp -->
+    <!-- Nyhetsbrev tekst, markert med * ettersom teksten og knappen er midlertidig. -->
     <section class="footer-grid-objects newsletter">
         <p>OsloMet</p>
     </section>
