@@ -572,8 +572,25 @@ seg av resten */
 
 /* GALLERY*/
 
+.gallery-grid{
+    display: grid;
+    grid-template-columns: 20px 1fr 20px;
+    grid-auto-rows: auto;
+}
+
+.test-gallery{
+    grid-column: 2;
+    grid-row: 2;
+}
+
+.gallery-grid h1 {
+    grid-column: 2;
+    grid-row: 1;
+}
 
 .gallery-flex{
+    grid-column: 2;
+    grid-row: 3;
     display:flex;
     flex-direction: row;
     flex-wrap: wrap;
@@ -616,6 +633,9 @@ seg av resten */
     display: block;
 }
 
+#larger-images:checked ~ .gallery-flex picture{
+    flex-basis: 500px;
+}
 
 
 /* FOOTER */
