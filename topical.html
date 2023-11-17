@@ -12,7 +12,7 @@
     <!-- Ikon bibliotek brukt i footer -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <title>Topical</title>
-    <meta name="description" content="´Aktuelt´ siden til OsloMet sin hjemmeside">
+    <meta name="description" content="´Samspillet mellom teknologi og samfunn. Artikkel av OsloMet studenter.">
 </head>
 
 <body>
@@ -20,23 +20,23 @@
     <!-- Navigasjonsbar med logo og hamburgermeny -->
     <nav>
 
-        <!-- Input checkbox for hamburger toggle (label)-->
+        <!-- Input checkbox for hamburger toggle (label), aria-label for screen readers -->
         <input id="hamburger-toggle" type="checkbox" aria-label="Åpne navigasjonsmeny">
 
         <div class="logo-hamburger-wrapper">
 
-            <!-- Logo på navbar -->
+            <!-- Logo på navbar, tabindex for at den skal velges i riktig rekkefølge (venstre mot høyre) -->
             <a href="index.html" title="Tilbake til forsiden" tabindex="1">
                 <img id="nav-logo" src="images/logo-oslomet-gul.svg" alt="OsloMet sin logo" width="68" height="40">
             </a>
 
-            <!-- Label for input checkbox og hamburger meny ikon-->
+            <!-- Label for input checkbox og hamburger meny ikon -->
             <label class="hamburger-toggle-container" for="hamburger-toggle">
                 <span class="hamburger-icon"></span>
             </label>
         </div>
 
-        <!-- Navigasjons meny side lenker-->
+        <!-- Navigasjons meny side lenker -->
         <ul class="menu">
             <li><a href="index.html">Hjem</a></li>
             <li><a href="accessibility.html">Tilgjengelighet</a></li>
@@ -54,11 +54,9 @@
     <article class="topical-grid" lang="en">
         <div class="headline">
             <h1>The Interplay between Technology and Society</h1>
-            <p>Imagine that you are part of a group of experts in computer technology that have been given the task of
-                exploring what the potential impact of satellite internet technology might have on society. Your discussions
-                can include its effects on national security, privacy, and everyday life. You could also discuss how the
-                internet compares to other critical infrastructure like the electrical power grid, the sewage system or
-                public roads. Include external sources when necessary. How is the internet connected to other infrastructures?</p>
+            <p>Explore the potential impact of satellite internet technology have on society. Discuss its effects on
+                national security, privacy, everyday life and compare to other critical infrastructure. How is the
+                internet connected to other infrastructures?</p>
             <p class="author-text"><span id="author">DATA1100 Obligatory Assignment Groups 45</span> - 14/09/2023, 12:03</p>
 
             <figure>
@@ -71,7 +69,7 @@
                                     images/topical-images/spacex-large.webp 4288w"
                             sizes= "(min-width: 1460) 1300px,
                                     (max-width: 1459) 93vw"
-                            type="image/webp"/>
+                            type="image/webp">
 
                     <!-- Backup bilde tilfelle device ikke støtter <picture> eller webp, i tillegg til alt tekst informasjon -->
                     <img src="images/topical-images/spacex.jpg"
@@ -135,7 +133,7 @@
                                     images/topical-images/nasa-large.webp 1440w"
                             sizes="(max-width: 900px) 48vw,
                                    (min-width: 901) 39vw"
-                            type="image/webp"/>
+                            type="image/webp">
 
                     <!-- Backup bilde tilfelle device ikke støtter <picture> eller webp, i tillegg til alt tekst informasjon -->
                     <img src="images/topical-images/nasa.jpg"
@@ -187,7 +185,7 @@
                             sizes="(max-width: 760px) 94vw,
                                    (min-width: 761) 76vw,
                                    (min-width: 1400px) 1300px"
-                            type="image/webp"/>
+                            type="image/webp">
 
                     <!-- Backup bilde tilfelle device ikke støtter <picture> eller webp, i tillegg til alt tekst informasjon -->
                     <img src="images/topical-images/imac.jpg"
@@ -221,7 +219,7 @@
                                    (max-width: 900px) 42vw,
                                    (min-width: 901) 35vw,
                                    (min-width: 1400) 600px"
-                            type="image/webp"/>
+                            type="image/webp">
 
                     <!-- Backup bilde tilfelle device ikke støtter <picture> eller webp, i tillegg til alt tekst informasjon -->
                     <img src="images/topical-images/circuit.jpg"
@@ -259,8 +257,8 @@
 </main>
 
 <footer>
-    <!-- Grid kode tatt fra: https://www.w3schools.com/css/css_grid.asp-->
-    <!-- nyhetsbrev tekst, markert med * ettersom teksten og knappen er midlertidig. -->
+    <!-- Grid kode tatt fra: https://www.w3schools.com/css/css_grid.asp -->
+    <!-- Nyhetsbrev tekst, markert med * ettersom teksten og knappen er midlertidig. -->
     <section class="footer-grid-objects newsletter">
         <p>OsloMet</p>
     </section>
