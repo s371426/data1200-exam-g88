@@ -12,7 +12,7 @@
     <!-- Ikon bibliotek brukt i footer -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <title>Tilgjengelighet</title>
-    <meta name="description" content="Informasjo om tilgjengelighet til OsloMet sin hjemmeside">
+    <meta name="description" content="Informasjon om tilgjengelighet til denne nettsiden om OsloMet">
 </head>
 
 <body>
@@ -20,23 +20,23 @@
     <!-- Navigasjonsbar med logo og hamburgermeny -->
     <nav>
 
-        <!-- Input checkbox for hamburger toggle (label)-->
+        <!-- Input checkbox for hamburger toggle (label), aria-label for screen readers -->
         <input id="hamburger-toggle" type="checkbox" aria-label="Åpne navigasjonsmeny">
 
         <div class="logo-hamburger-wrapper">
 
-            <!-- Logo på navbar -->
+            <!-- Logo på navbar, tabindex for at den skal velges i riktig rekkefølge (venstre mot høyre) -->
             <a href="index.html" title="Tilbake til forsiden" tabindex="1">
                 <img id="nav-logo" src="images/logo-oslomet-gul.svg" alt="OsloMet sin logo" width="68" height="40">
             </a>
 
-            <!-- Label for input checkbox og hamburger meny ikon-->
+            <!-- Label for input checkbox og hamburger meny ikon -->
             <label class="hamburger-toggle-container" for="hamburger-toggle">
                 <span class="hamburger-icon"></span>
             </label>
         </div>
 
-        <!-- Navigasjons meny side lenker-->
+        <!-- Navigasjons meny side lenker -->
         <ul class="menu">
             <li><a href="index.html">Hjem</a></li>
             <li><a href="accessibility.html">Tilgjengelighet</a></li>
@@ -98,8 +98,18 @@
 
         </div>
         <picture class="accessibility-image">
-            BILDE
-        </picture>
+
+                <!-- Bilde blir valgt av device ut i fra hvilken oppløsning som passer best. "w" er bredden
+                     på det bildet. Type forteller device at bildene er webp format -->
+                <source srcset=""
+                        sizes=""
+                        type="image/webp">
+
+                <!-- Backup bilde tilfelle device ikke støtter <picture> eller webp, i tilleg til alt tekst informasjon -->
+                <img src=""
+                     alt=""
+                     width="" height ="">
+            </picture>
     </div>
 
     <div class="accessibility-flex">
@@ -125,13 +135,23 @@
             <p> Den første løsningen vi gjorde for hamburger meny kunne ikke aktiveres med kun tastatur,
                 noe som trengs hvis man har problemer med å bruke mus. Dette var fordi checkbox ble satt til Display: none
                 i css for å gjemme den. Løsningen for dette, var å sette den til opacity: 0 og position: absolute for
-                posisjon isteden slik at den bare er usynelig isteden.  Sørget også for at hamburger får outline når den er valgt med tastatur da den ikke vanligvis
-                gjør det med opacity sat til 0. For brukere som bruker screen readers, la vi til "aria-label" på knappen slik at funksjonen dens
-                blir tydelig.</p>
+                posisjon isteden slik at den bare er usynelig isteden.  Sørget også for at hamburger får outline når den
+                er valgt med tastatur da den ikke vanligvis gjør det med opacity sat til 0. For brukere som bruker
+                screen readers, la vi til "aria-label" på knappen slik at funksjonen dens blir tydelig.</p>
         </div>
         <picture class="accessibility-image">
-            BILDE
-        </picture>
+
+                <!-- Bilde blir valgt av device ut i fra hvilken oppløsning som passer best. "w" er bredden
+                     på det bildet. Type forteller device at bildene er webp format -->
+                <source srcset=""
+                        sizes=""
+                        type="image/webp">
+
+                <!-- Backup bilde tilfelle device ikke støtter <picture> eller webp, i tilleg til alt tekst informasjon -->
+                <img src=""
+                     alt=""
+                     width="" height ="">
+            </picture>
     </div>
 
     <div class="accessibility-flex">
@@ -149,8 +169,8 @@
 </main>
 
 <footer>
-    <!-- Grid kode tatt fra: https://www.w3schools.com/css/css_grid.asp-->
-        <!-- nyhetsbrev tekst, markert med * ettersom teksten og knappen er midlertidig. -->
+    <!-- Grid kode tatt fra: https://www.w3schools.com/css/css_grid.asp -->
+        <!-- Nyhetsbrev tekst, markert med * ettersom teksten og knappen er midlertidig. -->
         <section class="footer-grid-objects newsletter">
             <p>OsloMet</p>
         </section>

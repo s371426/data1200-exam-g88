@@ -12,7 +12,7 @@
     <!-- Ikon bibliotek brukt i footer -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <title>Lokasjoner</title>
-    <meta name="description" content="Lokasjoner på oslomet sin hjemmeside">
+    <meta name="description" content="Informasjon om Lokasjoner på rundt på OsloMet campus.">
 </head>
 
 <body>
@@ -20,23 +20,23 @@
     <!-- Navigasjonsbar med logo og hamburgermeny -->
     <nav>
 
-        <!-- Input checkbox for hamburger toggle (label)-->
+        <!-- Input checkbox for hamburger toggle (label), aria-label for screen readers -->
         <input id="hamburger-toggle" type="checkbox" aria-label="Åpne navigasjonsmeny">
 
         <div class="logo-hamburger-wrapper">
 
-            <!-- Logo på navbar -->
+            <!-- Logo på navbar, tabindex for at den skal velges i riktig rekkefølge (venstre mot høyre) -->
             <a href="index.html" title="Tilbake til forsiden" tabindex="1">
                 <img id="nav-logo" src="images/logo-oslomet-gul.svg" alt="OsloMet sin logo" width="68" height="40">
             </a>
 
-            <!-- Label for input checkbox og hamburger meny ikon-->
+            <!-- Label for input checkbox og hamburger meny ikon -->
             <label class="hamburger-toggle-container" for="hamburger-toggle">
                 <span class="hamburger-icon"></span>
             </label>
         </div>
 
-        <!-- Navigasjons meny side lenker-->
+        <!-- Navigasjons meny side lenker -->
         <ul class="menu">
             <li><a href="index.html">Hjem</a></li>
             <li><a href="accessibility.html">Tilgjengelighet</a></li>
@@ -55,12 +55,12 @@
     <!-- Section med bilde og tekst over en lokasjon på OsloMET -->
     <section class="location-flex">
 
-        <!-- Bilde og bildetekst(fotograf) om lokasjonen på OsloMET-->
+        <!-- Bilde og bildetekst(fotograf) om lokasjonen på OsloMET -->
         <figure class="location-img">
             <picture>
 
                 <!-- Bilde blir valgt av device ut i fra hvilken oppløsning som passer best. "w" er bredden
-                     på det bildet. Type forteller device at bildene er webp format-->
+                     på det bildet. Type forteller device at bildene er webp format -->
                 <source srcset="images/auditorium-p32/auditorium-p32-john-hughes-very-small.webp 600w,
                                 images/auditorium-p32/auditorium-p32-john-hughes-small.webp 990w,
                                 images/auditorium-p32/auditorium-p32-john-hughes-medium.webp 1440w,
@@ -76,8 +76,7 @@
                      width="2100" height ="1402">
             </picture>
 
-            <!-- Semantic element for å spesifisere bildetekst til <figure> elementet det er en del av -->
-            <!-- Bildetekst/forfatter for tilhørende bilde, fra https://foto.oslomet.no/fotoweb/-->
+            <!-- Bildetekst/forfatter for tilhørende bilde, fra https://foto.oslomet.no/fotoweb/ -->
             <figcaption class="img-text">John Hughes / OsloMET</figcaption>
         </figure>
 
@@ -93,12 +92,12 @@
     <!-- Section med bilde og tekst over en lokasjon på OsloMET -->
     <section class="location-flex">
 
-        <!-- Bilde og bildetekst(fotograf) om lokasjonen på OsloMET-->
+        <!-- Bilde og bildetekst(fotograf) om lokasjonen på OsloMET -->
         <figure class="location-img">
             <picture>
 
                 <!-- Bilde blir valgt av device ut i fra hvilken oppløsning som passer best. "w" er bredden
-                     på det bildet. Type forteller device at bildene er webp format-->
+                     på det bildet. Type forteller device at bildene er webp format -->
                 <source srcset="images/studieplasser/studieplasser-skjalg-bøhmer-vold-very-small.webp 600w,
                                 images/studieplasser/studieplasser-skjalg-bøhmer-vold-small.webp 1020w,
                                 images/studieplasser/studieplasser-skjalg-bøhmer-vold-medium.webp 1440w,
@@ -114,7 +113,7 @@
                      width="2100" height ="1400">
             </picture>
 
-            <!-- Semantic element for å spesifisere bildetekst til <figure> elementet det er en del av -->
+            <!-- Bildetekst/forfatter for tilhørende bilde, fra https://foto.oslomet.no/fotoweb/ -->
             <figcaption class="img-text">Skalg Bøhmer Vold / OsloMET</figcaption>
         </figure>
 
@@ -129,12 +128,12 @@
     <!-- Section med bilde og tekst over en lokasjon på OsloMET -->
     <section class="location-flex">
 
-        <!-- Bilde og bildetekst(fotograf) om lokasjonen på OsloMET-->>
+        <!-- Bilde og bildetekst(fotograf) om lokasjonen på OsloMET -->
         <figure class="location-img">
             <picture>
 
                 <!-- Bilde blir valgt av device ut i fra hvilken oppløsning som passer best. "w" er bredden
-                     på det bildet. Type forteller device at bildene er webp format-->
+                     på det bildet. Type forteller device at bildene er webp format -->
                 <source srcset="images/fyrhuset-utendørs/fyrhuset-utendørs-skjalg-bøhmer-vold-very-small.webp 600w,
                                 images/fyrhuset-utendørs/fyrhuset-utendørs-skjalg-bøhmer-vold-small.webp 1020w,
                                 images/fyrhuset-utendørs/fyrhuset-utendørs-skjalg-bøhmer-vold-medium.webp 1440w,
@@ -151,7 +150,7 @@
                      width="2100" height ="1400">
             </picture>
 
-            <!-- Semantic element for å spesifisere bildetekst til <figure> elementet det er en del av -->
+            <!-- Bildetekst/forfatter for tilhørende bilde, fra https://foto.oslomet.no/fotoweb/ -->
             <figcaption>Skalg Bøhmer Vold / OsloMET</figcaption>
         </figure>
 
@@ -166,12 +165,12 @@
     <!-- Section med bilde og tekst over en lokasjon på OsloMET -->
     <section class="location-flex">
 
-        <!-- Bilde og bildetekst(fotograf) om lokasjonen på OsloMET-->
+        <!-- Bilde og bildetekst(fotograf) om lokasjonen på OsloMET -->
         <figure class="location-img">
             <picture>
 
                 <!-- Bilde blir valgt av device ut i fra hvilken oppløsning som passer best. "w" er bredden
-                     på det bildet. Type forteller device at bildene er webp format-->
+                     på det bildet. Type forteller device at bildene er webp format -->
                 <source srcset="images/fyrhuset-innendørs/fyrhuset-innendørs-skjalg-bøhmer-vold-very-small.webp 600w,
                                 images/fyrhuset-innendørs/fyrhuset-innendørs-skjalg-bøhmer-vold-small.webp 1020w,
                                 images/fyrhuset-innendørs/fyrhuset-innendørs-skjalg-bøhmer-vold-medium.webp 1440w,
@@ -187,7 +186,7 @@
                      width="2100" height ="1400">
             </picture>
 
-            <!-- Semantic element for å spesifisere bildetekst til <figure> elementet det er en del av -->
+            <!-- Bildetekst/forfatter for tilhørende bilde, fra https://foto.oslomet.no/fotoweb/ -->
             <figcaption class="img-text">Skalg Bøhmer Vold / OsloMET</figcaption>
         </figure>
 
@@ -205,12 +204,12 @@
     <!-- Section med bilde og tekst over en lokasjon på OsloMET -->
     <section class="location-flex">
 
-        <!-- Bilde og bildetekst(fotograf) om lokasjonen på OsloMET-->
+        <!-- Bilde og bildetekst(fotograf) om lokasjonen på OsloMET -->
         <figure class="location-img">
             <picture>
 
                 <!-- Bilde blir valgt av device ut i fra hvilken oppløsning som passer best. "w" er bredden
-                     på det bildet. Type forteller device at bildene er webp format-->
+                     på det bildet. Type forteller device at bildene er webp format -->
                 <source srcset="images/kantine-p52/kantine-p52-skjalg-bøhmer-vold-very-small.webp 600w,
                                 images/kantine-p52/kantine-p52-skjalg-bøhmer-vold-small.webp 1020w,
                                 images/kantine-p52/kantine-p52-skjalg-bøhmer-vold-medium.webp 1440w,
@@ -226,7 +225,7 @@
                      width="2100" height ="1400">
             </picture>
 
-            <!-- Semantic element for å spesifisere bildetekst til <figure> elementet det er en del av -->
+            <!-- Bildetekst/forfatter for tilhørende bilde, fra https://foto.oslomet.no/fotoweb/ -->
             <figcaption>Skald Bøhmer Vold / OsloMET</figcaption>
         </figure>
 
@@ -242,8 +241,8 @@
 
 </main>
 <footer>
-    <!-- Grid kode tatt fra: https://www.w3schools.com/css/css_grid.asp-->
-    <!-- nyhetsbrev tekst, markert med * ettersom teksten og knappen er midlertidig. -->
+    <!-- Grid kode tatt fra: https://www.w3schools.com/css/css_grid.asp -->
+    <!-- Nyhetsbrev tekst, markert med * ettersom teksten og knappen er midlertidig. -->
     <section class="footer-grid-objects newsletter">
         <p>OsloMet</p>
     </section>
