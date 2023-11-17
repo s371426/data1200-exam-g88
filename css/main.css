@@ -6,11 +6,11 @@
 /* Inspirert av Tengel presentasjon, eksempel nettside i faget og Mozilla web docs*/
 :root {
     --main-color: #749bbe;
-    --main-font-color: black;
     --main-background-color: white;
     --secondary-background-color: #f0f0f0;
-    --topical-navbar-h2-background-color: #5080A9;
-    --topical-navbar-a-background-color: #F3FAFF;
+    --main-font-color: black;
+    --topical-sidenav-h2-background-color: #5080A9;
+    --topical-sidenav-a-background-color: #F3FAFF;
     --topical-a-color: #4D4DFF;
     --topical-a-color-visited: #551A8B;
 }
@@ -20,10 +20,10 @@
 @media (prefers-color-scheme: dark) {
     :root {
         --main-background-color: #212121;
-        --main-font-color: #eeeeee;
         --secondary-background-color: #292929;
-        --topical-navbar-h2-background-color: #0A2F50;
-        --topical-navbar-a-background-color: #0C3B64;
+        --main-font-color: #eeeeee;
+        --topical-sidenav-h2-background-color: #0A2F50;
+        --topical-sidenav-a-background-color: #0C3B64;
         --topical-a-color: #58a6ff;
         --topical-a-color-visited: #B661FF;
     }
@@ -35,14 +35,14 @@
 }
 
 body {
+    background-color: var(--main-background-color);
     margin: 0;
     font-family: Verdana, sans-serif;
-    background-color: var(--main-background-color);
 }
 
 main {
-    color: var(--main-font-color);
     background-color: var(--main-background-color);
+    color: var(--main-font-color);
 }
 
 /* Img fyller det elementet det er inni */
@@ -118,13 +118,13 @@ nav {
 /* Kontakt knapp i navbar styling */
 .contact-button {
     background-color: skyblue;
-    color: black;
     border-radius: 30px;
     padding-top: 15px;
     padding-right: 25px;
     padding-bottom: 15px;
     padding-left: 25px;
     text-decoration: none;
+    color: black;
     font-weight: bold;
 }
 
@@ -154,7 +154,7 @@ nav {
 /* Hamburger meny ikon */
 .hamburger-icon {
     display: block;
-    background-image: url(../images/menu.png);      /* KANSJE FLYTTE TIL HTML */
+    background-image: url(../images/menu.png);
     background-size: cover;
     height: 60px;
     width: 60px;
@@ -370,7 +370,7 @@ som reduserer hvor mye koding som trengs for plassering */
 }
 
 .sidenav h2 {
-    background-color: var(--topical-navbar-h2-background-color);
+    background-color: var(--topical-sidenav-h2-background-color);
     padding: 15px;
     margin-bottom: 0;
     text-align: center;
@@ -385,7 +385,7 @@ som reduserer hvor mye koding som trengs for plassering */
 
 .sidenav ul a {
     display: block;
-    background-color: var(--topical-navbar-a-background-color);
+    background-color: var(--topical-sidenav-a-background-color);
     border-bottom-style: solid;
     border-color: black;
     padding: 15px;
