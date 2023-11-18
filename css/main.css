@@ -182,9 +182,10 @@ nav {
     outline: auto;
 }
 
-/* Sjuler outline når den er i fokus via mus, slik at den bare er i fokus via tastur, på nettlesere som støtter det. */
-/* Støtte for :focus-visible er bare siden 2022 på noen nettlesere, så sjekker om den støttes før det gjøres,
-   hvis ikke ville det aldri vært outline i de nettleserne. */
+/* Sjuler outline når den er i fokus via mus, slik at den bare er i fokus via tastur,
+   på nettlesere som støtter det. */
+/* Støtte for :focus-visible er bare siden 2022 på noen nettlesere, så sjekker om den støttes
+   før det gjøres, hvis ikke ville det aldri vært outline i de nettleserne. */
 @supports selector(:focus-visible) {
     #hamburger-toggle:not(:focus-visible) ~ .logo-hamburger-wrapper .hamburger-toggle-container{
         outline: none;
