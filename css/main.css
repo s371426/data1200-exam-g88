@@ -163,7 +163,7 @@ nav {
     width: 60px;
 }
 
-/* Hamburger meny checkbox input normal sjult. Posisjonert der hamburgermeny er*/
+/* Hamburger meny checkbox input normal skjult. Posisjonert der hamburgermeny er*/
 #hamburger-toggle {
     display: none;
     cursor: pointer;
@@ -182,7 +182,7 @@ nav {
     outline: auto;
 }
 
-/* Sjuler outline når den er i fokus via mus, slik at den bare er i fokus via tastur, på nettlesere som støtter det. */
+/* Skjuler outline når den er i fokus via mus, slik at den bare er i fokus via tastur, på nettlesere som støtter det. */
 /* Støtte for :focus-visible er bare siden 2022 på noen nettlesere, så sjekker om den støttes, før det gjøres,
    hvis ikke ville det aldri vært outline i de nettleserne. */
 @supports selector(:focus-visible) {
