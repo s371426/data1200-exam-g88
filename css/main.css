@@ -501,7 +501,7 @@ seg av resten */
     padding-left: 2.5%;
     padding-right: 2.5%;
     margin-bottom: 0.2em;
-    font-size: 2.5rem;
+    font-size: 2.4rem;
 }
 
 /* Normalt horisontal flexbox for to bokser, som er sentrert
@@ -569,6 +569,10 @@ seg av resten */
 }
 
 /* ACCESSIBILITY SIDE */
+
+.accessibility-flex h1{
+    font-size: 2.4rem;
+}
 
 .accessibility-flex{
     display: flex;
