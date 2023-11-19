@@ -5,27 +5,31 @@
 /* Custom property om farger som kan gjenbrukes flere steder, enklere å endre senere og gjøre darkmode */
 /* Inspirert av Tengel presentasjon, eksempel nettside i faget og Mozilla web docs */
 :root {
+    /* Generelle farger: */
     --main-color: #749bbe;
     --main-background-color: white;
     --secondary-background-color: #f0f0f0;
     --main-font-color: black;
+    --body-link-color: #4D4DFF;
+    --body-link-color-visited: #551A8B;
+    /* For topical siden */
     --topical-sidenav-h2-background-color: #5080A9;
-    --topical-sidenav-a-background-color: #F3FAFF;
-    --topical-a-color: #4D4DFF;
-    --topical-a-color-visited: #551A8B;
+    --topical-sidenav-link-background-color: #e7efff;
 }
 
 /* Darkmode som blir aktivert når device er satt til darkmode */
 /* Inspirert av Tengel presentasjon og eksempel nettside i faget */
 @media (prefers-color-scheme: dark) {
     :root {
+        /* Generelle farger: */
         --main-background-color: #212121;
         --secondary-background-color: #292929;
         --main-font-color: #eeeeee;
+        --body-link-color: #58a6ff;
+        --body-link-color-visited: #B661FF;
+        /* For topical siden */
         --topical-sidenav-h2-background-color: #0A2F50;
-        --topical-sidenav-a-background-color: #0C3B64;
-        --topical-a-color: #58a6ff;
-        --topical-a-color-visited: #B661FF;
+        --topical-sidenav-link-background-color: #0C3B64;
     }
 }
 
@@ -486,13 +490,13 @@ input[type=submit] {
 /*TOPICAL PAGE*/
 
 /* Grid-container her, der vi definerer en grid med to kolonner */
-/* Bruk av grid-auto-flow for automatisk plassering av grid items slik de har blitt plassert på HTML,
+/* Bruk av grid-auto-row for automatisk plassering av grid items slik de har blitt plassert på HTML,
 som reduserer hvor mye koding som trengs for plassering */
 .topical-grid {
     display: grid;
-    grid-template-columns: auto minmax(200px, 15vw);
-    grid-auto-flow: row;
-    grid-column-gap: 60px;
+    grid-template-columns: auto minmax(220px, 17vw);
+    grid-auto-rows: auto;
+    grid-column-gap: 3%;
     max-width: 1300px;
     margin-right: auto;
     margin-left: auto;
@@ -505,23 +509,31 @@ som reduserer hvor mye koding som trengs for plassering */
 .headline {
     grid-column: 1/-1;
     grid-row: 1;
-    justify-self: center;
 }
 
 /* Vi gjør overskriften mer tydelig, sentrert og litt større avstand på bokstavene for lettere lesing */
 .headline h1 {
     padding-top: 0.2em;
     border-bottom: 2px solid;
-    font-weight: bolder;
     font-size: 2.3rem;
-    letter-spacing: 0.07em;
+    font-weight: bolder;
+    letter-spacing: 0.05em;
 }
 
 .headline p {
     font-weight: 550;
 }
 
-/* Position: sticky sørger for at når brukeren scroller ned, så følger sidenav slik at man har den alltid tilgjengelig */
+.author-text {
+    font-size: 0.8rem;
+}
+
+#author {
+    color: var(--body-link-color);
+}
+
+/* Position: sticky sørger for at når brukeren scroller ned, så følger sidenav slik at den alltid er tilgjengelig */
+/* Vi plasserer bare grid-item sidenav i kolonne 2, som sørger for at sidenav kan bruke hele plassen */
 .sidenav {
     grid-column: 2;
     grid-row: 2/4;
@@ -532,21 +544,24 @@ som reduserer hvor mye koding som trengs for plassering */
 
 .sidenav h2 {
     background-color: var(--topical-sidenav-h2-background-color);
+    border-bottom-style: solid;
+    border-color: black;
     padding: 15px;
     margin-bottom: 0;
     text-align: center;
     color: white;
 }
-
+/* Fjerning av punkter og mellomrommet fra sidenav */
 .sidenav ul {
     list-style-type: none;
     padding: 0;
     margin: 0;
 }
 
+/* Display: block sørger for at underpunktene i sidenav vises som blokk elementer, som tar opp hele bredden */
 .sidenav ul a {
     display: block;
-    background-color: var(--topical-sidenav-a-background-color);
+    background-color: var(--topical-sidenav-link-background-color);
     border-bottom-style: solid;
     border-color: black;
     padding: 15px;
@@ -560,7 +575,7 @@ som reduserer hvor mye koding som trengs for plassering */
     color: white;
 }
 
-/* Her sier vi at grid-item main-bar som inneholder teksten skal holde seg innenfor første kolonnen. Grid-auto-flow tar
+/* Her sier vi at grid-item main-bar som inneholder teksten skal holde seg innenfor første kolonnen. Grid-auto-row tar
 seg av resten */
 .main-bar {
     grid-column: 1;
@@ -573,14 +588,10 @@ seg av resten */
 .topical-img-with-text {
     float: right;
     width: 50%;
-    padding-bottom: 10px;
-    padding-left: 30px;
+    margin-bottom: 15px;
+    margin-left: 25px;
 }
-
-#author {
-    color: var(--topical-a-color);
-}
-
+/* Fjerning av punkter og tab-mellomrommet */
 .list-style-none {
     list-style-type: none;
     padding-left: 0;
@@ -588,19 +599,15 @@ seg av resten */
 
 .list-style-none li:not(:last-child) {
         margin-bottom: 10px;
-    }
-
-
-.author-text {
-    font-size: small;
 }
 
-/* Vi skaper større kontraster for hyperlinks på dark mode, samtidig som vi beholder fargene assosiert med hyperlinks */
+/* Farge på hyperlinker slik at de har god kontrast i både dark og light mode, og fortsatt ser ut som hyperlinker*/
 .main-bar a {
-    color: var(--topical-a-color);
+    color: var(--body-link-color);
 }
+
 .main-bar a:visited {
-    color: var(--topical-a-color-visited);
+    color: var(--body-link-color-visited);
 }
 
 /* Vi bruker media queries slik at layouten passer bedre for de med mindre skjerm, og når man skalerer skjermen */
@@ -611,46 +618,22 @@ seg av resten */
         max-width: none;
     }
 
-    .headline {
-        grid-column: 1;
-        grid-row: 1;
-    }
-
     .sidenav {
         grid-column: 1;
         grid-row: 2;
         position: relative;
         top: 0;
     }
-
 }
-/* Nå sørger vi for at alle bildene går under og over teksten, og ikke ved siden av for bedre view */
+
+/* Bilder slutter å være ved siden av tekst og blir full width på liten skjerm */
 @media (max-width: 760px) {
-    .topical-grid {
-        grid-template-columns: auto;
-        max-width: none;
-    }
-
-    .headline {
-        grid-column: 1;
-        grid-row: 1;
-        justify-self: center;
-    }
-
     .topical-img-with-text {
         float: none;
         width: 100%;
-        padding-left: 0;
-    }
-
-    .sidenav {
-        grid-column: 1;
-        grid-row: 2;
-        position: relative;
-        top: 0;
+        margin-left: 0;
     }
 }
-
 
 /* LOCATION PAGE*/
 
@@ -821,12 +804,12 @@ footer ul {
 }
 
 /* Setter posisjon på item 1 og setter opp en ny grid i objektet */
-.newsletter {
+.footer-header {
     grid-column: 1;
     grid-row: 1;
 }
 
-.newsletter h2 {
+.footer-header h2 {
     font-size: 2rem;
 }
 
@@ -841,14 +824,6 @@ footer ul {
     margin-left: 25px;
 }
 
-.border-bottom{
-    grid-column: 1/4;
-    grid-row: 2;
-    border-bottom-width: 1px;
-    border-bottom-style: solid;
-    border-bottom-color: black;
-}
-
 /* design til knappen */
 .button {
     background-color: black;
@@ -860,6 +835,15 @@ footer ul {
 
 .button:hover {
     text-decoration: underline;
+}
+
+/* Linje på tvers av footer */
+.border-bottom{
+    grid-column: 1/4;
+    grid-row: 2;
+    border-bottom-width: 1px;
+    border-bottom-style: solid;
+    border-bottom-color: black;
 }
 
 .contact-information {
@@ -948,19 +932,15 @@ https://www.w3schools.com/howto/howto_css_social_media_buttons.asp
     .footer-grid {
         grid-template-columns: 1fr;
     }
-    /* Setter plassen til grid, og fjerner underlinja til gridden */
-    .newsletter {
-        grid-column: 1;
-        grid-row: 1;
-        border-bottom: 0;
-    }
-    /* Setter posisjon og legger til underlinje i grid */
+  
+    /* Setter posisjon og legger */
     .newsletter-button{
         grid-column: 1;
         grid-row: 2;
         text-align: left;
     }
 
+    /* Linje på tvers av footer */
     .border-bottom{
         grid-column: 1;
         grid-row: 3;
