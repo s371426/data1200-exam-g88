@@ -813,33 +813,40 @@ footer {
 footer h3 {
     font-size: 1.55rem;
 }
+
 /*Fjerner punktene i listen, og fjerner tab mellomrommet*/
 footer ul {
     list-style-type: none;
     padding: 0;
     margin: 0;
 }
+
 /* Grid kode tatt fra: https://www.w3schools.com/css/css_grid.asp*/
 /* endrer på alle grid, og sentrerer tekst */
 .footer-grid-objects {
     text-align: left;
-    padding-left: 25px;
+    margin-left: 25px;
 }
 
 /* Setter posisjon på item 1 og setter opp en ny grid i objektet */
 .newsletter {
-    grid-column: 1/3;
+    grid-column: 1;
     grid-row: 1;
-    font-size: 1.55rem;
-    font-weight: bold;
+}
+
+.newsletter h2 {
+    font-size: 2rem;
 }
 
 .newsletter-button {
     grid-column: 3/4;
     grid-row: 1;
+    align-self: center;
     text-align: right;
-    padding-top: 25px;
-    padding-right: 15px;
+    margin-top: 1rem;
+    margin-right: 25px;
+    margin-bottom: 1rem;
+    margin-left: 25px;
 }
 
 .border-bottom{
@@ -858,9 +865,11 @@ footer ul {
     color: yellow;
     font-size: 1.55rem;
 }
+
 .button:hover {
     text-decoration: underline;
 }
+
 .contact-information {
     grid-column: 1/2;
     grid-row: 3;
@@ -901,7 +910,8 @@ footer ul {
 
 .social-media-links a {
     display: block;
-    padding-bottom: 5%;
+    margin-top: 0.8rem;
+    margin-bottom: 0.8rem;
     text-decoration: none;
     color: black;
 }
@@ -957,12 +967,6 @@ https://www.w3schools.com/howto/howto_css_social_media_buttons.asp
         grid-column: 1;
         grid-row: 2;
         text-align: left;
-        border-bottom: 1px solid;
-        border-bottom-color: black;
-        padding-top: 0;
-        padding-right: 0;
-        padding-bottom: 3%;
-        padding-left: 3%;
     }
 
     .border-bottom{
@@ -983,11 +987,5 @@ https://www.w3schools.com/howto/howto_css_social_media_buttons.asp
     .social-media-links {
         grid-column: 1;
         grid-row: 6;
-        text-align: left;
     }
-
-    .social-media-links a {
-        padding: 1%;
-    }
-
 }
