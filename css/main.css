@@ -491,7 +491,7 @@ input[type=submit] {
 /*TOPICAL PAGE*/
 
 /* Grid-container her, der vi definerer en grid med to kolonner */
-/* Bruk av grid-auto-rowfor automatisk plassering av grid items slik de har blitt plassert på HTML,
+/* Bruk av grid-auto-row for automatisk plassering av grid items slik de har blitt plassert på HTML,
 som reduserer hvor mye koding som trengs for plassering */
 .topical-grid {
     display: grid;
@@ -533,7 +533,8 @@ som reduserer hvor mye koding som trengs for plassering */
     color: var(--topical-a-color);
 }
 
-/* Position: sticky sørger for at når brukeren scroller ned, så følger sidenav slik at man har den alltid tilgjengelig */
+/* Position: sticky sørger for at når brukeren scroller ned, så følger sidenav slik at den alltid er tilgjengelig */
+/* Vi plasserer bare grid-item sidenav i kolonne 2, som sørger for at sidenav kan bruke hele plassen */
 .sidenav {
     grid-column: 2;
     grid-row: 2/4;
@@ -551,13 +552,14 @@ som reduserer hvor mye koding som trengs for plassering */
     text-align: center;
     color: white;
 }
-
+/* Fjerning av punkter og mellomrommet fra sidenav */
 .sidenav ul {
     list-style-type: none;
     padding: 0;
     margin: 0;
 }
 
+/* Display: block sørger for at underpunktene i sidenav vises som blokk elementer, som tar opp hele bredden */
 .sidenav ul a {
     display: block;
     background-color: var(--topical-sidenav-a-background-color);
@@ -590,7 +592,7 @@ seg av resten */
     margin-bottom: 15px;
     margin-left: 25px;
 }
-
+/* Fjerning av punkter og tab-mellomrommet */
 .list-style-none {
     list-style-type: none;
     padding-left: 0;
@@ -599,7 +601,6 @@ seg av resten */
 .list-style-none li:not(:last-child) {
         margin-bottom: 10px;
 }
-
 
 /* Farge på hyperlinker slik at de har god kontrast i både dark og light mode, og fortsatt ser ut som hyperlinker*/
 .main-bar a {
