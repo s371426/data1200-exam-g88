@@ -421,6 +421,13 @@ nav {
     max-width: 650px;
     width: 100%;
 }
+
+.kontaktskjema-boks h2 {
+    font-size: 2.6rem;
+    font-weight: 700;
+}
+
+
 .kontaktskjema-form{
     max-width: 650px;
     width: 100%;
@@ -449,6 +456,11 @@ input[type=text] {
     box-shadow: 0 0 15px 4px;
 }
 
+#Melding {
+    height: 150px;
+
+}
+
 input[type=tel] {
     box-shadow: 0 0 15px 4px;
 
@@ -465,7 +477,7 @@ input[type=submit] {
 
 /* Endrer location-flex flexbox til å være vertikal når viewport mindre enn 760px (Mobil) */
 @media only screen and (max-width: 760px) {
-    .main {
+    .homepage-main {
         flex-direction: column;
     }
 
