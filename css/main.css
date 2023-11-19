@@ -338,7 +338,17 @@ nav {
     align-items: center;
 }
 
+input[type=text] {
+    padding: 15px;
+}
 
+input[type=email] {
+    padding: 15px;
+}
+
+input[type=tel] {
+    padding: 15px;
+}
 
 /*#Navn, #Etternavn, #E-post, #Nummer {
     width: 50%;*/
