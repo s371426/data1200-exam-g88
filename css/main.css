@@ -604,6 +604,7 @@ seg av resten */
 .main-bar a {
     color: var(--topical-a-color);
 }
+
 .main-bar a:visited {
     color: var(--topical-a-color-visited);
 }
