@@ -395,6 +395,18 @@ nav {
     padding-left: 2.5%;
 }
 
+/*font styling for 'spisesteder' tittel*/
+.spisesteder-box-2 h2 {
+    font-size: 1.4rem;
+    font-weight: 300;
+}
+
+/*font styling for 'stort utvalg av spisesteder og kaffebarer' tittel*/
+.spisesteder-box-2 h3 {
+    font-size: 2.6rem;
+    font-weight: 700;
+}
+
 
 /*Kontaktskjema seksjon*/
 
