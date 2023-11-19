@@ -424,6 +424,16 @@ seg av resten */
     color: var(--topical-a-color);
 }
 
+.list-style-none {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+.list-style-none li:not(:last-child) {
+        margin-bottom: 10px;
+    }
+
+
 .author-text {
     font-size: small;
 }
