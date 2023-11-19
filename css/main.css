@@ -492,6 +492,7 @@ input[type=submit] {
 /* Grid-container her, der vi definerer en grid med to kolonner */
 /* Bruk av grid-auto-row for automatisk plassering av grid items slik de har blitt plassert på HTML,
 som reduserer hvor mye koding som trengs for plassering */
+/* Inneholder grid-items: Headline, sidenav, main-bar, topical-img topical-img-with-text */
 .topical-grid {
     display: grid;
     grid-template-columns: auto minmax(220px, 17vw);
