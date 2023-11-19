@@ -333,7 +333,7 @@ nav {
 
 .kontaktskjema-flex{
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
 }
@@ -357,6 +357,20 @@ input[type=tel] {
     border-radius: 20px;
 
 }
+
+input {
+    width:100%;
+}
+
+input[type=submit] {
+    padding: 15px;
+    border:none;
+    font-weight: 600;
+    border-radius: 20px;
+}
+
+
+
 
 /*.rounded-input {
     padding: 100px
