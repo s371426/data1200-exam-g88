@@ -587,6 +587,8 @@ seg av resten */
     padding-top: 20px;
 }
 
+/* Vi bruker float: right for å posisjonere NASA- og circut bildet til høyre for teksten. Begge elementene befinner seg
+inni grid-item main-bar. */
 .topical-img-with-text {
     float: right;
     width: 50%;
