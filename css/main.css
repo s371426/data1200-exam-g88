@@ -52,6 +52,7 @@ main {
 
 .main-content{
     max-width: 1300px;
+
 }
 
 /* Generell figure styling*/
@@ -275,20 +276,20 @@ nav {
     color: white;
 
 }
-/*main heading i hero section*/
+/*h1 tittel i hero seksjon*/
 .hero-flex h1{
     font-size: 5.5rem;
     font-weight: 900;
 
 
 }
-/*mindre heading i hero section*/
+/*h2 tittel i hero section*/
 
 .hero-flex h2{
     font-size: 2.7rem;
 }
 
-/*campus-intro section*/
+/*campus-intro seksjon */
 .campus-intro-flex {
     display: flex;
     flex-direction: row;
@@ -296,23 +297,26 @@ nav {
     align-items: center;
 }
 
+/*box 1 og box 2 i campus intro. Flexis basis på 50% for å dele begge boksene i 2*/
+
 .campus-box-1,
 .campus-box-2 {
     flex-basis: 50%;
-    padding: 1.6rem;
 }
 
+/*font styling for 'campus' tittel*/
 .campus-box-2 h2 {
     font-size: 1.4rem;
     font-weight: 300;
 }
 
+/*font stylibng for 'pilestredet campus' tittel*/
 .campus-box-2 h3 {
     font-size: 2.6rem;
     font-weight: 700;
 }
 
-/*historie-intro section*/
+/*historie-intro seksjon*/
 
 .historie-intro-flex {
     display: flex;
@@ -321,14 +325,31 @@ nav {
     align-items: center;
 }
 
+/*box 1 og box 2 i historie-intro. Flex basis på 50% for å dele begge boksene i 2*/
+
 .historie-box-1,
 .historie-box-2 {
     flex-basis: 50%;
 }
 
-    /* spisesteder section*/
 
-/*Kontaktskjema*/
+/*Spisesteder-intro seksjon*/
+.spisesteder-intro-flex{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+
+}
+
+/*box 1 og box 2 i spisesteder-intro. Flex basis på 50% for å dele begge boksene i 2*/
+.spisesteder-box-1,
+.spisesteder-box-2 {
+    flex-basis: 50%;
+}
+
+
+/*Kontaktskjema seksjon*/
 
 .kontaktskjema-flex{
     display: flex;
@@ -340,6 +361,8 @@ nav {
 .kontaktskjema-text{
 
 }
+
+/*styling for inputs field av 'text' type*/
 input[type=text] {
     padding: 15px;
     box-shadow: 0 0 15px 4px;
@@ -348,6 +371,7 @@ input[type=text] {
 
 }
 
+/*styling for inputs field av 'email' type*/
 input[type=email] {
     padding: 15px;
     box-shadow: 0 0 15px 4px;
@@ -355,6 +379,7 @@ input[type=email] {
 
 }
 
+/*styling for inputs field av 'tel' type*/
 input[type=tel] {
     padding: 15px;
     box-shadow: 0 0 15px 4px;
@@ -365,7 +390,7 @@ input[type=tel] {
 input {
     width:100%;
 }
-
+/*styling for submit knapp*/
 input[type=submit] {
     padding: 15px;
     border:none;
