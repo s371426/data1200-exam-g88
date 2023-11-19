@@ -324,7 +324,6 @@ nav {
 .historie-box-1,
 .historie-box-2 {
     flex-basis: 50%;
-    padding: 1.6rem;
 }
 
     /* spisesteder section*/
@@ -338,10 +337,15 @@ nav {
     align-items: center;
 }
 
+.kontaktskjema-text{
+
+}
 input[type=text] {
     padding: 15px;
     box-shadow: 0 0 15px 4px;
     border-radius: 20px;
+    width: 100%;
+
 }
 
 input[type=email] {
@@ -369,6 +373,9 @@ input[type=submit] {
     border-radius: 20px;
 }
 
+form{
+    box-sizing: border-box;
+}
 
 
 
