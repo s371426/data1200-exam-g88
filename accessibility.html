@@ -60,7 +60,7 @@
                 mange som mulig, uavhengig av evne og behov. </p>
         </div>
     </div>
-    
+
     <div class="accessibility-flex">
         <div class="accessibility-text">
             <h2>Font:</h2>
@@ -71,12 +71,12 @@
 
             <h2>Tekst</h2>
             <p>Vi satt line height på paragrafer til 1.5 fordi det er det some er anbefalt da det gjør det enklere
-                å lese. Tekst størrelse er bare rem slik at den vil skalere riktig utifra brukerbehov</p>
+                å lese. Tekst størrelse er bare rem slik at den vil skalere riktig utifra brukerbehov.</p>
 
             <h2>Farge:</h2>
             <p>På siden har vi "mørk og lys" modus, som blir valgt utifra instillingene på brukerens pc. Lys modusen
-                har hvit bakgrunnsfarge med mørk tekst, og mørk modusen har mørk bakgrunn med hvit tekst. Vi har hatt
-                stort fokus på kontrast mellom tekst og bakgrunn.</p>
+                har hvit bakgrunnsfarge med mørk tekst, og mørk modusen har mørk bakgrunn med lys tekst, men ikke for
+                lys. Vi har hatt stort fokus på kontrast mellom tekst og bakgrunn.</p>
 
             <h2>Struktur:</h2>
             <p>På sidene har vi valgt å ha en generell utforming, med nav bar på toppen, hovedinnhold i midten og
@@ -99,17 +99,17 @@
         </div>
         <picture class="accessibility-image">
 
-                <!-- Bilde blir valgt av device ut i fra hvilken oppløsning som passer best. "w" er bredden
-                     på det bildet. Type forteller device at bildene er webp format -->
-                <source srcset=""
-                        sizes=""
-                        type="image/webp">
+            <!-- Bilde blir valgt av device ut i fra hvilken oppløsning som passer best. "w" er bredden
+                 på det bildet. Type forteller device at bildene er webp format -->
+            <source srcset=""
+                    sizes=""
+                    type="image/webp">
 
-                <!-- Backup bilde tilfelle device ikke støtter <picture> eller webp, i tilleg til alt tekst informasjon -->
-                <img src=""
-                     alt=""
-                     width="" height ="">
-            </picture>
+            <!-- Backup bilde tilfelle device ikke støtter <picture> eller webp, i tilleg til alt tekst informasjon -->
+            <img src=""
+                 alt=""
+                 width="" height ="">
+        </picture>
     </div>
 
     <div class="accessibility-flex">
@@ -141,17 +141,21 @@
         </div>
         <picture class="accessibility-image">
 
-                <!-- Bilde blir valgt av device ut i fra hvilken oppløsning som passer best. "w" er bredden
-                     på det bildet. Type forteller device at bildene er webp format -->
-                <source srcset=""
-                        sizes=""
-                        type="image/webp">
+            <!-- Bilde blir valgt av device ut i fra hvilken oppløsning som passer best. "w" er bredden
+                 på det bildet. Type forteller device at bildene er webp format -->
+            <source srcset="images/hamburger-kode/hamburgermeny-kode-very-small.webp 606w,
+                            images/hamburger-kode/hamburgermeny-kode-small.webp 998w,
+                            images/hamburger-kode/hamburgermeny-kode-medium.webp 1428w,
+                            images/hamburger-kode/hamburgermeny-kode-large.jpg 1956w"
+                    sizes="(max-width: 760px) 95vw,
+                           (min-width: 761px) 44vw"
+                    type="image/webp">
 
-                <!-- Backup bilde tilfelle device ikke støtter <picture> eller webp, i tilleg til alt tekst informasjon -->
-                <img src=""
-                     alt=""
-                     width="" height ="">
-            </picture>
+            <!-- Backup bilde tilfelle device ikke støtter <picture> eller webp, i tilleg til alt tekst informasjon -->
+            <img src="images/hamburger-kode/hamburgermeny-kode-large.jpg"
+                 alt="HTML/CSS som ble brukt til å å gjøre forbedringer med accessibility til Hamurgermenyen"
+                 width="1232" height ="1232">
+        </picture>
     </div>
 
     <div class="accessibility-flex">

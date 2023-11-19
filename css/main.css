@@ -164,7 +164,7 @@ nav {
     width: 60px;
 }
 
-/* Hamburger meny checkbox input normal sjult. Posisjonert der hamburgermeny er*/
+/* Hamburger meny checkbox input normal skjult. Posisjonert der hamburgermeny er*/
 #hamburger-toggle {
     display: none;
     cursor: pointer;
@@ -183,8 +183,8 @@ nav {
     outline: auto;
 }
 
-/* Sjuler outline når den er i fokus via mus, slik at den bare er i fokus via tastur, på nettlesere som støtter det. */
-/* Støtte for :focus-visible er bare siden 2022 på noen nettlesere, så sjekker om den støttes før det gjøres,
+/* Skjuler outline når den er i fokus via mus, slik at den bare er i fokus via tastur, på nettlesere som støtter det. */
+/* Støtte for :focus-visible er bare siden 2022 på noen nettlesere, så sjekker om den støttes, før det gjøres,
    hvis ikke ville det aldri vært outline i de nettleserne. */
 @supports selector(:focus-visible) {
     #hamburger-toggle:not(:focus-visible) ~ .logo-hamburger-wrapper .hamburger-toggle-container{
@@ -209,7 +209,7 @@ nav {
 
     /* Større tekst Linker når den er hamburger */
     .menu a{
-        font-size: 1.5em;
+        font-size: 1.4em;
     }
 
     /* Kontakt knappen blir skjult */
@@ -224,7 +224,7 @@ nav {
     }
 
     /* Hamburger checkbox er der men er usynelig, for at den skal være valgbar med tastatur/tab */
-    #hamburger-toggle{
+    #hamburger-toggle {
         display: block;
         opacity: 0;
     }
@@ -500,7 +500,7 @@ seg av resten */
     padding-left: 2.5%;
     padding-right: 2.5%;
     margin-bottom: 0.2em;
-    font-size: 2.5rem;
+    font-size: 2.4rem;
 }
 
 /* Normalt horisontal flexbox for to bokser, som er sentrert
@@ -569,6 +569,10 @@ seg av resten */
 
 /* ACCESSIBILITY SIDE */
 
+.accessibility-flex h1{
+    font-size: 2.4rem;
+}
+
 .accessibility-flex{
     display: flex;
     flex-direction: row;
@@ -628,11 +632,11 @@ footer {
     padding-bottom: 2%;
 }
 
-footer h3{
+footer h3 {
     font-size: 1.55rem;
 }
 /*Fjerner punktene i listen, og fjerner tab mellomrommet*/
-footer ul{
+footer ul {
     list-style-type: none;
     padding: 0;
     margin: 0;
@@ -675,16 +679,16 @@ footer ul{
 .button:hover {
     text-decoration: underline;
 }
-.contact-information{
+.contact-information {
     grid-row: 2;
     grid-column: 1/2;
 }
 
 /*fargen på linken før og etter den har blitt trykket på*/
-.contact-information a{
+.contact-information a {
     color: #0000a4;
 }
-.contact-information a:visited{
+.contact-information a:visited {
     color: rebeccapurple;
 }
 
@@ -779,15 +783,15 @@ https://www.w3schools.com/howto/howto_css_social_media_buttons.asp
         padding-left: 3%;
     }
 
-        .contact-information {
-            grid-column: 1;
-            grid-row: 3;
-        }
+    .contact-information {
+        grid-column: 1;
+        grid-row: 3;
+    }
 
-        .site-links {
-            grid-column: 1;
-            grid-row: 4;
-        }
+    .site-links {
+        grid-column: 1;
+        grid-row: 4;
+    }
 
     .social-media-links {
         grid-column: 1;
