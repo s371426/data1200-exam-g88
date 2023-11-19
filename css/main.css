@@ -45,6 +45,25 @@ body {
 main {
     background-color: var(--main-background-color);
     color: var(--main-font-color);
+
+}
+
+.homepage-main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.main-content{
+    max-width: 1300px;
+
+}
+
+.main-content section {
+    padding-bottom: 1.5%;
+    padding-top: 1.5%;
+
+
 }
 
 /* Generell figure styling*/
@@ -67,6 +86,7 @@ img {
 /* OVERSKRIFTER */
 
 /* PARAGRAFER */
+
 
 /* For accessibility, gjør tekst enklere å lese */
 p {
@@ -247,15 +267,16 @@ nav {
 
 /*main flex container for content på home-page*/
 
-.home-main-flex-container {
+/*.home-main-flex-container {
     display: flex;
     flex-direction: column;
 
-}
+}*/
 
 /*hero section*/
 .hero-flex {
     display: flex;
+    flex-direction: column;
     justify-content: center;
     height: 100vh;
     background-image: linear-gradient(to bottom,rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('../images/forsidebilde-arkitektur-p32/arkitektur-p32-skjalg-bøhmer-vold-square-large.jpg');
@@ -264,27 +285,23 @@ nav {
     background-position: center;
     align-items: center;
     text-shadow: 8px -4px 20px black;
+    color: white;
 
 }
-/*main heading i hero section*/
-.hero-text h1{
+/*h1 tittel i hero seksjon*/
+.hero-flex h1{
     font-size: 5.5rem;
-    display: flex;
     font-weight: 900;
-    color: white;
+
 
 }
-/*mindre heading i hero section*/
+/*h2 tittel i hero section*/
 
-.hero-text h2{
+.hero-flex h2{
     font-size: 2.7rem;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: white;
 }
 
-/*campus-intro section*/
+/*campus-intro seksjon */
 .campus-intro-flex {
     display: flex;
     flex-direction: row;
@@ -292,23 +309,26 @@ nav {
     align-items: center;
 }
 
+/*box 1 og box 2 i campus intro. Flexis basis på 50% for å dele begge boksene i 2*/
+
 .campus-box-1,
 .campus-box-2 {
     flex-basis: 50%;
-    padding: 1.6rem;
 }
 
+/*font styling for 'campus' tittel*/
 .campus-box-2 h2 {
     font-size: 1.4rem;
     font-weight: 300;
 }
 
+/*font stylibng for 'pilestredet campus' tittel*/
 .campus-box-2 h3 {
     font-size: 2.6rem;
     font-weight: 700;
 }
 
-/*historie-intro section*/
+/*historie-intro seksjon*/
 
 .historie-intro-flex {
     display: flex;
@@ -317,16 +337,143 @@ nav {
     align-items: center;
 }
 
+/*box 1 og box 2 i historie-intro. Flex basis på 50% for å dele begge boksene i 2*/
+
 .historie-box-1,
 .historie-box-2 {
     flex-basis: 50%;
-    padding: 1.6rem;
 }
 
-    /* spisesteder section*/
+/*font styling for 'siden 1128' tittel*/
+.historie-box-1 h2 {
+    font-size: 1.4rem;
+    font-weight: 300;
+}
+
+/*font styling for 'historie på over 200 år' tittel*/
+.historie-box-1 h3 {
+    font-size: 2.6rem;
+    font-weight: 700;
+}
+
+/*seksjon for lite galleri*/
+.bilder-flex {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.bilder-box-1,
+.bilder-box-2,
+.bilder-box-3 {
+    flex-basis: 33.333333%;
 
 
-    /*TOPICAL PAGE*/
+}
+
+/*Spisesteder-intro seksjon*/
+
+.spisesteder-intro-flex {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+
+}
+
+/*box 1 og box 2 i spisesteder-intro. Flex basis på 50% for å dele begge boksene i 2*/
+
+.spisesteder-box-1,
+.spisesteder-box-2 {
+    flex-basis: 50%;
+}
+
+
+/*Kontaktskjema seksjon*/
+
+.kontaktskjema-flex {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.kontaktskjema-text {
+
+}
+
+/*styling for inputs field av 'text' type*/
+
+input[type=text] {
+    padding: 15px;
+    box-shadow: 0 0 15px 4px;
+    border-radius: 20px;
+    width: 100%;
+
+}
+
+/*styling for inputs field av 'email' type*/
+
+input[type=email] {
+    padding: 15px;
+    box-shadow: 0 0 15px 4px;
+    border-radius: 20px;
+
+}
+
+/*styling for inputs field av 'tel' type*/
+
+input[type=tel] {
+    padding: 15px;
+    box-shadow: 0 0 15px 4px;
+    border-radius: 20px;
+
+}
+
+input {
+    width: 100%;
+}
+
+/*styling for submit knapp*/
+
+input[type=submit] {
+    padding: 15px;
+    border: none;
+    font-weight: 600;
+    border-radius: 20px;
+}
+
+form {
+    box-sizing: border-box;
+}
+
+/* Endrer location-flex flexbox til å være vertikal når viewport mindre enn 760px (Mobil) */
+@media only screen and (max-width: 760px) {
+    .main {
+        flex-direction: column;
+    }
+
+    .location-img,
+    .location-text {
+        max-width: none;
+    }
+}
+
+
+/*.rounded-input {
+    padding: 100px
+}*/
+
+/*#Navn, #Etternavn, #E-post, #Nummer {
+    width: 50%;*/
+
+
+/*input[type=text], select { */
+
+
+
+/*TOPICAL PAGE*/
 
 /* Grid-container her, der vi definerer en grid med to kolonner */
 /* Bruk av grid-auto-flow for automatisk plassering av grid items slik de har blitt plassert på HTML,
