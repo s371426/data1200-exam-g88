@@ -795,12 +795,14 @@ footer {
 footer h3 {
     font-size: 1.55rem;
 }
+
 /*Fjerner punktene i listen, og fjerner tab mellomrommet*/
 footer ul {
     list-style-type: none;
     padding: 0;
     margin: 0;
 }
+
 /* Grid kode tatt fra: https://www.w3schools.com/css/css_grid.asp*/
 /* endrer på alle grid, og sentrerer tekst */
 .footer-grid-objects {
@@ -845,9 +847,11 @@ footer ul {
     color: yellow;
     font-size: 1.55rem;
 }
+
 .button:hover {
     text-decoration: underline;
 }
+
 .contact-information {
     grid-column: 1/2;
     grid-row: 3;
