@@ -10,7 +10,7 @@
     --secondary-background-color: #f0f0f0;
     --main-font-color: black;
     --topical-sidenav-h2-background-color: #5080A9;
-    --topical-sidenav-a-background-color: #F3FAFF;
+    --topical-sidenav-a-background-color: #e7efff;
     --topical-a-color: #4D4DFF;
     --topical-a-color-visited: #551A8B;
 }
@@ -495,9 +495,9 @@ input[type=submit] {
 som reduserer hvor mye koding som trengs for plassering */
 .topical-grid {
     display: grid;
-    grid-template-columns: auto minmax(200px, 15vw);
-    grid-auto-flow: row;
-    grid-column-gap: 60px;
+    grid-template-columns: auto minmax(220px, 17vw);
+    grid-auto-rows: auto;
+    grid-column-gap: 3%;
     max-width: 1300px;
     margin-right: auto;
     margin-left: auto;
@@ -510,20 +510,27 @@ som reduserer hvor mye koding som trengs for plassering */
 .headline {
     grid-column: 1/-1;
     grid-row: 1;
-    justify-self: center;
 }
 
 /* Vi gjør overskriften mer tydelig, sentrert og litt større avstand på bokstavene for lettere lesing */
 .headline h1 {
     padding-top: 0.2em;
     border-bottom: 2px solid;
-    font-weight: bolder;
     font-size: 2.3rem;
-    letter-spacing: 0.07em;
+    font-weight: bolder;
+    letter-spacing: 0.05em;
 }
 
 .headline p {
     font-weight: 550;
+}
+
+.author-text {
+    font-size: small;
+}
+
+#author {
+    color: var(--topical-a-color);
 }
 
 /* Position: sticky sørger for at når brukeren scroller ned, så følger sidenav slik at man har den alltid tilgjengelig */
@@ -537,6 +544,8 @@ som reduserer hvor mye koding som trengs for plassering */
 
 .sidenav h2 {
     background-color: var(--topical-sidenav-h2-background-color);
+    border-bottom-style: solid;
+    border-color: black;
     padding: 15px;
     margin-bottom: 0;
     text-align: center;
@@ -578,12 +587,8 @@ seg av resten */
 .topical-img-with-text {
     float: right;
     width: 50%;
-    padding-bottom: 10px;
-    padding-left: 30px;
-}
-
-#author {
-    color: var(--topical-a-color);
+    margin-bottom: 15px;
+    margin-left: 25px;
 }
 
 .list-style-none {
@@ -593,14 +598,10 @@ seg av resten */
 
 .list-style-none li:not(:last-child) {
         margin-bottom: 10px;
-    }
-
-
-.author-text {
-    font-size: small;
 }
 
-/* Vi skaper større kontraster for hyperlinks på dark mode, samtidig som vi beholder fargene assosiert med hyperlinks */
+
+/* Farge på hyperlinker slik at de har god kontrast i både dark og light mode, og fortsatt ser ut som hyperlinker*/
 .main-bar a {
     color: var(--topical-a-color);
 }
@@ -617,46 +618,22 @@ seg av resten */
         max-width: none;
     }
 
-    .headline {
-        grid-column: 1;
-        grid-row: 1;
-    }
-
     .sidenav {
         grid-column: 1;
         grid-row: 2;
         position: relative;
         top: 0;
     }
-
 }
-/* Nå sørger vi for at alle bildene går under og over teksten, og ikke ved siden av for bedre view */
+
+/* Bilder slutter å være ved siden av tekst og blir full width på liten skjerm */
 @media (max-width: 760px) {
-    .topical-grid {
-        grid-template-columns: auto;
-        max-width: none;
-    }
-
-    .headline {
-        grid-column: 1;
-        grid-row: 1;
-        justify-self: center;
-    }
-
     .topical-img-with-text {
         float: none;
         width: 100%;
-        padding-left: 0;
-    }
-
-    .sidenav {
-        grid-column: 1;
-        grid-row: 2;
-        position: relative;
-        top: 0;
+        margin-left: 0;
     }
 }
-
 
 /* LOCATION PAGE*/
 
@@ -847,14 +824,6 @@ footer ul {
     margin-left: 25px;
 }
 
-.border-bottom{
-    grid-column: 1/4;
-    grid-row: 2;
-    border-bottom-width: 1px;
-    border-bottom-style: solid;
-    border-bottom-color: black;
-}
-
 /* design til knappen */
 .button {
     background-color: black;
@@ -866,6 +835,15 @@ footer ul {
 
 .button:hover {
     text-decoration: underline;
+}
+
+/* Linje på tvers av footer */
+.border-bottom{
+    grid-column: 1/4;
+    grid-row: 2;
+    border-bottom-width: 1px;
+    border-bottom-style: solid;
+    border-bottom-color: black;
 }
 
 .contact-information {
