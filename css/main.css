@@ -331,6 +331,10 @@ nav {
 
 /*Kontaktskjema*/
 
+.kontaktskjema-flex{
+    display: flex;
+    flex-direction: column;
+}
 
 
 
