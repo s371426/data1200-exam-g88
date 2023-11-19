@@ -129,8 +129,8 @@ nav {
     padding-left: 16px;
     text-decoration: none;
     color: black;
-    font-weight: bold;
     font-size: 1.1rem;
+    font-weight: bold;
 }
 
 /* Lenker navbar bakgrunn mørere under hover */
@@ -174,13 +174,15 @@ nav {
     display: none;
 }
 
-/* Hamburger meny ikon */
+/* Hamburger meny ikon.
+   Ikon fra: https://icons8.com/icon/set/menu-close/fluency-systems-filled */
 .hamburger-icon {
     display: block;
-    background-image: url(../images/menu.png);
+    background-image: url(../images/menu.svg);
     background-size: cover;
-    height: 60px;
-    width: 60px;
+    height: 50px;
+    width: 50px;
+    margin:  5px;
 }
 
 /* Hamburger meny checkbox input normal skjult. Posisjonert der hamburgermeny er*/
@@ -188,10 +190,10 @@ nav {
     display: none;
     cursor: pointer;
     position: absolute;
-    height: 50px;
-    width: 50px;
     top: 5px;
     right: 25px;
+    height: 50px;
+    width: 50px;
     margin: 0;
 }
 
@@ -253,11 +255,10 @@ nav {
         display: block;
     }
 
-    /* Bytter ut hamburger ikon når menyen er åpen */
-    /*https://iconscout.com/free-icon/close-147
-    "Free Close Icon in Glyph Style" By Benjamin J sperry*/
+    /* Bytter ut hamburger ikon når menyen er åpen
+       Ikon fra: https://icons8.com/icon/set/menu-close/fluency-systems-filled*/
     #hamburger-toggle:checked ~ .logo-hamburger-wrapper .hamburger-icon{
-        background-image: url(../images/svart_x_meny.svg);
+        background-image: url(../images/menu-close.svg);
     }
 }
 
@@ -570,6 +571,16 @@ seg av resten */
     color: var(--topical-a-color);
 }
 
+.list-style-none {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+.list-style-none li:not(:last-child) {
+        margin-bottom: 10px;
+    }
+
+
 .author-text {
     font-size: small;
 }
@@ -773,6 +784,7 @@ seg av resten */
 footer {
     display: grid;
     grid-template-columns: auto;
+    box-sizing: border-box;
     position: relative;
     bottom: 0;
     width: 100%;
@@ -800,20 +812,24 @@ footer ul {
 .newsletter {
     grid-column: 1/3;
     grid-row: 1;
-    border-bottom: 1px solid;
-    border-bottom-color: black;
-    font-weight: bold;
     font-size: 1.55rem;
+    font-weight: bold;
 }
 
 .newsletter-button {
-    grid-row: 1;
     grid-column: 3/4;
+    grid-row: 1;
     text-align: right;
-    border-bottom: 1px solid;
-    border-bottom-color: black;
     padding-top: 25px;
     padding-right: 15px;
+}
+
+.border-bottom{
+    grid-column: 1/4;
+    grid-row: 2;
+    border-bottom-width: 1px;
+    border-bottom-style: solid;
+    border-bottom-color: black;
 }
 
 /* design til knappen */
@@ -828,8 +844,8 @@ footer ul {
     text-decoration: underline;
 }
 .contact-information {
-    grid-row: 2;
     grid-column: 1/2;
+    grid-row: 3;
 }
 
 /*fargen på linken før og etter den har blitt trykket på*/
@@ -842,7 +858,7 @@ footer ul {
 
 .site-links {
     grid-column: 2/3;
-    grid-row: 2;
+    grid-row: 3;
 }
 
 .site-links p {
@@ -861,7 +877,7 @@ footer ul {
 
 .social-media-links {
     grid-column: 3/4;
-    grid-row: 2;
+    grid-row: 3;
 
 }
 
@@ -931,19 +947,24 @@ https://www.w3schools.com/howto/howto_css_social_media_buttons.asp
         padding-left: 3%;
     }
 
-    .contact-information {
+    .border-bottom{
         grid-column: 1;
         grid-row: 3;
     }
 
-    .site-links {
+    .contact-information {
         grid-column: 1;
         grid-row: 4;
     }
 
-    .social-media-links {
+    .site-links {
         grid-column: 1;
         grid-row: 5;
+    }
+
+    .social-media-links {
+        grid-column: 1;
+        grid-row: 6;
         text-align: left;
     }
 
