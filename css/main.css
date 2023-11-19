@@ -511,6 +511,7 @@ som reduserer hvor mye koding som trengs for plassering */
     font-weight: normal;
 }
 
+/* Vi definerer at overskriften starter på første rad, og tar opp alle kolonnnene */
 .headline {
     grid-column: 1/-1;
     grid-row: 1;
