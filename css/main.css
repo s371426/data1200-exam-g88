@@ -154,13 +154,15 @@ nav {
     display: none;
 }
 
-/* Hamburger meny ikon */
+/* Hamburger meny ikon.
+   Ikon fra: https://icons8.com/icon/set/menu-close/fluency-systems-filled */
 .hamburger-icon {
     display: block;
-    background-image: url(../images/menu.png);
+    background-image: url(../images/menu.svg);
     background-size: cover;
-    height: 60px;
-    width: 60px;
+    height: 50px;
+    width: 50px;
+    margin:  5px;
 }
 
 /* Hamburger meny checkbox input normal skjult. Posisjonert der hamburgermeny er*/
@@ -233,11 +235,10 @@ nav {
         display: block;
     }
 
-    /* Bytter ut hamburger ikon når menyen er åpen */
-    /*https://iconscout.com/free-icon/close-147
-    "Free Close Icon in Glyph Style" By Benjamin J sperry*/
+    /* Bytter ut hamburger ikon når menyen er åpen
+       Ikon fra: https://icons8.com/icon/set/menu-close/fluency-systems-filled*/
     #hamburger-toggle:checked ~ .logo-hamburger-wrapper .hamburger-icon{
-        background-image: url(../images/svart_x_meny.svg);
+        background-image: url(../images/menu-close.svg);
     }
 }
 
