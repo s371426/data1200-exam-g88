@@ -314,6 +314,8 @@ nav {
 .campus-box-1,
 .campus-box-2 {
     flex-basis: 50%;
+    padding-right: 2.5%;
+    padding-left: 2.5%;
 }
 
 /*font styling for 'campus' tittel*/
@@ -342,6 +344,8 @@ nav {
 .historie-box-1,
 .historie-box-2 {
     flex-basis: 50%;
+    padding-right: 2.5%;
+    padding-left: 2.5%;
 }
 
 /*font styling for 'siden 1128' tittel*/
@@ -387,6 +391,20 @@ nav {
 .spisesteder-box-1,
 .spisesteder-box-2 {
     flex-basis: 50%;
+    padding-right: 2.5%;
+    padding-left: 2.5%;
+}
+
+/*font styling for 'spisesteder' tittel*/
+.spisesteder-box-2 h2 {
+    font-size: 1.4rem;
+    font-weight: 300;
+}
+
+/*font styling for 'stort utvalg av spisesteder og kaffebarer' tittel*/
+.spisesteder-box-2 h3 {
+    font-size: 2.6rem;
+    font-weight: 700;
 }
 
 
