@@ -492,6 +492,7 @@ input[type=submit] {
 /* Grid-container her, der vi definerer en grid med to kolonner */
 /* Bruk av grid-auto-row for automatisk plassering av grid items slik de har blitt plassert på HTML,
 som reduserer hvor mye koding som trengs for plassering */
+/* Inneholder grid-items: Headline, sidenav, main-bar, topical-img topical-img-with-text */
 .topical-grid {
     display: grid;
     grid-template-columns: auto minmax(220px, 17vw);
@@ -506,6 +507,7 @@ som reduserer hvor mye koding som trengs for plassering */
     font-weight: normal;
 }
 
+/* Vi definerer at overskriften starter på første rad, og tar opp alle kolonnnene */
 .headline {
     grid-column: 1/-1;
     grid-row: 1;
@@ -585,6 +587,8 @@ seg av resten */
     padding-top: 20px;
 }
 
+/* Vi bruker float: right for å posisjonere NASA- og circut bildet til høyre for teksten. Begge elementene befinner seg
+inni grid-item main-bar. */
 .topical-img-with-text {
     float: right;
     width: 50%;
