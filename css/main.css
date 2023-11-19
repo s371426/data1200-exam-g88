@@ -45,6 +45,10 @@ body {
 main {
     background-color: var(--main-background-color);
     color: var(--main-font-color);
+
+}
+
+.homepage-main {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -52,6 +56,13 @@ main {
 
 .main-content{
     max-width: 1300px;
+
+}
+
+.main-content section {
+    padding-bottom: 1.5%;
+    padding-top: 1.5%;
+
 
 }
 
@@ -332,9 +343,37 @@ nav {
     flex-basis: 50%;
 }
 
+/*font styling for 'siden 1128' tittel*/
+.historie-box-1 h2 {
+    font-size: 1.4rem;
+    font-weight: 300;
+}
+
+/*font styling for 'historie på over 200 år' tittel*/
+.historie-box-1 h3 {
+    font-size: 2.6rem;
+    font-weight: 700;
+}
+
+/*seksjon for lite galleri*/
+.bilder-flex {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.bilder-box-1,
+.bilder-box-2,
+.bilder-box-3 {
+    flex-basis: 33.333333%;
+
+
+}
 
 /*Spisesteder-intro seksjon*/
-.spisesteder-intro-flex{
+
+.spisesteder-intro-flex {
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -343,6 +382,7 @@ nav {
 }
 
 /*box 1 og box 2 i spisesteder-intro. Flex basis på 50% for å dele begge boksene i 2*/
+
 .spisesteder-box-1,
 .spisesteder-box-2 {
     flex-basis: 50%;
@@ -351,18 +391,19 @@ nav {
 
 /*Kontaktskjema seksjon*/
 
-.kontaktskjema-flex{
+.kontaktskjema-flex {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
 }
 
-.kontaktskjema-text{
+.kontaktskjema-text {
 
 }
 
 /*styling for inputs field av 'text' type*/
+
 input[type=text] {
     padding: 15px;
     box-shadow: 0 0 15px 4px;
@@ -372,6 +413,7 @@ input[type=text] {
 }
 
 /*styling for inputs field av 'email' type*/
+
 input[type=email] {
     padding: 15px;
     box-shadow: 0 0 15px 4px;
@@ -380,6 +422,7 @@ input[type=email] {
 }
 
 /*styling for inputs field av 'tel' type*/
+
 input[type=tel] {
     padding: 15px;
     box-shadow: 0 0 15px 4px;
@@ -388,20 +431,33 @@ input[type=tel] {
 }
 
 input {
-    width:100%;
+    width: 100%;
 }
+
 /*styling for submit knapp*/
+
 input[type=submit] {
     padding: 15px;
-    border:none;
+    border: none;
     font-weight: 600;
     border-radius: 20px;
 }
 
-form{
+form {
     box-sizing: border-box;
 }
 
+/* Endrer location-flex flexbox til å være vertikal når viewport mindre enn 760px (Mobil) */
+@media only screen and (max-width: 760px) {
+    .main {
+        flex-direction: column;
+    }
+
+    .location-img,
+    .location-text {
+        max-width: none;
+    }
+}
 
 
 /*.rounded-input {
@@ -416,7 +472,7 @@ form{
 
 
 
-    /*TOPICAL PAGE*/
+/*TOPICAL PAGE*/
 
 /* Grid-container her, der vi definerer en grid med to kolonner */
 /* Bruk av grid-auto-flow for automatisk plassering av grid items slik de har blitt plassert på HTML,
