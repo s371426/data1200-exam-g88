@@ -314,6 +314,8 @@ nav {
 .campus-box-1,
 .campus-box-2 {
     flex-basis: 50%;
+    padding-right: 2.5%;
+    padding-left: 2.5%;
 }
 
 /*font styling for 'campus' tittel*/
