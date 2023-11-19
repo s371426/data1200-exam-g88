@@ -350,6 +350,10 @@ input[type=tel] {
     padding: 15px;
 }
 
+/*.rounded-input {
+    padding: 100px
+}*/
+
 /*#Navn, #Etternavn, #E-post, #Nummer {
     width: 50%;*/
 
