@@ -385,13 +385,6 @@ nav {
 
 /*Spisesteder-intro seksjon*/
 
-.spisesteder-intro-flex {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-
-}
 
 /*box 1 og box 2 i spisesteder-intro. Flex basis på 50% for å dele begge boksene i 2*/
 
