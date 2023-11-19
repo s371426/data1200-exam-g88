@@ -804,12 +804,12 @@ footer ul {
 }
 
 /* Setter posisjon på item 1 og setter opp en ny grid i objektet */
-.newsletter {
+.footer-header {
     grid-column: 1;
     grid-row: 1;
 }
 
-.newsletter h2 {
+.footer-header h2 {
     font-size: 2rem;
 }
 
@@ -933,13 +933,14 @@ https://www.w3schools.com/howto/howto_css_social_media_buttons.asp
         grid-template-columns: 1fr;
     }
   
-    /* Setter posisjon og legger til underlinje i grid */
+    /* Setter posisjon og legger */
     .newsletter-button{
         grid-column: 1;
         grid-row: 2;
         text-align: left;
     }
 
+    /* Linje på tvers av footer */
     .border-bottom{
         grid-column: 1;
         grid-row: 3;
