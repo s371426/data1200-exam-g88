@@ -45,6 +45,13 @@ body {
 main {
     background-color: var(--main-background-color);
     color: var(--main-font-color);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.main-content{
+    max-width: 1300px;
 }
 
 /* Generell figure styling*/
@@ -247,11 +254,11 @@ nav {
 
 /*main flex container for content på home-page*/
 
-.home-main-flex-container {
+/*.home-main-flex-container {
     display: flex;
     flex-direction: column;
 
-}
+}*/
 
 /*hero section*/
 .hero-flex {
@@ -266,7 +273,6 @@ nav {
     align-items: center;
     text-shadow: 8px -4px 20px black;
     color: white;
-
 
 }
 /*main heading i hero section*/
@@ -322,6 +328,18 @@ nav {
 }
 
     /* spisesteder section*/
+
+/*Kontaktskjema*/
+
+
+
+
+/*#Navn, #Etternavn, #E-post, #Nummer {
+    width: 50%;*/
+
+
+/*input[type=text], select { */
+
 
 
     /*TOPICAL PAGE*/
