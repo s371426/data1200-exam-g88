@@ -340,14 +340,19 @@ nav {
 
 input[type=text] {
     padding: 15px;
+    box-shadow: 0 0 15px 4px;
 }
 
 input[type=email] {
     padding: 15px;
+    box-shadow: 0 0 15px 4px;
+
 }
 
 input[type=tel] {
     padding: 15px;
+    box-shadow: 0 0 15px 4px;
+
 }
 
 /*.rounded-input {
