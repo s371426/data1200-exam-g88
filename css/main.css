@@ -341,14 +341,6 @@ nav {
     font-weight: 700;
 }
 
-/*historie-intro seksjon*/
-
-.historie-intro-flex {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-}
 
 /*box 1 og box 2 i historie-intro. Flex basis på 50% for å dele begge boksene i 2*/
 
