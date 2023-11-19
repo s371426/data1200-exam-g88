@@ -109,8 +109,8 @@ nav {
     padding-left: 16px;
     text-decoration: none;
     color: black;
-    font-weight: bold;
     font-size: 1.1rem;
+    font-weight: bold;
 }
 
 /* Lenker navbar bakgrunn mørere under hover */
@@ -654,8 +654,8 @@ footer ul {
 .newsletter {
     grid-column: 1/3;
     grid-row: 1;
-    font-weight: bold;
     font-size: 1.55rem;
+    font-weight: bold;
 }
 
 .newsletter-button {
