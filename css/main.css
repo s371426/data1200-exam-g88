@@ -391,6 +391,8 @@ nav {
 .spisesteder-box-1,
 .spisesteder-box-2 {
     flex-basis: 50%;
+    padding-right: 2.5%;
+    padding-left: 2.5%;
 }
 
 
