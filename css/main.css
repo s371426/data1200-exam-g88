@@ -440,8 +440,8 @@ form input {
     width: 100%;
     border-radius: 20px;
     padding: 15px;
-    margin-top: 1%;
-    margin-bottom: 1%;
+    margin-top: 2%;
+    margin-bottom: 2%;
 }
 
 /*styling for inputs field av 'email' type*/
