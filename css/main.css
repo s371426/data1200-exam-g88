@@ -366,14 +366,6 @@ nav {
     font-weight: 700;
 }
 
-/*seksjon med 3 bilder*/
-.bilder-flex {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-}
-
 .bilder-box-1,
 .bilder-box-2,
 .bilder-box-3 {
