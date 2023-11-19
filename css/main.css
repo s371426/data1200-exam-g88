@@ -400,17 +400,19 @@ nav {
 }
 
 .kontaktskjema-text {
-
+    width: 50%;
+}
+.kontaktskjema-form{
+    width: 50%;
 }
 
 /*styling for inputs field av 'text' type*/
 
-input[type=text] {
-    padding: 15px;
-    box-shadow: 0 0 15px 4px;
-    border-radius: 20px;
+input {
+    box-sizing: border-box;
     width: 100%;
-
+    margin-top: 1%;
+    margin-bottom: 1%;
 }
 
 /*styling for inputs field av 'email' type*/
@@ -423,6 +425,11 @@ input[type=email] {
 }
 
 /*styling for inputs field av 'tel' type*/
+input[type=text] {
+    padding: 15px;
+    box-shadow: 0 0 15px 4px;
+    border-radius: 20px;
+}
 
 input[type=tel] {
     padding: 15px;
@@ -431,9 +438,6 @@ input[type=tel] {
 
 }
 
-input {
-    width: 100%;
-}
 
 /*styling for submit knapp*/
 
@@ -444,9 +448,6 @@ input[type=submit] {
     border-radius: 20px;
 }
 
-form {
-    box-sizing: border-box;
-}
 
 /* Endrer location-flex flexbox til å være vertikal når viewport mindre enn 760px (Mobil) */
 @media only screen and (max-width: 760px) {
