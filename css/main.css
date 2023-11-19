@@ -969,6 +969,5 @@ https://www.w3schools.com/howto/howto_css_social_media_buttons.asp
     .social-media-links {
         grid-column: 1;
         grid-row: 6;
-        text-align: left;
     }
 }
