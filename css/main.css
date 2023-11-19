@@ -418,17 +418,21 @@ nav {
 }
 
 .kontaktskjema-text {
-    width: 50%;
+    max-width: 650px;
+    width: 100%;
 }
 .kontaktskjema-form{
-    width: 50%;
+    max-width: 650px;
+    width: 100%;
 }
 
 /*styling for inputs field av 'text' type*/
 
-input {
+form input {
     box-sizing: border-box;
     width: 100%;
+    border-radius: 20px;
+    padding: 15px;
     margin-top: 1%;
     margin-bottom: 1%;
 }
@@ -436,23 +440,17 @@ input {
 /*styling for inputs field av 'email' type*/
 
 input[type=email] {
-    padding: 15px;
     box-shadow: 0 0 15px 4px;
-    border-radius: 20px;
 
 }
 
 /*styling for inputs field av 'tel' type*/
 input[type=text] {
-    padding: 15px;
     box-shadow: 0 0 15px 4px;
-    border-radius: 20px;
 }
 
 input[type=tel] {
-    padding: 15px;
     box-shadow: 0 0 15px 4px;
-    border-radius: 20px;
 
 }
 
@@ -460,10 +458,8 @@ input[type=tel] {
 /*styling for submit knapp*/
 
 input[type=submit] {
-    padding: 15px;
     border: none;
     font-weight: 600;
-    border-radius: 20px;
 }
 
 
