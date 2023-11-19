@@ -491,7 +491,7 @@ input[type=submit] {
 /*TOPICAL PAGE*/
 
 /* Grid-container her, der vi definerer en grid med to kolonner */
-/* Bruk av grid-auto-flow for automatisk plassering av grid items slik de har blitt plassert på HTML,
+/* Bruk av grid-auto-rowfor automatisk plassering av grid items slik de har blitt plassert på HTML,
 som reduserer hvor mye koding som trengs for plassering */
 .topical-grid {
     display: grid;
@@ -574,7 +574,7 @@ som reduserer hvor mye koding som trengs for plassering */
     color: white;
 }
 
-/* Her sier vi at grid-item main-bar som inneholder teksten skal holde seg innenfor første kolonnen. Grid-auto-flow tar
+/* Her sier vi at grid-item main-bar som inneholder teksten skal holde seg innenfor første kolonnen. Grid-auto-row tar
 seg av resten */
 .main-bar {
     grid-column: 1;
