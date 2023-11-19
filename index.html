@@ -51,18 +51,14 @@
 </header>
 
 <!-- main flex container for content på home-page, altså mellom header og footer-->
+<!-- seksjon for hero -->
+<div class="hero-flex">
+    <h1>Oslo Metropolitan University</h1>
+    <h2>Velkommen til Pilestreted</h2>
+</div>
 
-<main class="home-main-flex-container">
-
-    <!-- seksjon for hero -->
-    <div class="hero-flex">
-        <div class="hero-text">
-            <h1>Oslo Metropolitan University</h1>
-            <h2>Velkommen til Pilestreted</h2>
-        </div>
-    </div>
-
-
+<main class="homepage-main">
+    <div class="main-content">
     <!-- seksjon for intro til campus -->
     <section class="campus-intro-flex">
         <div class="campus-box-1">
@@ -94,7 +90,7 @@
     <section class="historie-intro-flex">
         <div class="historie-box-1">
             <h2>Siden 1128</h2>
-            <h3> Moderne universitet med en historie på over 200 år</h3>
+            <h3> Historie på over 200 år</h3>
             <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has
                 been the industry's standard dummy text ever since the 1500s, when an unknown printer took a
                 galley of type and scrambled it to make a type specimen book. It has survived not only
@@ -120,14 +116,73 @@
                 <figcaption class="img-text">Benjamin A. Ward/OsloMET</figcaption>
             </figure>
         </div>
+    </section>
 
+    <section class="bilder-flex">
+        <div class="bilder-box-1">
+            <figure class="skulptur-img">
+                <picture>
+                    <source srcset="images/skulptur/skulptur.jpg 900w,
+                                    images/skulptur/skulptur.jpg 1350w,
+                                    images/skulptur/skulptur.jpg 2000w"
+                            type="image/jpg">
+                    <img src="images/skulptur/skulptur.jpg"
+                         alt="bilde av studiestart på oslomet"
+                         width="2700" height ="1793">
+                </picture>
+                <figcaption class="img-text">Benjamin A. Ward/OsloMET</figcaption> <!-- husk å fiks fotograf stuff-->
+            </figure>
+        </div>
 
+        <div class="bilder-box-2">
+            <figure class="skulptur-img">
+                <picture>
+                    <source srcset="images/skulptur/skulptur.jpg 900w,
+                                    images/skulptur/skulptur.jpg 1350w,
+                                    images/skulptur/skulptur.jpg 2000w"
+                            type="image/jpg">
+                    <img src="images/skulptur/skulptur.jpg"
+                         alt="bilde av studiestart på oslomet"
+                         width="2700" height ="1793">
+                </picture>
+                <figcaption class="img-text">Benjamin A. Ward/OsloMET</figcaption> <!-- husk å fiks fotograf stuff-->
+            </figure>
+        </div>
+
+        <div class="bilder-box-3">
+            <figure class="skulptur-img">
+                <picture>
+                    <source srcset="images/skulptur/skulptur.jpg 900w,
+                                    images/skulptur/skulptur.jpg 1350w,
+                                    images/skulptur/skulptur.jpg 2000w"
+                            type="image/jpg">
+                    <img src="images/skulptur/skulptur.jpg"
+                         alt="bilde av studiestart på oslomet"
+                         width="5851" height ="3893">
+                </picture>
+                <figcaption class="img-text">Benjamin A. Ward/OsloMET</figcaption> <!-- husk å fiks fotograf stuff-->
+            </figure>
+        </div>
     </section>
 
     <!-- Seksjon for spisested -->
 
-    <section class="spisesteder">
+    <section class="spisesteder-intro-flex">
         <div class="spisesteder-box-1">
+            <figure class="spisesteder-img">
+                <picture>
+                    <source srcset="images/grilling/grilling.jpg 900w,
+                                    images/grilling/grilling.jpg 1350w,
+                                    images/grilling/grilling.jpg 2000w"
+                            type="image/jpg">
+                    <img src="images/grilling/grilling.jpg"
+                         alt="bilde av studiestart på oslomet"
+                         width="4256" height ="2832">
+                </picture>
+                <figcaption class="img-text">Benjamin A. Ward/OsloMet</figcaption>
+            </figure>
+        </div>
+        <div class="spisesteder-box-2">
             <h2>Spisesteder</h2>
             <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has
             been the industry's standard dummy text ever since the 1500s, when an unknown printer took a
@@ -144,21 +199,34 @@
             Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software
             like Aldus PageMaker including versions of Lorem Ipsum</p>
         </div>
-        <div class="spisesteder-box-2">
-            <figure class="spisesteder-img">
-                <picture>
-                    <source srcset="images/grilling/grilling.jpg 900w,
-                                    images/grilling/grilling.jpg 1350w,
-                                    images/grilling/grilling.jpg 2000w"
-                            type="image/jpg">
-                    <img src="images/grilling/grilling.jpg"
-                         alt="bilde av studiestart på oslomet"
-                         width="4256" height ="2832">
-                </picture>
-                <figcaption class="img-text">Benjamin A. Ward/OsloMet</figcaption>
-            </figure>
-        </div>
+
     </section>
+
+    <section class="kontaktskjema-flex">
+            <div class="kontaktskjema-text">
+                <h2>Kontakt oss</h2>
+                <p>Send oss en e-post om du lurer på noe!</p>
+            </div>
+            <div class="kontaktskjema-form">
+            <form>
+                <label for="Navn"></label>
+                <input type="text" id="Navn" placeholder="Fornavn" required><br>
+
+                <label for="E-post"></label>
+                <input type="email" id="E-post" placeholder="eksempel@gmail.com" required><br>
+
+                <label for="Nummer"></label>
+                <input type="tel" id="Nummer" placeholder="+123 45 678" pattern="[0-9]{3} [0-9]{2} [0-9]{3}"><br>
+
+                <label for="Melding"></label>
+                <input type="text" id="Melding" placeholder="Hva lurer du på?" required><br>
+
+                <input type="submit">
+            </form>
+            </div>
+        <!--</div>-->
+    </section>
+    </div>
 </main>
 
 <footer>
