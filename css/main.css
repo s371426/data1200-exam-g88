@@ -48,23 +48,6 @@ main {
 
 }
 
-.homepage-main {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-.main-content{
-    max-width: 1300px;
-
-}
-
-.main-content section {
-    padding-bottom: 1.5%;
-    padding-top: 1.5%;
-
-
-}
 
 /* Generell figure styling*/
 figure {
@@ -273,6 +256,38 @@ nav {
 
 }*/
 
+/* Gjør bakgrunnen på annenhver sibling element (child av parent element) til en annen farge
+(main secondary background color) */
+/* https://developer.mozilla.org/en-US/docs/Web/CSS/:nth-child */
+.homepage-main section:nth-child(odd) {
+    background-color: var(--secondary-background-color);
+}
+
+.homepage-main-flex {
+    display: flex;
+    flex-direction: column;
+
+}
+
+.homepage-flex{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    padding-bottom: 1.5%;
+    padding-top: 1.5%;
+}
+
+.main-content{
+    /*max-width: 1300px; */
+
+}
+
+.main-content section {
+    /*padding-bottom: 1.5%;
+    padding-top: 1.5%;*/
+    /*width: 100%;*/
+}
 /*hero section*/
 .hero-flex {
     display: flex;
@@ -301,13 +316,7 @@ nav {
     font-size: 2.7rem;
 }
 
-/*campus-intro seksjon */
-.campus-intro-flex {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-}
+
 
 /*box 1 og box 2 i campus intro. Flexis basis på 50% for å dele begge boksene i 2*/
 
@@ -316,6 +325,8 @@ nav {
     flex-basis: 50%;
     padding-right: 2.5%;
     padding-left: 2.5%;
+    max-width: 650px;
+    box-sizing: border-box;
 }
 
 /*font styling for 'campus' tittel*/
@@ -346,6 +357,9 @@ nav {
     flex-basis: 50%;
     padding-right: 2.5%;
     padding-left: 2.5%;
+    max-width: 650px;
+    box-sizing: border-box;
+
 }
 
 /*font styling for 'siden 1128' tittel*/
@@ -360,7 +374,7 @@ nav {
     font-weight: 700;
 }
 
-/*seksjon for lite galleri*/
+/*seksjon med 3 bilder*/
 .bilder-flex {
     display: flex;
     flex-direction: row;
@@ -372,8 +386,9 @@ nav {
 .bilder-box-2,
 .bilder-box-3 {
     flex-basis: 33.333333%;
-
-
+    padding: 10px;
+    max-width: 500px;
+    box-sizing: border-box;
 }
 
 /*Spisesteder-intro seksjon*/
@@ -393,6 +408,9 @@ nav {
     flex-basis: 50%;
     padding-right: 2.5%;
     padding-left: 2.5%;
+    max-width: 650px;
+    box-sizing: border-box;
+
 }
 
 /*font styling for 'spisesteder' tittel*/
