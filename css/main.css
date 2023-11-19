@@ -526,7 +526,7 @@ som reduserer hvor mye koding som trengs for plassering */
 }
 
 .author-text {
-    font-size: small;
+    font-size: 0.8rem;
 }
 
 #author {
@@ -932,12 +932,7 @@ https://www.w3schools.com/howto/howto_css_social_media_buttons.asp
     .footer-grid {
         grid-template-columns: 1fr;
     }
-    /* Setter plassen til grid, og fjerner underlinja til gridden */
-    .newsletter {
-        grid-column: 1;
-        grid-row: 1;
-        border-bottom: 0;
-    }
+  
     /* Setter posisjon og legger til underlinje i grid */
     .newsletter-button{
         grid-column: 1;
