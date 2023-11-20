@@ -109,9 +109,9 @@ nav {
 /* Style lenkene i navbar */
 .menu a {
     display: block;
-    padding-top: 30px;
+    padding-top: 19px;
     padding-right: 16px;
-    padding-bottom: 30px;
+    padding-bottom: 19px;
     padding-left: 16px;
     text-decoration: none;
     color: black;
@@ -128,9 +128,9 @@ nav {
 .contact-button {
     background-color: skyblue;
     border-radius: 30px;
-    padding-top: 15px;
+    padding-top: 12px;
     padding-right: 25px;
-    padding-bottom: 15px;
+    padding-bottom: 12px;
     padding-left: 25px;
     text-decoration: none;
     color: black;
@@ -214,9 +214,11 @@ nav {
         padding-left: 0;
     }
 
-    /* Større tekst Linker når den er hamburger */
+    /* Større tekst og avstand Linker når den er hamburger */
     .menu a{
         font-size: 1.5em;
+        padding-top: 30px;
+        padding-bottom: 30px;
     }
 
     /* Kontakt knappen blir skjult */
