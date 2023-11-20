@@ -13,28 +13,31 @@
     <!-- Ikon bibliotek brukt i footer -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <title>Forside</title>
-    <meta name="description" content="XXXXXXXXX">
+    <meta name="description" content="Informasjon om OsloMet Metropolitan University">
 </head>
 
 <body>
 <header>
-    <!-- Navigasjonsbar med hamburgermeny -->
+    <!-- Navigasjonsbar med logo og hamburgermeny -->
     <nav>
-        <!-- Input checkbox for hamburger toggle (label)-->
-        <input id="hamburger-toggle" type="checkbox" aria-label="Åpne navigasjonsmeny"/>
+
+        <!-- Input checkbox for hamburger toggle (label), aria-label for screen readers -->
+        <input id="hamburger-toggle" type="checkbox" aria-label="Åpne navigasjonsmeny">
 
         <div class="logo-hamburger-wrapper">
-            <!-- Logo på navbar -->
+
+            <!-- Logo på navbar, tabindex for at den skal velges i riktig rekkefølge (venstre mot høyre) -->
             <a href="index.html" title="Tilbake til forsiden" tabindex="1">
                 <img id="nav-logo" src="images/logo-oslomet-gul.svg" alt="OsloMet sin logo" width="68" height="40">
             </a>
-            <!-- Label for input checkbox og hamburger meny ikon-->
+
+            <!-- Label for input checkbox og hamburger meny ikon -->
             <label class="hamburger-toggle-container" for="hamburger-toggle">
                 <span class="hamburger-icon"></span>
             </label>
         </div>
 
-        <!-- Navigasjons meny side lenker-->
+        <!-- Navigasjons meny side lenker -->
         <ul class="menu">
             <li><a href="index.html">Hjem</a></li>
             <li><a href="accessibility.html">Tilgjengelighet</a></li>
@@ -42,224 +45,233 @@
             <li><a href="locations.html">Lokasjoner</a></li>
         </ul>
 
+        <!-- Kontakt knapp på navigasjonsbar -->
         <a class="contact-button" href="maybepage5.html">Kontakt</a>
     </nav>
 </header>
 
 <!-- main flex container for content på home-page, altså mellom header og footer-->
+<!-- seksjon for hero -->
+<div class="hero-flex">
+    <h1>Oslo Metropolitan University</h1>
+    <h2>Velkommen til Pilestreted</h2>
+</div>
 
-<main class="home-main-flex-container">
-    <section class="hero-flex">
-
-        <!-- <picture>
-
-            Bilde blir valgt av device ut i fra hvilken oppløsning som passer best. "w" er bredden på det bildet.
-            Type forteller device at bildene er webp format
-
-            <source srcset="images/forsidebilde-arkitektur-p32/arkitektur-p32-skjalg-bøhmer-vold-small.webp 1200w,
-                                images/forsidebilde-arkitektur-p32/arkitektur-p32-skjalg-bøhmer-vold-medium.webp 1800w,
-                                images/forsidebilde-arkitektur-p32/arkitektur-p32-skjalg-bøhmer-vold-large.webp 2400w,
-                                images/forsidebilde-arkitektur-p32/arkitektur-p32-skjalg-bøhmer-vold-very-large.webp 3840p"
-                    media="(min-width: 700px)" type="image/webp">
-
-            Hvis device skjerm er smallere enn 700px vil en av disse bildene bli valgt steden for de over,
-            de er square istedenfor wide
-
-            <source srcset="images/forsidebilde-arkitektur-p32/arkitektur-p32-skjalg-bøhmer-vold-square-small.webp 1000w,
-                                images/forsidebilde-arkitektur-p32/arkitektur-p32-skjalg-bøhmer-vold-square-medium.webp 1440w,
-                                images/forsidebilde-arkitektur-p32/arkitektur-p32-skjalg-bøhmer-vold-square-large.jpg 2000w"
-                    media="(max-width: 700px)" type="image/webp">
-
-            Backup bilde tilfelle device ikke støtter <picture> eller webp, i tilleg til alt tekst informasjon
-
-            <img src="images/forsidebilde-arkitektur-p32/arkitektur-p32-skjalg-bøhmer-vold-large.jpg"
-                 alt="[MAGNLER ALT TEKST]"
-                 width="2400" height="1600">
-        </picture> -->
-        <div class="hero-text">
-            <h1>Oslo Metropolitan University</h1>
-            <h2>Velkommen til Pilestreted</h2>
-        </div>
-    </section>
+<main class="homepage-main">
+    <div class="main-content">
     <!-- seksjon for intro til campus -->
-    <section class="campus">
-        <h3>tommaboy suger</h3>
-    <!-- seksjon for intro til historie -->
-    </section>
-    <section class="historie">
-        <h3>tommaboy suger</h3>
-    <!-- seksjon for kantine -->
-    </section>
-    <section class="kantine">
-        <h3>tommaboy suger</h3>
-    </section>
-    <!-- seksjon for whatevs vi velger -->
-    <section class="whatevs">
-        <h3>tommaboy suger</h3>
-    </section>
-
-    <!-- legge ved fotograf. Skjalg Bøhmer Vold / OsloMet -->
-
-
-<!--
-        <picture>
-
-            Bilde blir valgt av device ut i fra hvilken oppløsning som passer best. "w" er bredden på det bildet.
-            Type forteller device at bildene er webp format
-
-            <source srcset="images/forsidebilde-arkitektur-p32/arkitektur-p32-skjalg-bøhmer-vold-small.webp 1200w,
-                                images/forsidebilde-arkitektur-p32/arkitektur-p32-skjalg-bøhmer-vold-medium.webp 1800w,
-                                images/forsidebilde-arkitektur-p32/arkitektur-p32-skjalg-bøhmer-vold-large.webp 2400w,
-                                images/forsidebilde-arkitektur-p32/arkitektur-p32-skjalg-bøhmer-vold-very-large.webp 3840p"
-                    media="(min-width: 700px)" type="image/webp">
-
-            Hvis device skjerm er smallere enn 700px vil en av disse bildene bli valgt steden for de over,
-            de er square istedenfor wide
-
-            <source srcset="images/forsidebilde-arkitektur-p32/arkitektur-p32-skjalg-bøhmer-vold-square-small.webp 1000w,
-                                images/forsidebilde-arkitektur-p32/arkitektur-p32-skjalg-bøhmer-vold-square-medium.webp 1440w,
-                                images/forsidebilde-arkitektur-p32/arkitektur-p32-skjalg-bøhmer-vold-square-large.jpg 2000w"
-                    media="(max-width: 700px)" type="image/webp">
-
-            Backup bilde tilfelle device ikke støtter <picture> eller webp, i tilleg til alt tekst informasjon
-
-            <img src="images/forsidebilde-arkitektur-p32/arkitektur-p32-skjalg-bøhmer-vold-large.jpg"
-                 alt="[MAGNLER ALT TEKST]"
-                 width="2400" height="1600">
-        </picture>
-    </section>
-
-    section class for en beskrivelse av områdene rundt campus.
-
-    <section class="campus-intro-flex">
-        <figure class="bislettbekken-img">
-            <picture>
-                <source srcset="images/bislettbekken/bislettbekken-small.jpg 900w,
+    <section class="homepage-flex">
+        <div class="campus-box-1">
+            <figure class="bislettbekken-img">
+                <picture>
+                    <source srcset="images/bislettbekken/bislettbekken-small.jpg 900w,
                                 images/bislettbekken/bislettbekken-medium.jpg 1350w,
                                 images/bislettbekken/bislettbekken-large.jpg 2000w"
-                        type="image/jpg">
-                <img src="images/bislettbekken/bislettbekken-src.jpg"
-                     alt="bilde av en bekk ved pilestredet"
-                     width="2700" height ="1793">
-            </picture>
+                            type="image/jpg">
+                    <img src="images/bislettbekken/bislettbekken-src.jpg"
+                         alt="bilde av en bekk ved pilestredet"
+                         width="2700" height ="1793">
+                </picture>
             <figcaption class="img-text">John Hughes / OsloMET</figcaption>
-        </figure>
-
-        <div class="campus-intro-text">
-            <h3>Campus</h3>
-            <h2>Området rundt campus</h2>
-            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.
-               Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
-               when an unknown printer took a galley of type and scrambled it to make a type specimen book.
-               It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.
-
-               It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages,
-               and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum</p>
+            </figure>
         </div>
-    </section> -->
-
-</main>
-
-    <!--    <div class="grid-mainpage">
-        <div class="item1-mainpage">
-
-
-
-            <div class="bilde-tekst">
-                <h1>Oslo Metropolitan University</h1>
-                <p>Velkommen til storbyuniversitetet</p>
-            </div>
-
-
-            <picture>
-
-                Bilde blir valgt av device ut i fra hvilken oppløsning som passer best. "w" er bredden
-                     på det bildet. Type forteller device at bildene er webp format
-
-                <source srcset="images/forsidebilde-arkitektur-p32/arkitektur-p32-skjalg-bøhmer-vold-small.webp 1200w,
-                                images/forsidebilde-arkitektur-p32/arkitektur-p32-skjalg-bøhmer-vold-medium.webp 1800w,
-                                images/forsidebilde-arkitektur-p32/arkitektur-p32-skjalg-bøhmer-vold-large.webp 2400w,
-                                images/forsidebilde-arkitektur-p32/arkitektur-p32-skjalg-bøhmer-vold-very-large.webp 3840p"
-                        media="(min-width: 700px)" type="image/webp">
-
-                Hvis device skjerm er smallere enn 700px vil en av disse bildene bli valgt steden for de over,
-                     de er square istedenfor wide
-
-                <source srcset="images/forsidebilde-arkitektur-p32/arkitektur-p32-skjalg-bøhmer-vold-square-small.webp 1000w,
-                                images/forsidebilde-arkitektur-p32/arkitektur-p32-skjalg-bøhmer-vold-square-medium.webp 1440w,
-                                images/forsidebilde-arkitektur-p32/arkitektur-p32-skjalg-bøhmer-vold-square-large.jpg 2000w"
-                        media="(max-width: 700px)" type="image/webp">
-
-                Backup bilde tilfelle device ikke støtter <picture> eller webp, i tilleg til alt tekst informasjon
-
-                <img src="images/forsidebilde-arkitektur-p32/arkitektur-p32-skjalg-bøhmer-vold-large.jpg"
-                     alt="[MAGNLER ALT TEKST]"
-                     width="2400" height="1600">
-            </picture>
-
-        </div>
-        <div class="item2-mainpage">
-            <h2> Dette er OsloMet</h2>
+        <div class="campus-box-2">
+            <h2>Campus</h2>
+            <h3>Pilestredet campus</h3>
             <p>OsloMet er en forkortelse for vårt internasjonale navn, Oslo Metropolitan University.
-                Vårt hovedstudiested ligger nemlig midt i Oslo, og har både storbyens puls og kort vei til arbeidslivet du senere skal bli en del av.
-                I tillegg har vi et studiested på Kjeller, som tilbyr flere populære studier. OsloMet er dessuten Norges tredje største universitet!</p>
+                Vårt hovedstudiested ligger nemlig midt i Oslo, og har både storbyens puls og kort vei
+                til arbeidslivet du senere skal bli en del av. I tillegg har vi et studiested på Kjeller,
+                som tilbyr flere populære studier. OsloMet er dessuten Norges tredje største universitet!</p>
         </div>
-        <div class="item3-mainpage">
-            <h2>Tekst her</h2>
-            <p></p>
-        </div>
-
--->
-
-
-
-<footer>
-    <!-- Grid kode tatt fra: https://www.w3schools.com/css/css_grid.asp-->
-    <!-- nyhetsbrev tekst, markert med * ettersom teksten og knappen er midlertidig. -->
-    <section class="footer-grid-objects newsletter">
-        <p>*Hold deg oppdatert på hva som skjer</p>
     </section>
 
+    <!-- Seksjon for intro til historie -->
+
+    <section class="homepage-flex">
+        <div class="historie-box-1">
+            <h2>Siden 1128</h2>
+            <h3> Historie på over 200 år</h3>
+            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has
+                been the industry's standard dummy text ever since the 1500s, when an unknown printer took a
+                galley of type and scrambled it to make a type specimen book. It has survived not only
+                five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.
+                Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+            <p><a href="http://www.oslomet.no"><b>Les mer om historien vår</b></a></p>
+        </div>
+        <div class="historie-box-2">
+            <figure class="studiestart-img">
+                <picture>
+                    <!-- Bilde blir valgt av device ut i fra hvilken oppløsning som passer best. "w" er bredden på det bildet.
+                    Type forteller device at bildene er webp format -->
+                    <source srcset="images/oslomet-studiestart/oslomet-studiestart.jpg 900w,
+                                    images/oslomet-studiestart/oslomet-studiestart.jpg 1350w,
+                                    images/oslomet-studiestart/oslomet-studiestart.jpg 2000w"
+                            type="image/jpg">
+                    <!-- Backup bilde tilfelle device ikke støtter <picture> eller webp, i tilleg til alt tekst informasjon -->
+                    <img src="images/oslomet-studiestart/oslomet-studiestart.jpg"
+                         alt="bilde av studiestart på oslomet"
+                         width="2700" height ="1793">
+                </picture>
+                <figcaption class="img-text">Benjamin A. Ward/OsloMET</figcaption>
+            </figure>
+        </div>
+    </section>
+
+    <section class="homepage-flex">
+        <div class="bilder-box-1">
+            <figure class="skulptur-img">
+                <picture>
+                    <source srcset="images/foreningsdag-musikk/foreningsdag-musikk-oslomet.jpg 900w,
+                                    images/foreningsdag-musikk/foreningsdag-musikk-oslomet.jpg 1350w,
+                                    images/foreningsdag-musikk/foreningsdag-musikk-oslomet.jpg 2000w"
+                                type="image/jpg">
+                    <img src="images/foreningsdag-musikk/foreningsdag-musikk-oslomet.jpg"
+                             alt="bilde fra live musikkopptreden på foreningsdag på oslomet"
+                             width="1600" height ="1066">
+                </picture>
+                <figcaption class="img-text">Benjamin A. Ward/OsloMET</figcaption> <!-- husk å fiks fotograf stuff-->
+            </figure>
+        </div>
+
+        <div class="bilder-box-2">
+            <figure class="home-img">
+                <picture>
+                    <source srcset="images/studiestart-2023/oslomet-studiestart-2023.jpg 900w,
+                                    images/studiestart-2023/oslomet-studiestart-2023.jpg 1350w,
+                                    images/studiestart-2023/oslomet-studiestart-2023.jpg 2000w"
+                            type="image/jpg">
+                    <img src="images/studiestart-2023/oslomet-studiestart-2023.jpg"
+                         alt="bilde av studiestart på oslomet"
+                         width="1600" height ="1068">
+                </picture>
+                <figcaption class="img-text">Benjamin A. Ward/OsloMET</figcaption> <!-- husk å fiks fotograf stuff-->
+            </figure>
+        </div>
+
+        <div class="bilder-box-3">
+            <figure class="skulptur-img">
+                <picture>
+                    <source srcset="images/skulptur/skulptur.jpg 900w,
+                                    images/skulptur/skulptur.jpg 1350w,
+                                    images/skulptur/skulptur.jpg 2000w"
+                            type="image/jpg">
+                    <img src="images/skulptur/skulptur.jpg"
+                         alt="bilde av studiestart på oslomet"
+                         width="5851" height ="3893">
+                </picture>
+                <figcaption class="img-text">Benjamin A. Ward/OsloMET</figcaption> <!-- husk å fiks fotograf stuff-->
+            </figure>
+        </div>
+    </section>
+
+    <!-- Seksjon for spisested -->
+
+    <section class="homepage-flex">
+        <div class="spisesteder-box-1">
+            <figure class="spisesteder-img">
+                <picture>
+                    <source srcset="images/grilling/grilling.jpg 900w,
+                                    images/grilling/grilling.jpg 1350w,
+                                    images/grilling/grilling.jpg 2000w"
+                            type="image/jpg">
+                    <img src="images/grilling/grilling.jpg"
+                         alt="bilde av studiestart på oslomet"
+                         width="4256" height ="2832">
+                </picture>
+                <figcaption class="img-text">Benjamin A. Ward/OsloMet</figcaption>
+            </figure>
+        </div>
+        <div class="spisesteder-box-2">
+            <h2>Spisesteder</h2>
+            <h3>Stort utvalg av mat</h3>
+            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has
+            been the industry's standard dummy text ever since the 1500s, when an unknown printer took a
+            galley of type and scrambled it to make a type specimen book. It has survived not only
+            five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.
+            Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has
+            been the industry's standard dummy text ever since the 1500s, when an unknown printer took a
+            galley of type and scrambled it to make a type specimen book. It has survived not only
+            five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. </p>
+        </div>
+
+    </section>
+
+    <section class="kontaktskjema-flex">
+        <div class=kontaktskjema-boks>
+            <h2>Kontakt oss</h2>
+            <p>Send oss en e-post om du lurer på noe!</p>
+        </div>
+        <div class="kontaktskjema-form">
+            <form>
+                <label for="Navn"></label>
+                <input type="text" id="Navn" placeholder="Fornavn" required><br>
+
+                <label for="E-post"></label>
+                <input type="email" id="E-post" placeholder="eksempel@gmail.com" required><br>
+
+                <label for="Nummer"></label>
+                <input type="tel" id="Nummer" placeholder="+123 45 678" pattern="[0-9]{3} [0-9]{2} [0-9]{3}"><br>
+
+                <label for="Melding"></label>
+
+                <input type="text" id="Melding" placeholder="Hva lurer du på?" required><br>
+
+                <input type="submit">
+            </form>
+        </div>
+    </section>
+    </div>
+</main>
+
+<footer>
+    <!-- Grid kode tatt fra: https://www.w3schools.com/css/css_grid.asp -->
+    <!-- Header Overskrift -->
+    <section class="footer-grid-objects footer-header">
+        <h2>OsloMet</h2>
+    </section>
+
+    <!-- Newsletter knapp -->
     <section class="newsletter-button">
         <a href="https://www.oslomet.no/nyhetsbrev" class="button">Nyhetsbrev! </a>
     </section>
+
+    <!--Linje på tvers av footer, styling-->
+    <div class="border-bottom"></div>
+
     <!-- Kontakt informasjon til OsloMet -->
     <section class="footer-grid-objects contact-information">
-        <h3>OsloMet</h3>
-        <p>Oslo Metropolitan University</p>
-        <p>Storbyuniversitetet</p>
-        <p>Postboks 4, St. Olavs plass</p>
-        <p>0130 Oslo</p>
-        <p>Tlf.: <a href="tel:67235000">67 23 50 00</a></p>
+        <h3>Kontaktinformasjon</h3>
+        <ul>
+            <li>Oslo Metropolitan University</li>
+            <li>Storbyuniversitetet</li>
+            <li>Postboks 4, St. Olavs plass</li>
+            <li>0130 Oslo</li>
+            <li>Tlf.: <a href="tel:67235000">67 23 50 00</a></li>
+            <li>E-post: <a href="mailto:post@oslomet.no">post@oslomet.no</a></li>
+        </ul>
     </section>
 
     <!-- Lenker til de andre sidene på nettsiden vår -->
     <section class="footer-grid-objects site-links">
         <h3>Navigasjon</h3>
-        <p><a href="index.html">Hjem</a></p>
-        <p><a href="accessibility.html">Tilgjengelighet</a></p>
-        <p><a href="topical.html">Topical</a></p>
-        <p><a href="locations.html">Lokasjoner</a></p>
-        <p><a href="maybepage5.html">Maybepage5</a></p>
+        <ul>
+            <li><a href="index.html">Hjem</a></li>
+            <li><a href="accessibility.html">Tilgjengelighet</a></li>
+            <li><a href="topical.html">Topical</a></li>
+            <li><a href="locations.html">Lokasjoner</a></li>
+            <li><a href="maybepage5.html">Maybepage5</a></li>
+        </ul>
     </section>
 
     <!-- Sosiale medie lenker -->
     <section class="footer-grid-objects social-media-links">
         <h3>Følg oss</h3>
-        <div class="ikoner">
-            <a href="https://www.facebook.com/oslomet/">
-                <div class="fa fa-facebook"></div>
-                Facebook </a>
-            <a href="https://twitter.com/oslomet">
-                <div class="fa fa-twitter"></div>
-                Twitter</a>
-            <a href="https://www.instagram.com/oslomet/?hl=nb">
-                <div class="fa fa-instagram"></div>
-                Instagram</a>
-            <a href="https://www.youtube.com/@OsloMetFilm">
-                <div class="fa fa-youtube"></div>
-                Youtube</a>
-        </div>
+        <ul>
+            <li><a href="https://www.facebook.com/oslomet/"><div class="fa fa-facebook"></div>Facebook</a></li>
+            <li><a href="https://twitter.com/oslomet"><div class="fa fa-twitter"></div>Twitter</a></li>
+            <li><a href="https://www.instagram.com/oslomet/?hl=nb"><div class="fa fa-instagram"></div>Instagram</a></li>
+            <li><a href="https://www.youtube.com/@OsloMetFilm"><div class="fa fa-youtube"></div>Youtube</a></li>
+        </ul>
     </section>
 </footer>
 </body>
