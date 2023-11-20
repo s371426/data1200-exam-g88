@@ -642,37 +642,10 @@ inni grid-item main-bar. */
     }
 }
 
-/* LOCATION PAGE */
-
-/* Main flexbox, for blant annet å gjøre slik at overskrift passer strukturen til content i location-flex*/
-.location-main-flex {
-    display: flex;
-    flex-direction: column;
-}
-
-/* Sørger for at h1 er riktig bredde forhold til de andre elementene */
-.location-main-flex h1 {
-    box-sizing: border-box;
-    align-self: center;
-    max-width: 1300px;
-    width: 100%;
-    padding-left: 2.5%;
-    padding-right: 2.5%;
-    margin-bottom: 0.2em;
-    font-size: 2.4rem;
-}
-
-.flex-text-full-width h1{
-    width: 100%;
-    font-size: 2.4rem;
-}
-
-.location-flex .flex-text-full-width h1 {
-    margin-bottom: 0.2em;
-}
+/* LOCATION OG ACCESSIBILITY PAGE */
 
 /* Normalt horisontal flexbox for to bokser, som er sentrert
-   Inneholder location-img og locaiton-text */
+   Inneholder flex-img og flex-text */
 .location-flex,
 .accessibility-flex {
     display: flex;
@@ -683,7 +656,7 @@ inni grid-item main-bar. */
     padding-top: 1.5%;
 }
 
-/* To bokser inni location-flex, gjør at de er like store*/
+/* To bokser inni flexbox, gjør at de er like store med maks bredde */
 .flex-img,
 .flex-text{
     flex-basis: 50%;
@@ -693,12 +666,24 @@ inni grid-item main-bar. */
     padding-right: 2.5%;
 }
 
+/* En boks inni flexbox, gjør at den er like bred som der det er to bokser*/
 .flex-text-full-width{
     flex-basis: 100%;
     box-sizing: border-box;
     max-width: 1300px;
     padding-right: 2.5%;
     padding-left: 2.5%;
+}
+
+/* h1 da den er inni denne klassen, Location og Accessibility */
+.flex-text-full-width h1{
+    width: 100%;
+    font-size: 2.4rem;
+}
+
+/* Spesifikt h1 på location page, margin*/
+.location-flex .flex-text-full-width h1 {
+    margin-bottom: 0.2em;
 }
 
 /* Kompensere for bildetekst hvis det er en figure (har bildetekst)*/
@@ -709,7 +694,7 @@ figure.flex-img {
     margin-bottom: 0.5rem;
 }
 
-/* Endrer location-flex flexbox til å være vertikal når viewport mindre enn 760px (Mobil) */
+/* Endrer location og accessability flexbox til å være vertikal når viewport mindre enn 760px (Mobil) */
 @media only screen and (max-width: 760px) {
     .location-flex,
     .accessibility-flex {
@@ -730,7 +715,7 @@ figure.flex-img {
     background-color: var(--secondary-background-color);
 }
 
-/* Bytter om på rekkefølgen på annenhver sibling element hvis viewport 761px eller bredere*/
+/* Location page: Bytter om på rekkefølgen på annenhver sibling element hvis viewport 761px eller bredere*/
 @media only screen and (min-width: 761px) {
     .location-flex:nth-child(even) .flex-img {
         order: 2;
@@ -740,8 +725,6 @@ figure.flex-img {
         order: 1;
     }
 }
-
-/* ACCESSIBILITY SIDE */
 
 /* FOOTER */
 /* Setter fooder på bunn av siden og at bredden skal være 100% */
