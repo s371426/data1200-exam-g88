@@ -802,7 +802,7 @@ footer ul {
     margin: 0;
 }
 
-/* Grid kode tatt fra: https://www.w3schools.com/css/css_grid.asp*/
+/* Grid kode basert på: https://www.w3schools.com/css/css_grid.asp*/
 /* endrer på alle grid, og sentrerer tekst */
 .footer-grid-objects {
     text-align: left;
@@ -917,7 +917,7 @@ footer ul {
 
 /* Ikon kode tatt fra:
 https://www.w3schools.com/howto/howto_css_social_media_buttons.asp
-*/
+Bestemmer farge og størrelse på ikonene*/
 .fa {
     width: 15px;
     border-radius: 50%;
