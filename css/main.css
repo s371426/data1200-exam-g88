@@ -601,8 +601,9 @@ inni grid-item main-bar. */
     padding-left: 0;
 }
 
-.list-style-none li:not(:last-child) {
-        margin-bottom: 10px;
+/* Avstand mellom listeelementer main bar */
+.main-bar li:not(:last-child) {
+        margin-bottom: 0.6em;
 }
 
 /* Farge på hyperlinker slik at de har god kontrast i både dark og light mode, og fortsatt ser ut som hyperlinker*/
