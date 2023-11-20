@@ -796,7 +796,7 @@ footer h3 {
     font-size: 1.55rem;
 }
 
-/*Fjerner punktene i listen, og fjerner tab mellomrommet*/
+/* Fjerner punktene i listen, og fjerner tab mellomrommet */
 footer ul {
     list-style-type: none;
     padding: 0;
@@ -835,14 +835,10 @@ footer ul {
 /* design til knappen */
 .button {
     background-color: black;
-    padding: 3px;
+    padding: 4px;
     text-decoration: none;
     color: yellow;
     font-size: 1.55rem;
-}
-
-.button:hover {
-    text-decoration: underline;
 }
 
 /* Linje på tvers av footer */
@@ -893,10 +889,6 @@ footer ul {
     font-weight: 550;
 }
 
-.site-links a:hover {
-    text-decoration: underline;
-}
-
 .social-media-links {
     grid-column: 3/4;
     grid-row: 3;
@@ -917,6 +909,9 @@ footer ul {
     color: black;
 }
 
+/* Knapp, Navigasjons, og Sosiale medier linker har underline når det hover over */
+.button:hover,
+.site-links a:hover,
 .social-media-links a:hover {
     text-decoration: underline;
 }
