@@ -53,8 +53,8 @@
 
     <!-- Section med h1 og intro tekst om accessibility -->
     <section class="accessibility-flex">
-        
-        <div class="accessibility-text-only">
+
+        <div class="flex-text-full-width">
             <h1>Universal design:</h1>
             <p>Brukervennlighet handler om å gjøre nettsiden så enkel og intuitiv som mulig. Det skal være enkelt å
                 manøvrere seg på siden, uten å skape forvirring og irritasjon. Det skal være lett å finne det man leter
@@ -83,7 +83,7 @@
     <section class="accessibility-flex">
 
         <!-- Diverse tekst om accessibility -->
-        <div class="accessibility-text">
+        <div class="flex-text">
             <h2>Lighthose test:</h2>
             <p>Mens vi har jobbet med siden har vi brukt lighthouse for å teste siden vår underveis, for å oppdage
                 områder vi kan forbedre. </p>
@@ -115,7 +115,7 @@
         </div>
 
         <!-- Bilde av lighthouse test -->
-        <picture class="accessibility-image">
+        <picture class="flex-img">
 
             <!-- Bilde blir valgt av device ut i fra hvilken oppløsning som passer best. "w" er bredden
                  på det bildet. Type forteller device at bildene er webp format -->
@@ -136,7 +136,7 @@
 
     <section class="accessibility-flex">
 
-       <div class="accessibility-text-only">
+       <div class="flex-text-full-width">
            <h2>Topical:</h2>
            <p>Bruken av grids hjelper å forkorte koden og holde den ryddig. Bruk av grid-auto-flow hjalp veldig mye
            med å forkorte koden, der vi tidligere hadde implementert flere klasser og definert flere plasseringer inne i koden.</p>
@@ -156,7 +156,7 @@
     <section class="accessibility-flex">
 
         <!-- Tekst om Hamburgermeny accessibility-->
-        <div class="accessibility-text">
+        <div class="flex-text">
             <h2>Hamburger meny:</h2>
             <p> Den første løsningen vi gjorde for hamburger meny kunne ikke aktiveres med kun tastatur,
                 noe som trengs hvis man har problemer med å bruke mus. Dette var fordi checkbox ble satt til Display: none
@@ -171,7 +171,7 @@
         </div>
 
         <!-- Bilde av kode fra hamburgermeny -->
-        <picture class="accessibility-image">
+        <picture class="flex-img">
 
             <!-- Bilde blir valgt av device ut i fra hvilken oppløsning som passer best. "w" er bredden
                  på det bildet. Type forteller device at bildene er webp format -->
@@ -192,7 +192,7 @@
 
     <section class="accessibility-flex">
 
-        <div class="accessibility-text-only">
+        <div class="flex-text-full-width">
             <h2>Footer:</h2>
             <p> På footeren har vi valgt å bli inspirert av oslomet.no sin footer. Vi har lenker nederst på siden, som gjør det
                 enkelt for brukerne å gå videre til neste side, isteden for å måtte manøvrere seg til toppen igjen.
@@ -206,7 +206,8 @@
 </main>
 
 <footer>
-    <!-- Grid kode tatt fra: https://www.w3schools.com/css/css_grid.asp -->
+    <!-- Grid kode basert på: https://www.w3schools.com/css/css_grid.asp
+    Bruker sections isteden for div  -->
     <!-- Header Overskrift -->
     <section class="footer-grid-objects footer-header">
         <h2>OsloMet</h2>
@@ -216,10 +217,8 @@
     <section class="newsletter-button">
             <a href="https://www.oslomet.no/nyhetsbrev" class="button">Nyhetsbrev! </a>
     </section>
-
     <!--Linje på tvers av footer, styling-->
     <div class="border-bottom"></div>
-
     <!-- Kontakt informasjon til OsloMet -->
     <section class="footer-grid-objects contact-information">
         <h3>Kontaktinformasjon</h3>

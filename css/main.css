@@ -51,7 +51,6 @@ main {
     color: var(--main-font-color);
 }
 
-
 /* Generell figure styling*/
 figure {
     margin: 0;
@@ -111,9 +110,9 @@ nav {
 /* Style lenkene i navbar */
 .menu a {
     display: block;
-    padding-top: 20px;
+    padding-top: 19px;
     padding-right: 16px;
-    padding-bottom: 20px;
+    padding-bottom: 19px;
     padding-left: 16px;
     text-decoration: none;
     color: black;
@@ -130,9 +129,9 @@ nav {
 .contact-button {
     background-color: skyblue;
     border-radius: 30px;
-    padding-top: 15px;
+    padding-top: 12px;
     padding-right: 25px;
-    padding-bottom: 15px;
+    padding-bottom: 12px;
     padding-left: 25px;
     text-decoration: none;
     color: black;
@@ -216,9 +215,11 @@ nav {
         padding-left: 0;
     }
 
-    /* Større tekst Linker når den er hamburger */
+    /* Større tekst og avstand Linker når den er hamburger */
     .menu a{
-        font-size: 1.4em;
+        font-size: 1.5em;
+        padding-top: 30px;
+        padding-bottom: 30px;
     }
 
     /* Kontakt knappen blir skjult */
@@ -643,29 +644,12 @@ inni grid-item main-bar. */
     }
 }
 
-/* LOCATION PAGE*/
-
-/* Main flexbox, for blant annet å gjøre slik at overskrift passer strukturen til content i location-flex*/
-.location-main-flex {
-    display: flex;
-    flex-direction: column;
-}
-
-/* Sørger for at h1 er riktig bredde forhold til de andre elementene */
-.location-main-flex h1 {
-    box-sizing: border-box;
-    align-self: center;
-    max-width: 1300px;
-    width: 100%;
-    padding-left: 2.5%;
-    padding-right: 2.5%;
-    margin-bottom: 0.2em;
-    font-size: 2.4rem;
-}
+/* LOCATION OG ACCESSIBILITY PAGE */
 
 /* Normalt horisontal flexbox for to bokser, som er sentrert
-   Inneholder location-img og locaiton-text */
-.location-flex {
+   Inneholder flex-img og flex-text */
+.location-flex,
+.accessibility-flex {
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -674,9 +658,9 @@ inni grid-item main-bar. */
     padding-top: 1.5%;
 }
 
-/* To bokser inni location-flex, gjør at de er like store*/
-.location-img,
-.location-text{
+/* To bokser inni flexbox, gjør at de er like store med maks bredde */
+.flex-img,
+.flex-text{
     flex-basis: 50%;
     box-sizing: border-box;
     max-width: 650px;
@@ -684,80 +668,8 @@ inni grid-item main-bar. */
     padding-right: 2.5%;
 }
 
-/* Er inni location-flex, inneholder bilde/bildetekst
-   position for å kompensere for bildetekst */
-.location-img {
-    position: relative;
-    top: 0.66rem;
-    margin-top: 0.5rem;
-    margin-bottom: 0.5rem;
-}
-
-/* Er inni location-flex, inneholder ovserktift/tekst */
-.location-text {
-}
-
-/* Endrer location-flex flexbox til å være vertikal når viewport mindre enn 760px (Mobil) */
-@media only screen and (max-width: 760px) {
-    .location-flex {
-        flex-direction: column;
-    }
-
-    .location-img,
-    .location-text {
-        max-width: none;
-    }
-}
-
-/* Gjør bakgrunnen på annenhver sibling element (child av parent element) til en annen farge
-(main secondary background color) */
-/* https://developer.mozilla.org/en-US/docs/Web/CSS/:nth-child */
-.location-flex:nth-child(odd) {
-    background-color: var(--secondary-background-color);
-}
-
-/* Bytter om på rekkefølgen på annenhver sibling element hvis viewport 761px eller bredere*/
-@media only screen and (min-width: 761px) {
-    .location-flex:nth-child(even) .location-img {
-        order: 2;
-    }
-
-    .location-flex:nth-child(even) .location-text {
-        order: 1;
-    }
-}
-
-/* ACCESSIBILITY SIDE */
-
-.accessibility-flex h1{
-    font-size: 2.4rem;
-}
-
-.accessibility-flex{
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
-    padding-top: 1.5%;
-    padding-bottom: 1.5%;
-}
-
-.accessibility-text,
-.accessibility-image{
-    flex-basis: 50%;
-    box-sizing: border-box;
-    max-width: 650px;
-    padding-right: 2.5%;
-    padding-left: 2.5%;
-}
-
-.accessibility-text {
-}
-
-.accessibility-image {
-}
-
-.accessibility-text-only {
+/* En boks inni flexbox, gjør at den er like bred som der det er to bokser*/
+.flex-text-full-width{
     flex-basis: 100%;
     box-sizing: border-box;
     max-width: 1300px;
@@ -765,21 +677,56 @@ inni grid-item main-bar. */
     padding-left: 2.5%;
 }
 
-.accessibility-flex:nth-child(even) {
-    background-color: var(--secondary-background-color);
+/* h1 da den er inni denne klassen, Location og Accessibility */
+.flex-text-full-width h1{
+    width: 100%;
+    font-size: 2.4rem;
 }
 
-@media (max-width: 760px) {
+/* Spesifikt h1 på location page, margin*/
+.location-flex .flex-text-full-width h1 {
+    margin-bottom: 0.2em;
+}
+
+/* Kompensere for bildetekst hvis det er en figure (har bildetekst)*/
+figure.flex-img {
+    position: relative;
+    top: 0.66rem;
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+}
+
+/* Endrer location og accessability flexbox til å være vertikal når viewport mindre enn 760px (Mobil) */
+@media only screen and (max-width: 760px) {
+    .location-flex,
     .accessibility-flex {
         flex-direction: column;
     }
 
-    .accessibility-image,
-    .accessibility-text {
+    .flex-img,
+    .flex-text {
         max-width: none;
     }
 }
 
+/* Gjør bakgrunnen på annenhver sibling element (child av parent element) til en annen farge
+   (main secondary background color) anderledes på location fordi h1 er alene */
+/* https://developer.mozilla.org/en-US/docs/Web/CSS/:nth-child */
+.location-flex:nth-child(odd):not(:first-child),
+.accessibility-flex:nth-child(even) {
+    background-color: var(--secondary-background-color);
+}
+
+/* Location page: Bytter om på rekkefølgen på annenhver sibling element hvis viewport 761px eller bredere*/
+@media only screen and (min-width: 761px) {
+    .location-flex:nth-child(even) .flex-img {
+        order: 2;
+    }
+
+    .location-flex:nth-child(even) .flex-text {
+        order: 1;
+    }
+}
 /* GALLERY*/
 
 .gallery-grid {
@@ -947,7 +894,7 @@ footer ul {
     margin: 0;
 }
 
-/* Grid kode tatt fra: https://www.w3schools.com/css/css_grid.asp*/
+/* Grid kode basert på: https://www.w3schools.com/css/css_grid.asp*/
 /* endrer på alle grid, og sentrerer tekst */
 .footer-grid-objects {
     text-align: left;
@@ -1062,7 +1009,7 @@ footer ul {
 
 /* Ikon kode tatt fra:
 https://www.w3schools.com/howto/howto_css_social_media_buttons.asp
-*/
+Bestemmer farge og størrelse på ikonene*/
 .fa {
     width: 15px;
     border-radius: 50%;
@@ -1096,7 +1043,7 @@ https://www.w3schools.com/howto/howto_css_social_media_buttons.asp
     .footer-grid {
         grid-template-columns: 1fr;
     }
-  
+
     /* Setter posisjon og legger */
     .newsletter-button {
         grid-column: 1;
