@@ -787,9 +787,17 @@ inni grid-item main-bar. */
     grid-auto-rows: auto;
 }
 
-.test-gallery {
+.gallery-filters {
     grid-column: 2;
     grid-row: 2;
+    background-color: var(--main-color);
+    padding: 1rem;
+    color: black;
+}
+
+.filter-flex{
+    display: flex;
+    flex-direction: row;
 }
 
 .gallery-grid h1 {
@@ -831,11 +839,22 @@ inni grid-item main-bar. */
     opacity: 0;
 }
 
-#home-images:not(:checked) ~ .test-gallery.checkbox-home-toggle,
-#topical-images:not(:checked) ~ .test-gallery .checkbox-topical-toggle,
-#location-images:not(:checked) ~ .test-gallery .checkbox-location-toggle{
+/* Checkbox fra:
+   https://icons8.com/icon/I61emdjNzpV9/unchecked-checkbox
+   https://icons8.com/icon/I61emdjNzpV9/unchecked-checkbox*/
+
+#home-images:not(:checked) ~ .gallery-filters.checkbox-home-toggle,
+#topical-images:not(:checked) ~ .gallery-filters .checkbox-topical-toggle,
+#location-images:not(:checked) ~ .gallery-filters .checkbox-location-toggle{
     background-color: #3B5998;
 }
+
+#home-images:not(:checked) ~ .gallery-filters .checkbox-home-icon,
+#topical-images:not(:checked) ~ .gallery-filters .checkbox-topical-icon,
+#location-images:not(:checked) ~ .gallery-filters .checkbox-location-icon{
+    background-image: url("");
+}
+
 
 #home-images:checked ~ .gallery-flex .gallery-home-img,
 #topical-images:checked ~ .gallery-flex .gallery-topical-img,
@@ -850,16 +869,22 @@ inni grid-item main-bar. */
 
 @media (min-width: 1400px) {
     .gallery-grid {
-        grid-template-columns: 20px 150px 1fr 20px;
+        grid-template-columns: 20px 15rem minmax(100px,1300px) 20px;
     }
-    .test-gallery {
-        grid-column: 2;
 
+    .gallery-filters {
+        grid-column: 2;
     }
+
+    .filter-flex{
+        flex-direction: column;
+    }
+
     .gallery-grid h1 {
         grid-column: 3;
         grid-row: 1;
     }
+
     .gallery-flex {
         grid-column: 3;
         grid-row: 2;
