@@ -1,57 +1,58 @@
-/*DATA1200 Home Exam 2023*/
+/* DATA1200 Home Exam 2023 */
 
-/*DIVERSE*/
+/* DIVERSE */
 
 /* Custom property om farger som kan gjenbrukes flere steder, enklere å endre senere og gjøre darkmode */
-/* Inspirert av Tengel presentasjon, eksempel nettside i faget og Mozilla web docs*/
+/* Inspirert av Tengel presentasjon, eksempel nettside i faget og Mozilla web docs */
 :root {
-    --main-color: #15856d;
-    --main-font-color: black;
+    /* Generelle farger: */
+    --main-color: #749bbe;
     --main-background-color: white;
     --secondary-background-color: #f0f0f0;
-    --topical-navbar-h2-background-color: rgb(80, 128, 169);
-    --topical-navbar-a-background-color: rgb(243, 250, 255);
-    --topical-a-color: rgb(77,77,255);
-    --topical-a-color-visited: #551A8B;
-
+    --main-font-color: black;
+    --body-link-color: #4D4DFF;
+    --body-link-color-visited: #551A8B;
+    /* For topical siden */
+    --topical-sidenav-h2-background-color: #5080A9;
+    --topical-sidenav-link-background-color: #e7efff;
 }
 
 /* Darkmode som blir aktivert når device er satt til darkmode */
 /* Inspirert av Tengel presentasjon og eksempel nettside i faget */
 @media (prefers-color-scheme: dark) {
     :root {
+        /* Generelle farger: */
         --main-background-color: #212121;
-        --main-font-color: #eeeeee;
         --secondary-background-color: #292929;
-        --topical-navbar-h2-background-color: rgb(10, 47, 80);
-        --topical-navbar-a-background-color: rgb(12, 59, 100);
-        --topical-a-color: #58a6ff;
-        --topical-a-color-visited: rgb(182, 97, 255);
+        --main-font-color: #eeeeee;
+        --body-link-color: #58a6ff;
+        --body-link-color-visited: #B661FF;
+        /* For topical siden */
+        --topical-sidenav-h2-background-color: #0A2F50;
+        --topical-sidenav-link-background-color: #0C3B64;
     }
 }
 
-/* Skroller smooth når det scrolles via linker til andre steder på siden, gjelder alle elements*/
-* {
+/* Scroller smooth når det scrolles via linker til andre steder på siden, gjelder alt */
+html {
     scroll-behavior: smooth;
 }
 
+/* Generell bakgrunsfarrge, og font */
 body {
+    background-color: var(--main-background-color);
     margin: 0;
     font-family: Verdana, sans-serif;
-    background-color: var(--main-background-color);
 }
 
+/* Font farge tekst i main, men ikke eks. Navbar eller footer */
 main {
-    color: var(--main-font-color);
     background-color: var(--main-background-color);
+    color: var(--main-font-color);
 }
 
-/* Img fyller det elementet det er inni */
-img {
-    width: 100%;
-    height: auto;
-}
 
+/* Generell figure styling*/
 figure {
     margin: 0;
     padding: 0;
@@ -62,29 +63,36 @@ figcaption {
     font-size: 0.88rem;
 }
 
-/*OVERSKRIFTER*/
+/* Img fyller det elementet det er inni */
+img {
+    height: auto;
+    width: 100%;
+}
 
-/*PARAGRAFER*/
+/* OVERSKRIFTER */
+
+/* PARAGRAFER */
+
 
 /* For accessibility, gjør tekst enklere å lese */
 p {
     line-height: 1.5;
 }
 
-/*DIVs*/
+/* DIVs */
 
-/*HEADER*/
+/* HEADER */
 /* NAV BAR */
 
-/* Hoved flexboks navbar */
+/* Hoved flexboks navbar  fordeler conent utover bar */
 nav {
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
     background-color: var(--main-color);
-    padding-left: 20px;
     padding-right: 20px;
+    padding-left: 20px;
     max-height: 60px;
 }
 
@@ -101,11 +109,14 @@ nav {
 /* Style lenkene i navbar */
 .menu a {
     display: block;
-    padding: 20px 16px;
+    padding-top: 20px;
+    padding-right: 16px;
+    padding-bottom: 20px;
+    padding-left: 16px;
     text-decoration: none;
     color: black;
-    font-weight: bold;
     font-size: 1.1rem;
+    font-weight: bold;
 }
 
 /* Lenker navbar bakgrunn mørere under hover */
@@ -116,18 +127,18 @@ nav {
 /* Kontakt knapp i navbar styling */
 .contact-button {
     background-color: skyblue;
-    color: black;
     border-radius: 30px;
-    padding-right: 25px;
-    padding-left: 25px;
     padding-top: 15px;
+    padding-right: 25px;
     padding-bottom: 15px;
+    padding-left: 25px;
     text-decoration: none;
+    color: black;
     font-weight: bold;
 }
 
 .contact-button:hover {
-    background-color: cadetblue;
+    filter: brightness(60%);
 }
 
 /* Secondær flexbox med logo/hamburger, slik at de blir fordelt på navbar separat fra linke liste */
@@ -149,45 +160,39 @@ nav {
     display: none;
 }
 
-/* Hamburger meny ikon */
+/* Hamburger meny ikon.
+   Ikon fra: https://icons8.com/icon/set/menu-close/fluency-systems-filled */
 .hamburger-icon {
     display: block;
-    background-image: url(../images/menu.png);      /* KANSJE FLYTTE TIL HTML */
+    background-image: url(../images/menu.svg);
     background-size: cover;
-    height: 60px;
-    width: 60px;
+    height: 50px;
+    width: 50px;
+    margin:  5px;
 }
 
-/* Hamburger meny checkbox input normal sjult. Posisjonert der hamburgermeny er*/
+/* Hamburger meny checkbox input normal skjult. Posisjonert der hamburgermeny er*/
 #hamburger-toggle {
     display: none;
     cursor: pointer;
     position: absolute;
-    height: 50px;
-    width: 50px;
     top: 5px;
     right: 25px;
+    height: 50px;
+    width: 50px;
     margin: 0;
 }
 
-/* Outline rundt hamburgermeny når den er i fokus med tastatur, men ikke med mus.*/
-/* :has() er CSS 4 ikke 3 men trengs fordi hvordan hamburgermeny/navbar setup er.
-   Nettlesere som støtter :has() støtter også :focus-visible, så trenger ikke @supports rule da ingenting skjer
-   hvis :has() ikke støttes. Det er ikke site-breaking.
-   :has() støttes: Chrome/Safari fra september 2022/Firefox versjon 121 fra desember 2023 */
-/* Inspirert av: https://unused-css.com/blog/css-only-hamburger-menu/
-                 https://developer.mozilla.org/en-US/docs/Web/CSS/:has */
-/*nav:has(#hamburger-toggle:focus-visible) .hamburger-toggle-container{*/
-/*    outline: auto;*/
-/*}*/
-
-/* Støtte for outline: auto er god, så det holder*/
+/* Outline rundt hamburgermeny når den er i fokus, for accessibility.
+   Støtte for outline: auto er god, så det holder */
+/* Inspirert av: https://unused-css.com/blog/css-only-hamburger-menu/ */
 #hamburger-toggle:focus ~ .logo-hamburger-wrapper .hamburger-toggle-container{
     outline: auto;
 }
 
-/* Støtte for :focus-visible er bare siden 2020-2022 så sjekker om den støttes, hvis det gjør det,
-   blir outline sjult når den er i fokus av mus og ikke tastatur*/
+/* Skjuler outline når den er i fokus via mus, slik at den bare er i fokus via tastur, på nettlesere som støtter det. */
+/* Støtte for :focus-visible er bare siden 2022 på noen nettlesere, så sjekker om den støttes, før det gjøres,
+   hvis ikke ville det aldri vært outline i de nettleserne. */
 @supports selector(:focus-visible) {
     #hamburger-toggle:not(:focus-visible) ~ .logo-hamburger-wrapper .hamburger-toggle-container{
         outline: none;
@@ -209,6 +214,11 @@ nav {
         padding-left: 0;
     }
 
+    /* Større tekst Linker når den er hamburger */
+    .menu a{
+        font-size: 1.4em;
+    }
+
     /* Kontakt knappen blir skjult */
     .contact-button {
         display: none;
@@ -221,7 +231,7 @@ nav {
     }
 
     /* Hamburger checkbox er der men er usynelig, for at den skal være valgbar med tastatur/tab */
-    #hamburger-toggle{
+    #hamburger-toggle {
         display: block;
         opacity: 0;
     }
@@ -231,147 +241,335 @@ nav {
         display: block;
     }
 
-    /* Bytter ut hamburger ikon når menyen er åpen */
+    /* Bytter ut hamburger ikon når menyen er åpen
+       Ikon fra: https://icons8.com/icon/set/menu-close/fluency-systems-filled*/
     #hamburger-toggle:checked ~ .logo-hamburger-wrapper .hamburger-icon{
-        background-image: url(../images/logo-oslomet-svart.svg);
+        background-image: url(../images/menu-close.svg);
     }
 }
 
 
 /* FLEX-CONTAINER FORSIDE */
 
-/* utility class for å legge content inni hver seksjon horisontalt på homepage og holde det consistent for hver del*/
-.row {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin: auto;
-    width: 85%;
-}
-
 /*main flex container for content på home-page*/
 
-.home-main-flex-container {
+/*.home-main-flex-container {
+    display: flex;
+    flex-direction: column;
+
+}*/
+
+/* Gjør bakgrunnen på annenhver sibling element (child av parent element) til en annen farge
+(main secondary background color) */
+/* https://developer.mozilla.org/en-US/docs/Web/CSS/:nth-child */
+.homepage-main section:nth-child(odd) {
+    background-color: var(--secondary-background-color);
+}
+
+.homepage-main-flex {
     display: flex;
     flex-direction: column;
 
 }
 
-/* base style for hver av seksjonene på homepage */
-
-.home-main-flex-container section{
-    /*padding-top: 100px; */
-    padding-right: 0;
-    padding-left: 0;
-    /*padding-bottom: 100px; */
+.homepage-flex{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    padding-bottom: 1.5%;
+    padding-top: 1.5%;
 }
 
+.main-content{
+    /*max-width: 1300px; */
+
+}
+
+.main-content section {
+    /*padding-bottom: 1.5%;
+    padding-top: 1.5%;*/
+    /*width: 100%;*/
+}
+/*hero section*/
 .hero-flex {
     display: flex;
+    flex-direction: column;
+    justify-content: center;
     height: 100vh;
-    background: url('../images/forsidebilde-arkitektur-p32/arkitektur-p32-skjalg-bøhmer-vold-square-large.jpg') no-repeat;
+    background-image: linear-gradient(to bottom,rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('../images/forsidebilde-arkitektur-p32/arkitektur-p32-skjalg-bøhmer-vold-square-large.jpg');
+    background-repeat: no-repeat;
     background-size: cover;
+    background-position: center;
     align-items: center;
-    justify-content: center;
-}
+    text-shadow: 8px -4px 20px black;
+    color: white;
 
-.hero-text h1{
+}
+/*h1 tittel i hero seksjon*/
+.hero-flex h1{
     font-size: 5.5rem;
-    display: flex;
     font-weight: 900;
-    color: white;
-}
 
-.hero-text h2{
+
+}
+/*h2 tittel i hero section*/
+
+.hero-flex h2{
     font-size: 2.7rem;
+}
+
+
+
+/*box 1 og box 2 i campus intro. Flexis basis på 50% for å dele begge boksene i 2*/
+
+.campus-box-1,
+.campus-box-2 {
+    flex-basis: 50%;
+    padding-right: 2.5%;
+    padding-left: 2.5%;
+    max-width: 650px;
+    box-sizing: border-box;
+}
+
+/*font styling for 'campus' tittel*/
+.campus-box-2 h2 {
+    font-size: 1.4rem;
+    font-weight: 300;
+}
+
+/*font stylibng for 'pilestredet campus' tittel*/
+.campus-box-2 h3 {
+    font-size: 2.6rem;
+    font-weight: 700;
+}
+
+
+/*box 1 og box 2 i historie-intro. Flex basis på 50% for å dele begge boksene i 2*/
+
+.historie-box-1,
+.historie-box-2 {
+    flex-basis: 50%;
+    padding-right: 2.5%;
+    padding-left: 2.5%;
+    max-width: 650px;
+    box-sizing: border-box;
+
+}
+
+/*font styling for 'siden 1128' tittel*/
+.historie-box-1 h2 {
+    font-size: 1.4rem;
+    font-weight: 300;
+}
+
+/*font styling for 'historie på over 200 år' tittel*/
+.historie-box-1 h3 {
+    font-size: 2.6rem;
+    font-weight: 700;
+}
+
+.bilder-box-1,
+.bilder-box-2,
+.bilder-box-3 {
+    flex-basis: 33.333333%;
+    padding: 10px;
+    max-width: 500px;
+    box-sizing: border-box;
+}
+
+/*Spisesteder-intro seksjon*/
+
+
+/*box 1 og box 2 i spisesteder-intro. Flex basis på 50% for å dele begge boksene i 2*/
+
+.spisesteder-box-1,
+.spisesteder-box-2 {
+    flex-basis: 50%;
+    padding-right: 2.5%;
+    padding-left: 2.5%;
+    max-width: 650px;
+    box-sizing: border-box;
+
+}
+
+/*font styling for 'spisesteder' tittel*/
+.spisesteder-box-2 h2 {
+    font-size: 1.4rem;
+    font-weight: 300;
+}
+
+/*font styling for 'stort utvalg av spisesteder og kaffebarer' tittel*/
+.spisesteder-box-2 h3 {
+    font-size: 2.6rem;
+    font-weight: 700;
+}
+
+
+/*Kontaktskjema seksjon*/
+
+.kontaktskjema-flex {
     display: flex;
-    align-items: center;
+    flex-direction: column;
     justify-content: center;
-    color: white;
+    align-items: center;
 }
 
-/*.bilde-tekst {
-    position: absolute;
-    top: 50%;
-    color: white;
+.kontaktskjema-text {
+    max-width: 650px;
     width: 100%;
-    right: 50%;
-    transform: translate(50%, -50%);
-    text-shadow: black 0 0 4px;
-    font-size: 2rem;
-    background: #777;
 }
 
-.item1-mainpage img {
-    filter: blur(3px);
-} */
+.kontaktskjema-boks h2 {
+    font-size: 2.6rem;
+    font-weight: 700;
+}
+
+
+.kontaktskjema-form{
+    max-width: 650px;
+    width: 100%;
+}
+
+/*styling for inputs field av 'text' type*/
+
+form input {
+    box-sizing: border-box;
+    width: 100%;
+    border-radius: 20px;
+    padding: 15px;
+    margin-top: 2%;
+    margin-bottom: 2%;
+}
+
+/*styling for inputs field av 'email' type*/
+
+input[type=email] {
+    box-shadow: 0 0 15px 4px;
+
+}
+
+/*styling for inputs field av 'tel' type*/
+input[type=text] {
+    box-shadow: 0 0 15px 4px;
+}
+
+#Melding {
+    height: 150px;
+
+}
+
+input[type=tel] {
+    box-shadow: 0 0 15px 4px;
+
+}
+
+
+/*styling for submit knapp*/
+
+input[type=submit] {
+    border: none;
+    font-weight: 600;
+}
+
+
+/* Endrer location-flex flexbox til å være vertikal når viewport mindre enn 760px (Mobil) */
+@media only screen and (max-width: 760px) {
+    .homepage-main {
+        flex-direction: column;
+    }
+
+    .location-img,
+    .location-text {
+        max-width: none;
+    }
+}
+
 
 /*TOPICAL PAGE*/
 
 /* Grid-container her, der vi definerer en grid med to kolonner */
-/* Bruk av grid-auto-flow for automatisk plassering av grid items slik de har blitt plassert på HTML,
+/* Bruk av grid-auto-row for automatisk plassering av grid items slik de har blitt plassert på HTML,
 som reduserer hvor mye koding som trengs for plassering */
+/* Inneholder grid-items: Headline, sidenav, main-bar, topical-img topical-img-with-text */
 .topical-grid {
     display: grid;
-    grid-template-columns: auto minmax(200px, 15vw);
-    grid-auto-flow: row;
-    grid-column-gap: 60px;
+    grid-template-columns: auto minmax(220px, 17vw);
+    grid-auto-rows: auto;
+    grid-column-gap: 3%;
     max-width: 1300px;
-    padding-right: 3em;
-    padding-left: 3em;
-    padding-bottom: 2.3em;
-    font-family: Calibri, serif;
+    margin-right: auto;
+    margin-left: auto;
+    padding-right: 2.5%;
+    padding-bottom: 2.5%;
+    padding-left: 2.5%;
     font-weight: normal;
 }
 
+/* Vi definerer at overskriften starter på første rad, og tar opp alle kolonnnene */
 .headline {
     grid-column: 1/-1;
     grid-row: 1;
-    justify-self: center;
 }
 
 /* Vi gjør overskriften mer tydelig, sentrert og litt større avstand på bokstavene for lettere lesing */
 .headline h1 {
     padding-top: 0.2em;
     border-bottom: 2px solid;
-    text-align: center;
-    font-weight: bolder;
     font-size: 2.3rem;
-    letter-spacing: 0.09em;
+    font-weight: bolder;
+    letter-spacing: 0.05em;
 }
 
 .headline p {
     font-weight: 550;
 }
 
+.author-text {
+    font-size: 0.8rem;
+}
+
+#author {
+    color: var(--body-link-color);
+}
+
+/* Position: sticky sørger for at når brukeren scroller ned, så følger sidenav slik at den alltid er tilgjengelig */
+/* Vi plasserer bare grid-item sidenav i kolonne 2, som sørger for at sidenav kan bruke hele plassen */
 .sidenav {
     grid-column: 2;
     grid-row: 2/4;
+    align-self: start;
+    position: sticky;
+    top: 2em;
 }
 
 .sidenav h2 {
-    background-color: var(--topical-navbar-h2-background-color);
+    background-color: var(--topical-sidenav-h2-background-color);
+    border-bottom-style: solid;
+    border-color: black;
     padding: 15px;
-    text-align: center;
     margin-bottom: 0;
+    text-align: center;
     color: white;
 }
 
+/* Fjerning av punkter og mellomrommet fra sidenav */
 .sidenav ul {
     list-style-type: none;
     padding: 0;
     margin: 0;
 }
 
+/* Display: block sørger for at underpunktene i sidenav vises som blokk elementer, som tar opp hele bredden */
 .sidenav ul a {
-    padding: 15px;
     display: block;
+    background-color: var(--topical-sidenav-link-background-color);
     border-bottom-style: solid;
     border-color: black;
+    padding: 15px;
     text-align: center;
     text-decoration: none;
     color: var(--main-font-color);
-    background-color: var(--topical-navbar-a-background-color);
 }
 
 .sidenav ul a:hover {
@@ -379,63 +577,69 @@ som reduserer hvor mye koding som trengs for plassering */
     color: white;
 }
 
-/* Her sier vi at grid-item main-bar som inneholder teksten skal holde seg innenfor første kolonnen. Grid-auto-flow tar
+/* Her sier vi at grid-item main-bar som inneholder teksten skal holde seg innenfor første kolonnen. Grid-auto-row tar
 seg av resten */
 .main-bar {
     grid-column: 1;
 }
 
-
 .topical-img {
     padding-top: 20px;
 }
 
+/* Vi bruker float: right for å posisjonere NASA- og circut bildet til høyre for teksten. Begge elementene befinner seg
+inni grid-item main-bar. */
 .topical-img-with-text {
-    width: 50%;
     float: right;
-    padding-left: 30px;
-    padding-bottom: 10px;
+    width: 50%;
+    margin-bottom: 15px;
+    margin-left: 25px;
 }
 
-#author {
-    color: orangered;
+/* Fjerning av punkter og tab-mellomrommet */
+.list-style-none {
+    list-style-type: none;
+    padding-left: 0;
 }
 
-/* Vi skaper større kontraster for hyperlinks på dark mode, samtidig som vi beholder fargene assosiert med hyperlinks */
+/* Avstand mellom listeelementer main bar */
+.main-bar li:not(:last-child) {
+        margin-bottom: 0.6em;
+}
+
+/* Farge på hyperlinker slik at de har god kontrast i både dark og light mode, og fortsatt ser ut som hyperlinker*/
 .main-bar a {
-    color: var(--topical-a-color);
+    color: var(--body-link-color);
 }
+
 .main-bar a:visited {
-    color: var(--topical-a-color-visited);
+    color: var(--body-link-color-visited);
 }
 
-/* Vi bruker media queries slik at layouten passer bedre for de på mobile-view */
-/* Bruk av grid-auto-flow igjen for mobile-view */
-@media (max-width: 760px) {
+/* Vi bruker media queries slik at layouten passer bedre for de med mindre skjerm, og når man skalerer skjermen */
+/* Max-width på 900px sikrer at vi kan flytte på sidenav over slik at bildene kan benytte seg tomrommet for bedre skalering */
+@media (max-width: 900px) {
     .topical-grid {
-        grid-template-columns: 1fr;
-        grid-auto-flow: row;
+        grid-template-columns: auto;
         max-width: none;
-    }
-
-    .headline {
-        grid-column: 1;
-        grid-row: 1;
-        justify-self: center;
-    }
-
-    .topical-img-with-text {
-        float: none;
-        width: 100%;
-        padding-left: 0;
     }
 
     .sidenav {
         grid-column: 1;
         grid-row: 2;
+        position: relative;
+        top: 0;
     }
 }
 
+/* Bilder slutter å være ved siden av tekst og blir full width på liten skjerm */
+@media (max-width: 760px) {
+    .topical-img-with-text {
+        float: none;
+        width: 100%;
+        margin-left: 0;
+    }
+}
 
 /* LOCATION PAGE*/
 
@@ -454,7 +658,7 @@ seg av resten */
     padding-left: 2.5%;
     padding-right: 2.5%;
     margin-bottom: 0.2em;
-    font-size: 2.5rem;
+    font-size: 2.4rem;
 }
 
 /* Normalt horisontal flexbox for to bokser, som er sentrert
@@ -523,27 +727,36 @@ figure.flex-img {
 
 /* ACCESSIBILITY SIDE */
 
-/*.accessibility-flex{*/
-/*    display: flex;*/
-/*    flex-direction: row;*/
-/*    align-items: center;*/
-/*    justify-content: center;*/
-/*    padding-bottom: 1.5%;*/
-/*    padding-top: 1.5%;*/
-/*}*/
+.accessibility-flex {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    padding-top: 1.5%;
+    padding-bottom: 1.5%;
+}
+
+.accessibility-text,
+.accessibility-image {
+    flex-basis: 50%;
+    box-sizing: border-box;
+    max-width: 650px;
+    padding-right: 2.5%;
+    padding-left: 2.5%;
+}
 
 
 .flex-text-full-width{
     flex-basis: 100%;
     box-sizing: border-box;
     max-width: 1300px;
-    padding-left: 2.5%;
     padding-right: 2.5%;
+    padding-left: 2.5%;
 }
 
-/*.accessibility-flex:nth-child(even){*/
-/*    background-color: var(--secondary-background-color);*/
-/*}*/
+.accessibility-flex:nth-child(even) {
+    background-color: var(--secondary-background-color);
+}
 
 /*@media (max-width: 760px) {*/
 /*    .accessibility-flex{*/
@@ -556,6 +769,7 @@ figure.flex-img {
 footer {
     display: grid;
     grid-template-columns: auto;
+    box-sizing: border-box;
     position: relative;
     bottom: 0;
     width: 100%;
@@ -563,43 +777,52 @@ footer {
     padding-bottom: 2%;
 }
 
-footer h3{
+footer h3 {
     font-size: 1.55rem;
+}
+
+/*Fjerner punktene i listen, og fjerner tab mellomrommet*/
+footer ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
 }
 
 /* Grid kode tatt fra: https://www.w3schools.com/css/css_grid.asp*/
 /* endrer på alle grid, og sentrerer tekst */
 .footer-grid-objects {
     text-align: left;
-    padding-left: 25px;
+    margin-left: 6.5%;
+    margin-right: 6.5%;
 }
 
 /* Setter posisjon på item 1 og setter opp en ny grid i objektet */
-.newsletter {
-    grid-column: 1/3;
+.footer-header {
+    grid-column: 1;
     grid-row: 1;
-    border-bottom: 1px solid;
-    border-bottom-color: black;
-    font-weight: bold;
-    font-size: 1.55rem;
 }
 
-.newsletter-button{
-    grid-row: 1;
+.footer-header h2 {
+    font-size: 2rem;
+}
+
+.newsletter-button {
     grid-column: 3/4;
+    grid-row: 1;
+    align-self: center;
     text-align: right;
-    border-bottom: 1px solid;
-    border-bottom-color: black;
-    padding-top: 25px;
-    padding-right: 15px;
+    margin-top: 1rem;
+    margin-right: 6.5%;
+    margin-bottom: 1rem;
+    margin-left: 6.5%;
 }
 
 /* design til knappen */
 .button {
-    padding: 3px;
-    color: yellow;
     background-color: black;
+    padding: 3px;
     text-decoration: none;
+    color: yellow;
     font-size: 1.55rem;
 }
 
@@ -607,27 +830,52 @@ footer h3{
     text-decoration: underline;
 }
 
-.contact-information{
+/* Linje på tvers av footer */
+.border-bottom{
+    grid-column: 1/4;
     grid-row: 2;
+    border-bottom-width: 1px;
+    border-bottom-style: solid;
+    border-bottom-color: black;
+}
+
+.contact-information {
     grid-column: 1/2;
-}
-.contact-information a{
-    color: lightblue;
+    grid-row: 3;
 }
 
-.site-links{
-    grid-row: 2;
+/* Avstand mellom listeelementene Kontaktinformasjon */
+.contact-information li {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+
+/*fargen på linken før og etter den har blitt trykket på*/
+.contact-information a {
+    color: #0000a4;
+}
+.contact-information a:visited {
+    color: rebeccapurple;
+}
+
+.site-links {
     grid-column: 2/3;
+    grid-row: 3;
+    justify-self: center;
+    width: 12rem;
 }
 
-.site-links p {
-    font-size: 1.25rem;
-    font-weight: 550;
+/* Avstand mellom listeelementene navigasjonsliste */
+.site-links li {
+    margin-top: 1.25rem;
+    margin-bottom: 1.25rem;
 }
 
 .site-links a {
     text-decoration: none;
+    font-size: 1.25rem;
     color: black;
+    font-weight: 550;
 }
 
 .site-links a:hover {
@@ -635,14 +883,21 @@ footer h3{
 }
 
 .social-media-links {
-    grid-row: 2;
     grid-column: 3/4;
-    padding-top: 0;
+    grid-row: 3;
+    justify-self: right;
+    width: 10rem;
+
+}
+
+/* Avstand mellom listelelementer sosiale medier linker*/
+.social-media-links li {
+    margin-top: 0.55rem;
+    margin-bottom: 0.55rem;
 }
 
 .social-media-links a {
     display: block;
-    padding: 1%;
     text-decoration: none;
     color: black;
 }
@@ -687,39 +942,34 @@ https://www.w3schools.com/howto/howto_css_social_media_buttons.asp
     .footer-grid {
         grid-template-columns: 1fr;
     }
-/* Setter plassen til grid, og fjerner underlinja til gridden */
-    .newsletter {
-        grid-row: 1;
-        grid-column: 1;
-        border-bottom: 0;
-    }
-    /* Setter posisjon og legger til underlinje i grid */
+
+    /* Setter posisjon og legger */
     .newsletter-button{
+        grid-column: 1;
         grid-row: 2;
-        grid-column: 1;
         text-align: left;
-        border-bottom: 1px solid;
-        border-bottom-color: black;
-        padding: 0 0 3% 3%;
     }
 
-    .contact-information{
+    /* Linje på tvers av footer */
+    .border-bottom{
+        grid-column: 1;
         grid-row: 3;
-        grid-column: 1;
     }
 
-    .site-links{
-        grid-row: 4;
+    .contact-information {
         grid-column: 1;
+        grid-row: 4;
+    }
+
+    .site-links {
+        grid-column: 1;
+        grid-row: 5;
+        justify-self: normal;
     }
 
     .social-media-links {
-        grid-row: 5;
         grid-column: 1;
-        text-align: left;
-    }
-
-    .social-media-links a {
-        padding: 1%;
+        grid-row: 6;
+        justify-self: normal;
     }
 }
