@@ -747,7 +747,10 @@ figure.flex-img {
     grid-row: 2;
     align-self: start   ;
     background-color: var(--main-color);
-    padding: 1rem;
+    padding-top: 1rem;
+    padding-right: 1rem;
+    padding-bottom: 1.8rem;
+    padding-left: 1rem;
     color: black;
     margin-top: 10px;
     margin-right: 10px;
