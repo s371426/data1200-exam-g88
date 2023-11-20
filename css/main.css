@@ -843,16 +843,39 @@ inni grid-item main-bar. */
    https://icons8.com/icon/I61emdjNzpV9/unchecked-checkbox
    https://icons8.com/icon/I61emdjNzpV9/unchecked-checkbox*/
 
-#home-images:not(:checked) ~ .gallery-filters.checkbox-home-toggle,
-#topical-images:not(:checked) ~ .gallery-filters .checkbox-topical-toggle,
-#location-images:not(:checked) ~ .gallery-filters .checkbox-location-toggle{
-    background-color: #3B5998;
+.checkbox-home-toggle,
+.checkbox-topical-toggle,
+.checkbox-location-toggle,
+.checkbox-size-toggle {
+    display: inline-flex;
+    margin: 10px;
+}
+
+
+.checkbox-home-icon,
+.checkbox-topical-icon,
+.checkbox-location-icon{
+    display: block;
+    position: relative;
+    height: 20px;
+    width: 20px;
+    background-image: url("../images/checked-checkbox-96.png");
+    background-size: cover;
+}
+
+.checkbox-size-icon{
+    display: block;
+    position: relative;
+    height: 20px;
+    width: 20px;
+    background-image: url("../images/unchecked-checkbox-96.png");
+    background-size: cover;
 }
 
 #home-images:not(:checked) ~ .gallery-filters .checkbox-home-icon,
 #topical-images:not(:checked) ~ .gallery-filters .checkbox-topical-icon,
 #location-images:not(:checked) ~ .gallery-filters .checkbox-location-icon{
-    background-image: url("");
+    background-image: url("../images/unchecked-checkbox-96.png");
 }
 
 
