@@ -63,21 +63,30 @@
         </div>
     </section>
 
+
+    <section class="accessibility-flex">
+
+        <div class="accessibility-text-only">
+            <h2>Font og tekst:</h2>
+            <p>Vi har valgt å bruke "Verdana" som font, og "sans-serif" som backup. "Verdana" har vi valgt ettersom den
+                blir annset som en av de beste når det komer til accessibility. Fonten har tydelige former og
+                forskjeller mellom bokstavene, og er tydelig med mange og få piksler. Det er tydelige forskjeller mellom
+                "l" og "I". "sans-serif" er backup dersom brukeren ikke får lastet inn "Verdana".</p>
+            <p>Vi satt line height på paragrafer til 1.5 fordi det er det some er anbefalt da det gjør det enklere
+                å lese. Vi har passet på at tekst ikke er for liten, størrelse er rem slik at den vil skalere riktig
+                utifra brukerbehov.</p>
+            <p>
+        </div>
+    </section>
+
     <!-- Section bilde av lighthouse test og tilhørende tekst -->
     <section class="accessibility-flex">
 
         <!-- Diverse tekst om accessibility -->
         <div class="accessibility-text">
-            <h2>Font:</h2>
-            <p>Vi har valgt å bruke "Verdana" som font, og "sans-serif" som backup. "Verdana" har vi valgt ettersom
-                fonten har tydelige former og forskjeller mellom bokstavene, og er tydelig med mange og få piksler.
-                Det er tydelige forskjeller mellom "l" og "I". Vi har valgt å ha en backup font, "sans-serif", som blir
-                hovedfonten dersom brukeren ikke får lastet inn "Verdana".</p>
-
-            <h2>Tekst</h2>
-            <p>Vi satt line height på paragrafer til 1.5 fordi det er det some er anbefalt da det gjør det enklere
-                å lese. Vi har passet på at tekst ikke er for liten, størrelse er rem slik at den vil skalere riktig
-                utifra brukerbehov.</p>
+            <h2>Lighthose test:</h2>
+            <p>Mens vi har jobbet med siden har vi brukt lighthouse for å teste siden vår underveis, for å oppdage
+                områder vi kan forbedre. </p>
 
             <h2>Farge:</h2>
             <p>På siden har vi "mørk og lys" modus, som blir valgt utifra instillingene på brukerens pc. Lys modusen
@@ -91,9 +100,8 @@
                 for å lese hvis man bruker en stor skjerm.</p>
 
             <h2>Alt tekster:</h2>
-            <p>la bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla
-            bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla
-            bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla</p>
+            <p> Vi har sørget for at alle bildene på siden vår har beskrivene alt tekster som hjelper de som ikke kan
+                se, vite hva bildet inneholder og hva det prøver å formidle</p>
 
             <h2>Bilder</h2>
             <p>Vi har valgt å bruker WebP på alle bildene våres, fordi med WebP kan vi komprimere bilder uten stor tap
@@ -101,7 +109,8 @@
                 kjappere, som gjør nettsidene bedre tilgjengelig for de som har treg internett hastighet. Vi har også
                 lastet opp flere versjoner av de samme bildene med ulike dimensjoner slik at filstørrelsene er enda
                 mindre avhengig av dimensjonene på enheten. Vi har lastet opp jpg versjon av bildene som backup, der
-                disse også er under 1 mb.</p>
+                disse også er under 1 mb. Lighthouse testen slo først ut på at vi ikke hadde riktig under size på source
+                elementene, men det forbedret vi. </p>
 
         </div>
 
