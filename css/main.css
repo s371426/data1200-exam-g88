@@ -38,11 +38,12 @@ html {
     scroll-behavior: smooth;
 }
 
-/* Generell bakgrunsfarrge, og font */
+/* Generell bakgrunsfarrge, og font Font Verdana og letter spacing for accesibility */
 body {
     background-color: var(--main-background-color);
     margin: 0;
     font-family: Verdana, sans-serif;
+    letter-spacing: 0.04em;
 }
 
 /* Font farge tekst i main, men ikke eks. Navbar eller footer */
@@ -51,7 +52,7 @@ main {
     color: var(--main-font-color);
 }
 
-/* Generell figure styling*/
+/* Generell figure styling */
 figure {
     margin: 0;
     padding: 0;
