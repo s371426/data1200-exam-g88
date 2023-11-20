@@ -52,6 +52,7 @@
 <main class="main-accessibility">
 
     <section class="accessibility-flex">
+
         <div class="flex-text-full-width">
             <h1>Universal design:</h1>
             <p>Brukervennlighet handler om å gjøre nettsiden så enkel og intuitiv som mulig. Det skal være enkelt å
@@ -62,6 +63,7 @@
     </section>
 
     <section class="accessibility-flex">
+
         <div class="flex-text">
             <h2>Font:</h2>
             <p>Vi har valgt å bruke "Verdana" som font, og "sans-serif" som backup. "Verdana" har vi valgt ettersom
@@ -98,22 +100,27 @@
                 disse også er under 1 mb.</p>
 
         </div>
+
         <picture class="flex-img">
 
             <!-- Bilde blir valgt av device ut i fra hvilken oppløsning som passer best. "w" er bredden
                  på det bildet. Type forteller device at bildene er webp format -->
-            <source srcset=""
-                    sizes=""
+            <source srcset="images/lighthouse-test/lighthouse-test-very-small.webp 596w,
+                            images/lighthouse-test/lighthouse-test-small.webp 993w,
+                            images/lighthouse-test/lighthouse-test-medium.webp 1418w"
+                    sizes="(max-width: 760px) 95vw,
+                           (min-width: 761px) 44vw"
                     type="image/webp">
 
             <!-- Backup bilde tilfelle device ikke støtter <picture> eller webp, i tilleg til alt tekst informasjon -->
-            <img src=""
+            <img src="images/lighthouse-test/lighthouse-test-medium.jpg"
                  alt=""
-                 width="" height ="">
+                 width="111" height ="11">
         </picture>
     </section>
 
     <section class="accessibility-flex">
+
        <div class="flex-text-full-width">
            <h2>Topical:</h2>
            <p>Bruken av grids hjelper å forkorte koden og holde den ryddig. Bruk av grid-auto-flow hjalp veldig mye
@@ -131,6 +138,7 @@
     </section>
 
     <section class="accessibility-flex">
+
         <div class="flex-text">
             <h2>Hamburger meny:</h2>
             <p> Den første løsningen vi gjorde for hamburger meny kunne ikke aktiveres med kun tastatur,
@@ -144,6 +152,7 @@
 
 
         </div>
+
         <picture class="flex-img">
 
             <!-- Bilde blir valgt av device ut i fra hvilken oppløsning som passer best. "w" er bredden
@@ -164,6 +173,7 @@
     </section>
 
     <section class="accessibility-flex">
+
         <div class="flex-text-full-width">
             <h2>Footer:</h2>
             <p> På footeren har vi valgt å bli inspirert av oslomet.no sin footer. Vi har lenker nederst på siden, som gjør det
