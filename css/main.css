@@ -552,6 +552,7 @@ som reduserer hvor mye koding som trengs for plassering */
     text-align: center;
     color: white;
 }
+
 /* Fjerning av punkter og mellomrommet fra sidenav */
 .sidenav ul {
     list-style-type: none;
@@ -594,6 +595,7 @@ inni grid-item main-bar. */
     margin-bottom: 15px;
     margin-left: 25px;
 }
+
 /* Fjerning av punkter og tab-mellomrommet */
 .list-style-none {
     list-style-type: none;
