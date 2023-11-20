@@ -642,7 +642,7 @@ inni grid-item main-bar. */
     }
 }
 
-/* LOCATION PAGE*/
+/* LOCATION PAGE */
 
 /* Main flexbox, for blant annet å gjøre slik at overskrift passer strukturen til content i location-flex*/
 .location-main-flex {
@@ -660,6 +660,15 @@ inni grid-item main-bar. */
     padding-right: 2.5%;
     margin-bottom: 0.2em;
     font-size: 2.4rem;
+}
+
+.flex-text-full-width h1{
+    width: 100%;
+    font-size: 2.4rem;
+}
+
+.location-flex .flex-text-full-width h1 {
+    margin-bottom: 0.2em;
 }
 
 /* Normalt horisontal flexbox for to bokser, som er sentrert
@@ -714,9 +723,9 @@ figure.flex-img {
 }
 
 /* Gjør bakgrunnen på annenhver sibling element (child av parent element) til en annen farge
-(main secondary background color) */
+   (main secondary background color) anderledes på location fordi h1 er alene */
 /* https://developer.mozilla.org/en-US/docs/Web/CSS/:nth-child */
-.location-flex:nth-child(odd),
+.location-flex:nth-child(odd):not(:first-child),
 .accessibility-flex:nth-child(even) {
     background-color: var(--secondary-background-color);
 }
@@ -733,15 +742,6 @@ figure.flex-img {
 }
 
 /* ACCESSIBILITY SIDE */
-
-.accessibility-flex {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
-    padding-top: 1.5%;
-    padding-bottom: 1.5%;
-}
 
 /* FOOTER */
 /* Setter fooder på bunn av siden og at bredden skal være 100% */
