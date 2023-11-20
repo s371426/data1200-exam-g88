@@ -743,7 +743,7 @@ footer h3 {
     font-size: 1.55rem;
 }
 
-/*Fjerner punktene i listen, og fjerner tab mellomrommet*/
+/* Fjerner punktene i listen, og fjerner tab mellomrommet */
 footer ul {
     list-style-type: none;
     padding: 0;
@@ -782,18 +782,14 @@ footer ul {
 /* design til knappen */
 .button {
     background-color: black;
-    padding: 3px;
+    padding: 4px;
     text-decoration: none;
     color: yellow;
     font-size: 1.55rem;
 }
 
-.button:hover {
-    text-decoration: underline;
-}
-
 /* Linje på tvers av footer */
-.border-bottom{
+.border-bottom {
     grid-column: 1/4;
     grid-row: 2;
     border-bottom-width: 1px;
@@ -816,6 +812,7 @@ footer ul {
 .contact-information a {
     color: #0000a4;
 }
+
 .contact-information a:visited {
     color: rebeccapurple;
 }
@@ -840,16 +837,11 @@ footer ul {
     font-weight: 550;
 }
 
-.site-links a:hover {
-    text-decoration: underline;
-}
-
 .social-media-links {
     grid-column: 3/4;
     grid-row: 3;
     justify-self: right;
     width: 10rem;
-
 }
 
 /* Avstand mellom listelelementer sosiale medier linker*/
@@ -864,6 +856,9 @@ footer ul {
     color: black;
 }
 
+/* Knapp, Navigasjons, og Sosiale medier linker har underline når det hover over */
+.button:hover,
+.site-links a:hover,
 .social-media-links a:hover {
     text-decoration: underline;
 }
@@ -906,14 +901,14 @@ https://www.w3schools.com/howto/howto_css_social_media_buttons.asp
     }
 
     /* Setter posisjon og legger */
-    .newsletter-button{
+    .newsletter-button {
         grid-column: 1;
         grid-row: 2;
         text-align: left;
     }
 
     /* Linje på tvers av footer */
-    .border-bottom{
+    .border-bottom {
         grid-column: 1;
         grid-row: 3;
     }
