@@ -804,7 +804,8 @@ footer ul {
 /* endrer på alle grid, og sentrerer tekst */
 .footer-grid-objects {
     text-align: left;
-    margin-left: 25px;
+    margin-left: 6.5%;
+    margin-right: 6.5%;
 }
 
 /* Setter posisjon på item 1 og setter opp en ny grid i objektet */
@@ -823,9 +824,9 @@ footer ul {
     align-self: center;
     text-align: right;
     margin-top: 1rem;
-    margin-right: 25px;
+    margin-right: 6.5%;
     margin-bottom: 1rem;
-    margin-left: 25px;
+    margin-left: 6.5%;
 }
 
 /* design til knappen */
@@ -855,6 +856,12 @@ footer ul {
     grid-row: 3;
 }
 
+/* Avstand mellom listeelementene Kontaktinformasjon */
+.contact-information li {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+
 /*fargen på linken før og etter den har blitt trykket på*/
 .contact-information a {
     color: #0000a4;
@@ -866,16 +873,21 @@ footer ul {
 .site-links {
     grid-column: 2/3;
     grid-row: 3;
+    justify-self: center;
+    width: 12rem;
 }
 
-.site-links p {
-    font-size: 1.25rem;
-    font-weight: 550;
+/* Avstand mellom listeelementene navigasjonsliste */
+.site-links li {
+    margin-top: 1.25rem;
+    margin-bottom: 1.25rem;
 }
 
 .site-links a {
     text-decoration: none;
+    font-size: 1.25rem;
     color: black;
+    font-weight: 550;
 }
 
 .site-links a:hover {
@@ -885,13 +897,19 @@ footer ul {
 .social-media-links {
     grid-column: 3/4;
     grid-row: 3;
+    justify-self: right;
+    width: 10rem;
 
+}
+
+/* Avstand mellom listelelementer sosiale medier linker*/
+.social-media-links li {
+    margin-top: 0.55rem;
+    margin-bottom: 0.55rem;
 }
 
 .social-media-links a {
     display: block;
-    margin-top: 0.8rem;
-    margin-bottom: 0.8rem;
     text-decoration: none;
     color: black;
 }
@@ -958,10 +976,12 @@ https://www.w3schools.com/howto/howto_css_social_media_buttons.asp
     .site-links {
         grid-column: 1;
         grid-row: 5;
+        justify-self: normal;
     }
 
     .social-media-links {
         grid-column: 1;
         grid-row: 6;
+        justify-self: normal;
     }
 }
