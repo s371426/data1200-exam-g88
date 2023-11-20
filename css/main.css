@@ -684,15 +684,21 @@ inni grid-item main-bar. */
     padding-right: 2.5%;
 }
 
-/* Er inni location-flex, inneholder bilde/bildetekst
-   position for å kompensere for bildetekst */
+.flex-text-full-width{
+    flex-basis: 100%;
+    box-sizing: border-box;
+    max-width: 1300px;
+    padding-right: 2.5%;
+    padding-left: 2.5%;
+}
+
+/* Kompensere for bildetekst hvis det er en figure (har bildetekst)*/
 figure.flex-img {
     position: relative;
     top: 0.66rem;
     margin-top: 0.5rem;
     margin-bottom: 0.5rem;
 }
-
 
 /* Endrer location-flex flexbox til å være vertikal når viewport mindre enn 760px (Mobil) */
 @media only screen and (max-width: 760px) {
@@ -736,34 +742,6 @@ figure.flex-img {
     padding-top: 1.5%;
     padding-bottom: 1.5%;
 }
-
-.accessibility-text,
-.accessibility-image {
-    flex-basis: 50%;
-    box-sizing: border-box;
-    max-width: 650px;
-    padding-right: 2.5%;
-    padding-left: 2.5%;
-}
-
-
-.flex-text-full-width{
-    flex-basis: 100%;
-    box-sizing: border-box;
-    max-width: 1300px;
-    padding-right: 2.5%;
-    padding-left: 2.5%;
-}
-
-.accessibility-flex:nth-child(even) {
-    background-color: var(--secondary-background-color);
-}
-
-/*@media (max-width: 760px) {*/
-/*    .accessibility-flex{*/
-/*        flex-direction: column;*/
-/*    }*/
-/*}*/
 
 /* FOOTER */
 /* Setter fooder på bunn av siden og at bredden skal være 100% */
