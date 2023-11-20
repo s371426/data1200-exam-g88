@@ -731,17 +731,21 @@ figure.flex-img {
 
 .gallery-grid {
     display: grid;
-    grid-template-columns: 20px 1fr 20px;
+    grid-template-columns: 1% 1fr 1%;
     grid-auto-rows: auto;
     grid-gap: 10px;
 }
-.gallery-grid h1{
+
+.gallery-grid h1 {
+    grid-column: 2;
+    grid-row: 1;
     margin-left: 10px;
 }
 
 .gallery-filters {
     grid-column: 2;
     grid-row: 2;
+    align-self: start   ;
     background-color: var(--main-color);
     padding: 1rem;
     color: black;
@@ -750,15 +754,15 @@ figure.flex-img {
     margin-left: 10px;
 }
 
+.gallery-filters h2{
+    margin-left: 10px;
+}
+
 .filter-flex{
     display: flex;
     flex-direction: row;
 }
 
-.gallery-grid h1 {
-    grid-column: 2;
-    grid-row: 1;
-}
 
 .gallery-flex {
     grid-column: 2;
@@ -793,9 +797,6 @@ figure.flex-img {
     opacity: 0;
 }
 
-/* Checkbox fra:
-   https://icons8.com/icon/I61emdjNzpV9/unchecked-checkbox
-   https://icons8.com/icon/I61emdjNzpV9/unchecked-checkbox*/
 
 .checkbox-home-toggle,
 .checkbox-topical-toggle,
@@ -807,6 +808,9 @@ figure.flex-img {
     gap: 0.3rem;
 }
 
+/* Checkbox fra:
+   https://icons8.com/icon/I61emdjNzpV9/unchecked-checkbox
+   https://icons8.com/icon/I61emdjNzpV9/unchecked-checkbox */
 
 .checkbox-home-icon,
 .checkbox-topical-icon,
@@ -842,7 +846,7 @@ figure.flex-img {
 
 @media (min-width: 1400px) {
     .gallery-grid {
-        grid-template-columns: 20px 15rem minmax(100px,1300px) 20px;
+        grid-template-columns: 1% 15rem minmax(100px,1300px) 1%;
     }
 
     .gallery-filters {
