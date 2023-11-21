@@ -255,7 +255,7 @@ nav {
 /* FELLES FORSIDE/HJEMMEISDE, ACCESSIBILITY OG LOCATION*/
 
 /* Normalt horisontal flexbox for to bokser, som er sentrert
-   Inneholder flex-img og flex-text */
+   Inneholder flex-child-img og flex-child-text */
 .homepage-flex,
 .location-flex,
 .accessibility-flex {
@@ -277,7 +277,7 @@ nav {
     padding-right: 2.5%;
 }
 
-/* En boks inni flexbox, gjør at den er like bred som der det er to bokser*/
+/* En boks inni flexbox, gjør at den er like bred som der det er to bokser */
 .flex-child-text-full-width {
     flex-basis: 100%;
     box-sizing: border-box;
@@ -361,7 +361,6 @@ figure.flex-child-img {
 
 /* Tekst hero section større på store skjermer (over 1250px*/
 @media (min-width: 1250px) {
-
     .hero-flex h1 {
         font-size: 4rem;
     }
@@ -387,23 +386,23 @@ figure.flex-child-img {
 }
 
 /* Styling av h2 i flex child på forside */
-.homepage-flex .flex-child-text h2 {
+.homepage-flex h2 {
     font-size: 1.4rem;
     font-weight: 300;
 }
 
 /* Styling av h3 i flex child på forside */
-.homepage-flex .flex-child-text h3 {
+.homepage-flex h3 {
     font-size: 2.4rem;
     font-weight: 700;
     margin-top: 1.2rem
 }
 
-.bilde-box {
+.flex-child-third-width {
     flex-basis: 33.333333%;
+    box-sizing: border-box;
     padding: 10px;
     max-width: 500px;
-    box-sizing: border-box;
 }
 
 /* Gjør bakgrunnen på annenhver sibling element (child av parent element) til en annen farge
@@ -478,8 +477,8 @@ input[type=submit] {
 
 /* LOCATION PAGE*/
 
-/* Spesifikt h1 på location page, margin*/
-.location-flex .flex-child-text-full-width h1 {
+/* Spesifikt h1 på location page, margin */
+.location-flex h1 {
     margin-bottom: 0.2em;
 }
 
