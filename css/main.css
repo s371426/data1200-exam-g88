@@ -254,8 +254,8 @@ nav {
 
 /* FELLES FORSIDE/HJEMMEISDE, ACCESSIBILITY OG LOCATION*/
 
-/* Normalt horisontal flexbox for to bokser, som er sentrert
-   Inneholder flex-child-img og flex-child-text */
+/* Normalt horisontal flexbox for flere bokser, som er sentrert
+   Inneholder flex-child-XXX og flex-child-XXX */
 .homepage-flex,
 .location-flex,
 .accessibility-flex {
@@ -267,7 +267,8 @@ nav {
     padding-top: 1.5%;
 }
 
-/* To bokser inni flexbox, gjør at de er like store med maks bredde */
+/* flex child, to av dem blir 1300px bredde tilsammen
+   border-box inkluderer padding*/
 .flex-child-img,
 .flex-child-text {
     flex-basis: 50%;
@@ -277,8 +278,8 @@ nav {
     padding-right: 2.5%;
 }
 
-/* En boks inni flexbox, gjør at den er like bred som der det er to bokser */
-.flex-child-text-full-width {
+/* Flex child som blir 1300px alene */
+.flex-child-full-width {
     flex-basis: 100%;
     box-sizing: border-box;
     max-width: 1300px;
@@ -286,14 +287,23 @@ nav {
     padding-left: 2.5%;
 }
 
+/* Mindre flex child, blir 1500px bred med 3 */
+.flex-child-smaller-width {
+    flex-basis: 100%;
+    box-sizing: border-box;
+    padding: 10px;
+    max-width: 500px;
+}
+
 /* h1 da den er inni denne klassen, Location og Accessibility */
-.flex-child-text-full-width h1 {
+.flex-child-full-width h1 {
     width: 100%;
     font-size: 2.4rem;
 }
 
-/* Kompensere for bildetekst hvis det er en figure (har bildetekst)*/
-figure.flex-child-img {
+/* Kompensere for bildetekst hvis det er en figure (har bildetekst) */
+figure.flex-child-img,
+figure.flex-child-smaller-width {
     position: relative;
     top: 0.66rem;
     margin-top: 0.5rem;
@@ -309,7 +319,8 @@ figure.flex-child-img {
     }
 
     .flex-child-img,
-    .flex-child-text {
+    .flex-child-text,
+    .flex-child-smaller-width {
         max-width: none;
     }
 }
@@ -396,13 +407,6 @@ figure.flex-child-img {
     font-size: 2.4rem;
     font-weight: 700;
     margin-top: 1.2rem
-}
-
-.flex-child-third-width {
-    flex-basis: 33.333333%;
-    box-sizing: border-box;
-    padding: 10px;
-    max-width: 500px;
 }
 
 /* Farger på linker body front page for mere accessibility */
