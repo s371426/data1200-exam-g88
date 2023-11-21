@@ -31,7 +31,7 @@
                 <img id="nav-logo" src="images/logo-oslomet-gul.svg" alt="OsloMet sin logo" width="68" height="40">
             </a>
 
-            <!-- Label for input checkbox og hamburger meny ikon -->
+            <!-- Label for input checkbox og hamburger meny| ikon -->
             <label class="hamburger-toggle-container" for="hamburger-toggle">
                 <span class="hamburger-icon"></span>
             </label>
@@ -51,11 +51,11 @@
 </header>
 
 <!-- main flex container for content på home-page, altså mellom header og footer-->
-<!-- seksjon for hero -->
-<div class="hero-flex">
+<!-- Section med hero bilde/tekst -->
+<section class="hero-flex">
     <h1>Oslo Metropolitan University</h1>
     <h2>Velkommen til Pilestreted</h2>
-</div>
+</section>
 
 <main class="homepage-main">
     <div class="main-content">
@@ -66,6 +66,8 @@
                 <source srcset="images/bislettbekken/bislettbekken-small.jpg 900w,
                             images/bislettbekken/bislettbekken-medium.jpg 1350w,
                             images/bislettbekken/bislettbekken-large.jpg 2000w"
+                        sizes="(max-width: 760px) 95vw,
+                               (min-width: 761px) 44vw"
                         type="image/jpg">
                 <img src="images/bislettbekken/bislettbekken-src.jpg"
                      alt="bilde av en bekk ved pilestredet"
@@ -103,6 +105,8 @@
                 <source srcset="images/oslomet-studiestart/oslomet-studiestart.jpg 900w,
                                 images/oslomet-studiestart/oslomet-studiestart.jpg 1350w,
                                 images/oslomet-studiestart/oslomet-studiestart.jpg 2000w"
+                        sizes="(max-width: 760px) 95vw,
+                               (min-width: 761px) 44vw"
                         type="image/jpg">
                 <!-- Backup bilde tilfelle device ikke støtter <picture> eller webp, i tilleg til alt tekst informasjon -->
                 <img src="images/oslomet-studiestart/oslomet-studiestart.jpg"
@@ -114,50 +118,44 @@
     </section>
 
     <section class="homepage-flex">
-        <div class="bilder-box-1">
-            <figure class="skulptur-img">
-                <picture>
-                    <source srcset="images/foreningsdag-musikk/foreningsdag-musikk-oslomet.jpg 900w,
-                                    images/foreningsdag-musikk/foreningsdag-musikk-oslomet.jpg 1350w,
-                                    images/foreningsdag-musikk/foreningsdag-musikk-oslomet.jpg 2000w"
-                                type="image/jpg">
-                    <img src="images/foreningsdag-musikk/foreningsdag-musikk-oslomet.jpg"
-                             alt="bilde fra live musikkopptreden på foreningsdag på oslomet"
-                             width="1600" height ="1066">
-                </picture>
-                <figcaption class="img-text">Benjamin A. Ward/OsloMET</figcaption> <!-- husk å fiks fotograf stuff-->
-            </figure>
-        </div>
-
-        <div class="bilder-box-2">
-            <figure class="home-img">
-                <picture>
-                    <source srcset="images/studiestart-2023/oslomet-studiestart-2023.jpg 900w,
-                                    images/studiestart-2023/oslomet-studiestart-2023.jpg 1350w,
-                                    images/studiestart-2023/oslomet-studiestart-2023.jpg 2000w"
+        <figure class=bilde-box>
+            <picture>
+                <source srcset="images/foreningsdag-musikk/foreningsdag-musikk-oslomet.jpg 900w,
+                                images/foreningsdag-musikk/foreningsdag-musikk-oslomet.jpg 1350w,
+                                images/foreningsdag-musikk/foreningsdag-musikk-oslomet.jpg 2000w"
                             type="image/jpg">
-                    <img src="images/studiestart-2023/oslomet-studiestart-2023.jpg"
-                         alt="bilde av studiestart på oslomet"
-                         width="1600" height ="1068">
-                </picture>
-                <figcaption class="img-text">Benjamin A. Ward/OsloMET</figcaption> <!-- husk å fiks fotograf stuff-->
-            </figure>
-        </div>
+                <img src="images/foreningsdag-musikk/foreningsdag-musikk-oslomet.jpg"
+                         alt="bilde fra live musikkopptreden på foreningsdag på oslomet"
+                         width="1600" height ="1066">
+            </picture>
+            <figcaption class="img-text">Benjamin A. Ward/OsloMET</figcaption> <!-- husk å fiks fotograf stuff-->
+        </figure>
 
-        <div class="bilder-box-3">
-            <figure class="skulptur-img">
-                <picture>
-                    <source srcset="images/skulptur/skulptur.jpg 900w,
-                                    images/skulptur/skulptur.jpg 1350w,
-                                    images/skulptur/skulptur.jpg 2000w"
-                            type="image/jpg">
-                    <img src="images/skulptur/skulptur.jpg"
-                         alt="bilde av studiestart på oslomet"
-                         width="5851" height ="3893">
-                </picture>
-                <figcaption class="img-text">Benjamin A. Ward/OsloMET</figcaption> <!-- husk å fiks fotograf stuff-->
-            </figure>
-        </div>
+        <figure class=bilde-box>
+            <picture>
+                <source srcset="images/studiestart-2023/oslomet-studiestart-2023.jpg 900w,
+                                images/studiestart-2023/oslomet-studiestart-2023.jpg 1350w,
+                                images/studiestart-2023/oslomet-studiestart-2023.jpg 2000w"
+                        type="image/jpg">
+                <img src="images/studiestart-2023/oslomet-studiestart-2023.jpg"
+                     alt="bilde av studiestart på oslomet"
+                     width="1600" height ="1068">
+            </picture>
+            <figcaption class="img-text">Benjamin A. Ward/OsloMET</figcaption> <!-- husk å fiks fotograf stuff-->
+        </figure>
+
+        <figure class=bilde-box>
+            <picture>
+                <source srcset="images/skulptur/skulptur.jpg 900w,
+                                images/skulptur/skulptur.jpg 1350w,
+                                images/skulptur/skulptur.jpg 2000w"
+                        type="image/jpg">
+                <img src="images/skulptur/skulptur.jpg"
+                     alt="bilde av studiestart på oslomet"
+                     width="5851" height ="3893">
+            </picture>
+            <figcaption class="img-text">Benjamin A. Ward/OsloMET</figcaption> <!-- husk å fiks fotograf stuff-->
+        </figure>
     </section>
 
     <!-- Seksjon for spisested -->
@@ -168,6 +166,8 @@
                 <source srcset="images/grilling/grilling.jpg 900w,
                                 images/grilling/grilling.jpg 1350w,
                                 images/grilling/grilling.jpg 2000w"
+                        sizes="(max-width: 760px) 95vw,
+                               (min-width: 761px) 44vw"
                         type="image/jpg">
                 <img src="images/grilling/grilling.jpg"
                      alt="bilde av studiestart på oslomet"
