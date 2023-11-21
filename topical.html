@@ -45,13 +45,15 @@
         </ul>
 
         <!-- Kontakt knapp på navigasjonsbar -->
-        <a class="contact-button" href="maybepage5.html">Kontakt</a>
+        <a class="contact-button" href="index.html#contact-form-flex">Kontakt</a>
     </nav>
 </header>
 
-<!-- Vi tar i bruk grids for å style nettsiden, slik at det blir lettere og enklere å designe nettsiden slik vi vil ha det -->
+<!-- Grids for å style nettsiden, slik at det blir lettere og enklere å designe nettsiden slik vi vil ha det -->
 <main>
     <article class="topical-grid" lang="en">
+
+        <!-- Overskrifts del med overskrift, ingress, forfatter og et bilde -->
         <div class="headline">
             <h1>The Interplay between Technology and Society</h1>
             <p>Explore the potential impact of satellite internet technology have on society. Discuss its effects on
@@ -61,7 +63,7 @@
 
             <figure>
                 <picture lang="no">
-                    <!-- Bilde blir valgt av device ut i fra hvilken oppløsning som passer best. "w" er bredden
+                    <!-- Bilde blir valgt av device ut i fra hvilken oppløsning som passer best med size. "w" er bredden
                     på det bildet. Type forteller device at bildene er webp format-->
                     <source srcset="images/spacex/spacex-very-small.webp 600w,
                                     images/spacex/spacex-small.webp 1072w,
@@ -76,11 +78,12 @@
                          alt="En satelitt i verdensrommet med jorden som belyser bakgrunnen"
                          height="2848" width="4288">
                 </picture>
+                <!-- Bilde Fra: -->
                 <figcaption>SpaceX, Pexels</figcaption>
             </figure>
         </div>
 
-        <!-- Dette er navigation baren som skal gjøre det lettere for brukere å navigere artikkelen -->
+        <!-- Navigation baren som skal gjøre det lettere for brukere å navigere artikkelen -->
         <!-- Bruker id og hyperlinks for å linke til de ulikene delene av artikkelen -->
         <aside class="sidenav">
             <h2>Menu</h2>
@@ -95,6 +98,7 @@
             </ul>
         </aside>
 
+        <!-- Hoveddelen i seksjoner for styling med grid og float bilder-->
         <div class="main-bar">
             <h2 id="introduction">Introduction</h2>
             <p>Today the global infrastructure of the internet is, to a large degree, dependent on physical sub-sea and
@@ -119,7 +123,7 @@
             <figure class="topical-img-with-text">
                 <picture lang="no">
 
-                    <!-- Bilde blir valgt av device ut i fra hvilken oppløsning som passer best. "w" er bredden
+                    <!-- Bilde blir valgt av device ut i fra hvilken oppløsning som passer best med size. "w" er bredden
                     på det bildet. Type forteller device at bildene er webp format-->
                     <!-- Bruk av media sikrer at bildene beholder sine opprinnelige dimensjoner i mobile view -->
                     <source srcset="images/nasa/nasa-small-mobile-view.webp 600w,
@@ -140,8 +144,10 @@
                          alt="New York sett ovenifra på kvelden, der gatebelysning dominerer landskapet"
                          height="1394" width="1394">
                 </picture>
+                <!-- Bilde Fra: -->
                 <figcaption>NASA, New York</figcaption>
             </figure>
+
             <ul class="list-style-none">
                 <li><strong>Technological trajectory:</strong> The evolution of technology in a specific field.</li>
                 <li><strong>Co-production:</strong> When experts from different fields work together to produce new
@@ -150,6 +156,7 @@
                 <li><strong>Environmental Consequences:</strong> Adverse or beneficial changes to the environment
                     resulting from an activity.</li>
             </ul>
+
             <h2 id="identify">Identify the Situation:</h2>
             <p>My future job is likely to be heavily influenced by the internet. Considering that important information
                 can be stolen online, one must be cautious. However, it’s also great that those parts of the world without
@@ -178,7 +185,7 @@
             <figure class="topical-img">
                 <picture lang="no">
 
-                    <!-- Bilde blir valgt av device ut i fra hvilken oppløsning som passer best. "w" er bredden
+                    <!-- Bilde blir valgt av device ut i fra hvilken oppløsning som passer med size best. "w" er bredden
                     på det bildet. Type forteller device at bildene er webp format-->
                     <!-- Bildene beholder sine opprinnelige dimensjoner i mobile view -->
                     <source srcset="images/imac/imac-very-small.webp 600w,
@@ -195,6 +202,7 @@
                          alt="Flere ulike elektroniske enheter med en iMac i sentrum"
                          height="4000" width="6000">
                 </picture>
+                <!-- Bilde Fra: -->
                 <figcaption>Domenico Loia, Unsplash</figcaption>
             </figure>
         </div>
@@ -210,10 +218,11 @@
                 which makes it even more accessible for everyone.</p>
 
             <h2 id="negative-aspects">Describe three potentially negative aspects of this development:</h2>
+
             <figure class="topical-img-with-text">
                 <picture lang="no">
 
-                    <!-- Bilde blir valgt av device ut i fra hvilken oppløsning som passer best. "w" er bredden
+                    <!-- Bilde blir valgt av device ut i fra hvilken oppløsning som passer best med size. "w" er bredden
                     på det bildet. Type forteller device at bildene er webp format-->
                     <!-- Bildene beholder sine opprinnelige dimensjoner i mobile view -->
                     <source srcset="images/circuit/circuit-very-small.webp 600w,
@@ -232,6 +241,7 @@
                               elektroniske komponenter inni en maskin"
                          height="2597" width="3895">
                 </picture>
+                <!-- Bilde Fra: -->
                 <figcaption>Umberto, Unsplash</figcaption>
             </figure>
 
