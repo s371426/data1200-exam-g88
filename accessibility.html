@@ -54,7 +54,7 @@
     <!-- Section med h1 og intro tekst om accessibility -->
     <section class="accessibility-flex">
 
-        <div class="flex-text-full-width">
+        <div class="flex-child-text-full-width">
             <h1>Universal design:</h1>
             <p>Brukervennlighet handler om å gjøre nettsiden så enkel og intuitiv som mulig. Det skal være enkelt å
                 manøvrere seg på siden, uten å skape forvirring og irritasjon. Det skal være lett å finne det man leter
@@ -66,7 +66,7 @@
     <!-- Secetion om vårt valg når det kommer til font og tekst om acessibility -->
     <section class="accessibility-flex">
 
-        <div class="flex-text-full-width">
+        <div class="flex-child-text-full-width">
             <h2>Font og tekst:</h2>
             <p>Vi har valgt å bruke "Verdana" som font, og "sans-serif" som backup. "Verdana" har vi valgt ettersom den
                 blir annset som en av de beste når det komer til accessibility. Fonten har tydelige former og
@@ -83,7 +83,7 @@
     <section class="accessibility-flex">
 
         <!-- Diverse tekst om accessibility -->
-        <div class="flex-text">
+        <div class="flex-child-text">
             <h2>Lighthose test resultater:</h2>
             <p>Mens vi har jobbet med siden har vi brukt lighthouse for å teste siden vår underveis, for å oppdage
                 områder vi kan forbedre. To advarsler gjenstår: På peformace klager den på at bi brukte eksterne font
@@ -98,20 +98,10 @@
             <p>På grunn av darkmode, fant vi ut at hyperlinker hadde dårlig kontrast med bakgrunnen. Så vi fant noen
                 lysere blåfarger for når darkmode er på, slik at de forstatt assosiert med hyperlinker.</p>
 
-            <h2>Struktur:</h2>
-            <p>På sidene har vi valgt å ha en generell utforming, med nav bar på toppen, hovedinnhold i midten og
-                på bunn. Vi har brukt tydelige overskrifter og bilder, for å gjøre det enkelt for brukerne å forstå
-                siden uten å lese innholdet.</p>
-            <p>Vi har også sørget for at siden scaler bra til mindre og større skjermer uten at tekst blir for smal
-                eller for bred. Vi har satt Maks bredde på siden vår til 1300px slik at man ikke må vri
-                hode for å lese hvis man bruker en stor skjerm. Det er media queries som sørger for at at elementer som
-                er ved siden av hverandre på brede skjermer, går underhverandre på smalere skjermer. I topical
-                bedskjærte vi et bilde når det er inni teksten slik at det skal passe bedre.</p>
-            
         </div>
 
         <!-- Bilde av lighthouse test -->
-        <picture class="flex-img">
+        <picture class="flex-child-img">
 
             <!-- Bilde blir valgt av device ut i fra hvilken oppløsning som passer best. "w" er bredden
                  på det bildet. Type forteller device at bildene er webp format -->
@@ -129,9 +119,24 @@
         </picture>
     </section>
 
+    <!-- Seksjon om sidens struktur -->
+    <section class="accessibility-flex">
+        <div class="flex-child-text-full-width">
+            <h2>Struktur:</h2>
+            <p>På sidene har vi valgt å ha en generell utforming, med nav bar på toppen, hovedinnhold i midten og
+                på bunn. Vi har brukt tydelige overskrifter og bilder, for å gjøre det enkelt for brukerne å forstå
+                siden uten å lese innholdet.</p>
+            <p>Vi har også sørget for at siden scaler bra til mindre og større skjermer uten at tekst blir for smal
+                eller for bred. Vi har satt Maks bredde på siden vår til 1300px slik at man ikke må vri
+                hode for å lese hvis man bruker en stor skjerm. Det er media queries som sørger for at at elementer som
+                er ved siden av hverandre på brede skjermer, går underhverandre på smalere skjermer. I topical
+                bedskjærte vi et bilde når det er inni teksten slik at det skal passe bedre.</p>
+        </div>
+    </section>
+
     <!-- Seksjon med informasjon om bilder og dens alt tekster -->
     <section class="accessibility-flex">
-        <div class="flex-text-full-width">
+        <div class="flex-child-text-full-width">
             <h2>Bilder</h2>
             <p>Vi har valgt å bruker WebP på alle bildene våres, fordi med WebP kan vi komprimere bilder uten stor tap
                 av kvalitet. Dette sikrer at alle bildene vi har er under 1 mb som gjør at nettsidene våres lastes inn
@@ -153,7 +158,7 @@
     <section class="accessibility-flex">
 
         <!-- Tekst om Hamburgermeny accessibility-->
-        <div class="flex-text">
+        <div class="flex-child-text">
             <h2>Hamburger meny:</h2>
             <p> Den første løsningen vi gjorde for hamburger meny kunne ikke aktiveres med kun tastatur,
                 noe som trengs hvis man har problemer med å bruke mus. Dette var fordi checkbox ble satt til Display: none
@@ -166,7 +171,7 @@
         </div>
 
         <!-- Bilde av kode fra hamburgermeny -->
-        <picture class="flex-img">
+        <picture class="flex-child-img">
 
             <!-- Bilde blir valgt av device ut i fra hvilken oppløsning som passer best. "w" er bredden
                  på det bildet. Type forteller device at bildene er webp format -->
@@ -187,21 +192,10 @@
 
     <section class="accessibility-flex">
 
-        <div class="flex-text-full-width">
-            <h2>Topical:</h2>
-            <p>Bruken av grids hjelper å forkorte koden og holde den ryddig. Bruk av grid-auto-flow hjalp veldig mye
-                med å forkorte koden, der vi tidligere hadde implementert flere klasser og definert flere plasseringer inne i koden.</p>
-            <p></p>
-        </div>
-    </section>
-
-    <section class="accessibility-flex">
-
-        <div class="flex-text-full-width">
+        <div class="flex-child-text-full-width">
             <h2>Footer:</h2>
-            <p> På footeren har vi valgt å bli inspirert av oslomet.no sin footer. Vi har lenker nederst på siden, som gjør det
-                enkelt for brukerne å gå videre til neste side, isteden for å måtte manøvrere seg til toppen igjen.
-                Lenkene til sosiale medier har ikoner. Dette har vi gjort for å gjøre det enkelt for brukerne å forstå
+            <p> Vi har lenker nederst på siden, som gjør det enkelt for brukerne å gå videre til neste side, isteden for
+                å måtte manøvrere seg til toppen igjen. Ikon-lenkene til sosiale medier har tekst alternativ for de som treDette har vi gjort for å gjøre det enkelt for brukerne å forstå
                 hvor lenkene går. Lenkene får også strek under seg når man holder musen over, for å indikere at det er
                 en lenke. Ellers har vi kontrast mellom tekst og bakgrunn, samt oversiktlig og leselig tekst.
             </p>

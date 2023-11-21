@@ -300,7 +300,6 @@ nav {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    /* align-items: center; */
     height: 100vh;
     background-image: linear-gradient(to bottom,rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('../images/forsidebilde-arkitektur-p32/arkitektur-p32-skjalg-bøhmer-vold-square-large.jpg');
     background-repeat: no-repeat;
@@ -670,8 +669,8 @@ input[type=submit] {
 }
 
 /* To bokser inni flexbox, gjør at de er like store med maks bredde */
-.flex-img,
-.flex-text{
+.flex-child-img,
+.flex-child-text{
     flex-basis: 50%;
     box-sizing: border-box;
     max-width: 650px;
@@ -680,7 +679,7 @@ input[type=submit] {
 }
 
 /* En boks inni flexbox, gjør at den er like bred som der det er to bokser*/
-.flex-text-full-width{
+.flex-child-text-full-width{
     flex-basis: 100%;
     box-sizing: border-box;
     max-width: 1300px;
@@ -689,18 +688,18 @@ input[type=submit] {
 }
 
 /* h1 da den er inni denne klassen, Location og Accessibility */
-.flex-text-full-width h1{
+.flex-child-text-full-width h1{
     width: 100%;
     font-size: 2.4rem;
 }
 
 /* Spesifikt h1 på location page, margin*/
-.location-flex .flex-text-full-width h1 {
+.location-flex .flex-child-text-full-width h1 {
     margin-bottom: 0.2em;
 }
 
 /* Kompensere for bildetekst hvis det er en figure (har bildetekst)*/
-figure.flex-img {
+figure.flex-child-img {
     position: relative;
     top: 0.66rem;
     margin-top: 0.5rem;
@@ -714,8 +713,8 @@ figure.flex-img {
         flex-direction: column;
     }
 
-    .flex-img,
-    .flex-text {
+    .flex-child-img,
+    .flex-child-text {
         max-width: none;
     }
 }
@@ -730,11 +729,11 @@ figure.flex-img {
 
 /* Location page: Bytter om på rekkefølgen på annenhver sibling element hvis viewport 761px eller bredere*/
 @media only screen and (min-width: 761px) {
-    .location-flex:nth-child(even) .flex-img {
+    .location-flex:nth-child(even) .flex-child-img {
         order: 2;
     }
 
-    .location-flex:nth-child(even) .flex-text {
+    .location-flex:nth-child(even) .flex-child-text {
         order: 1;
     }
 }
