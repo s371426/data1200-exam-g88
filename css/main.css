@@ -253,7 +253,7 @@ nav {
 }
 
 
-/* FLEX-CONTAINER FORSIDE */
+/* HJEMMESIDE/FORSIDE */
 
 /* Gjør bakgrunnen på annenhver sibling element (child av parent element) til en annen farge
 (main secondary background color) */
@@ -409,6 +409,92 @@ input[type=submit] {
     font-weight: 600;
 }
 
+/* LOCATION OG ACCESSIBILITY PAGE */
+
+/* Normalt horisontal flexbox for to bokser, som er sentrert
+   Inneholder flex-img og flex-text */
+.homepage-flex,
+.location-flex,
+.accessibility-flex {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    padding-bottom: 1.5%;
+    padding-top: 1.5%;
+}
+
+/* To bokser inni flexbox, gjør at de er like store med maks bredde */
+.flex-child-img,
+.flex-child-text{
+    flex-basis: 50%;
+    box-sizing: border-box;
+    max-width: 650px;
+    padding-left: 2.5%;
+    padding-right: 2.5%;
+}
+
+/* En boks inni flexbox, gjør at den er like bred som der det er to bokser*/
+.flex-child-text-full-width{
+    flex-basis: 100%;
+    box-sizing: border-box;
+    max-width: 1300px;
+    padding-right: 2.5%;
+    padding-left: 2.5%;
+}
+
+/* h1 da den er inni denne klassen, Location og Accessibility */
+.flex-child-text-full-width h1{
+    width: 100%;
+    font-size: 2.4rem;
+}
+
+/* Spesifikt h1 på location page, margin*/
+.location-flex .flex-child-text-full-width h1 {
+    margin-bottom: 0.2em;
+}
+
+/* Kompensere for bildetekst hvis det er en figure (har bildetekst)*/
+figure.flex-child-img {
+    position: relative;
+    top: 0.66rem;
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+}
+
+/* Endrer location og accessability flexbox til å være vertikal når viewport mindre enn 760px (Mobil) */
+@media only screen and (max-width: 760px) {
+    .homepage-flex,
+    .location-flex,
+    .accessibility-flex {
+        flex-direction: column;
+    }
+
+    .flex-child-img,
+    .flex-child-text {
+        max-width: none;
+    }
+}
+
+/* Gjør bakgrunnen på annenhver sibling element (child av parent element) til en annen farge
+   (main secondary background color) anderledes på location fordi h1 er alene */
+/* https://developer.mozilla.org/en-US/docs/Web/CSS/:nth-child */
+.location-flex:nth-child(odd):not(:first-child),
+.accessibility-flex:nth-child(even) {
+    background-color: var(--secondary-background-color);
+}
+
+/* Location page: Bytter om på rekkefølgen på annenhver sibling element hvis viewport 761px eller bredere*/
+@media only screen and (min-width: 761px) {
+    .location-flex:nth-child(even) .flex-child-img {
+        order: 2;
+    }
+
+    .location-flex:nth-child(even) .flex-child-text {
+        order: 1;
+    }
+}
+
 /*TOPICAL PAGE*/
 
 /* Grid-container med to kolonner */
@@ -562,92 +648,6 @@ input[type=submit] {
         float: none;
         width: 100%;
         margin-left: 0;
-    }
-}
-
-/* LOCATION OG ACCESSIBILITY PAGE */
-
-/* Normalt horisontal flexbox for to bokser, som er sentrert
-   Inneholder flex-img og flex-text */
-.homepage-flex,
-.location-flex,
-.accessibility-flex {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
-    padding-bottom: 1.5%;
-    padding-top: 1.5%;
-}
-
-/* To bokser inni flexbox, gjør at de er like store med maks bredde */
-.flex-child-img,
-.flex-child-text{
-    flex-basis: 50%;
-    box-sizing: border-box;
-    max-width: 650px;
-    padding-left: 2.5%;
-    padding-right: 2.5%;
-}
-
-/* En boks inni flexbox, gjør at den er like bred som der det er to bokser*/
-.flex-child-text-full-width{
-    flex-basis: 100%;
-    box-sizing: border-box;
-    max-width: 1300px;
-    padding-right: 2.5%;
-    padding-left: 2.5%;
-}
-
-/* h1 da den er inni denne klassen, Location og Accessibility */
-.flex-child-text-full-width h1{
-    width: 100%;
-    font-size: 2.4rem;
-}
-
-/* Spesifikt h1 på location page, margin*/
-.location-flex .flex-child-text-full-width h1 {
-    margin-bottom: 0.2em;
-}
-
-/* Kompensere for bildetekst hvis det er en figure (har bildetekst)*/
-figure.flex-child-img {
-    position: relative;
-    top: 0.66rem;
-    margin-top: 0.5rem;
-    margin-bottom: 0.5rem;
-}
-
-/* Endrer location og accessability flexbox til å være vertikal når viewport mindre enn 760px (Mobil) */
-@media only screen and (max-width: 760px) {
-    .homepage-flex,
-    .location-flex,
-    .accessibility-flex {
-        flex-direction: column;
-    }
-
-    .flex-child-img,
-    .flex-child-text {
-        max-width: none;
-    }
-}
-
-/* Gjør bakgrunnen på annenhver sibling element (child av parent element) til en annen farge
-   (main secondary background color) anderledes på location fordi h1 er alene */
-/* https://developer.mozilla.org/en-US/docs/Web/CSS/:nth-child */
-.location-flex:nth-child(odd):not(:first-child),
-.accessibility-flex:nth-child(even) {
-    background-color: var(--secondary-background-color);
-}
-
-/* Location page: Bytter om på rekkefølgen på annenhver sibling element hvis viewport 761px eller bredere*/
-@media only screen and (min-width: 761px) {
-    .location-flex:nth-child(even) .flex-child-img {
-        order: 2;
-    }
-
-    .location-flex:nth-child(even) .flex-child-text {
-        order: 1;
     }
 }
 
