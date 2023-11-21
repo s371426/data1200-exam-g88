@@ -484,20 +484,6 @@ input[type=submit] {
     font-weight: 600;
 }
 
-
-/* Endrer location-flex flexbox til å være vertikal når viewport mindre enn 760px (Mobil) */
-@media only screen and (max-width: 760px) {
-    .homepage-main {
-        flex-direction: column;
-    }
-
-    .location-img,
-    .location-text {
-        max-width: none;
-    }
-}
-
-
 /*TOPICAL PAGE*/
 
 /* Grid-container med to kolonner */
