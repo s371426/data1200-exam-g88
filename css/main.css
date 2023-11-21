@@ -276,25 +276,7 @@ nav {
 
 }
 
-.homepage-flex{
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
-    padding-bottom: 1.5%;
-    padding-top: 1.5%;
-}
 
-.main-content{
-    /*max-width: 1300px; */
-
-}
-
-.main-content section {
-    /*padding-bottom: 1.5%;
-    padding-top: 1.5%;*/
-    /*width: 100%;*/
-}
 /* Hero section med cover bakgrunsbilde og sentrert headings på seg */
 .hero-flex {
     display: flex;
@@ -351,51 +333,14 @@ nav {
     }
 }
 
-
-/*box 1 og box 2 i campus intro. Flexis basis på 50% for å dele begge boksene i 2*/
-
-.campus-box-1,
-.campus-box-2 {
-    flex-basis: 50%;
-    padding-right: 2.5%;
-    padding-left: 2.5%;
-    max-width: 650px;
-    box-sizing: border-box;
-}
-
-/*font styling for 'campus' tittel*/
-.campus-box-2 h2 {
+/* Styling av h2 i flex child på forside */
+.homepage-flex .flex-child-text h2{
     font-size: 1.4rem;
     font-weight: 300;
 }
 
-/*font stylibng for 'pilestredet campus' tittel*/
-.campus-box-2 h3 {
-    font-size: 2.6rem;
-    font-weight: 700;
-}
-
-
-/*box 1 og box 2 i historie-intro. Flex basis på 50% for å dele begge boksene i 2*/
-
-.historie-box-1,
-.historie-box-2 {
-    flex-basis: 50%;
-    padding-right: 2.5%;
-    padding-left: 2.5%;
-    max-width: 650px;
-    box-sizing: border-box;
-
-}
-
-/*font styling for 'siden 1128' tittel*/
-.historie-box-1 h2 {
-    font-size: 1.4rem;
-    font-weight: 300;
-}
-
-/*font styling for 'historie på over 200 år' tittel*/
-.historie-box-1 h3 {
+/* Styling av h3 i flex child på forside */
+.homepage-flex .flex-child-text h3 {
     font-size: 2.6rem;
     font-weight: 700;
 }
@@ -409,32 +354,6 @@ nav {
     box-sizing: border-box;
 }
 
-/*Spisesteder-intro seksjon*/
-
-
-/*box 1 og box 2 i spisesteder-intro. Flex basis på 50% for å dele begge boksene i 2*/
-
-.spisesteder-box-1,
-.spisesteder-box-2 {
-    flex-basis: 50%;
-    padding-right: 2.5%;
-    padding-left: 2.5%;
-    max-width: 650px;
-    box-sizing: border-box;
-
-}
-
-/*font styling for 'spisesteder' tittel*/
-.spisesteder-box-2 h2 {
-    font-size: 1.4rem;
-    font-weight: 300;
-}
-
-/*font styling for 'stort utvalg av spisesteder og kaffebarer' tittel*/
-.spisesteder-box-2 h3 {
-    font-size: 2.6rem;
-    font-weight: 700;
-}
 
 /* Kontaktskjema seksjon */
 
@@ -660,6 +579,7 @@ input[type=submit] {
 
 /* Normalt horisontal flexbox for to bokser, som er sentrert
    Inneholder flex-img og flex-text */
+.homepage-flex,
 .location-flex,
 .accessibility-flex {
     display: flex;
@@ -710,6 +630,7 @@ figure.flex-child-img {
 
 /* Endrer location og accessability flexbox til å være vertikal når viewport mindre enn 760px (Mobil) */
 @media only screen and (max-width: 760px) {
+    .homepage-flex,
     .location-flex,
     .accessibility-flex {
         flex-direction: column;
