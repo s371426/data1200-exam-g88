@@ -38,11 +38,12 @@ html {
     scroll-behavior: smooth;
 }
 
-/* Generell bakgrunsfarrge, og font */
+/* Generell bakgrunsfarrge, og font Font Verdana og letter spacing for accesibility */
 body {
     background-color: var(--main-background-color);
     margin: 0;
     font-family: Verdana, sans-serif;
+    letter-spacing: 0.04em;
 }
 
 /* Font farge tekst i main, men ikke eks. Navbar eller footer */
@@ -51,7 +52,7 @@ main {
     color: var(--main-font-color);
 }
 
-/* Generell figure styling*/
+/* Generell figure styling */
 figure {
     margin: 0;
     padding: 0;
@@ -92,8 +93,8 @@ nav {
     align-items: center;
     justify-content: space-between;
     background-color: var(--main-color);
-    padding-right: 20px;
-    padding-left: 20px;
+    padding-right: 2%;
+    padding-left: 2%;
     max-height: 60px;
 }
 
@@ -111,9 +112,9 @@ nav {
 .menu a {
     display: block;
     padding-top: 19px;
-    padding-right: 16px;
+    padding-right: 0.8rem;
     padding-bottom: 19px;
-    padding-left: 16px;
+    padding-left: 0.8rem;
     text-decoration: none;
     color: black;
     font-size: 1.1rem;
@@ -128,18 +129,18 @@ nav {
 /* Kontakt knapp i navbar styling */
 .contact-button {
     background-color: skyblue;
-    border-radius: 30px;
+    border-radius: 24px;
     padding-top: 12px;
-    padding-right: 25px;
+    padding-right: 20px;
     padding-bottom: 12px;
-    padding-left: 25px;
+    padding-left: 20px;
     text-decoration: none;
     color: black;
     font-weight: bold;
 }
 
 .contact-button:hover {
-    filter: brightness(60%);
+    filter: brightness(75%);
 }
 
 /* Secondær flexbox med logo/hamburger, slik at de blir fordelt på navbar separat fra linke liste */
@@ -251,31 +252,13 @@ nav {
     }
 }
 
+/* FELLES FORSIDE/HJEMMEISDE, ACCESSIBILITY OG LOCATION*/
 
-/* FLEX-CONTAINER FORSIDE */
-
-/*main flex container for content på home-page*/
-
-/*.home-main-flex-container {
-    display: flex;
-    flex-direction: column;
-
-}*/
-
-/* Gjør bakgrunnen på annenhver sibling element (child av parent element) til en annen farge
-(main secondary background color) */
-/* https://developer.mozilla.org/en-US/docs/Web/CSS/:nth-child */
-.homepage-main section:nth-child(odd) {
-    background-color: var(--secondary-background-color);
-}
-
-.homepage-main-flex {
-    display: flex;
-    flex-direction: column;
-
-}
-
-.homepage-flex{
+/* Normalt horisontal flexbox for flere bokser, som er sentrert
+   Inneholder flex-child-XXX */
+.homepage-flex,
+.location-flex,
+.accessibility-flex {
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -284,158 +267,187 @@ nav {
     padding-top: 1.5%;
 }
 
-.main-content{
-    /*max-width: 1300px; */
-
+/* flex child, to av dem blir 1300px bredde tilsammen
+   border-box inkluderer padding*/
+.flex-child-img,
+.flex-child-text {
+    flex-basis: 50%;
+    box-sizing: border-box;
+    max-width: 650px;
+    padding-left: 2.5%;
+    padding-right: 2.5%;
 }
 
-.main-content section {
-    /*padding-bottom: 1.5%;
-    padding-top: 1.5%;*/
-    /*width: 100%;*/
+/* Flex child som blir 1300px alene */
+.flex-child-full-width {
+    flex-basis: 100%;
+    box-sizing: border-box;
+    max-width: 1300px;
+    padding-right: 2.5%;
+    padding-left: 2.5%;
 }
-/*hero section*/
+
+/* Mindre flex child, blir 1500px bred med 3 */
+.flex-child-smaller-width {
+    flex-basis: 100%;
+    box-sizing: border-box;
+    padding: 10px;
+    max-width: 500px;
+}
+
+/* h1 da den er inni denne klassen, Location og Accessibility */
+.flex-child-full-width h1 {
+    width: 100%;
+    font-size: 2.4rem;
+    margin-bottom: 0.0em
+}
+/* Første sibling, tittelen, location/accessability page har padding bottom 0 */
+.accessibility-flex:first-child,
+.location-flex:first-child {
+    padding-bottom: 0;
+}
+
+/* Kompensere for bildetekst hvis det er en figure (har bildetekst) */
+figure.flex-child-img,
+figure.flex-child-smaller-width {
+    position: relative;
+    top: 0.66rem;
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+}
+
+/* Gjør bakgrunnen på annenhver sibling element (child av parent element) til en annen farge
+   (main secondary background color) anderledes på accessibility oglocation fordi h1 er alene */
+/* https://developer.mozilla.org/en-US/docs/Web/CSS/:nth-child */
+.homepage-flex:nth-child(odd),
+.location-flex:nth-child(odd):not(:first-child),
+.accessibility-flex:nth-child(odd):not(:first-child) {
+    background-color: var(--secondary-background-color);
+}
+
+/* Endrer location og accessability flexbox til å være vertikal når viewport mindre enn 760px (Mobil) */
+@media only screen and (max-width: 760px) {
+    .homepage-flex,
+    .location-flex,
+    .accessibility-flex {
+        flex-direction: column;
+    }
+
+    .flex-child-img,
+    .flex-child-text,
+    .flex-child-smaller-width {
+        max-width: none;
+    }
+}
+
+/* HJEMMESIDE/FORSIDE */
+
+/* Hero section med cover bakgrunsbilde og sentrert headings på seg */
 .hero-flex {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    height: 100vh;
-    background-image: linear-gradient(to bottom,rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('../images/forsidebilde-arkitektur-p32/arkitektur-p32-skjalg-bøhmer-vold-square-large.jpg');
+    height: 50vh;
+    background-image: linear-gradient(to bottom,rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url('../images/forsidebilde-arkitektur-p32/arkitektur-p32-skjalg-bøhmer-vold-large.webp');
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
-    align-items: center;
-    text-shadow: 8px -4px 20px black;
+    padding-right: 3%;
+    padding-left: 3%;
+    text-align: center;
     color: white;
-
+    text-shadow: 8px -4px 20px black;
 }
-/*h1 tittel i hero seksjon*/
-.hero-flex h1{
-    font-size: 5.5rem;
+
+/* h1 tittel i hero seksjon */
+.hero-flex h1 {
+    font-size: 3rem;
     font-weight: 900;
-
-
-}
-/*h2 tittel i hero section*/
-
-.hero-flex h2{
-    font-size: 2.7rem;
 }
 
-
-
-/*box 1 og box 2 i campus intro. Flexis basis på 50% for å dele begge boksene i 2*/
-
-.campus-box-1,
-.campus-box-2 {
-    flex-basis: 50%;
-    padding-right: 2.5%;
-    padding-left: 2.5%;
-    max-width: 650px;
-    box-sizing: border-box;
+/* h2 tittel i hero section */
+.hero-flex h2 {
+    font-size: 2rem;
 }
 
-/*font styling for 'campus' tittel*/
-.campus-box-2 h2 {
+/* Tekst hero section større på store skjermer (over 1250px*/
+@media (min-width: 1250px) {
+    .hero-flex h1 {
+        font-size: 4rem;
+    }
+
+    .hero-flex h2 {
+        font-size: 2.5rem;
+    }
+}
+
+/* Tekst og bilde hero section blir mindre når det er på mobil/små skjermen (mindre enn 620px) også mindre bilde */
+@media (max-width:  620px) {
+    .hero-flex{
+        background-image: linear-gradient(to bottom,rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+        url('../images/forsidebilde-arkitektur-p32/arkitektur-p32-skjalg-bøhmer-vold-square-medium.webp');
+    }
+    .hero-flex h1 {
+        font-size: 2.5rem;
+    }
+
+    .hero-flex h2 {
+        font-size: 1.6rem;
+    }
+}
+
+/* Styling av h2 i flex child på forside */
+.homepage-flex h2 {
     font-size: 1.4rem;
     font-weight: 300;
 }
 
-/*font stylibng for 'pilestredet campus' tittel*/
-.campus-box-2 h3 {
-    font-size: 2.6rem;
+/* Styling av h3 i flex child på forside */
+.homepage-flex h3 {
+    font-size: 2.4rem;
     font-weight: 700;
+    margin-top: 1.2rem
 }
 
-
-/*box 1 og box 2 i historie-intro. Flex basis på 50% for å dele begge boksene i 2*/
-
-.historie-box-1,
-.historie-box-2 {
-    flex-basis: 50%;
-    padding-right: 2.5%;
-    padding-left: 2.5%;
-    max-width: 650px;
-    box-sizing: border-box;
-
+/* Farger på linker body front page for mere accessibility */
+.homepage-flex a {
+    color: var(--body-link-color);
 }
 
-/*font styling for 'siden 1128' tittel*/
-.historie-box-1 h2 {
-    font-size: 1.4rem;
-    font-weight: 300;
+.homepage-flex a:visited {
+    color: var(--body-link-color-visited);
 }
 
-/*font styling for 'historie på over 200 år' tittel*/
-.historie-box-1 h3 {
-    font-size: 2.6rem;
-    font-weight: 700;
-}
-
-.bilder-box-1,
-.bilder-box-2,
-.bilder-box-3 {
-    flex-basis: 33.333333%;
-    padding: 10px;
-    max-width: 500px;
-    box-sizing: border-box;
-}
-
-/*Spisesteder-intro seksjon*/
-
-
-/*box 1 og box 2 i spisesteder-intro. Flex basis på 50% for å dele begge boksene i 2*/
-
-.spisesteder-box-1,
-.spisesteder-box-2 {
-    flex-basis: 50%;
-    padding-right: 2.5%;
-    padding-left: 2.5%;
-    max-width: 650px;
-    box-sizing: border-box;
-
-}
-
-/*font styling for 'spisesteder' tittel*/
-.spisesteder-box-2 h2 {
-    font-size: 1.4rem;
-    font-weight: 300;
-}
-
-/*font styling for 'stort utvalg av spisesteder og kaffebarer' tittel*/
-.spisesteder-box-2 h3 {
-    font-size: 2.6rem;
-    font-weight: 700;
-}
-
-
-/*Kontaktskjema seksjon*/
-
-.kontaktskjema-flex {
+/* Kontaktskjema seksjon */
+/*Flex for kontakt skjema*/
+#contact-form-flex {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    padding-right: 2.5%;
+    padding-bottom: 2.5%;
+    padding-left: 2.5%;
 }
-
-.kontaktskjema-text {
+/* tekst over kontaktskjema maks bredde 650px */
+.contact-form-text {
     max-width: 650px;
     width: 100%;
 }
 
-.kontaktskjema-boks h2 {
-    font-size: 2.6rem;
+.contact-form-text h2 {
+    font-size: 1.9rem;
     font-weight: 700;
 }
 
-
-.kontaktskjema-form{
+/* Kontakt skjemaet i seg, maks bredde 650px */
+.contact-form-form {
     max-width: 650px;
     width: 100%;
 }
 
-/*styling for inputs field av 'text' type*/
-
+/* Styling av form inputt fields */
 form input {
     box-sizing: border-box;
     width: 100%;
@@ -445,56 +457,49 @@ form input {
     margin-bottom: 2%;
 }
 
-/*styling for inputs field av 'email' type*/
-
+/* Styling for inputs field av 'email' type */
 input[type=email] {
-    box-shadow: 0 0 15px 4px;
-
+    box-shadow: 0 0 10px 2px;
 }
 
-/*styling for inputs field av 'tel' type*/
+/* Styling for inputs field av 'tel' type */
 input[type=text] {
-    box-shadow: 0 0 15px 4px;
+    box-shadow: 0 0 10px 2px;
 }
 
-#Melding {
-    height: 150px;
-
-}
-
+/* Styling for inputs field av 'text' type */
 input[type=tel] {
-    box-shadow: 0 0 15px 4px;
-
+    box-shadow: 0 0 10px 2px;
 }
 
+/* Høyde på meldingboks */
+#message {
+    height: 150px;
+}
 
-/*styling for submit knapp*/
-
+/* Styling for submit knapp */
 input[type=submit] {
-    border: none;
     font-weight: 600;
 }
 
+/* LOCATION PAGE*/
 
-/* Endrer location-flex flexbox til å være vertikal når viewport mindre enn 760px (Mobil) */
-@media only screen and (max-width: 760px) {
-    .homepage-main {
-        flex-direction: column;
+/* Location page: Bytter om på rekkefølgen på annenhver sibling element hvis viewport 761px eller bredere*/
+@media only screen and (min-width: 761px) {
+    .location-flex:nth-child(even) .flex-child-img {
+        order: 2;
     }
 
-    .location-img,
-    .location-text {
-        max-width: none;
+    .location-flex:nth-child(even) .flex-child-text {
+        order: 1;
     }
 }
 
-
 /*TOPICAL PAGE*/
 
-/* Grid-container her, der vi definerer en grid med to kolonner */
-/* Bruk av grid-auto-row for automatisk plassering av grid items slik de har blitt plassert på HTML,
-som reduserer hvor mye koding som trengs for plassering */
-/* Inneholder grid-items: Headline, sidenav, main-bar, topical-img topical-img-with-text */
+/* Grid-container med to kolonner */
+/* Grid-auto-row for automatisk plassering av grid items slik de har blitt plassert på HTML */
+/* Inneholder grid-items: headline, sidenav, main-bar, topical-img topical-img-with-text */
 .topical-grid {
     display: grid;
     grid-template-columns: auto minmax(220px, 17vw);
@@ -506,16 +511,15 @@ som reduserer hvor mye koding som trengs for plassering */
     padding-right: 2.5%;
     padding-bottom: 2.5%;
     padding-left: 2.5%;
-    font-weight: normal;
 }
 
-/* Vi definerer at overskriften starter på første rad, og tar opp alle kolonnnene */
+/* Overskriftsdelen starter på første rad, og tar opp alle kolonnnene (hele bredden) */
 .headline {
     grid-column: 1/-1;
     grid-row: 1;
 }
 
-/* Vi gjør overskriften mer tydelig, sentrert og litt større avstand på bokstavene for lettere lesing */
+/* Overskriften mer tydelig, sentrert og litt større avstand på bokstavene for lettere lesing */
 .headline h1 {
     padding-top: 0.2em;
     border-bottom: 2px solid;
@@ -524,10 +528,12 @@ som reduserer hvor mye koding som trengs for plassering */
     letter-spacing: 0.05em;
 }
 
+/* Ingress fet skrift */
 .headline p {
     font-weight: 550;
 }
 
+/* Styling forfattertekst*/
 .author-text {
     font-size: 0.8rem;
 }
@@ -536,8 +542,8 @@ som reduserer hvor mye koding som trengs for plassering */
     color: var(--body-link-color);
 }
 
-/* Position: sticky sørger for at når brukeren scroller ned, så følger sidenav slik at den alltid er tilgjengelig */
-/* Vi plasserer bare grid-item sidenav i kolonne 2, som sørger for at sidenav kan bruke hele plassen */
+/* Sidenav grid, kolonne 2, og fra row 2 helt til bunn, slik at Position: sticky sørger for at når brukeren scroller
+ ned, så følger sidenav slik at den alltid er tilgjengelig */
 .sidenav {
     grid-column: 2;
     grid-row: 2/4;
@@ -546,6 +552,7 @@ som reduserer hvor mye koding som trengs for plassering */
     top: 2em;
 }
 
+/* Sidenav overskrift slyling */
 .sidenav h2 {
     background-color: var(--topical-sidenav-h2-background-color);
     border-bottom-style: solid;
@@ -563,7 +570,7 @@ som reduserer hvor mye koding som trengs for plassering */
     margin: 0;
 }
 
-/* Display: block sørger for at underpunktene i sidenav vises som blokk elementer, som tar opp hele bredden */
+/* Styling av sidenav linker, Display: block sørger for at de vises som blokk elementer, som tar opp hele bredden */
 .sidenav ul a {
     display: block;
     background-color: var(--topical-sidenav-link-background-color);
@@ -575,23 +582,23 @@ som reduserer hvor mye koding som trengs for plassering */
     color: var(--main-font-color);
 }
 
+/* Farge når hover over sidenav linker */
 .sidenav ul a:hover {
     background-color: dimgray;
     color: white;
 }
 
-/* Her sier vi at grid-item main-bar som inneholder teksten skal holde seg innenfor første kolonnen. Grid-auto-row tar
-seg av resten */
+/* Grid-item main-bar som inneholder hoved teksten skal være i første kolonnen. Grid-auto-row tar seg av resten */
 .main-bar {
     grid-column: 1;
 }
 
+/* Bilde som ikke er inni teksten */
 .topical-img {
     padding-top: 20px;
 }
 
-/* Vi bruker float: right for å posisjonere NASA- og circut bildet til høyre for teksten. Begge elementene befinner seg
-inni grid-item main-bar. */
+/* Bilder som er inni teksten med bruk av float:right. Befinner seg inni inni grid-item main-bar. */
 .topical-img-with-text {
     float: right;
     width: 50%;
@@ -599,7 +606,7 @@ inni grid-item main-bar. */
     margin-left: 25px;
 }
 
-/* Fjerning av punkter og tab-mellomrommet */
+/* Fjerning av punkter og tab-mellomrommet i "key terms" liste */
 .list-style-none {
     list-style-type: none;
     padding-left: 0;
@@ -619,8 +626,8 @@ inni grid-item main-bar. */
     color: var(--body-link-color-visited);
 }
 
-/* Vi bruker media queries slik at layouten passer bedre for de med mindre skjerm, og når man skalerer skjermen */
-/* Max-width på 900px sikrer at vi kan flytte på sidenav over slik at bildene kan benytte seg tomrommet for bedre skalering */
+/* Media queries slik at layouten passer bedre for de med mindre skjerm, og når man skalerer skjermen */
+/* Ved bredde mindre enn 900px vil sidenav flytte over main-bar slik at bilder/tekst for mere plass */
 @media (max-width: 900px) {
     .topical-grid {
         grid-template-columns: auto;
@@ -641,90 +648,6 @@ inni grid-item main-bar. */
         float: none;
         width: 100%;
         margin-left: 0;
-    }
-}
-
-/* LOCATION OG ACCESSIBILITY PAGE */
-
-/* Normalt horisontal flexbox for to bokser, som er sentrert
-   Inneholder flex-img og flex-text */
-.location-flex,
-.accessibility-flex {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
-    padding-bottom: 1.5%;
-    padding-top: 1.5%;
-}
-
-/* To bokser inni flexbox, gjør at de er like store med maks bredde */
-.flex-img,
-.flex-text{
-    flex-basis: 50%;
-    box-sizing: border-box;
-    max-width: 650px;
-    padding-left: 2.5%;
-    padding-right: 2.5%;
-}
-
-/* En boks inni flexbox, gjør at den er like bred som der det er to bokser*/
-.flex-text-full-width{
-    flex-basis: 100%;
-    box-sizing: border-box;
-    max-width: 1300px;
-    padding-right: 2.5%;
-    padding-left: 2.5%;
-}
-
-/* h1 da den er inni denne klassen, Location og Accessibility */
-.flex-text-full-width h1{
-    width: 100%;
-    font-size: 2.4rem;
-}
-
-/* Spesifikt h1 på location page, margin*/
-.location-flex .flex-text-full-width h1 {
-    margin-bottom: 0.2em;
-}
-
-/* Kompensere for bildetekst hvis det er en figure (har bildetekst)*/
-figure.flex-img {
-    position: relative;
-    top: 0.66rem;
-    margin-top: 0.5rem;
-    margin-bottom: 0.5rem;
-}
-
-/* Endrer location og accessability flexbox til å være vertikal når viewport mindre enn 760px (Mobil) */
-@media only screen and (max-width: 760px) {
-    .location-flex,
-    .accessibility-flex {
-        flex-direction: column;
-    }
-
-    .flex-img,
-    .flex-text {
-        max-width: none;
-    }
-}
-
-/* Gjør bakgrunnen på annenhver sibling element (child av parent element) til en annen farge
-   (main secondary background color) anderledes på location fordi h1 er alene */
-/* https://developer.mozilla.org/en-US/docs/Web/CSS/:nth-child */
-.location-flex:nth-child(odd):not(:first-child),
-.accessibility-flex:nth-child(even) {
-    background-color: var(--secondary-background-color);
-}
-
-/* Location page: Bytter om på rekkefølgen på annenhver sibling element hvis viewport 761px eller bredere*/
-@media only screen and (min-width: 761px) {
-    .location-flex:nth-child(even) .flex-img {
-        order: 2;
-    }
-
-    .location-flex:nth-child(even) .flex-text {
-        order: 1;
     }
 }
 /* GALLERY*/
@@ -878,6 +801,7 @@ figure.flex-img {
 }
 
 /* FOOTER */
+
 /* Setter fooder på bunn av siden og at bredden skal være 100% */
 footer {
     display: grid;
@@ -915,10 +839,12 @@ footer ul {
     grid-row: 1;
 }
 
+/* Hovedoverskrift footer */
 .footer-header h2 {
     font-size: 2rem;
 }
 
+/* Knapp som linker til Oslomet nyhetsbrev, styling*/
 .newsletter-button {
     grid-column: 3/4;
     grid-row: 1;
@@ -933,7 +859,7 @@ footer ul {
 /* design til knappen */
 .button {
     background-color: black;
-    padding: 4px;
+    padding: 0.3rem;
     text-decoration: none;
     color: yellow;
     font-size: 1.55rem;
@@ -959,7 +885,7 @@ footer ul {
     margin-bottom: 1rem;
 }
 
-/*fargen på linken før og etter den har blitt trykket på*/
+/* fargen på linken før og etter den har blitt trykket på */
 .contact-information a {
     color: #0000a4;
 }
@@ -968,6 +894,7 @@ footer ul {
     color: rebeccapurple;
 }
 
+/* Navigasjonslinker til sidene i footeren Sentrert seksjon */
 .site-links {
     grid-column: 2/3;
     grid-row: 3;
@@ -981,13 +908,15 @@ footer ul {
     margin-bottom: 1.25rem;
 }
 
+/* Utseende til navigasjonslinker i footer */
 .site-links a {
     text-decoration: none;
-    font-size: 1.25rem;
+    font-size: 1.1rem;
     color: black;
     font-weight: 550;
 }
 
+/* Linker til sosiale medier seksjon, mot høyre*/
 .social-media-links {
     grid-column: 3/4;
     grid-row: 3;
@@ -995,10 +924,9 @@ footer ul {
     width: 10rem;
 }
 
-/* Avstand mellom listelelementer sosiale medier linker*/
+/* Avstand mellom listelelementer sosiale medier linker */
 .social-media-links li {
-    margin-top: 0.55rem;
-    margin-bottom: 0.55rem;
+    margin-bottom: 0.38rem;
 }
 
 .social-media-links a {
@@ -1046,6 +974,7 @@ Bestemmer farge og størrelse på ikonene*/
 /* Slutt på ikonkode */
 
 /* Når siden er mindre enn 760 px skal grid stackes */
+/* Burde ha blitt sentrert og ikke left alligned på mobil, men hadde ikke tid å fikse */
 @media (max-width: 760px) {
     .footer-grid {
         grid-template-columns: 1fr;

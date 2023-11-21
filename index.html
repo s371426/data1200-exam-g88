@@ -31,7 +31,7 @@
                 <img id="nav-logo" src="images/logo-oslomet-gul.svg" alt="OsloMet sin logo" width="68" height="40">
             </a>
 
-            <!-- Label for input checkbox og hamburger meny ikon -->
+            <!-- Label for input checkbox og hamburger meny| ikon -->
             <label class="hamburger-toggle-container" for="hamburger-toggle">
                 <span class="hamburger-icon"></span>
             </label>
@@ -46,36 +46,36 @@
         </ul>
 
         <!-- Kontakt knapp på navigasjonsbar -->
-        <a class="contact-button" href="maybepage5.html">Kontakt</a>
+        <a class="contact-button" href="index.html#contact-form-flex">Kontakt</a>
     </nav>
 </header>
 
 <!-- main flex container for content på home-page, altså mellom header og footer-->
-<!-- seksjon for hero -->
-<div class="hero-flex">
+<!-- Section med hero bilde/tekst -->
+<section class="hero-flex">
     <h1>Oslo Metropolitan University</h1>
     <h2>Velkommen til Pilestreted</h2>
-</div>
+</section>
 
-<main class="homepage-main">
-    <div class="main-content">
+<main>
     <!-- seksjon for intro til campus -->
     <section class="homepage-flex">
-        <div class="campus-box-1">
-            <figure class="bislettbekken-img">
-                <picture>
-                    <source srcset="images/bislettbekken/bislettbekken-small.jpg 900w,
-                                images/bislettbekken/bislettbekken-medium.jpg 1350w,
-                                images/bislettbekken/bislettbekken-large.jpg 2000w"
-                            type="image/jpg">
-                    <img src="images/bislettbekken/bislettbekken-src.jpg"
-                         alt="bilde av en bekk ved pilestredet"
-                         width="2700" height ="1793">
-                </picture>
+        <figure class=flex-child-img>
+            <picture>
+                <source srcset="images/bislettbekken/bislettbekken-very-small.webp 600w,
+                            images/bislettbekken/bislettbekken-small.webp 900w,
+                            images/bislettbekken/bislettbekken-medium.webp 1440w,
+                            images/bislettbekken/bislettbekken-large.webp 2100w"
+                        sizes="(max-width: 760px) 92vw,
+                               (min-width: 761px) 44vw"
+                        type="image/jpg">
+                <img src="images/bislettbekken/bislettbekken-src.jpg"
+                     alt="liten bekk med gangbru over og grønne planter, med rødbrune musteinsbygninger i bakgrunnen"
+                     width="2700" height ="1793">
+            </picture>
             <figcaption class="img-text">John Hughes / OsloMET</figcaption>
-            </figure>
-        </div>
-        <div class="campus-box-2">
+        </figure>
+        <div class=flex-child-text>
             <h2>Campus</h2>
             <h3>Pilestredet campus</h3>
             <p>OsloMet er en forkortelse for vårt internasjonale navn, Oslo Metropolitan University.
@@ -86,9 +86,8 @@
     </section>
 
     <!-- Seksjon for intro til historie -->
-
     <section class="homepage-flex">
-        <div class="historie-box-1">
+        <div class=flex-child-text>
             <h2>Siden 1128</h2>
             <h3> Historie på over 200 år</h3>
             <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has
@@ -96,92 +95,95 @@
                 galley of type and scrambled it to make a type specimen book. It has survived not only
                 five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.
                 Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
-            <p><a href="http://www.oslomet.no"><b>Les mer om historien vår</b></a></p>
+            <p><a href="https://www.oslomet.no/om/historie"><b>Les mer om historien vår</b></a></p>
         </div>
-        <div class="historie-box-2">
-            <figure class="studiestart-img">
-                <picture>
-                    <!-- Bilde blir valgt av device ut i fra hvilken oppløsning som passer best. "w" er bredden på det bildet.
-                    Type forteller device at bildene er webp format -->
-                    <source srcset="images/oslomet-studiestart/oslomet-studiestart.jpg 900w,
-                                    images/oslomet-studiestart/oslomet-studiestart.jpg 1350w,
-                                    images/oslomet-studiestart/oslomet-studiestart.jpg 2000w"
-                            type="image/jpg">
-                    <!-- Backup bilde tilfelle device ikke støtter <picture> eller webp, i tilleg til alt tekst informasjon -->
-                    <img src="images/oslomet-studiestart/oslomet-studiestart.jpg"
-                         alt="bilde av studiestart på oslomet"
-                         width="2700" height ="1793">
-                </picture>
-                <figcaption class="img-text">Benjamin A. Ward/OsloMET</figcaption>
-            </figure>
-        </div>
+        <figure class=flex-child-img>
+            <picture>
+                <!-- Bilde blir valgt av device ut i fra hvilken oppløsning som passer best. "w" er bredden på det bildet.
+                Type forteller device at bildene er webp format -->
+                <source srcset="images/oslomet-studiestart/oslomet-studiestart-very-small.webp 600w,
+                                images/oslomet-studiestart/oslomet-studiestart-small.webp 900w,
+                                images/oslomet-studiestart/oslomet-studiestart-medium.webp 1440w,
+                                images/oslomet-studiestart/oslomet-studiestart-large.webp 2100w"
+                        sizes="(max-width: 760px) 92vw,
+                               (min-width: 761px) 44vw"
+                        type="image/jpg">
+                <!-- Backup bilde tilfelle device ikke støtter <picture> eller webp, i tilleg til alt tekst informasjon -->
+                <img src="images/oslomet-studiestart/oslomet-studiestart.jpg"
+                     alt="gruppe studenter forran en univertetsbygning av glass og betong, med noen planter i forgrunnen"
+                     width="2700" height ="1793">
+            </picture>
+            <figcaption class="img-text">Benjamin A. Ward / OsloMET</figcaption>
+        </figure>
     </section>
 
+    <!-- Section med flere mindre bilder, "Mini galleri"  Hadde tenkt å ha flex wrap, men fikk ikke tid -->
     <section class="homepage-flex">
-        <div class="bilder-box-1">
-            <figure class="skulptur-img">
-                <picture>
-                    <source srcset="images/foreningsdag-musikk/foreningsdag-musikk-oslomet.jpg 900w,
-                                    images/foreningsdag-musikk/foreningsdag-musikk-oslomet.jpg 1350w,
-                                    images/foreningsdag-musikk/foreningsdag-musikk-oslomet.jpg 2000w"
-                                type="image/jpg">
-                    <img src="images/foreningsdag-musikk/foreningsdag-musikk-oslomet.jpg"
-                             alt="bilde fra live musikkopptreden på foreningsdag på oslomet"
-                             width="1600" height ="1066">
-                </picture>
-                <figcaption class="img-text">Benjamin A. Ward/OsloMET</figcaption> <!-- husk å fiks fotograf stuff-->
-            </figure>
-        </div>
+        <figure class=flex-child-smaller-width>
+            <picture>
+                <source srcset="images/foreningsdag-musikk/foreningsdag-musikk-oslomet-small.webp 600w,
+                                images/foreningsdag-musikk/foreningsdag-musikk-oslomet-medium.webp 900w,
+                                images/foreningsdag-musikk/foreningsdag-musikk-oslomet-large.webp 1440w"
+                        sizes="(max-width: 760px) 95vw,
+                               (min-width: 761px) 30vw"
+                        type="image/jpg">
+                <img src="images/foreningsdag-musikk/foreningsdag-musikk-oslomet.jpg"
+                         alt="jente med svarte og røde klær som spiller på keyboard og synger på en scene"
+                         width="1600" height ="1066">
+            </picture>
+            <figcaption class="img-text">Benjamin A. Ward / OsloMET</figcaption> <!-- husk å fiks fotograf stuff-->
+        </figure>
 
-        <div class="bilder-box-2">
-            <figure class="home-img">
-                <picture>
-                    <source srcset="images/studiestart-2023/oslomet-studiestart-2023.jpg 900w,
-                                    images/studiestart-2023/oslomet-studiestart-2023.jpg 1350w,
-                                    images/studiestart-2023/oslomet-studiestart-2023.jpg 2000w"
-                            type="image/jpg">
-                    <img src="images/studiestart-2023/oslomet-studiestart-2023.jpg"
-                         alt="bilde av studiestart på oslomet"
-                         width="1600" height ="1068">
-                </picture>
-                <figcaption class="img-text">Benjamin A. Ward/OsloMET</figcaption> <!-- husk å fiks fotograf stuff-->
-            </figure>
-        </div>
+        <figure class=flex-child-smaller-width>
+            <picture>
+                <source srcset="images/studiestart-2023/oslomet-studiestart-2023-small.webp 600w,
+                                images/studiestart-2023/oslomet-studiestart-2023-medium.webp 900w,
+                                images/studiestart-2023/oslomet-studiestart-2023-large.webp 1440w"
+                        sizes="(max-width: 760px) 95vw,
+                               (min-width: 761px) 30vw"
+                        type="image/jpg">
+                <img src="images/studiestart-2023/oslomet-studiestart-2023.jpg"
+                     alt="gruppe studenter som følger andre med oslomet geneser, gåene bortover en vei utenfor en
+                          skolebygning"
+                     width="1600" height ="1068">
+            </picture>
+            <figcaption class="img-text">Benjamin A. Ward / OsloMET</figcaption> <!-- husk å fiks fotograf stuff-->
+        </figure>
 
-        <div class="bilder-box-3">
-            <figure class="skulptur-img">
-                <picture>
-                    <source srcset="images/skulptur/skulptur.jpg 900w,
-                                    images/skulptur/skulptur.jpg 1350w,
-                                    images/skulptur/skulptur.jpg 2000w"
-                            type="image/jpg">
-                    <img src="images/skulptur/skulptur.jpg"
-                         alt="bilde av studiestart på oslomet"
-                         width="5851" height ="3893">
-                </picture>
-                <figcaption class="img-text">Benjamin A. Ward/OsloMET</figcaption> <!-- husk å fiks fotograf stuff-->
-            </figure>
-        </div>
+        <figure class=flex-child-smaller-width>
+            <picture>
+                <source srcset="images/skulptur/skulptur-small.webp 600w,
+                                images/skulptur/skulptur-medium.webp 900w,
+                                images/skulptur/skulptur-large.webp 1440w"
+                        sizes="(max-width: 760px) 95vw,
+                               (min-width: 761px) 30vw"
+                        type="image/jpg">
+                <img src="images/skulptur/skulptur.jpg"
+                     alt="person med grønnblå lue som arbeider på en statue av leire med verktøy"
+                     width="5851" height ="3893">
+            </picture>
+            <figcaption class="img-text">Benjamin A. Ward / OsloMET</figcaption> <!-- husk å fiks fotograf stuff-->
+        </figure>
     </section>
 
     <!-- Seksjon for spisested -->
-
     <section class="homepage-flex">
-        <div class="spisesteder-box-1">
-            <figure class="spisesteder-img">
-                <picture>
-                    <source srcset="images/grilling/grilling.jpg 900w,
-                                    images/grilling/grilling.jpg 1350w,
-                                    images/grilling/grilling.jpg 2000w"
-                            type="image/jpg">
-                    <img src="images/grilling/grilling.jpg"
-                         alt="bilde av studiestart på oslomet"
-                         width="4256" height ="2832">
-                </picture>
-                <figcaption class="img-text">Benjamin A. Ward/OsloMet</figcaption>
-            </figure>
-        </div>
-        <div class="spisesteder-box-2">
+        <figure class=flex-child-img>
+            <picture>
+                <source srcset="images/grilling/grilling-small.webp 600w,
+                                images/grilling/grilling-medium.webp 900w,
+                                images/grilling/grilling-large.webp 1440w"
+                        sizes="(max-width: 760px) 92vw,
+                               (min-width: 761px) 44vw"
+                        type="image/jpg">
+                <img src="images/grilling/grilling.jpg"
+                     alt="grilling av kjøtt på en bolle grill"
+                     width="4256" height ="2832">
+            </picture>
+            <figcaption class="img-text">Benjamin A. Ward / OsloMet</figcaption>
+        </figure>
+
+        <div class=flex-child-text>
             <h2>Spisesteder</h2>
             <h3>Stort utvalg av mat</h3>
             <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has
@@ -193,34 +195,30 @@
             galley of type and scrambled it to make a type specimen book. It has survived not only
             five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. </p>
         </div>
-
     </section>
 
-    <section class="kontaktskjema-flex">
-        <div class=kontaktskjema-boks>
+    <!-- Kontakt form på første side-->
+    <section id="contact-form-flex">
+        <div class=contact-form-text>
             <h2>Kontakt oss</h2>
-            <p>Send oss en e-post om du lurer på noe!</p>
+            <p>Send oss en melding om du lurer på noe!</p>
         </div>
-        <div class="kontaktskjema-form">
-            <form>
-                <label for="Navn"></label>
-                <input type="text" id="Navn" placeholder="Fornavn" required><br>
+        <form class = contact-form-form>
+            <label for="name"></label>
+            <input type="text" id="name" placeholder="Fornavn" required><br>
 
-                <label for="E-post"></label>
-                <input type="email" id="E-post" placeholder="eksempel@gmail.com" required><br>
+            <label for="e-mail"></label>
+            <input type="email" id="e-mail" placeholder="eksempel@gmail.com" required><br>
 
-                <label for="Nummer"></label>
-                <input type="tel" id="Nummer" placeholder="+123 45 678" pattern="[0-9]{3} [0-9]{2} [0-9]{3}"><br>
+            <label for="number"></label>
+            <input type="tel" id="number" placeholder="+123 45 678" pattern="[0-9]{3} [0-9]{2} [0-9]{3}"><br>
 
-                <label for="Melding"></label>
+            <label for="message"></label>
+            <input type="text" id="message" placeholder="Hva lurer du på?" required><br>
 
-                <input type="text" id="Melding" placeholder="Hva lurer du på?" required><br>
-
-                <input type="submit">
-            </form>
-        </div>
+            <input type="submit">
+        </form>
     </section>
-    </div>
 </main>
 
 <footer>

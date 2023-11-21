@@ -45,36 +45,31 @@
         </ul>
 
         <!-- Kontakt knapp på navigasjonsbar -->
-        <a class="contact-button" href="maybepage5.html">Kontakt</a>
+        <a class="contact-button" href="index.html#contact-form-flex">Kontakt</a>
     </nav>
 </header>
 
 <main class="main-accessibility">
 
-    <!-- Section med h1 og intro tekst om accessibility -->
+    <!-- Section med h1 -->
     <section class="accessibility-flex">
-
-        <div class="flex-text-full-width">
+        <div class="flex-child-full-width">
             <h1>Universal design:</h1>
-            <p>Brukervennlighet handler om å gjøre nettsiden så enkel og intuitiv som mulig. Det skal være enkelt å
-                manøvrere seg på siden, uten å skape forvirring og irritasjon. Det skal være lett å finne det man leter
-                etter, og gi brukerne en god opplevelse. Universal design handler om å gjøre siden tilgjengelig for så
-                mange som mulig, uavhengig av evne og behov. </p>
         </div>
     </section>
 
-
+    <!-- Secetion om vårt valg når det kommer til font og tekst om acessibility -->
     <section class="accessibility-flex">
 
-        <div class="flex-text-full-width">
+        <div class="flex-child-full-width">
             <h2>Font og tekst:</h2>
             <p>Vi har valgt å bruke "Verdana" som font, og "sans-serif" som backup. "Verdana" har vi valgt ettersom den
-                blir annset som en av de beste når det komer til accessibility. Fonten har tydelige former og
-                forskjeller mellom bokstavene, og er tydelig med mange og få piksler. Det er tydelige forskjeller mellom
-                "l" og "I". "sans-serif" er backup dersom brukeren ikke får lastet inn "Verdana".</p>
-            <p>Vi satt line height på paragrafer til 1.5 fordi det er det some er anbefalt da det gjør det enklere
+                blir ansett som en av de beste når det kommer til tilgjengelighet. Fonten har tydelige forskjeller mellom
+                bokstavene, og er tydelig i små størrelser. Det er tydelige forskjeller mellom "l" og "I". "sans-serif"
+                er backup dersom brukeren ikke får lastet inn "Verdana".</p>
+            <p>Vi satt line-height på paragrafer til 1.5 fordi det er det some er anbefalt da det gjør det enklere
                 å lese. Vi har passet på at tekst ikke er for liten, størrelse er rem slik at den vil skalere riktig
-                utifra brukerbehov.</p>
+                utifra brukerbehov. Vi har også økt letter-spacing.</p>
             <p>
         </div>
     </section>
@@ -83,26 +78,62 @@
     <section class="accessibility-flex">
 
         <!-- Diverse tekst om accessibility -->
-        <div class="flex-text">
-            <h2>Lighthose test:</h2>
+        <div class="flex-child-text">
+            <h2>Lighthouse test:</h2>
             <p>Mens vi har jobbet med siden har vi brukt lighthouse for å teste siden vår underveis, for å oppdage
-                områder vi kan forbedre. </p>
+                områder vi kan forbedre. To advarsler gjenstår: På performace klager den på at vi brukte eksterne font
+                for sosiale medier ikonene. Det er nok greit da det er tekst alternativ. Den andre er at tabindex har
+                blitt endret. Les mer om dette under hamburgermeny lenger nede.</p>
 
             <h2>Farge:</h2>
+            <p>På naviagasjonsbaren og footer, fant vi en pen blåfarge, som passer bra å ha svart tekst med god kontrast.</p>
             <p>På siden har vi "mørk og lys" modus, som blir valgt utifra instillingene på brukerens pc. Lys modusen
                 har hvit bakgrunnsfarge med mørk tekst, og mørk modusen har mørk bakgrunn med lys tekst, men ikke for
-                lys. Vi har hatt stort fokus på kontrast mellom tekst og bakgrunn.</p>
+                lys. Vi har hatt stort fokus på kontrast mellom tekst og bakgrunn for at tekst skal være lett å lese.
+                Vi har både brukt Ligthhouse til å teste dette, men også brukt "inspect element" i nettleser.</p>
+            <p>På grunn av darkmode, fant vi ut at hyperlinker hadde dårlig kontrast med bakgrunnen. Derfor vi fant noen
+                lysere blåfarger for når darkmode er på, slik at har en liknende farge mens vi beholder fargene
+                assosiert med hyperlinker.</p>
 
+        </div>
+
+        <!-- Bilde av lighthouse test -->
+        <picture class="flex-child-img">
+
+            <!-- Bilde blir valgt av device ut i fra hvilken oppløsning som passer best. "w" er bredden
+                 på det bildet. Type forteller device at bildene er webp format -->
+            <source srcset="images/lighthouse-test/lighthouse-test-very-small.webp 596w,
+                            images/lighthouse-test/lighthouse-test-small.webp 993w,
+                            images/lighthouse-test/lighthouse-test-medium.webp 1418w"
+                    sizes="(max-width: 760px) 93vw,
+                           (min-width: 761px) 44vw"
+                    type="image/webp">
+
+            <!-- Backup bilde tilfelle device ikke støtter <picture> eller webp, i tilleg til alt tekst informasjon -->
+            <img src="images/lighthouse-test/lighthouse-test-medium.jpg"
+                 alt="Testresultater av lighthouse automated test, med gode, men ikke perfekte resultater"
+                 width="1418" height ="2024">
+        </picture>
+    </section>
+
+    <!-- Seksjon om sidens struktur -->
+    <section class="accessibility-flex">
+        <div class="flex-child-full-width">
             <h2>Struktur:</h2>
             <p>På sidene har vi valgt å ha en generell utforming, med nav bar på toppen, hovedinnhold i midten og
                 på bunn. Vi har brukt tydelige overskrifter og bilder, for å gjøre det enkelt for brukerne å forstå
-                siden uten å lese innholdet. Maks bredde på siden vår er satt til 1300px slik at man ikke må vri hode
-                for å lese hvis man bruker en stor skjerm.</p>
+                siden uten å lese innholdet.</p>
+            <p>Vi har også sørget for at siden scaler bra til mindre og større skjermer uten at tekst blir for smal
+                eller for bred. Vi har satt Maks bredde på siden vår til 1300px slik at man ikke må vri
+                hode for å lese hvis man bruker en stor skjerm. Det er media queries som sørger for at at elementer som
+                er ved siden av hverandre på brede skjermer, går underhverandre på smalere skjermer. I topical
+                bedskjærte vi et bilde når det er inni teksten slik at det skal passe bedre.</p>
+        </div>
+    </section>
 
-            <h2>Alt tekster:</h2>
-            <p> Vi har sørget for at alle bildene på siden vår har beskrivene alt tekster som hjelper de som ikke kan
-                se, vite hva bildet inneholder og hva det prøver å formidle</p>
-
+    <!-- Seksjon med informasjon om bilder og dens alt tekster -->
+    <section class="accessibility-flex">
+        <div class="flex-child-full-width">
             <h2>Bilder</h2>
             <p>Vi har valgt å bruker WebP på alle bildene våres, fordi med WebP kan vi komprimere bilder uten stor tap
                 av kvalitet. Dette sikrer at alle bildene vi har er under 1 mb som gjør at nettsidene våres lastes inn
@@ -110,68 +141,35 @@
                 lastet opp flere versjoner av de samme bildene med ulike dimensjoner slik at filstørrelsene er enda
                 mindre avhengig av dimensjonene på enheten. Vi har lastet opp jpg versjon av bildene som backup, der
                 disse også er under 1 mb. Lighthouse testen slo først ut på at vi ikke hadde riktig under size på source
-                elementene, men det forbedret vi. </p>
+                elementene, men det forbedret vi.</p>
 
+            <h2>Alt tekster:</h2>
+            <p> Vi har sørget for at alle bildene på siden vår har beskrivene alt tekster som hjelper de som ikke kan
+                se, vite hva bildet inneholder og hva det prøver å formidle. På sosiale medier lenkene i footer, er det
+                også tekst alternativ til ikonet man kan lese, som får underline når man holder musen over.</p>
         </div>
-
-        <!-- Bilde av lighthouse test -->
-        <picture class="flex-img">
-
-            <!-- Bilde blir valgt av device ut i fra hvilken oppløsning som passer best. "w" er bredden
-                 på det bildet. Type forteller device at bildene er webp format -->
-            <source srcset="images/lighthouse-test/lighthouse-test-very-small.webp 596w,
-                            images/lighthouse-test/lighthouse-test-small.webp 993w,
-                            images/lighthouse-test/lighthouse-test-medium.webp 1418w"
-                    sizes="(max-width: 760px) 95vw,
-                           (min-width: 761px) 44vw"
-                    type="image/webp">
-
-            <!-- Backup bilde tilfelle device ikke støtter <picture> eller webp, i tilleg til alt tekst informasjon -->
-            <img src="images/lighthouse-test/lighthouse-test-medium.jpg"
-                 alt=""
-                 width="111" height ="11">
-        </picture>
     </section>
 
 
-    <section class="accessibility-flex">
-
-       <div class="flex-text-full-width">
-           <h2>Topical:</h2>
-           <p>Bruken av grids hjelper å forkorte koden og holde den ryddig. Bruk av grid-auto-flow hjalp veldig mye
-           med å forkorte koden, der vi tidligere hadde implementert flere klasser og definert flere plasseringer inne i koden.</p>
-           <p>Vi så under implementeringen av dark mode at det ikke var nok kontrast mellom bakgrunnen og hyperlinks. Løsningen her
-           var å endre litt på fargen på hyperlinks når nettsiden oppdager at brukeren bruker dark mode. Vi endret marginalt på fargen
-           slik at det er fremdeles de samme fargene assosiert med hyperlinks.</p>
-           <p>Vi har "beskjært" nasa bildet slik at de passer bedre inn i teksten. Dette sikrer mer plass for teksten
-           som gjør skaleringen av nettsiden bedre, der leseren slipper å bevege like mye på øynene.
-           Dette bildet er også godt egnet til å beskjære, forid det er ingen viktige elementer som blir skjært ut.
-           Vi beholder opprinnelige dimensjoner på mobile view fordi bilder er ikke lenger plassert ved siden av teksten.
-           Da kan vi unngå å beskjære bildet for å sikre god skalering av tekst.</p>
-
-       </div>
-    </section>
 
     <!-- Section om hambburgermeny og dens accessibility med tilhørende bilde-->
     <section class="accessibility-flex">
 
         <!-- Tekst om Hamburgermeny accessibility-->
-        <div class="flex-text">
+        <div class="flex-child-text">
             <h2>Hamburger meny:</h2>
             <p> Den første løsningen vi gjorde for hamburger meny kunne ikke aktiveres med kun tastatur,
                 noe som trengs hvis man har problemer med å bruke mus. Dette var fordi checkbox ble satt til Display: none
                 i css for å gjemme den. Løsningen for dette, var å sette den til opacity: 0 og position: absolute for
-                posisjon isteden slik at den bare er usynelig isteden.  Sørget også for at hamburger får outline når
-                den er valgt med tastatur da den ikke vanligvis gjør det med opacity sat til 0. For brukere som bruker
-                screen readers, la vi til "aria-label" på knappen slik at funksjonen dens blir tydelig. Linkene er ikke
-                focusable når de ikke er på skjermen. Tabindex er satt slik at tab rekkefølge er logisk i forhold til
-                hvor de er på siden</p>
-
-
+                posisjon slik at den bare er usynlig istedet.  Sørget også for at hamburger får outline når
+                den er valgt med tastatur da den ikke vanligvis gjør det med opacity sat til 0.</p>
+            <p>For brukere som bruker screen readers, la vi til "aria-label" på knappen slik at funksjonen dens blir
+                tydelig. Linkene er ikke focusable når de ikke er på skjermen. Tabindex er satt slik at tab rekkefølge
+                er logisk i forhold til hvor de er på siden.</p>
         </div>
 
         <!-- Bilde av kode fra hamburgermeny -->
-        <picture class="flex-img">
+        <picture class="flex-child-img">
 
             <!-- Bilde blir valgt av device ut i fra hvilken oppløsning som passer best. "w" er bredden
                  på det bildet. Type forteller device at bildene er webp format -->
@@ -179,7 +177,7 @@
                             images/hamburger-kode/hamburgermeny-kode-small.webp 998w,
                             images/hamburger-kode/hamburgermeny-kode-medium.webp 1428w,
                             images/hamburger-kode/hamburgermeny-kode-large.jpg 1956w"
-                    sizes="(max-width: 760px) 95vw,
+                    sizes="(max-width: 760px) 93vw,
                            (min-width: 761px) 44vw"
                     type="image/webp">
 
@@ -189,20 +187,6 @@
                  width="1956" height ="1629">
         </picture>
     </section>
-
-    <section class="accessibility-flex">
-
-        <div class="flex-text-full-width">
-            <h2>Footer:</h2>
-            <p> På footeren har vi valgt å bli inspirert av oslomet.no sin footer. Vi har lenker nederst på siden, som gjør det
-                enkelt for brukerne å gå videre til neste side, isteden for å måtte manøvrere seg til toppen igjen.
-                Lenkene til sosiale medier har ikoner. Dette har vi gjort for å gjøre det enkelt for brukerne å forstå
-                hvor lenkene går. Lenkene får også strek under seg når man holder musen over, for å indikere at det er
-                en lenke. Ellers har vi kontrast mellom tekst og bakgrunn, samt oversiktlig og leselig tekst.
-            </p>
-        </div>
-    </section>
-
 </main>
 
 <footer>
@@ -217,8 +201,10 @@
     <section class="newsletter-button">
             <a href="https://www.oslomet.no/nyhetsbrev" class="button">Nyhetsbrev! </a>
     </section>
+
     <!--Linje på tvers av footer, styling-->
     <div class="border-bottom"></div>
+
     <!-- Kontakt informasjon til OsloMet -->
     <section class="footer-grid-objects contact-information">
         <h3>Kontaktinformasjon</h3>
