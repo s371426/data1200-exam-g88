@@ -721,9 +721,6 @@ input[type=submit] {
     margin: 10px;
 
 }
-.gallery-flex img {
-    object-fit: cover;
-}
 
 .gallery-grid label {
     cursor: pointer;
