@@ -299,6 +299,12 @@ nav {
 .flex-child-full-width h1 {
     width: 100%;
     font-size: 2.4rem;
+    margin-bottom: 0.0em
+}
+/* Første sibling, tittelen, location/accessability page har padding bottom 0 */
+.accessibility-flex:first-child,
+.location-flex:first-child {
+    padding-bottom: 0;
 }
 
 /* Kompensere for bildetekst hvis det er en figure (har bildetekst) */
@@ -308,6 +314,15 @@ figure.flex-child-smaller-width {
     top: 0.66rem;
     margin-top: 0.5rem;
     margin-bottom: 0.5rem;
+}
+
+/* Gjør bakgrunnen på annenhver sibling element (child av parent element) til en annen farge
+   (main secondary background color) anderledes på accessibility oglocation fordi h1 er alene */
+/* https://developer.mozilla.org/en-US/docs/Web/CSS/:nth-child */
+.homepage-flex:nth-child(odd),
+.location-flex:nth-child(odd):not(:first-child),
+.accessibility-flex:nth-child(odd):not(:first-child) {
+    background-color: var(--secondary-background-color);
 }
 
 /* Endrer location og accessability flexbox til å være vertikal når viewport mindre enn 760px (Mobil) */
@@ -325,14 +340,6 @@ figure.flex-child-smaller-width {
     }
 }
 
-/* Gjør bakgrunnen på annenhver sibling element (child av parent element) til en annen farge
-   (main secondary background color) anderledes på location fordi h1 er alene */
-/* https://developer.mozilla.org/en-US/docs/Web/CSS/:nth-child */
-.homepage-flex:nth-child(odd),
-.location-flex:nth-child(odd):not(:first-child),
-.accessibility-flex:nth-child(even) {
-    background-color: var(--secondary-background-color);
-}
 
 /* HJEMMESIDE/FORSIDE */
 
@@ -484,11 +491,6 @@ input[type=submit] {
 }
 
 /* LOCATION PAGE*/
-
-/* Spesifikt h1 på location page, margin */
-.location-flex h1 {
-    margin-bottom: 0.2em;
-}
 
 /* Location page: Bytter om på rekkefølgen på annenhver sibling element hvis viewport 761px eller bredere*/
 @media only screen and (min-width: 761px) {
