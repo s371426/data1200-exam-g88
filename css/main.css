@@ -485,7 +485,7 @@ input[type=submit] {
 /* LOCATION PAGE*/
 
 /* Location page: Bytter om på rekkefølgen på annenhver sibling element hvis viewport 761px eller bredere
-   Alle section elementene kan være like*/
+   Alle section elementene kan være like */
 @media only screen and (min-width: 761px) {
     .location-flex:nth-child(even) .flex-child-img {
         order: 2;
