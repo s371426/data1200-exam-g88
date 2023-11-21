@@ -405,6 +405,15 @@ figure.flex-child-img {
     max-width: 500px;
 }
 
+/* Farger på linker body front page for mere accessibility */
+.homepage-flex a {
+    color: var(--body-link-color);
+}
+
+.homepage-flex a:visited {
+    color: var(--body-link-color-visited);
+}
+
 /* Gjør bakgrunnen på annenhver sibling element (child av parent element) til en annen farge
 (main secondary background color) */
 /* https://developer.mozilla.org/en-US/docs/Web/CSS/:nth-child */
