@@ -295,12 +295,12 @@ nav {
     padding-top: 1.5%;*/
     /*width: 100%;*/
 }
-/* hero section */
+/* Hero section med cover bakgrunsbilde og sentrert headings på seg */
 .hero-flex {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    height: 100vh;
+    height: 50vh;
     background-image: linear-gradient(to bottom,rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('../images/forsidebilde-arkitektur-p32/arkitektur-p32-skjalg-bøhmer-vold-square-large.jpg');
     background-repeat: no-repeat;
     background-size: cover;
@@ -314,26 +314,36 @@ nav {
 
 /* h1 tittel i hero seksjon */
 .hero-flex h1{
-    font-size: 3.5rem;
+    font-size: 3rem;
     font-weight: 900;
 }
 
 /* h2 tittel i hero section */
 .hero-flex h2{
-    font-size: 2.4rem;
+    font-size: 2rem;
 }
 
-/* Gjør h hero section tekst mindre når det er på mobil*/
-@media (max-width:  760px) {
+/* Tekst hero section større på store skjermer (over 1250px*/
+@media (min-width: 1250px) {
     .hero-flex h1 {
-        font-size: 2.8rem;
+        font-size: 4rem;
     }
 
     .hero-flex h2 {
-        font-size: 1.9rem;
+        font-size: 2.5rem;
     }
 }
 
+/* Tekst hero section tekst mindre når det er på mobil/små skjermen (mindre enn 620px) */
+@media (max-width:  620px) {
+    .hero-flex h1 {
+        font-size: 2.5rem;
+    }
+
+    .hero-flex h2 {
+        font-size: 1.6rem;
+    }
+}
 
 
 /*box 1 og box 2 i campus intro. Flexis basis på 50% for å dele begge boksene i 2*/
