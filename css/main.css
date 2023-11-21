@@ -419,13 +419,6 @@ figure.flex-child-smaller-width {
     color: var(--body-link-color-visited);
 }
 
-/*!* Gjør bakgrunnen på annenhver sibling element (child av parent element) til en annen farge*/
-/*(main secondary background color) *!*/
-/*!* https://developer.mozilla.org/en-US/docs/Web/CSS/:nth-child *!*/
-/*.homepage-main section:nth-child(odd) {*/
-/*    background-color: var(--secondary-background-color);*/
-/*}*/
-
 /* Kontaktskjema seksjon */
 /*Flex for kontakt skjema*/
 #contact-form-flex {
