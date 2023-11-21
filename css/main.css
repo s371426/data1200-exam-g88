@@ -422,7 +422,7 @@ figure.flex-child-img {
 }
 
 /* Kontaktskjema seksjon */
-
+/*Flex for kontakt skjema*/
 #contact-form-flex {
     display: flex;
     flex-direction: column;
@@ -432,7 +432,7 @@ figure.flex-child-img {
     padding-bottom: 2.5%;
     padding-left: 2.5%;
 }
-
+/* tekst over kontaktskjema maks bredde 650px */
 .contact-form-text {
     max-width: 650px;
     width: 100%;
@@ -443,12 +443,13 @@ figure.flex-child-img {
     font-weight: 700;
 }
 
+/* Kontakt skjemaet i seg, maks bredde 650px */
 .contact-form-form {
     max-width: 650px;
     width: 100%;
 }
 
-/* Styling av form inpit fields*/
+/* Styling av form inputt fields */
 form input {
     box-sizing: border-box;
     width: 100%;
@@ -460,17 +461,17 @@ form input {
 
 /* Styling for inputs field av 'email' type */
 input[type=email] {
-    box-shadow: 0 0 15px 4px;
+    box-shadow: 0 0 10px 2px;
 }
 
 /* Styling for inputs field av 'tel' type */
 input[type=text] {
-    box-shadow: 0 0 15px 4px;
+    box-shadow: 0 0 10px 2px;
 }
 
 /* Styling for inputs field av 'text' type */
 input[type=tel] {
-    box-shadow: 0 0 15px 4px;
+    box-shadow: 0 0 10px 2px;
 }
 
 /* Høyde på meldingboks */
@@ -480,7 +481,6 @@ input[type=tel] {
 
 /* Styling for submit knapp */
 input[type=submit] {
-    border: none;
     font-weight: 600;
 }
 
