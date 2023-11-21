@@ -423,7 +423,7 @@ nav {
 
 /* Kontaktskjema seksjon */
 
-.contact-form-flex {
+#contact-form-flex {
     display: flex;
     flex-direction: column;
     justify-content: center;
