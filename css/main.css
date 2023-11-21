@@ -315,13 +315,24 @@ nav {
 
 /* h1 tittel i hero seksjon */
 .hero-flex h1{
-    font-size: 2.8rem;
+    font-size: 3.5rem;
     font-weight: 900;
 }
 
 /* h2 tittel i hero section */
 .hero-flex h2{
-    font-size: 2em;
+    font-size: 2.4rem;
+}
+
+/* Gjør h hero section tekst mindre når det er på mobil*/
+@media (max-width:  760px) {
+    .hero-flex h1 {
+        font-size: 2.8rem;
+    }
+
+    .hero-flex h2 {
+        font-size: 1.9rem;
+    }
 }
 
 
