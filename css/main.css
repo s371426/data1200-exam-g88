@@ -255,14 +255,6 @@ nav {
 
 /* FLEX-CONTAINER FORSIDE */
 
-/*main flex container for content på home-page*/
-
-/*.home-main-flex-container {
-    display: flex;
-    flex-direction: column;
-
-}*/
-
 /* Gjør bakgrunnen på annenhver sibling element (child av parent element) til en annen farge
 (main secondary background color) */
 /* https://developer.mozilla.org/en-US/docs/Web/CSS/:nth-child */
@@ -273,7 +265,6 @@ nav {
 .homepage-main-flex {
     display: flex;
     flex-direction: column;
-
 }
 
 
@@ -382,8 +373,7 @@ nav {
     width: 100%;
 }
 
-/* styling for inputs field av 'text' type */
-
+/* Styling av form inpit fields*/
 form input {
     box-sizing: border-box;
     width: 100%;
