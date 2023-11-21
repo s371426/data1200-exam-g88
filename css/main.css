@@ -501,10 +501,9 @@ input[type=submit] {
 
 /*TOPICAL PAGE*/
 
-/* Grid-container her, der vi definerer en grid med to kolonner */
-/* Bruk av grid-auto-row for automatisk plassering av grid items slik de har blitt plassert på HTML,
-som reduserer hvor mye koding som trengs for plassering */
-/* Inneholder grid-items: Headline, sidenav, main-bar, topical-img topical-img-with-text */
+/* Grid-container med to kolonner */
+/* Grid-auto-row for automatisk plassering av grid items slik de har blitt plassert på HTML */
+/* Inneholder grid-items: headline, sidenav, main-bar, topical-img topical-img-with-text */
 .topical-grid {
     display: grid;
     grid-template-columns: auto minmax(220px, 17vw);
@@ -516,16 +515,15 @@ som reduserer hvor mye koding som trengs for plassering */
     padding-right: 2.5%;
     padding-bottom: 2.5%;
     padding-left: 2.5%;
-    font-weight: normal;
 }
 
-/* Vi definerer at overskriften starter på første rad, og tar opp alle kolonnnene */
+/* Overskriftsdelen starter på første rad, og tar opp alle kolonnnene (hele bredden) */
 .headline {
     grid-column: 1/-1;
     grid-row: 1;
 }
 
-/* Vi gjør overskriften mer tydelig, sentrert og litt større avstand på bokstavene for lettere lesing */
+/* Overskriften mer tydelig, sentrert og litt større avstand på bokstavene for lettere lesing */
 .headline h1 {
     padding-top: 0.2em;
     border-bottom: 2px solid;
@@ -534,10 +532,12 @@ som reduserer hvor mye koding som trengs for plassering */
     letter-spacing: 0.05em;
 }
 
+/* Ingress fet skrift */
 .headline p {
     font-weight: 550;
 }
 
+/* Styling forfattertekst*/
 .author-text {
     font-size: 0.8rem;
 }
@@ -546,8 +546,8 @@ som reduserer hvor mye koding som trengs for plassering */
     color: var(--body-link-color);
 }
 
-/* Position: sticky sørger for at når brukeren scroller ned, så følger sidenav slik at den alltid er tilgjengelig */
-/* Vi plasserer bare grid-item sidenav i kolonne 2, som sørger for at sidenav kan bruke hele plassen */
+/* Sidenav grid, kolonne 2, og fra row 2 helt til bunn, slik at Position: sticky sørger for at når brukeren scroller
+ ned, så følger sidenav slik at den alltid er tilgjengelig */
 .sidenav {
     grid-column: 2;
     grid-row: 2/4;
@@ -556,6 +556,7 @@ som reduserer hvor mye koding som trengs for plassering */
     top: 2em;
 }
 
+/* Sidenav overskrift slyling */
 .sidenav h2 {
     background-color: var(--topical-sidenav-h2-background-color);
     border-bottom-style: solid;
@@ -573,7 +574,7 @@ som reduserer hvor mye koding som trengs for plassering */
     margin: 0;
 }
 
-/* Display: block sørger for at underpunktene i sidenav vises som blokk elementer, som tar opp hele bredden */
+/* Styling av sidenav linker, Display: block sørger for at de vises som blokk elementer, som tar opp hele bredden */
 .sidenav ul a {
     display: block;
     background-color: var(--topical-sidenav-link-background-color);
@@ -585,23 +586,23 @@ som reduserer hvor mye koding som trengs for plassering */
     color: var(--main-font-color);
 }
 
+/* Farge når hover over sidenav linker */
 .sidenav ul a:hover {
     background-color: dimgray;
     color: white;
 }
 
-/* Her sier vi at grid-item main-bar som inneholder teksten skal holde seg innenfor første kolonnen. Grid-auto-row tar
-seg av resten */
+/* Grid-item main-bar som inneholder hoved teksten skal være i første kolonnen. Grid-auto-row tar seg av resten */
 .main-bar {
     grid-column: 1;
 }
 
+/* Bilde som ikke er inni teksten */
 .topical-img {
     padding-top: 20px;
 }
 
-/* Vi bruker float: right for å posisjonere NASA- og circut bildet til høyre for teksten. Begge elementene befinner seg
-inni grid-item main-bar. */
+/* Bilder som er inni teksten med bruk av float:right. Befinner seg inni inni grid-item main-bar. */
 .topical-img-with-text {
     float: right;
     width: 50%;
@@ -609,7 +610,7 @@ inni grid-item main-bar. */
     margin-left: 25px;
 }
 
-/* Fjerning av punkter og tab-mellomrommet */
+/* Fjerning av punkter og tab-mellomrommet i "key terms" liste */
 .list-style-none {
     list-style-type: none;
     padding-left: 0;
@@ -629,8 +630,8 @@ inni grid-item main-bar. */
     color: var(--body-link-color-visited);
 }
 
-/* Vi bruker media queries slik at layouten passer bedre for de med mindre skjerm, og når man skalerer skjermen */
-/* Max-width på 900px sikrer at vi kan flytte på sidenav over slik at bildene kan benytte seg tomrommet for bedre skalering */
+/* Media queries slik at layouten passer bedre for de med mindre skjerm, og når man skalerer skjermen */
+/* Ved bredde mindre enn 900px vil sidenav flytte over main-bar slik at bilder/tekst for mere plass */
 @media (max-width: 900px) {
     .topical-grid {
         grid-template-columns: auto;
