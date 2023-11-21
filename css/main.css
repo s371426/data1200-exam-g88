@@ -255,7 +255,7 @@ nav {
 /* FELLES FORSIDE/HJEMMEISDE, ACCESSIBILITY OG LOCATION*/
 
 /* Normalt horisontal flexbox for flere bokser, som er sentrert
-   Inneholder flex-child-XXX og flex-child-XXX */
+   Inneholder flex-child-XXX */
 .homepage-flex,
 .location-flex,
 .accessibility-flex {
@@ -328,11 +328,11 @@ figure.flex-child-smaller-width {
 /* Gjør bakgrunnen på annenhver sibling element (child av parent element) til en annen farge
    (main secondary background color) anderledes på location fordi h1 er alene */
 /* https://developer.mozilla.org/en-US/docs/Web/CSS/:nth-child */
+.homepage-flex:nth-child(odd),
 .location-flex:nth-child(odd):not(:first-child),
 .accessibility-flex:nth-child(even) {
     background-color: var(--secondary-background-color);
 }
-
 
 /* HJEMMESIDE/FORSIDE */
 
@@ -413,12 +413,12 @@ figure.flex-child-smaller-width {
     color: var(--body-link-color-visited);
 }
 
-/* Gjør bakgrunnen på annenhver sibling element (child av parent element) til en annen farge
-(main secondary background color) */
-/* https://developer.mozilla.org/en-US/docs/Web/CSS/:nth-child */
-.homepage-main section:nth-child(odd) {
-    background-color: var(--secondary-background-color);
-}
+/*!* Gjør bakgrunnen på annenhver sibling element (child av parent element) til en annen farge*/
+/*(main secondary background color) *!*/
+/*!* https://developer.mozilla.org/en-US/docs/Web/CSS/:nth-child *!*/
+/*.homepage-main section:nth-child(odd) {*/
+/*    background-color: var(--secondary-background-color);*/
+/*}*/
 
 /* Kontaktskjema seksjon */
 /*Flex for kontakt skjema*/
