@@ -697,10 +697,12 @@ footer ul {
     grid-row: 1;
 }
 
+/* Hovedoverskrift footer */
 .footer-header h2 {
     font-size: 2rem;
 }
 
+/* Knapp som linker til Oslomet nyhetsbrev, styling*/
 .newsletter-button {
     grid-column: 3/4;
     grid-row: 1;
@@ -741,7 +743,7 @@ footer ul {
     margin-bottom: 1rem;
 }
 
-/*fargen på linken før og etter den har blitt trykket på*/
+/* fargen på linken før og etter den har blitt trykket på */
 .contact-information a {
     color: #0000a4;
 }
@@ -750,6 +752,7 @@ footer ul {
     color: rebeccapurple;
 }
 
+/* Navigasjonslinker til sidene i footeren Sentrert seksjon */
 .site-links {
     grid-column: 2/3;
     grid-row: 3;
@@ -763,6 +766,7 @@ footer ul {
     margin-bottom: 1.25rem;
 }
 
+/* Utseende til navigasjonslinker i footer */
 .site-links a {
     text-decoration: none;
     font-size: 1.25rem;
@@ -770,6 +774,7 @@ footer ul {
     font-weight: 550;
 }
 
+/* Linker til sosiale medier seksjon, mot høyre*/
 .social-media-links {
     grid-column: 3/4;
     grid-row: 3;
@@ -777,7 +782,7 @@ footer ul {
     width: 10rem;
 }
 
-/* Avstand mellom listelelementer sosiale medier linker*/
+/* Avstand mellom listelelementer sosiale medier linker */
 .social-media-links li {
     margin-top: 0.55rem;
     margin-bottom: 0.55rem;
