@@ -336,11 +336,6 @@ figure.flex-child-smaller-width {
 
 /* HJEMMESIDE/FORSIDE */
 
-.homepage-main-flex {
-    display: flex;
-    flex-direction: column;
-}
-
 /* Hero section med cover bakgrunsbilde og sentrert headings på seg */
 .hero-flex {
     display: flex;
