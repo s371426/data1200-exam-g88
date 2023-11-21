@@ -429,6 +429,9 @@ nav {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    padding-right: 2.5%;
+    padding-bottom: 2.5%;
+    padding-left: 2.5%;
 }
 
 .kontaktskjema-text {
@@ -437,7 +440,7 @@ nav {
 }
 
 .kontaktskjema-boks h2 {
-    font-size: 2.6rem;
+    font-size: 1.9rem;
     font-weight: 700;
 }
 
@@ -447,7 +450,7 @@ nav {
     width: 100%;
 }
 
-/*styling for inputs field av 'text' type*/
+/* styling for inputs field av 'text' type */
 
 form input {
     box-sizing: border-box;
@@ -458,31 +461,27 @@ form input {
     margin-bottom: 2%;
 }
 
-/*styling for inputs field av 'email' type*/
-
+/* Styling for inputs field av 'email' type */
 input[type=email] {
     box-shadow: 0 0 15px 4px;
-
 }
 
-/*styling for inputs field av 'tel' type*/
+/* Styling for inputs field av 'tel' type */
 input[type=text] {
     box-shadow: 0 0 15px 4px;
 }
 
-#Melding {
-    height: 150px;
-
-}
-
+/* Styling for inputs field av 'text' type */
 input[type=tel] {
     box-shadow: 0 0 15px 4px;
-
 }
 
+/* Høyde på meldingboks */
+#Melding {
+    height: 150px;
+}
 
-/*styling for submit knapp*/
-
+/* Styling for submit knapp */
 input[type=submit] {
     border: none;
     font-weight: 600;
