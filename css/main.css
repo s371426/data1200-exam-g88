@@ -762,7 +762,7 @@ footer ul {
 /* Utseende til navigasjonslinker i footer */
 .site-links a {
     text-decoration: none;
-    font-size: 1.25rem;
+    font-size: 1.1rem;
     color: black;
     font-weight: 550;
 }
@@ -777,8 +777,7 @@ footer ul {
 
 /* Avstand mellom listelelementer sosiale medier linker */
 .social-media-links li {
-    margin-top: 0.55rem;
-    margin-bottom: 0.55rem;
+    margin-bottom: 0.38rem;
 }
 
 .social-media-links a {
@@ -826,6 +825,7 @@ Bestemmer farge og størrelse på ikonene*/
 /* Slutt på ikonkode */
 
 /* Når siden er mindre enn 760 px skal grid stackes */
+/* Burde ha blitt sentrert og ikke left alligned på mobil, men hadde ikke tid å fikse */
 @media (max-width: 760px) {
     .footer-grid {
         grid-template-columns: 1fr;
