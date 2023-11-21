@@ -332,13 +332,12 @@ nav {
 
 /* Styling av h3 i flex child på forside */
 .homepage-flex .flex-child-text h3 {
-    font-size: 2.6rem;
+    font-size: 2.4rem;
     font-weight: 700;
+    margin-top: 1.2rem
 }
 
-.bilder-box-1,
-.bilder-box-2,
-.bilder-box-3 {
+.bilde-box {
     flex-basis: 33.333333%;
     padding: 10px;
     max-width: 500px;
