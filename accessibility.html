@@ -93,13 +93,20 @@
             <h2>Farge:</h2>
             <p>På siden har vi "mørk og lys" modus, som blir valgt utifra instillingene på brukerens pc. Lys modusen
                 har hvit bakgrunnsfarge med mørk tekst, og mørk modusen har mørk bakgrunn med lys tekst, men ikke for
-                lys. Vi har hatt stort fokus på kontrast mellom tekst og bakgrunn.</p>
+                lys. Vi har hatt stort fokus på kontrast mellom tekst og bakgrunn for at tekst skal være lett å lese.
+                Vi har både brukt Ligthhouse til å teste dette, men også brukt "inspect element" i nettleser.</p>
+            <p>På grunn av darkmode, fant vi ut at hyperlinker hadde dårlig kontrast med bakgrunnen. Så vi fant noen
+                lysere blåfarger for når darkmode er på, slik at de forstatt assosiert med hyperlinker.</p>
 
             <h2>Struktur:</h2>
             <p>På sidene har vi valgt å ha en generell utforming, med nav bar på toppen, hovedinnhold i midten og
                 på bunn. Vi har brukt tydelige overskrifter og bilder, for å gjøre det enkelt for brukerne å forstå
-                siden uten å lese innholdet. Maks bredde på siden vår er satt til 1300px slik at man ikke må vri hode
-                for å lese hvis man bruker en stor skjerm.</p>
+                siden uten å lese innholdet.</p>
+            <p>Vi har også sørget for at siden scaler bra til mindre og større skjermer uten at tekst blir for smal
+                eller for bred. Vi har satt Maks bredde på siden vår til 1300px slik at man ikke må vri
+                hode for å lese hvis man bruker en stor skjerm. Det er media queries som sørger for at at elementer som
+                er ved siden av hverandre på brede skjermer, går underhverandre på smalere skjermer. I topical
+                bedskjærte vi et bilde når det er inni teksten slik at det skal passe bedre.</p>
             
         </div>
 
@@ -141,23 +148,6 @@
     </section>
 
 
-    <section class="accessibility-flex">
-
-       <div class="flex-text-full-width">
-           <h2>Topical:</h2>
-           <p>Bruken av grids hjelper å forkorte koden og holde den ryddig. Bruk av grid-auto-flow hjalp veldig mye
-           med å forkorte koden, der vi tidligere hadde implementert flere klasser og definert flere plasseringer inne i koden.</p>
-           <p>Vi så under implementeringen av dark mode at det ikke var nok kontrast mellom bakgrunnen og hyperlinks. Løsningen her
-           var å endre litt på fargen på hyperlinks når nettsiden oppdager at brukeren bruker dark mode. Vi endret marginalt på fargen
-           slik at det er fremdeles de samme fargene assosiert med hyperlinks.</p>
-           <p>Vi har "beskjært" nasa bildet slik at de passer bedre inn i teksten. Dette sikrer mer plass for teksten
-           som gjør skaleringen av nettsiden bedre, der leseren slipper å bevege like mye på øynene.
-           Dette bildet er også godt egnet til å beskjære, forid det er ingen viktige elementer som blir skjært ut.
-           Vi beholder opprinnelige dimensjoner på mobile view fordi bilder er ikke lenger plassert ved siden av teksten.
-           Da kan vi unngå å beskjære bildet for å sikre god skalering av tekst.</p>
-
-       </div>
-    </section>
 
     <!-- Section om hambburgermeny og dens accessibility med tilhørende bilde-->
     <section class="accessibility-flex">
@@ -170,10 +160,9 @@
                 i css for å gjemme den. Løsningen for dette, var å sette den til opacity: 0 og position: absolute for
                 posisjon isteden slik at den bare er usynelig isteden.  Sørget også for at hamburger får outline når
                 den er valgt med tastatur da den ikke vanligvis gjør det med opacity sat til 0.</p>
-                <p>For brukere som bruker
-                screen readers, la vi til "aria-label" på knappen slik at funksjonen dens blir tydelig. Linkene er ikke
-                focusable når de ikke er på skjermen. Tabindex er satt slik at tab rekkefølge er logisk i forhold til
-                hvor de er på siden.</p>
+            <p>For brukere som bruker screen readers, la vi til "aria-label" på knappen slik at funksjonen dens blir
+                tydelig. Linkene er ikke focusable når de ikke er på skjermen. Tabindex er satt slik at tab rekkefølge
+                er logisk i forhold til hvor de er på siden.</p>
         </div>
 
         <!-- Bilde av kode fra hamburgermeny -->
@@ -194,6 +183,16 @@
                  alt="HTML/CSS som ble brukt til å å gjøre forbedringer med accessibility til Hamurgermenyen"
                  width="1956" height ="1629">
         </picture>
+    </section>
+
+    <section class="accessibility-flex">
+
+        <div class="flex-text-full-width">
+            <h2>Topical:</h2>
+            <p>Bruken av grids hjelper å forkorte koden og holde den ryddig. Bruk av grid-auto-flow hjalp veldig mye
+                med å forkorte koden, der vi tidligere hadde implementert flere klasser og definert flere plasseringer inne i koden.</p>
+            <p></p>
+        </div>
     </section>
 
     <section class="accessibility-flex">
