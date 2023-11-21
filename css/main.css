@@ -422,9 +422,9 @@ nav {
 }
 
 
-/*Kontaktskjema seksjon*/
+/* Kontaktskjema seksjon */
 
-.kontaktskjema-flex {
+.contact-form-flex {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -434,18 +434,18 @@ nav {
     padding-left: 2.5%;
 }
 
-.kontaktskjema-text {
+.contact-form-text {
     max-width: 650px;
     width: 100%;
 }
 
-.kontaktskjema-boks h2 {
+.contact-form-text h2 {
     font-size: 1.9rem;
     font-weight: 700;
 }
 
 
-.kontaktskjema-form{
+.contact-form-form{
     max-width: 650px;
     width: 100%;
 }
@@ -477,7 +477,7 @@ input[type=tel] {
 }
 
 /* Høyde på meldingboks */
-#Melding {
+#message {
     height: 150px;
 }
 
