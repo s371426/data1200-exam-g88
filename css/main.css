@@ -1,6 +1,15 @@
 /* DATA1200 Home Exam 2023 */
 
-/* DIVERSE */
+/*CSS rekkefølge, markert med || (Fra Mozilla)
+  - Diverse/Felles alle sider
+  - Header/Navbar
+  - Felles forside/acessability/location page
+  - Forisde
+  - Location page
+  - Topical page
+  - Footer */
+
+/* || DIVERSE/FELLES */
 
 /* Custom property om farger som kan gjenbrukes flere steder, enklere å endre senere og gjøre darkmode */
 /* Inspirert av Tengel presentasjon, eksempel nettside i faget og Mozilla web docs */
@@ -19,7 +28,7 @@
 
 /* Darkmode som blir aktivert når device er satt til darkmode */
 /* Inspirert av Tengel presentasjon og eksempel nettside i faget */
-@media (prefers-color-scheme: dark) {
+@media only screen and (prefers-color-scheme: dark) {
     :root {
         /* Generelle farger: */
         --main-background-color: #212121;
@@ -69,19 +78,11 @@ img {
     width: 100%;
 }
 
-/* OVERSKRIFTER */
-
-/* PARAGRAFER */
-
-
 /* For accessibility, gjør tekst enklere å lese */
 p {
     line-height: 1.5;
     font-size: 1rem;
-    /*letter-spacing: 0.012em;*/
 }
-
-/* DIVs */
 
 /* HEADER */
 /* NAV BAR */
@@ -201,8 +202,9 @@ nav {
     }
 }
 
-/* Sjuler linker på navbar og viser hamburger meny knapp når bredde er mindre enn 800px*/
-@media (max-width: 810px) {
+/* Sjuler linker på navbar og viser hamburger meny knapp når bredde er mindre enn 810px
+   "only screen and" sjuler det for ikke skjermer og gamle enheter */
+@media only screen and (max-width: 810px) {
     /* Meny blir vertikal istedenfor horisontal */
     nav {
         flex-direction: column;
@@ -252,7 +254,7 @@ nav {
     }
 }
 
-/* FELLES FORSIDE/HJEMMEISDE, ACCESSIBILITY OG LOCATION*/
+/* || FELLES FORSIDE/HJEMMEISDE, ACCESSIBILITY OG LOCATION*/
 
 /* Normalt horisontal flexbox for flere bokser, som er sentrert
    Inneholder flex-child-XXX */
@@ -325,7 +327,8 @@ figure.flex-child-smaller-width {
     background-color: var(--secondary-background-color);
 }
 
-/* Endrer location og accessability flexbox til å være vertikal når viewport mindre enn 760px (Mobil) */
+/* Endrer location og accessability flexbox til å være vertikal når viewport mindre enn 760px (Mobil)
+   "only screen and" sjuler det for ikke skjermer og gamle enheter*/
 @media only screen and (max-width: 760px) {
     .homepage-flex,
     .location-flex,
@@ -340,7 +343,7 @@ figure.flex-child-smaller-width {
     }
 }
 
-/* HJEMMESIDE/FORSIDE */
+/* || HJEMMESIDE/FORSIDE */
 
 /* Hero section med cover bakgrunsbilde og sentrert headings på seg */
 .hero-flex {
@@ -372,7 +375,7 @@ figure.flex-child-smaller-width {
 }
 
 /* Tekst hero section større på store skjermer (over 1250px*/
-@media (min-width: 1250px) {
+@media only screen and (min-width: 1250px) {
     .hero-flex h1 {
         font-size: 4rem;
     }
@@ -383,7 +386,7 @@ figure.flex-child-smaller-width {
 }
 
 /* Tekst og bilde hero section blir mindre når det er på mobil/små skjermen (mindre enn 620px) også mindre bilde */
-@media (max-width:  620px) {
+@media only screen and (max-width:  620px) {
     .hero-flex{
         background-image: linear-gradient(to bottom,rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
         url('../images/forsidebilde-arkitektur-p32/arkitektur-p32-skjalg-bøhmer-vold-square-medium.webp');
@@ -482,7 +485,7 @@ input[type=submit] {
     font-weight: 600;
 }
 
-/* LOCATION PAGE*/
+/* || LOCATION PAGE*/
 
 /* Location page: Bytter om på rekkefølgen på annenhver sibling element hvis viewport 761px eller bredere
    Alle section elementene kan være like */
@@ -496,7 +499,7 @@ input[type=submit] {
     }
 }
 
-/*TOPICAL PAGE*/
+/* || TOPICAL PAGE*/
 
 /* Grid-container med to kolonner */
 /* Grid-auto-row for automatisk plassering av grid items slik de har blitt plassert på HTML */
@@ -644,7 +647,7 @@ input[type=submit] {
 }
 
 /* Bilder slutter å være ved siden av tekst og blir full width på liten skjerm */
-@media (max-width: 760px) {
+@media only screen and (max-width: 760px) {
     .topical-img-with-text {
         float: none;
         width: 100%;
@@ -652,7 +655,7 @@ input[type=submit] {
     }
 }
 
-/* FOOTER */
+/* || FOOTER */
 
 /* Setter fooder på bunn av siden og at bredden skal være 100% */
 footer {
@@ -827,7 +830,7 @@ Bestemmer farge og størrelse på ikonene*/
 
 /* Når siden er mindre enn 760 px skal grid stackes */
 /* Burde ha blitt sentrert og ikke left alligned på mobil, men hadde ikke tid å fikse */
-@media (max-width: 760px) {
+@media only screen and (max-width: 760px) {
     .footer-grid {
         grid-template-columns: 1fr;
     }
