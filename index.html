@@ -50,7 +50,6 @@
     </nav>
 </header>
 
-<!-- main flex container for content på home-page, altså mellom header og footer-->
 <!-- Section med hero bilde/tekst -->
 <section class="hero-flex">
     <h1>Oslo Metropolitan University</h1>
@@ -66,9 +65,9 @@
                 <!-- Bilde blir valgt av device ut i fra hvilken oppløsning som passer best med size. "w" er bredden
                      på det bildet. Type forteller device at bildene er webp format -->
                 <source srcset="images/bislettbekken/bislettbekken-very-small.webp 600w,
-                            images/bislettbekken/bislettbekken-small.webp 900w,
-                            images/bislettbekken/bislettbekken-medium.webp 1440w,
-                            images/bislettbekken/bislettbekken-large.webp 2100w"
+                                images/bislettbekken/bislettbekken-small.webp 900w,
+                                images/bislettbekken/bislettbekken-medium.webp 1440w,
+                                images/bislettbekken/bislettbekken-large.webp 2100w"
                         sizes="(max-width: 760px) 92vw,
                                (min-width: 761px) 44vw"
                         type="image/jpg">
@@ -89,19 +88,20 @@
                 Vårt hovedstudiested ligger nemlig midt i Oslo, og har både storbyens puls og kort vei
                 til arbeidslivet du senere skal bli en del av. I tillegg har vi et studiested på Kjeller,
                 som tilbyr flere populære studier. OsloMet er dessuten Norges tredje største universitet!</p>
+            <p><a href="https://www.oslomet.no/om/studiested-pilestredet"><b>Les mer om Campus</b></a></p>
         </div>
     </section>
 
     <!-- Seksjon for intro til historie -->
     <section class="homepage-flex">
         <div class=flex-child-text>
-            <h2>Siden 1128</h2>
+            <h2>Historie</h2>
             <h3> Historie på over 200 år</h3>
-            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has
-                been the industry's standard dummy text ever since the 1500s, when an unknown printer took a
-                galley of type and scrambled it to make a type specimen book. It has survived not only
-                five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.
-                Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+            <p>Historien om OsloMet, fra de første studentene til dagens status som storbyuniversitet,begynner i 1843
+                med Sørine Eriksen Aaseide. Universitetet har alltid vært et bindeledd mellom utdanning og samfunnet.
+                Gjennom flere stadier, inkludert omgjøring til høyskoler og senere universitetsstatus i 2018 som OsloMet,
+                har institusjonen kontinuerlig tilpasset seg endringer. I OsloMet står som en sentral bidragsyter til
+                kunnskapsutvikling og samfunnsendring, både regionalt og nasjonalt.</p>
             <p><a href="https://www.oslomet.no/om/historie"><b>Les mer om historien vår</b></a></p>
         </div>
         <figure class=flex-child-img>
@@ -119,7 +119,7 @@
 
                 <!-- Backup bilde tilfelle device ikke støtter <picture> eller webp, i tilleg til alt tekst informasjon -->
                 <img src="images/oslomet-studiestart/oslomet-studiestart.jpg"
-                     alt="gruppe studenter forran en univertetsbygning av glass og betong, med noen planter i forgrunnen"
+                     alt="gruppe studenter foran en universitetsbygning av glass og betong, med noen planter i forgrunnen"
                      width="2700" height ="1793">
             </picture>
 
@@ -147,7 +147,7 @@
             </picture>
 
             <!-- Bildetekst/forfatter for tilhørende bilde, fra https://foto.oslomet.no/fotoweb/ -->
-            <figcaption class="img-text">Benjamin A. Ward / OsloMET</figcaption> <!-- husk å fiks fotograf stuff-->
+            <figcaption class="img-text">Benjamin A. Ward / OsloMET</figcaption>
         </figure>
 
         <figure class=flex-child-smaller-width>
@@ -170,7 +170,7 @@
             </picture>
 
             <!-- Bildetekst/forfatter for tilhørende bilde, fra https://foto.oslomet.no/fotoweb/ -->
-            <figcaption class="img-text">Benjamin A. Ward / OsloMET</figcaption> <!-- husk å fiks fotograf stuff-->
+            <figcaption class="img-text">Benjamin A. Ward / OsloMET</figcaption>
         </figure>
 
         <figure class=flex-child-smaller-width>
@@ -192,7 +192,7 @@
             </picture>
 
             <!-- Bildetekst/forfatter for tilhørende bilde, fra https://foto.oslomet.no/fotoweb/ -->
-            <figcaption class="img-text">Benjamin A. Ward / OsloMET</figcaption> <!-- husk å fiks fotograf stuff-->
+            <figcaption class="img-text">Benjamin A. Ward / OsloMET</figcaption>
         </figure>
     </section>
 
@@ -212,7 +212,7 @@
 
                 <!-- Backup bilde tilfelle device ikke støtter <picture> eller webp, i tilleg til alt tekst informasjon -->
                 <img src="images/grilling/grilling.jpg"
-                     alt="grilling av kjøtt på en bolle grill"
+                     alt="grilling av kjøtt på en grill"
                      width="4256" height ="2832">
             </picture>
 
@@ -223,18 +223,19 @@
         <div class=flex-child-text>
             <h2>Spisesteder</h2>
             <h3>Stort utvalg av mat</h3>
-            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has
-            been the industry's standard dummy text ever since the 1500s, when an unknown printer took a
-            galley of type and scrambled it to make a type specimen book. It has survived not only
-            five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.
-            Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has
-            been the industry's standard dummy text ever since the 1500s, when an unknown printer took a
-            galley of type and scrambled it to make a type specimen book. It has survived not only
-            five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. </p>
+            <p>OsloMets initiativ med 36 spennende spisesteder og kaffebarer på lærestedene reflekterer et ønske om å
+                skape et mangfoldig og helsefremmende matmiljø for studenter og ansatte. OsloMets initiativ til å tilby
+                et sunt og næringsrikt alternativ, reflekterer universitetets engasjement for studenters helse og velvære.
+                Gjennom sitt fokus på dette, gir OsloMet et verdifullt bidrag til utviklingen av studenters framtid.</p>
+            <p><a href="https://www.oslomet.no/forskning/forskningsprosjekter/fremtidens-maltidskonsepter">
+                <b>Les mer om vår visjon på mat</b></a></p>
+
         </div>
     </section>
 
-    <!-- Kontakt form på første side-->
+    <!-- Kontakt form på første side
+         Kilde: https://developer.mozilla.org/en-US/docs/Web/HTML/Element/form
+         https://www.w3schools.com/tags/tag_textarea.asp -->
     <section id="contact-form-flex">
         <div class=contact-form-text>
             <h2>Kontakt oss</h2>
@@ -251,7 +252,7 @@
             <input type="tel" id="number" placeholder="+123 45 678" pattern="[0-9]{3} [0-9]{2} [0-9]{3}"><br>
 
             <label for="message"></label>
-            <input type="text" id="message" placeholder="Hva lurer du på?" required><br>
+            <textarea id="message" name="message" placeholder="Hva lurer du på?" required></textarea>
 
             <input type="submit">
         </form>

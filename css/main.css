@@ -1,6 +1,6 @@
 /* DATA1200 Home Exam 2023 */
 
-/*CSS rekkefølge, markert med || (Fra Mozilla)
+/*CSS rekkefølge, markert med || for å søke(Fra Mozilla)
   - Diverse/Felles alle sider
   - Header/Navbar
   - Felles forside/acessability/location page
@@ -329,11 +329,12 @@ figure.flex-child-smaller-width {
 }
 
 /* Endrer location og accessability flexbox til å være vertikal når viewport mindre enn 760px (Mobil)
-   "only screen and" sjuler det for ikke skjermer og gamle enheter*/
+   "only screen and" sjuler det for ikke skjermer og gamle enheter */
+/* :not(:Firstchild) fordi overskrift ikke oppfører seg riktig på de sidene*/
 @media only screen and (max-width: 760px) {
     .homepage-flex,
-    .location-flex,
-    .accessibility-flex {
+    .location-flex:not(:first-child),
+    .accessibility-flex:not(:first-child) {
         flex-direction: column;
     }
 
@@ -351,7 +352,7 @@ figure.flex-child-smaller-width {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    height: 50vh;
+    height: 60vh;
     background-image: linear-gradient(to bottom,rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
     url('../images/forsidebilde-arkitektur-p32/arkitektur-p32-skjalg-bøhmer-vold-large.webp');
     background-repeat: no-repeat;
@@ -401,17 +402,19 @@ figure.flex-child-smaller-width {
     }
 }
 
+/* H3 større enn H2 fordi det passer bedre med styling selv om h2 er hovedoverskrift, de sier nesten det samme*/
 /* Styling av h2 i flex child på forside */
 .homepage-flex h2 {
     font-size: 1.4rem;
     font-weight: 300;
+    margin-bottom: 0.9rem;
 }
 
 /* Styling av h3 i flex child på forside */
 .homepage-flex h3 {
-    font-size: 2.4rem;
+    font-size: 2.1rem;
     font-weight: 700;
-    margin-top: 1.2rem
+    margin-top: 0.9rem
 }
 
 /* Farger på linker body front page for mere accessibility */
@@ -423,8 +426,23 @@ figure.flex-child-smaller-width {
     color: var(--body-link-color-visited);
 }
 
+ /* Sørger for at rekkefølgen på flex child er riktig på mobil.
+    Fungerer ikke med samme som på location page på det layout vi har på homepage*/
+@media only screen and (max-width: 760px) {
+    .homepage-flex .flex-child-img {
+        order: 1;
+    }
+
+    .homepage-flex .flex-child-text {
+        order: 2;
+    }
+}
+
 /* Kontaktskjema seksjon */
+
 /*Flex for kontakt skjema*/
+/* Kilde: https://developer.mozilla.org/en-US/docs/Web/HTML/Element/form
+   https://www.w3schools.com/tags/tag_textarea.asp */
 #contact-form-flex {
     display: flex;
     flex-direction: column;
@@ -439,6 +457,7 @@ figure.flex-child-smaller-width {
     max-width: 650px;
     width: 100%;
 }
+
 
 .contact-form-text h2 {
     font-size: 1.9rem;
@@ -484,6 +503,16 @@ input[type=tel] {
 /* Styling for submit knapp */
 input[type=submit] {
     font-weight: 600;
+}
+
+/*styling for message box*/
+textarea {
+    box-sizing: border-box;
+    width: 100%;
+    border-radius: 20px;
+    padding: 15px;
+    margin-top: 2%;
+    margin-bottom: 2%;
 }
 
 /* || LOCATION PAGE*/
