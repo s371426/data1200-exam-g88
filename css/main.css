@@ -95,8 +95,8 @@ nav {
     align-items: center;
     justify-content: space-between;
     background-color: var(--main-color);
-    padding-right: 2%;
-    padding-left: 2%;
+    padding-right: 1.5%;
+    padding-left: 1.5%;
     max-height: 60px;
 }
 
@@ -114,9 +114,9 @@ nav {
 .menu a {
     display: block;
     padding-top: 19px;
-    padding-right: 0.8rem;
+    padding-right: 0.7rem;
     padding-bottom: 19px;
-    padding-left: 0.8rem;
+    padding-left: 0.7rem;
     text-decoration: none;
     color: black;
     font-size: 1.1rem;
@@ -203,9 +203,9 @@ nav {
     }
 }
 
-/* Sjuler linker på navbar og viser hamburger meny knapp når bredde er mindre enn 810px
+/* Sjuler linker på navbar og viser hamburger meny knapp når bredde er mindre enn 865px
    "only screen and" sjuler det for ikke skjermer og gamle enheter */
-@media only screen and (max-width: 810px) {
+@media only screen and (max-width: 865px) {
     /* Meny blir vertikal istedenfor horisontal */
     nav {
         flex-direction: column;
