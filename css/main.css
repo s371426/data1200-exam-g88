@@ -88,6 +88,8 @@ p {
 /* HEADER */
 /* NAV BAR */
 
+/* Diverse kilder brukt og kombinert, for å få det til å fungere slik vi ville ha det */
+
 /* Hoved flexboks navbar  fordeler conent utover bar */
 nav {
     display: flex;
