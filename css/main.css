@@ -688,7 +688,7 @@ textarea {
 /* BONUS SIDE, hadde ikke tid til å gjøre finishing touches, accessibility test ikke kjørt på denne
    Lagd med kunnskap lært fra de andre sidene */
 
-
+/* Main hoved grid galleri*/
 .gallery-grid {
     display: grid;
     grid-template-columns: 1fr;
@@ -700,7 +700,7 @@ textarea {
     padding-right: 1.5%;
     padding-left: 1.5%;
 }
-
+/* Hovedoverskrift styling*/
 .gallery-grid h1 {
     grid-column: 1;
     grid-row: 1;
@@ -708,6 +708,7 @@ textarea {
     font-size: 2.4rem;
 }
 
+/* Boks for filterne til galleriet, tar ikke hele høyden */
 .gallery-filters {
     grid-column: 1;
     grid-row: 2;
@@ -723,17 +724,19 @@ textarea {
     margin-left: 10px;
 }
 
+/* Filter Overskrift styling*/
 .gallery-filters h2{
     margin-left: 10px;
 }
 
+/* Flex som ineholder lables med knapper for filtere */
 .filter-flex{
     display: flex;
     flex-direction: row;
 }
 
-
-.gallery-flex {
+/* Flexbox for bildene på siden, som wrapper når plass trengs*/
+.gallery-image-flex {
     grid-column: 1;
     grid-row: 3;
     display:flex;
@@ -742,28 +745,30 @@ textarea {
     justify-content: center;
 }
 
-.gallery-flex picture {
+/* Setter flex child egenskaper på pictures, basis er standardstørelse. Skult vanligvis*/
+.gallery-image-flex picture {
     flex-grow: 1;
     flex-shrink: 1;
     flex-basis: 330px;
     display: none;
     margin: 10px;
-
 }
 
+/* Bytter til pointer mus når label holdes over*/
 .gallery-grid label {
     cursor: pointer;
 }
 
-#home-images,
-#topical-images,
-#location-images,
-#larger-images {
+/* Skuler selve checkboxene, men er fortsatt tiljengelig med tab */
+#home-img-toggle,
+#topical-img-toggle,
+#location-img-toggle,
+#larger-img-toggle {
     position: absolute;
     opacity: 0;
 }
 
-
+/* Layout/styling av label knappene*/
 .checkbox-home-toggle,
 .checkbox-topical-toggle,
 .checkbox-location-toggle,
@@ -774,10 +779,10 @@ textarea {
     gap: 0.3rem;
 }
 
+/* Setter bakgrunn på label som checkbox ikon */
 /* Checkbox fra:
    https://icons8.com/icon/I61emdjNzpV9/unchecked-checkbox
    https://icons8.com/icon/I61emdjNzpV9/unchecked-checkbox */
-
 .checkbox-home-icon,
 .checkbox-topical-icon,
 .checkbox-location-icon,
@@ -786,30 +791,31 @@ textarea {
     position: relative;
     height: 25px;
     width: 25px;
-    background-image: url("../images/unchecked-checkbox-96.png");
+    background-image: url("../images/unchecked-checkbox-48.png");
     background-size: cover;
 }
 
-
-#home-images:checked ~ .gallery-filters .checkbox-home-icon,
-#topical-images:checked ~ .gallery-filters .checkbox-topical-icon,
-#location-images:checked ~ .gallery-filters .checkbox-location-icon,
-#larger-images:checked ~ .gallery-filters .checkbox-size-icon{
-    background-image: url("../images/checked-checkbox-96.png");
+/* Bytter checkbox bakgrunn hvis checkbox er checked*/
+#home-img-toggle:checked ~ .gallery-filters .checkbox-home-icon,
+#topical-img-toggle:checked ~ .gallery-filters .checkbox-topical-icon,
+#location-img-toggle:checked ~ .gallery-filters .checkbox-location-icon,
+#larger-img-toggle:checked ~ .gallery-filters .checkbox-size-icon{
+    background-image: url("../images/checked-checkbox-48.png");
 }
 
-
-#home-images:checked ~ .gallery-flex .gallery-home-img,
-#topical-images:checked ~ .gallery-flex .gallery-topical-img,
-#location-images:checked ~ .gallery-flex .gallery-location-img {
+/* Viser de tilhørende bildene når checkboxer er checked */
+#home-img-toggle:checked ~ .gallery-image-flex .gallery-home-img,
+#topical-img-toggle:checked ~ .gallery-image-flex .gallery-topical-img,
+#location-img-toggle:checked ~ .gallery-image-flex .gallery-location-img {
     display: block;
 }
 
-#larger-images:checked ~ .gallery-flex picture {
+/* Øker flex basis når checkbox er checked*/
+#larger-img-toggle:checked ~ .gallery-image-flex picture {
     flex-basis: 510px;
 }
 
-
+/* Flytter filter til å være på siden når siden er bred nok*/
 @media (min-width: 1400px) {
     .gallery-grid {
         grid-template-columns: 15rem minmax(100px,1300px);
@@ -828,12 +834,13 @@ textarea {
         grid-row: 1;
     }
 
-    .gallery-flex {
+    .gallery-image-flex {
         grid-column: 2;
         grid-row: 2;
     }
 }
 
+/* Flipper filter labels til kolonne på mobil*/
 @media (max-width: 780px) {
     .filter-flex {
         flex-direction: column;
