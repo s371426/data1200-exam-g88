@@ -54,7 +54,7 @@
     <!-- Section med h1 -->
     <section class="accessibility-flex">
         <div class="flex-child-full-width">
-            <h1>Universal design:</h1>
+            <h1>Tilgjengelighet</h1>
         </div>
     </section>
 
@@ -65,12 +65,24 @@
             <h2>Font og tekst:</h2>
             <p>Vi har valgt å bruke "Verdana" som font, og "sans-serif" som backup. "Verdana" har vi valgt ettersom den
                 blir ansett som en av de beste når det kommer til tilgjengelighet. Fonten har tydelige forskjeller mellom
-                bokstavene, og er tydelig i små størrelser. Det er tydelige forskjeller mellom "l" og "I". "sans-serif"
-                er backup dersom brukeren ikke får lastet inn "Verdana".</p>
+                bokstavene, og er tydelig i små størrelser.</p>
             <p>Vi satt line-height på paragrafer til 1.5 fordi det er det some er anbefalt da det gjør det enklere
                 å lese. Vi har passet på at tekst ikke er for liten, størrelse er rem slik at den vil skalere riktig
                 utifra brukerbehov. Vi har også økt letter-spacing.</p>
             <p>
+        </div>
+    </section>
+
+    <!-- Seksjon om sidens struktur -->
+    <section class="accessibility-flex">
+        <div class="flex-child-full-width">
+            <h2>Struktur:</h2>
+            <p>På sidene har vi valgt å ha en generell utforming, av siden vår. Vi har hat fokus på accessibility hele
+                veien. Vi har brukt tydelige overskrifter og bilder, for å gjøre det enkelt for brukerne å forstå
+                siden uten å lese innholdet.Vi har også hatt fokus på å ikke ha header i feil rekkefølge siden start. </p>
+            <p>Vi har også sørget for at siden scaler bra til mindre og større skjermer uten at tekst blir for smal
+                eller for bred med media queries. Vi har også satt satt Maks bredde på siden vår til 1300px slik at man ikke må vri
+                hode for å lese hvis man bruker en stor skjerm.</p>
         </div>
     </section>
 
@@ -80,21 +92,20 @@
         <!-- Diverse tekst om accessibility -->
         <div class="flex-child-text">
             <h2>Lighthouse test:</h2>
-            <p>Mens vi har jobbet med siden har vi brukt lighthouse for å teste siden vår underveis, for å oppdage
-                områder vi kan forbedre. To advarsler gjenstår: På performace klager den på at vi brukte eksterne font
-                for sosiale medier ikonene. Det er nok greit da det er tekst alternativ. Den andre er at tabindex har
-                blitt endret. Les mer om dette under hamburgermeny lenger nede.</p>
+            <p>Mens vi har jobbet med siden har vi brukt lighthouse fra vi var ca halveis for å teste siden vår underveis,
+                for å oppdage områder vi kan forbedre. To advarsler gjenstår: På performace klager den på at vi brukte
+                eksterne font for sosiale medier ikonene. Det er nok greit da det er tekst alternativ. Den andre er at
+                tabindex har blitt endret. Les mer om dette under hamburgermeny lenger nede.</p>
 
             <h2>Farge:</h2>
-            <p>På naviagasjonsbaren og footer, fant vi en pen blåfarge, som passer bra å ha svart tekst med god kontrast.</p>
-            <p>På siden har vi "mørk og lys" modus, som blir valgt utifra instillingene på brukerens pc. Lys modusen
-                har hvit bakgrunnsfarge med mørk tekst, og mørk modusen har mørk bakgrunn med lys tekst, men ikke for
-                lys. Vi har hatt stort fokus på kontrast mellom tekst og bakgrunn for at tekst skal være lett å lese.
-                Vi har både brukt Ligthhouse til å teste dette, men også brukt "inspect element" i nettleser.</p>
-            <p>På grunn av darkmode, fant vi ut at hyperlinker hadde dårlig kontrast med bakgrunnen. Derfor vi fant noen
-                lysere blåfarger for når darkmode er på, slik at har en liknende farge mens vi beholder fargene
-                assosiert med hyperlinker.</p>
-
+            <p>På naviagasjonsbaren og footer, fant vi en blåfarge, som passer bra å ha svart tekst med god kontrast.</p>
+            <p>På siden har vi "mørk og lys" modus, som blir valgt utifra instillingene på brukerens pc. Vi har hatt
+                stort fokus på kontrast mellom tekst og bakgrunn for at tekst skal være lett å lese. Men også ikke for
+                høy i mørk modus. Vi har både brukt Ligthhouse til å teste dette, men også brukt "inspect element" i
+                nettleser.</p>
+            <p>På grunn av darkmode, fant vi blant annet ut at hyperlinker hadde dårlig kontrast med bakgrunnen. Derfor
+                vi fant noen lysere blåfarger for når darkmode er på, slik at har en liknende farge mens vi beholder
+                fargene assosiert med hyperlinker.</p>
         </div>
 
         <!-- Bilde av lighthouse test -->
@@ -115,33 +126,16 @@
                  width="1418" height ="2024">
         </picture>
     </section>
-
-    <!-- Seksjon om sidens struktur -->
-    <section class="accessibility-flex">
-        <div class="flex-child-full-width">
-            <h2>Struktur:</h2>
-            <p>På sidene har vi valgt å ha en generell utforming, med nav bar på toppen, hovedinnhold i midten og
-                på bunn. Vi har brukt tydelige overskrifter og bilder, for å gjøre det enkelt for brukerne å forstå
-                siden uten å lese innholdet.</p>
-            <p>Vi har også sørget for at siden scaler bra til mindre og større skjermer uten at tekst blir for smal
-                eller for bred. Vi har satt Maks bredde på siden vår til 1300px slik at man ikke må vri
-                hode for å lese hvis man bruker en stor skjerm. Det er media queries som sørger for at at elementer som
-                er ved siden av hverandre på brede skjermer, går underhverandre på smalere skjermer. I topical
-                bedskjærte vi et bilde når det er inni teksten slik at det skal passe bedre.</p>
-        </div>
-    </section>
-
+    
     <!-- Seksjon med informasjon om bilder og dens alt tekster -->
     <section class="accessibility-flex">
         <div class="flex-child-full-width">
             <h2>Bilder</h2>
-            <p>Vi har valgt å bruker WebP på alle bildene våres, fordi med WebP kan vi komprimere bilder uten stor tap
-                av kvalitet. Dette sikrer at alle bildene vi har er under 1 mb som gjør at nettsidene våres lastes inn
-                kjappere, som gjør nettsidene bedre tilgjengelig for de som har treg internett hastighet. Vi har også
-                lastet opp flere versjoner av de samme bildene med ulike dimensjoner slik at filstørrelsene er enda
-                mindre avhengig av dimensjonene på enheten. Vi har lastet opp jpg versjon av bildene som backup, der
-                disse også er under 1 mb. Lighthouse testen slo først ut på at vi ikke hadde riktig under size på source
-                elementene, men det forbedret vi.</p>
+            <p>Vi bruker WebP-formatet for alle våre bilder, da det tillater mindre/raskere lasting av bilder. JPG er
+                backup tilfelle WEBP ikke støttes. Vi har også flere versjoner av hvert bilde med ulike dimensjoner som
+                brukes avhengig av enheten skjermstørrelse. Etter å ha gjennomført en Lighthouse-test, identifiserte vi
+                og løste problemet knyttet til riktig bruk av "size" i source-elementene. Dette har forbedred ytelsen
+                til nettstedet vårt.</p>
 
             <h2>Alt tekster:</h2>
             <p> Vi har sørget for at alle bildene på siden vår har beskrivene alt tekster som hjelper de som ikke kan
@@ -149,8 +143,6 @@
                 også tekst alternativ til ikonet man kan lese, som får underline når man holder musen over.</p>
         </div>
     </section>
-
-
 
     <!-- Section om hambburgermeny og dens accessibility med tilhørende bilde-->
     <section class="accessibility-flex">
