@@ -406,13 +406,14 @@ figure.flex-child-smaller-width {
 .homepage-flex h2 {
     font-size: 1.4rem;
     font-weight: 300;
+    margin-bottom: 0.9rem;
 }
 
 /* Styling av h3 i flex child på forside */
 .homepage-flex h3 {
     font-size: 2.1rem;
     font-weight: 700;
-    margin-top: 1.2rem
+    margin-top: 0.9rem
 }
 
 /* Farger på linker body front page for mere accessibility */
@@ -439,8 +440,8 @@ figure.flex-child-smaller-width {
 /* Kontaktskjema seksjon */
 
 /*Flex for kontakt skjema*/
-/* Kilde brukt for form: https://developer.mozilla.org/en-US/docs/Web/HTML/Element/form */
-/* https://www.w3schools.com/tags/tag_textarea.asp */
+/* Kilde: https://developer.mozilla.org/en-US/docs/Web/HTML/Element/form
+   https://www.w3schools.com/tags/tag_textarea.asp */
 #contact-form-flex {
     display: flex;
     flex-direction: column;
