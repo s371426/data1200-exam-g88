@@ -401,6 +401,7 @@ figure.flex-child-smaller-width {
     }
 }
 
+/* H3 større enn H2 fordi det passer bedre med styling selv om h2 er hovedoverskrift, de sier nesten det samme*/
 /* Styling av h2 i flex child på forside */
 .homepage-flex h2 {
     font-size: 1.4rem;
