@@ -424,6 +424,7 @@ figure.flex-child-smaller-width {
 
 /* Kontaktskjema seksjon */
 /*Flex for kontakt skjema*/
+/* Kilde brukt for form: https://developer.mozilla.org/en-US/docs/Web/HTML/Element/form */
 #contact-form-flex {
     display: flex;
     flex-direction: column;
