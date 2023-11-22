@@ -487,6 +487,16 @@ input[type=submit] {
     font-weight: 600;
 }
 
+/*styling for message box*/
+textarea {
+    box-sizing: border-box;
+    width: 100%;
+    border-radius: 20px;
+    padding: 15px;
+    margin-top: 2%;
+    margin-bottom: 2%;
+}
+
 /* || LOCATION PAGE*/
 
 /* Location page: Bytter om på rekkefølgen på annenhver sibling element hvis viewport 761px eller bredere
