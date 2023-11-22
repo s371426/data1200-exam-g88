@@ -52,12 +52,17 @@
 <!-- BONUS SIDE, hadde ikke tid til å gjøre alle finishing touches, accessibility test ikke kjørt på denne siden
     Lagd med kunnskap lært fra de andre sidene, blant annet navbar, flex og grids. -->
 
+<!-- Grid for hovedlayout-->
 <main class="gallery-grid">
     <h1>Galleri</h1>
+
+    <!-- Inputs for checkbox labels med filter funksjoner -->
     <input id="home-images" type="checkbox" checked>
     <input id="topical-images" type="checkbox" checked>
     <input id="location-images" type="checkbox" checked>
     <input id="larger-images" type="checkbox">
+
+    <!-- Section med label filterene man kan klikke på -->
     <section class="gallery-filters">
         <h2>Filtere:</h2>
             <div class="filter-flex">
@@ -80,8 +85,43 @@
         </div>
     </section>
 
-
+    <!-- Flexbox med alle bilder fra andre sider på dette nettstedet-->
     <section class="gallery-flex">
+
+        <picture class="gallery-home-img">
+
+            <!-- Bilde blir valgt av device ut i fra hvilken oppløsning som passer best med size. "w" er bredden
+                 på det bildet. Type forteller device at bildene er webp format -->
+            <source srcset="images/bislettbekken/bislettbekken-very-small.webp 600w,
+                            images/bislettbekken/bislettbekken-small.webp 900w,
+                            images/bislettbekken/bislettbekken-medium.webp 1440w,
+                            images/bislettbekken/bislettbekken-large.webp 2100w"
+                    sizes="(max-width: 760px) 92vw,
+                           (min-width: 761px) 44vw"
+                    type="image/jpg">
+
+            <!-- Backup bilde tilfelle device ikke støtter <picture> eller webp, i tilleg til alt tekst informasjon -->
+            <img src="images/bislettbekken/bislettbekken-src.jpg"
+                 alt="liten bekk med gangbru over og grønne planter, med rødbrune musteinsbygninger i bakgrunnen"
+                 width="2700" height ="1793">
+        </picture>
+
+        <picture class="gallery-location-img">
+            <!-- Bilde blir valgt av device ut i fra hvilken oppløsning som passer best. "w" er bredden
+                 på det bildet. Type forteller device at bildene er webp format-->
+            <source srcset="images/studieplasser/studieplasser-skjalg-bøhmer-vold-very-small.webp 600w,
+                            images/studieplasser/studieplasser-skjalg-bøhmer-vold-small.webp 1020w,
+                            images/studieplasser/studieplasser-skjalg-bøhmer-vold-medium.webp 1440w,
+                            images/studieplasser/studieplasser-skjalg-bøhmer-vold-large.webp 2100w"
+                    sizes="(max-width: 760px) 95vw, (min-width: 760px) 44vw"
+                    type="image/webp">
+
+            <!-- Backup bilde tilfelle device ikke støtter <picture> eller webp, i tilleg til alt tekst informasjon -->
+            <img src="images/studieplasser/studieplasser-skjalg-bøhmer-vold-large.jpg"
+                 alt="lite innendørs minihus med trespiler og en åpen vegg. innni er det bord og noen benker
+                      med puter, der man kan sitte å studere i grupper"
+                 width="2100" height ="1400">
+        </picture>
 
         <picture class="gallery-location-img">
             <!-- Bilde blir valgt av device ut i fra hvilken oppløsning som passer best. "w" er bredden
@@ -100,21 +140,70 @@
                  width="2100" height ="1402">
         </picture>
 
-        <picture class="gallery-location-img">
-            <!-- Bilde blir valgt av device ut i fra hvilken oppløsning som passer best. "w" er bredden
-                 på det bildet. Type forteller device at bildene er webp format-->
-            <source srcset="images/studieplasser/studieplasser-skjalg-bøhmer-vold-very-small.webp 600w,
-                            images/studieplasser/studieplasser-skjalg-bøhmer-vold-small.webp 1020w,
-                            images/studieplasser/studieplasser-skjalg-bøhmer-vold-medium.webp 1440w,
-                            images/studieplasser/studieplasser-skjalg-bøhmer-vold-large.webp 2100w"
-                    sizes="(max-width: 760px) 95vw, (min-width: 760px) 44vw"
-                    type="image/webp">
+        <picture class="gallery-topical-img">
+                <!-- Bilde blir valgt av device ut i fra hvilken oppløsning som passer best. "w" er bredden
+                på det bildet. Type forteller device at bildene er webp format-->
+                <!-- Bruk av media sikrer at bildene beholder sine opprinnelige dimensjoner i mobile view -->
+                <source srcset="images/nasa/nasa-small-mobile-view.webp 600w,
+                                images/nasa/nasa-mobile-view.webp 900w"
+                        sizes="(max-width: 900px) 48vw,
+                               (min-width: 901) 39vw"
+                        type="image/webp">
+
+                <!-- Backup bilde tilfelle device ikke støtter <picture> eller webp, i tillegg til alt tekst informasjon -->
+                <img src="images/nasa/nasa.jpg"
+                     alt="New York sett ovenifra på kvelden, der gatebelysning dominerer landskapet"
+                     height="1394" width="1394">
+            </picture>
+
+        <picture class="gallery-home-img">
+
+            <!-- Bilde blir valgt av device ut i fra hvilken oppløsning som passer best. "w" er bredden på det bildet.
+            Type forteller device at bildene er webp format -->
+            <source srcset="images/oslomet-studiestart/oslomet-studiestart-very-small.webp 600w,
+                            images/oslomet-studiestart/oslomet-studiestart-small.webp 900w,
+                            images/oslomet-studiestart/oslomet-studiestart-medium.webp 1440w,
+                            images/oslomet-studiestart/oslomet-studiestart-large.webp 2100w"
+                    sizes="(max-width: 760px) 92vw,
+                           (min-width: 761px) 44vw"
+                    type="image/jpg">
 
             <!-- Backup bilde tilfelle device ikke støtter <picture> eller webp, i tilleg til alt tekst informasjon -->
-            <img src="images/studieplasser/studieplasser-skjalg-bøhmer-vold-large.jpg"
-                 alt="lite innendørs minihus med trespiler og en åpen vegg. innni er det bord og noen benker
-                      med puter, der man kan sitte å studere i grupper"
-                 width="2100" height ="1400">
+            <img src="images/oslomet-studiestart/oslomet-studiestart.jpg"
+                 alt="gruppe studenter foran en universitetsbygning av glass og betong, med noen planter i forgrunnen"
+                 width="2700" height ="1793">
+        </picture>
+
+        <picture class="gallery-topical-img">
+                <!-- Bilde blir valgt av device ut i fra hvilken oppløsning som passer best med size. "w" er bredden
+                på det bildet. Type forteller device at bildene er webp format-->
+                <source srcset="images/spacex/spacex-very-small.webp 600w,
+                                images/spacex/spacex-small.webp 1072w,
+                                images/spacex/spacex-medium.webp 2144w,
+                                images/spacex/spacex-large.webp 4288w"
+                        sizes= "(min-width: 1460) 1300px,
+                                (max-width: 1459) 93vw"
+                        type="image/webp">
+
+                <!-- Backup bilde tilfelle device ikke støtter <picture> eller webp, i tillegg til alt tekst informasjon -->
+                <img src="images/spacex/spacex-large.jpg"
+                     alt="En satelitt i verdensrommet med jorden som belyser bakgrunnen"
+                     height="2848" width="4288">
+            </picture>
+
+        <picture class="gallery-home-img">
+
+            <!-- Bilde blir valgt av device ut i fra hvilken oppløsning som passer best med size. "w" er bredden
+                 på det bildet. Type forteller device at bildene er webp format -->
+            <source srcset="images/foreningsdag-musikk/foreningsdag-musikk-oslomet-small.webp 600w,
+                            images/foreningsdag-musikk/foreningsdag-musikk-oslomet-medium.webp 900w,
+                            images/foreningsdag-musikk/foreningsdag-musikk-oslomet-large.webp 1440w"
+                    sizes="(max-width: 760px) 95vw,
+                           (min-width: 761px) 30vw"
+                    type="image/jpg">
+            <img src="images/foreningsdag-musikk/foreningsdag-musikk-oslomet.jpg"
+                     alt="jente med svarte og røde klær som spiller på keyboard og synger på en scene"
+                     width="1600" height ="1066">
         </picture>
 
         <picture class="gallery-location-img">
@@ -152,40 +241,8 @@
                  width="2100" height ="1400">
         </picture>
 
-         <picture class="gallery-location-img">
-            <!-- Bilde blir valgt av device ut i fra hvilken oppløsning som passer best. "w" er bredden
-                 på det bildet. Type forteller device at bildene er webp format-->
-            <source srcset="images/kantine-p52/kantine-p52-skjalg-bøhmer-vold-very-small.webp 600w,
-                            images/kantine-p52/kantine-p52-skjalg-bøhmer-vold-small.webp 1020w,
-                            images/kantine-p52/kantine-p52-skjalg-bøhmer-vold-medium.webp 1440w,
-                            images/kantine-p52/kantine-p52-skjalg-bøhmer-vold-large.webp 2100w"
-                    sizes="(max-width: 760px) 95vw, (min-width: 760px) 44vw"
-                    type="image/webp">
-
-            <!-- Backup bilde tilfelle device ikke støtter <picture> eller webp, i tilleg til alt tekst informasjon -->
-            <img src="images/kantine-p52/kantine-p52-skjalg-bøhmer-vold-large.jpg"
-                 alt="koselig rom med bra lyes og søyler av stein. taket er bugd opp av hvite buer med
-                        lamper formet som kuler. det er også border og stoler på det svart/beige rutete gulvet"
-                 width="2100" height ="1400">
-        </picture>
-
-         <picture class="gallery-topical-img">
-                    <!-- Bilde blir valgt av device ut i fra hvilken oppløsning som passer best. "w" er bredden
-                    på det bildet. Type forteller device at bildene er webp format-->
-                    <!-- Bruk av media sikrer at bildene beholder sine opprinnelige dimensjoner i mobile view -->
-                    <source srcset="images/nasa/nasa-small-mobile-view.webp 600w,
-                                    images/nasa/nasa-mobile-view.webp 900w"
-                            sizes="(max-width: 900px) 48vw,
-                                   (min-width: 901) 39vw"
-                            type="image/webp">
-
-                    <!-- Backup bilde tilfelle device ikke støtter <picture> eller webp, i tillegg til alt tekst informasjon -->
-                    <img src="images/nasa/nasa.jpg"
-                         alt="New York sett ovenifra på kvelden, der gatebelysning dominerer landskapet"
-                         height="1394" width="1394">
-                </picture>
-
         <picture class="gallery-topical-img">
+
             <!-- Bilde blir valgt av device ut i fra hvilken oppløsning som passer best. "w" er bredden
             på det bildet. Type forteller device at bildene er webp format-->
             <!-- Bildene beholder sine opprinnelige dimensjoner i mobile view -->
@@ -202,6 +259,58 @@
             <img src="images/imac/imac.jpg"
                  alt="Flere ulike elektroniske enheter med en iMac i sentrum"
                  height="4000" width="6000">
+        </picture>
+
+        <picture class="gallery-home-img">
+
+            <!-- Bilde blir valgt av device ut i fra hvilken oppløsning som passer best med size. "w" er bredden
+                 på det bildet. Type forteller device at bildene er webp format -->
+            <source srcset="images/studiestart-2023/oslomet-studiestart-2023-small.webp 600w,
+                            images/studiestart-2023/oslomet-studiestart-2023-medium.webp 900w,
+                            images/studiestart-2023/oslomet-studiestart-2023-large.webp 1440w"
+                    sizes="(max-width: 760px) 95vw,
+                           (min-width: 761px) 30vw"
+                    type="image/jpg">
+
+            <!-- Backup bilde tilfelle device ikke støtter <picture> eller webp, i tilleg til alt tekst informasjon -->
+            <img src="images/studiestart-2023/oslomet-studiestart-2023.jpg"
+                 alt="gruppe studenter som følger andre med oslomet geneser, gåene bortover en vei utenfor en
+                      skolebygning"
+                 width="1600" height ="1068">
+        </picture>
+
+        <picture class="gallery-location-img">
+            <!-- Bilde blir valgt av device ut i fra hvilken oppløsning som passer best. "w" er bredden
+                 på det bildet. Type forteller device at bildene er webp format-->
+            <source srcset="images/kantine-p52/kantine-p52-skjalg-bøhmer-vold-very-small.webp 600w,
+                            images/kantine-p52/kantine-p52-skjalg-bøhmer-vold-small.webp 1020w,
+                            images/kantine-p52/kantine-p52-skjalg-bøhmer-vold-medium.webp 1440w,
+                            images/kantine-p52/kantine-p52-skjalg-bøhmer-vold-large.webp 2100w"
+                    sizes="(max-width: 760px) 95vw, (min-width: 760px) 44vw"
+                    type="image/webp">
+
+            <!-- Backup bilde tilfelle device ikke støtter <picture> eller webp, i tilleg til alt tekst informasjon -->
+            <img src="images/kantine-p52/kantine-p52-skjalg-bøhmer-vold-large.jpg"
+                 alt="koselig rom med bra lyes og søyler av stein. taket er bugd opp av hvite buer med
+                        lamper formet som kuler. det er også border og stoler på det svart/beige rutete gulvet"
+                 width="2100" height ="1400">
+        </picture>
+
+        <picture class="gallery-home-img">
+
+            <!-- Bilde blir valgt av device ut i fra hvilken oppløsning som passer best med size. "w" er bredden
+                 på det bildet. Type forteller device at bildene er webp format -->
+            <source srcset="images/skulptur/skulptur-small.webp 600w,
+                            images/skulptur/skulptur-medium.webp 900w,
+                            images/skulptur/skulptur-large.webp 1440w"
+                    sizes="(max-width: 760px) 95vw,
+                           (min-width: 761px) 30vw"
+                    type="image/jpg">
+
+            <!-- Backup bilde tilfelle device ikke støtter <picture> eller webp, i tilleg til alt tekst informasjon -->
+            <img src="images/skulptur/skulptur.jpg"
+                 alt="person med grønnblå lue som arbeider på en statue av leire med verktøy"
+                 width="5851" height ="3893">
         </picture>
 
         <picture class="gallery-topical-img">
@@ -225,11 +334,77 @@
                  height="2597" width="3895">
         </picture>
 
+        <picture class="gallery-home-img">
+
+            <!-- Bilde blir valgt av device ut i fra hvilken oppløsning som passer best med size. "w" er bredden
+                 på det bildet. Type forteller device at bildene er webp format -->
+            <source srcset="images/grilling/grilling-small.webp 600w,
+                            images/grilling/grilling-medium.webp 900w,
+                            images/grilling/grilling-large.webp 1440w"
+                    sizes="(max-width: 760px) 92vw,
+                           (min-width: 761px) 44vw"
+                    type="image/jpg">
+
+            <!-- Backup bilde tilfelle device ikke støtter <picture> eller webp, i tilleg til alt tekst informasjon -->
+            <img src="images/grilling/grilling.jpg"
+                 alt="grilling av kjøtt på en grill"
+                 width="4256" height ="2832">
+        </picture>
+
     </section>
 </main>
 
 <footer>
+    <!-- Grid kode basert på: https://www.w3schools.com/css/css_grid.asp
+    Bruker sections isteden for div  -->
+    <!-- Header Overskrift -->
+    <section class="footer-grid-objects footer-header">
+        <h2>OsloMet</h2>
+    </section>
 
+    <!-- Newsletter knapp -->
+    <section class="newsletter-button">
+            <a href="https://www.oslomet.no/nyhetsbrev" class="button">Nyhetsbrev! </a>
+    </section>
+
+    <!--Linje på tvers av footer, styling-->
+    <div class="border-bottom"></div>
+
+    <!-- Kontakt informasjon til OsloMet -->
+    <section class="footer-grid-objects contact-information">
+        <h3>Kontaktinformasjon</h3>
+        <ul>
+            <li>Oslo Metropolitan University</li>
+            <li>Storbyuniversitetet</li>
+            <li>Postboks 4, St. Olavs plass</li>
+            <li>0130 Oslo</li>
+            <li>Tlf.: <a href="tel:67235000">67 23 50 00</a></li>
+            <li>E-post: <a href="mailto:post@oslomet.no">post@oslomet.no</a></li>
+        </ul>
+    </section>
+
+    <!-- Lenker til de andre sidene på nettsiden vår -->
+    <section class="footer-grid-objects site-links">
+        <h3>Navigasjon</h3>
+        <ul>
+            <li><a href="index.html">Hjem</a></li>
+            <li><a href="accessibility.html">Tilgjengelighet</a></li>
+            <li><a href="topical.html">Topical</a></li>
+            <li><a href="locations.html">Lokasjoner</a></li>
+            <li><a href="maybepage5.html">Galleri</a></li>
+        </ul>
+    </section>
+
+    <!-- Sosiale medie lenker -->
+    <section class="footer-grid-objects social-media-links">
+        <h3>Følg oss</h3>
+        <ul>
+            <li> <a href="https://www.facebook.com/oslomet/"><div class="fa fa-facebook"></div>Facebook</a></li>
+            <li><a href="https://twitter.com/oslomet"><div class="fa fa-twitter"></div>Twitter</a></li>
+            <li><a href="https://www.instagram.com/oslomet/?hl=nb"><div class="fa fa-instagram"></div>Instagram</a></li>
+            <li><a href="https://www.youtube.com/@OsloMetFilm"><div class="fa fa-youtube"></div>Youtube</a></li>
+        </ul>
+    </section>
 </footer>
 </body>
 </html>
