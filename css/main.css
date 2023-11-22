@@ -440,6 +440,7 @@ figure.flex-child-smaller-width {
 
 /*Flex for kontakt skjema*/
 /* Kilde brukt for form: https://developer.mozilla.org/en-US/docs/Web/HTML/Element/form */
+/* https://www.w3schools.com/tags/tag_textarea.asp */
 #contact-form-flex {
     display: flex;
     flex-direction: column;
