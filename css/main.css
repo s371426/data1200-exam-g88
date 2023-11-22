@@ -328,11 +328,12 @@ figure.flex-child-smaller-width {
 }
 
 /* Endrer location og accessability flexbox til å være vertikal når viewport mindre enn 760px (Mobil)
-   "only screen and" sjuler det for ikke skjermer og gamle enheter*/
+   "only screen and" sjuler det for ikke skjermer og gamle enheter */
+/* :not(:Firstchild) fordi overskrift ikke oppfører seg riktig på de sidene*/
 @media only screen and (max-width: 760px) {
     .homepage-flex,
-    .location-flex,
-    .accessibility-flex {
+    .location-flex:not(:first-child),
+    .accessibility-flex:not(:first-child) {
         flex-direction: column;
     }
 
